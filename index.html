@@ -3,216 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIELIT Exam Portal | Kaushal Institute</title>
+    <title>NIELIT Professional Exam Portal | Kaushal Institute</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-        body { background-color: #f8fafc; font-family: 'Inter', sans-serif; }
-        .nav-gradient { background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%); }
-        .option-btn { border: 1px solid #e2e8f0; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); text-align: left; background: white; }
-        .option-btn:hover:not(:disabled) { border-color: #3b82f6; background-color: #f0f7ff; transform: translateX(4px); }
-        .correct { background-color: #dcfce7 !important; border-color: #22c55e !important; color: #166534; position: relative; }
-        .correct::after { content: "\f058"; font-family: "Font Awesome 5 Free"; font-weight: 900; float: right; }
-        .wrong { background-color: #fee2e2 !important; border-color: #ef4444 !important; color: #991b1b; }
-        .wrong::after { content: "\f057"; font-family: "Font Awesome 5 Free"; font-weight: 900; float: right; }
-        .module-card { border-top: 4px solid transparent; transition: all 0.3s ease; }
-        .module-card:hover { transform: translateY(-8px); border-top-color: #3b82f6; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        body { background-color: #f1f5f9; font-family: 'Inter', sans-serif; height: 100vh; overflow: hidden; }
+        .nav-blue { background: #1e3a8a; }
+        .q-btn { width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid #cbd5e1; cursor: pointer; transition: 0.2s; }
+        .q-answered { background: #22c55e !important; color: white; border-color: #16a34a; }
+        .q-current { border: 2px solid #1e3a8a; box-shadow: 0 0 10px rgba(30,58,138,0.3); }
+        .option-card { border: 2px solid #e2e8f0; border-radius: 12px; padding: 15px; text-align: left; transition: 0.2s; background: white; width: 100%; }
+        .option-card.active { border-color: #3b82f6; background: #eff6ff; }
+        .hide { display: none !important; }
     </style>
 </head>
-<body>
+<body class="flex flex-col">
 
-    <nav class="nav-gradient text-white shadow-xl py-4 px-6 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="bg-white p-2 rounded-lg">
-                    <i class="fas fa-user-graduate text-blue-800 text-xl"></i>
-                </div>
-                <h1 class="text-xl font-bold tracking-tight uppercase">NIELIT Exam Portal</h1>
-            </div>
-            <div id="user-display" class="hidden flex items-center gap-4 bg-white/10 px-4 py-2 rounded-full border border-white/20">
-                <span id="student-name-tag" class="text-sm font-semibold italic"></span>
-                <button onclick="location.reload()" class="bg-red-500 hover:bg-red-600 px-3 py-1 rounded-md text-xs transition">Exit</button>
-            </div>
+    <nav class="nav-blue text-white py-3 px-6 flex justify-between items-center shadow-md">
+        <div class="flex items-center gap-2">
+            <i class="fas fa-shield-halved text-orange-400"></i>
+            <span class="font-bold tracking-wider uppercase">NIELIT Exam Portal - Kaushal Institute</span>
         </div>
+        <div id="timer" class="bg-red-600 px-4 py-1 rounded font-mono text-lg font-bold">00:00</div>
     </nav>
 
-    <section id="login-section" class="container mx-auto pt-20 px-4 flex justify-center">
-        <div class="max-w-md w-full bg-white p-10 rounded-2xl shadow-2xl border border-gray-100">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-extrabold text-gray-800 mb-2">Welcome!</h2>
-                <p class="text-gray-500">Apna naam daalkar practice shuru karein</p>
-            </div>
-            <div class="mb-6">
-                <input type="text" id="name-input" placeholder="Enter Full Name" 
-                       class="w-full px-5 py-4 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition-all text-lg font-medium">
-            </div>
-            <button onclick="saveUser()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-200 transition-all flex items-center justify-center gap-2">
-                Get Started <i class="fas fa-arrow-right"></i>
+    <main class="flex-1 overflow-hidden flex flex-col items-center justify-center p-4">
+        
+        <div id="welcome-screen" class="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center">
+            <h2 class="text-2xl font-bold mb-6">Student Login</h2>
+            <input type="text" id="student-name" placeholder="Apna Naam Likhein" class="w-full p-3 border rounded-lg mb-4 outline-none focus:ring-2 focus:ring-blue-500">
+            <button onclick="initApp()" class="w-full bg-blue-700 text-white py-3 rounded-lg font-bold hover:bg-blue-800">Enter Dashboard</button>
+        </div>
+
+        <div id="dashboard" class="hide grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl w-full">
+            <button onclick="loadModule('M1')" class="bg-white p-6 rounded-xl shadow hover:shadow-lg text-left border-l-4 border-blue-600">
+                <h3 class="font-bold text-lg text-blue-800">M1-R5: IT Tools</h3>
+                <p class="text-sm text-gray-500">LibreOffice & OS</p>
+            </button>
+            <button onclick="loadModule('M2')" class="bg-white p-6 rounded-xl shadow hover:shadow-lg text-left border-l-4 border-green-600">
+                <h3 class="font-bold text-lg text-green-800">M2-R5: Web Design</h3>
+                <p class="text-sm text-gray-500">HTML, CSS, JS</p>
             </button>
         </div>
-    </section>
 
-    <section id="dashboard" class="hidden container mx-auto py-12 px-4">
-        <div class="mb-12 text-center">
-            <h3 class="text-3xl font-bold text-gray-800 mb-2">Select Revision Module</h3>
-            <p class="text-gray-500">2026 Updated Pattern MCQs</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-white p-8 rounded-2xl shadow-sm module-card cursor-pointer" onclick="selectModule('M1')">
-                <i class="fas fa-laptop-code text-4xl text-blue-600 mb-6"></i>
-                <h4 class="text-xl font-bold">M1-R5</h4>
-                <p class="text-gray-500 text-sm mt-2">IT Tools & Network Basics</p>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-sm module-card cursor-pointer" onclick="selectModule('M2')">
-                <i class="fas fa-file-code text-4xl text-green-600 mb-6"></i>
-                <h4 class="text-xl font-bold">M2-R5</h4>
-                <p class="text-gray-500 text-sm mt-2">Web Designing & Publishing</p>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-sm module-card cursor-pointer" onclick="selectModule('M3')">
-                <i class="fab fa-python text-4xl text-yellow-500 mb-6"></i>
-                <h4 class="text-xl font-bold">M3-R5</h4>
-                <p class="text-gray-500 text-sm mt-2">Programming with Python</p>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-sm module-card cursor-pointer" onclick="selectModule('M4')">
-                <i class="fas fa-microchip text-4xl text-purple-600 mb-6"></i>
-                <h4 class="text-xl font-bold">M4-R5</h4>
-                <p class="text-gray-500 text-sm mt-2">Internet of Things (IoT)</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="quiz-area" class="hidden container mx-auto py-10 px-4 max-w-4xl">
-        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
-            <div class="bg-gray-50 px-8 py-6 border-b flex justify-between items-center">
-                <div>
-                    <h5 id="current-m-title" class="font-bold text-blue-800 uppercase tracking-widest text-sm"></h5>
-                    <p id="q-count-display" class="text-xs text-gray-400 mt-1"></p>
+        <div id="exam-ui" class="hide w-full max-w-6xl h-full flex gap-4 overflow-hidden py-4">
+            <div class="flex-1 bg-white rounded-xl shadow-lg flex flex-col overflow-hidden">
+                <div class="p-4 border-b bg-gray-50 font-bold flex justify-between">
+                    <span id="module-label">M1 Practice</span>
+                    <span id="q-number-title" class="text-blue-700">Question 1</span>
                 </div>
-                <div id="progress-container" class="w-32 bg-gray-200 rounded-full h-2 shadow-inner">
-                    <div id="progress-bar" class="bg-blue-600 h-2 rounded-full transition-all duration-500" style="width: 0%"></div>
+                <div class="flex-1 p-8 overflow-y-auto">
+                    <h2 id="question-text" class="text-xl font-semibold text-gray-800 mb-8"></h2>
+                    <div id="options-container" class="space-y-4"></div>
+                </div>
+                <div class="p-4 border-t flex justify-between bg-gray-50">
+                    <button onclick="prevQ()" class="bg-gray-200 px-6 py-2 rounded font-bold hover:bg-gray-300">Previous</button>
+                    <div>
+                        <button onclick="nextQ()" id="btn-next" class="bg-blue-600 text-white px-8 py-2 rounded font-bold hover:bg-blue-700">Next</button>
+                        <button onclick="submitExam()" id="btn-submit" class="hide bg-green-600 text-white px-8 py-2 rounded font-bold hover:bg-green-700">Submit Exam</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="p-8 md:p-12">
-                <h2 id="question-text" class="text-2xl font-bold text-gray-800 mb-10 leading-relaxed"></h2>
-                <div id="options-grid" class="grid gap-4"></div>
-                
-                <div class="mt-12 flex justify-between items-center">
-                    <div class="text-gray-400 text-sm"><i class="fas fa-info-circle mr-1"></i> Sahi option par click karein</div>
-                    <button id="next-btn" class="hidden bg-orange-600 hover:bg-orange-700 text-white px-10 py-3 rounded-xl font-bold shadow-lg transition-all active:scale-95">
-                        Next Question <i class="fas fa-chevron-right ml-2"></i>
-                    </button>
+            <div class="w-72 bg-white rounded-xl shadow-lg p-4 flex flex-col">
+                <h4 class="font-bold mb-4 border-b pb-2">Question Palette</h4>
+                <div id="palette" class="flex flex-wrap gap-2 overflow-y-auto content-start flex-1"></div>
+                <div class="mt-4 pt-4 border-t text-xs space-y-2">
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 bg-green-500 rounded"></span> Answered</div>
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 bg-white border border-gray-400 rounded"></span> Not Visited</div>
                 </div>
             </div>
         </div>
-    </section>
+
+        <div id="result-screen" class="hide w-full max-w-4xl bg-white rounded-2xl shadow-2xl p-8 overflow-y-auto max-h-full">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold">Exam Result Summary</h1>
+                <p id="res-name" class="text-blue-600 font-bold mt-2"></p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                <div class="bg-blue-50 p-4 rounded text-center">
+                    <p class="text-xs text-gray-500">SCORE</p>
+                    <p id="res-score" class="text-2xl font-bold"></p>
+                </div>
+                <div class="bg-blue-50 p-4 rounded text-center">
+                    <p class="text-xs text-gray-500">PERCENTAGE</p>
+                    <p id="res-percent" class="text-2xl font-bold"></p>
+                </div>
+                <div class="bg-blue-50 p-4 rounded text-center border-2 border-blue-200">
+                    <p class="text-xs text-gray-500">GRADE</p>
+                    <p id="res-grade" class="text-3xl font-black text-blue-800"></p>
+                </div>
+                <div class="bg-blue-50 p-4 rounded text-center">
+                    <p class="text-xs text-gray-500">STATUS</p>
+                    <p id="res-status" class="text-lg font-bold"></p>
+                </div>
+            </div>
+
+            <h3 class="font-bold text-lg mb-4 border-b pb-2">Incorrect Answers Analysis:</h3>
+            <div id="incorrect-list" class="space-y-4 mb-8 text-sm"></div>
+
+            <button onclick="location.reload()" class="w-full bg-blue-700 text-white py-4 rounded font-bold">Restart Another Test</button>
+        </div>
+
+    </main>
 
     <script>
-        let student = "";
-        let moduleKey = "";
-        let quizData = [];
-        let index = 0;
-        let score = 0;
+        let questions = [];
+        let userAnswers = {};
+        let cursor = 0;
+        let sName = "";
 
-        function saveUser() {
-            const input = document.getElementById('name-input').value.trim();
-            if (input.length < 3) return alert("Please enter your full name!");
-            student = input;
-            document.getElementById('login-section').classList.add('hidden');
-            document.getElementById('dashboard').classList.remove('hidden');
-            document.getElementById('user-display').classList.remove('hidden');
-            document.getElementById('student-name-tag').innerText = student;
+        function initApp() {
+            sName = document.getElementById('student-name').value;
+            if(!sName) return alert("Naam zaroori hai!");
+            document.getElementById('welcome-screen').classList.add('hide');
+            document.getElementById('dashboard').classList.remove('hide');
         }
 
-        async function selectModule(m) {
-            moduleKey = m;
-            document.getElementById('dashboard').classList.add('hidden');
-            document.getElementById('quiz-area').classList.remove('hidden');
-            
+        async function loadModule(m) {
             try {
-                // Ensure filename matches your GitHub (Small q or Capital Q)
-                const res = await fetch('questions.json');
+                const res = await fetch('Questions.json');
                 const data = await res.json();
-                
-                quizData = (data[moduleKey] || []).sort(() => 0.5 - Math.random()).slice(0, 50);
-                
-                if (quizData.length === 0) {
-                    alert("No questions found for this module!");
-                    location.reload();
-                    return;
-                }
-                showQ();
-            } catch (err) {
-                alert("Error loading Questions.json. Make sure filename is correct!");
-                location.reload();
-            }
+                questions = data[m].sort(() => 0.5 - Math.random()).slice(0, 50);
+                document.getElementById('dashboard').classList.add('hide');
+                document.getElementById('exam-ui').classList.remove('hide');
+                buildPalette();
+                renderQ();
+            } catch(e) { alert("JSON Load Error!"); }
         }
 
-        function showQ() {
-            const q = quizData[index];
-            document.getElementById('current-m-title').innerText = "NIELIT " + moduleKey;
-            document.getElementById('q-count-display').innerText = `Progress: ${index + 1} of ${quizData.length}`;
+        function buildPalette() {
+            const p = document.getElementById('palette');
+            p.innerHTML = '';
+            questions.forEach((_, i) => {
+                const b = document.createElement('div');
+                b.className = `q-btn q-${i}`;
+                b.innerText = i + 1;
+                b.onclick = () => jumpTo(i);
+                p.appendChild(b);
+            });
+        }
+
+        function renderQ() {
+            const q = questions[cursor];
+            document.getElementById('q-number-title').innerText = `Question ${cursor + 1} of ${questions.length}`;
             document.getElementById('question-text').innerText = q.question;
-            document.getElementById('progress-bar').style.width = `${((index+1)/quizData.length)*100}%`;
             
-            const grid = document.getElementById('options-grid');
-            grid.innerHTML = '';
+            const box = document.getElementById('options-container');
+            box.innerHTML = '';
             
             q.options.forEach(opt => {
                 const btn = document.createElement('button');
-                btn.className = "option-btn p-5 rounded-2xl font-semibold text-gray-700";
+                btn.className = `option-card ${userAnswers[cursor] === opt ? 'active' : ''}`;
                 btn.innerText = opt;
                 btn.onclick = () => {
-                    const all = grid.querySelectorAll('button');
-                    all.forEach(b => b.disabled = true);
-                    if (opt === q.answer) {
-                        btn.classList.add('correct');
-                        score++;
-                    } else {
-                        btn.classList.add('wrong');
-                        all.forEach(b => { if(b.innerText === q.answer) b.classList.add('correct'); });
-                    }
-                    document.getElementById('next-btn').classList.remove('hidden');
+                    userAnswers[cursor] = opt;
+                    document.querySelector(`.q-${cursor}`).classList.add('q-answered');
+                    renderQ();
                 };
-                grid.appendChild(btn);
+                box.appendChild(btn);
             });
-            document.getElementById('next-btn').classList.add('hidden');
+
+            // Palette Highlights
+            document.querySelectorAll('.q-btn').forEach(b => b.classList.remove('q-current'));
+            document.querySelector(`.q-${cursor}`).classList.add('q-current');
+
+            // Button Toggle
+            document.getElementById('btn-next').classList.toggle('hide', cursor === questions.length - 1);
+            document.getElementById('btn-submit').classList.toggle('hide', cursor !== questions.length - 1);
         }
 
-        document.getElementById('next-btn').onclick = () => {
-            index++;
-            if (index < quizData.length) showQ();
-            else {
-                showResult();
-            }
-        };
+        function nextQ() { if(cursor < questions.length - 1) { cursor++; renderQ(); } }
+        function prevQ() { if(cursor > 0) { cursor--; renderQ(); } }
+        function jumpTo(i) { cursor = i; renderQ(); }
 
-        function showResult() {
-            const per = Math.round((score/quizData.length)*100);
-            const status = per >= 50 ? "PASSED" : "FAILED";
-            const color = per >= 50 ? "text-green-600" : "text-red-600";
+        function submitExam() {
+            if(!confirm("Kya aap exam khatam karna chahte hain?")) return;
+            showResults();
+        }
+
+        function getGrade(p) {
+            if(p >= 85) return 'S';
+            if(p >= 75) return 'A';
+            if(p >= 65) return 'B';
+            if(p >= 55) return 'C';
+            if(p >= 50) return 'D';
+            return 'F';
+        }
+
+        function showResults() {
+            document.getElementById('exam-ui').classList.add('hide');
+            document.getElementById('result-screen').classList.remove('hide');
             
-            document.getElementById('quiz-area').innerHTML = `
-                <div class="bg-white rounded-3xl shadow-2xl p-10 text-center max-w-lg mx-auto border-t-8 border-blue-600">
-                    <h2 class="text-3xl font-bold mb-2">Quiz Result</h2>
-                    <p class="text-gray-500 mb-8">Well done, ${student}!</p>
-                    <div class="text-6xl font-black mb-4 ${color}">${per}%</div>
-                    <div class="text-xl font-bold mb-8 italic">Grade: ${status}</div>
-                    <div class="grid grid-cols-2 gap-4 mb-8">
-                        <div class="bg-gray-50 p-4 rounded-xl">
-                            <span class="block text-gray-400 text-xs">Correct</span>
-                            <span class="text-xl font-bold text-green-600">${score}</span>
+            let correctCount = 0;
+            let incorrectHTML = '';
+
+            questions.forEach((q, i) => {
+                const uAns = userAnswers[i] || "Not Attempted";
+                if(uAns === q.answer) {
+                    correctCount++;
+                } else {
+                    incorrectHTML += `
+                        <div class="p-3 border-l-4 border-red-500 bg-red-50 rounded">
+                            <p class="font-bold">Q${i+1}: ${q.question}</p>
+                            <p class="text-red-600">Your Answer: ${uAns}</p>
+                            <p class="text-green-600 font-bold">Correct Answer: ${q.answer}</p>
                         </div>
-                        <div class="bg-gray-50 p-4 rounded-xl">
-                            <span class="block text-gray-400 text-xs">Total</span>
-                            <span class="text-xl font-bold text-blue-600">${quizData.length}</span>
-                        </div>
-                    </div>
-                    <button onclick="location.reload()" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold shadow-lg hover:bg-blue-700">Practice Again</button>
-                </div>
-            `;
+                    `;
+                }
+            });
+
+            const percent = Math.round((correctCount / questions.length) * 100);
+            document.getElementById('res-name').innerText = sName;
+            document.getElementById('res-score').innerText = `${correctCount} / ${questions.length}`;
+            document.getElementById('res-percent').innerText = `${percent}%`;
+            document.getElementById('res-grade').innerText = getGrade(percent);
+            document.getElementById('res-status').innerText = percent >= 50 ? "QUALIFIED" : "NOT QUALIFIED";
+            document.getElementById('res-status').className = percent >= 50 ? "text-green-600 font-bold" : "text-red-600 font-bold";
+            document.getElementById('incorrect-list').innerHTML = incorrectHTML || "<p class='text-green-600'>Wow! No incorrect answers.</p>";
         }
     </script>
 </body>
