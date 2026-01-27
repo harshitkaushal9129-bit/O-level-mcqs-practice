@@ -3,226 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIELIT Professional Exam Portal | Kaushal Institute</title>
+    <title>NIELIT Professional Portal | Kaushal Institute</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-        body { background-color: #f1f5f9; font-family: 'Inter', sans-serif; height: 100vh; overflow: hidden; }
+        body { background-color: #f1f5f9; font-family: 'Inter', sans-serif; height: 100vh; display: flex; flex-col; overflow: hidden; }
         .nav-blue { background: #1e3a8a; }
-        .q-btn { width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-size: 12px; font-weight: 600; border: 1px solid #cbd5e1; cursor: pointer; transition: 0.2s; }
-        .q-answered { background: #22c55e !important; color: white; border-color: #16a34a; }
-        .q-current { border: 2px solid #1e3a8a; box-shadow: 0 0 10px rgba(30,58,138,0.3); }
-        .option-card { border: 2px solid #e2e8f0; border-radius: 12px; padding: 15px; text-align: left; transition: 0.2s; background: white; width: 100%; }
-        .option-card.active { border-color: #3b82f6; background: #eff6ff; }
+        
+        /* Question Palette Buttons */
+        .q-btn { 
+            width: 40px; height: 40px; 
+            display: flex; align-items: center; justify-content: center; 
+            border-radius: 6px; font-size: 14px; font-weight: 600; 
+            border: 1px solid #cbd5e1; cursor: pointer; transition: 0.2s; 
+            background: white; color: #475569;
+        }
+        .q-answered { background: #22c55e !important; color: white !important; border-color: #16a34a !important; }
+        .q-skipped { background: #ef4444 !important; color: white !important; border-color: #dc2626 !important; }
+        .q-current { border: 3px solid #1e3a8a !important; transform: scale(1.1); z-index: 10; }
+        
+        .option-card { border: 2px solid #e2e8f0; border-radius: 12px; padding: 16px; text-align: left; transition: 0.2s; background: white; width: 100%; cursor: pointer; }
+        .option-card:hover { border-color: #94a3b8; background: #f8fafc; }
+        .option-card.active { border-color: #3b82f6; background: #eff6ff; font-weight: 600; }
         .hide { display: none !important; }
     </style>
 </head>
 <body class="flex flex-col">
 
-    <nav class="nav-blue text-white py-3 px-6 flex justify-between items-center shadow-md">
+    <nav class="nav-blue text-white py-3 px-6 flex justify-between items-center shadow-lg">
         <div class="flex items-center gap-2">
-            <i class="fas fa-shield-halved text-orange-400"></i>
-            <span class="font-bold tracking-wider uppercase">NIELIT Exam Portal - Kaushal Institute</span>
+            <i class="fas fa-university text-orange-400"></i>
+            <span class="font-bold tracking-wider uppercase">NIELIT CBT Practice - Kaushal Institute</span>
         </div>
-        <div id="timer" class="bg-red-600 px-4 py-1 rounded font-mono text-lg font-bold">00:00</div>
+        <div id="exam-timer" class="bg-black/20 px-4 py-1 rounded font-mono text-lg">00:00:00</div>
     </nav>
 
-    <main class="flex-1 overflow-hidden flex flex-col items-center justify-center p-4">
+    <main class="flex-1 flex overflow-hidden">
         
-        <div id="welcome-screen" class="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center">
-            <h2 class="text-2xl font-bold mb-6">Student Login</h2>
-            <input type="text" id="student-name" placeholder="Apna Naam Likhein" class="w-full p-3 border rounded-lg mb-4 outline-none focus:ring-2 focus:ring-blue-500">
-            <button onclick="initApp()" class="w-full bg-blue-700 text-white py-3 rounded-lg font-bold hover:bg-blue-800">Enter Dashboard</button>
+        <section id="setup-area" class="w-full flex items-center justify-center p-6 bg-gray-100">
+            <div id="name-box" class="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center">
+                <h2 class="text-2xl font-bold mb-6">Student Login</h2>
+                <input type="text" id="s-name" placeholder="Apna Naam Likhein" class="w-full p-4 border-2 rounded-xl mb-6 outline-none focus:border-blue-600">
+                <button onclick="showModules()" class="w-full bg-blue-700 text-white py-4 rounded-xl font-bold text-lg">Next Step</button>
+            </div>
+
+            <div id="module-box" class="hide grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl w-full">
+                <button onclick="pickModule('M1')" class="bg-white p-6 rounded-2xl shadow hover:border-blue-600 border-2 border-transparent transition text-left">
+                    <h3 class="font-bold text-xl text-blue-800">M1-R5: IT Tools</h3>
+                    <p class="text-sm text-gray-500">Information Technology Basics</p>
+                </button>
+                <button onclick="pickModule('M2')" class="bg-white p-6 rounded-2xl shadow hover:border-green-600 border-2 border-transparent transition text-left">
+                    <h3 class="font-bold text-xl text-green-800">M2-R5: Web Design</h3>
+                    <p class="text-sm text-gray-500">HTML, CSS, JavaScript</p>
+                </button>
+                <button onclick="pickModule('M3')" class="bg-white p-6 rounded-2xl shadow hover:border-yellow-600 border-2 border-transparent transition text-left">
+                    <h3 class="font-bold text-xl text-yellow-800">M3-R5: Python</h3>
+                    <p class="text-sm text-gray-500">Programming & Algorithms</p>
+                </button>
+                <button onclick="pickModule('M4')" class="bg-white p-6 rounded-2xl shadow hover:border-purple-600 border-2 border-transparent transition text-left">
+                    <h3 class="font-bold text-xl text-purple-800">M4-R5: IoT</h3>
+                    <p class="text-sm text-gray-500">Internet of Things</p>
+                </button>
+            </div>
+        </section>
+
+        <div id="count-screen" class="hide fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
+            <div class="bg-white p-8 rounded-3xl shadow-2xl max-w-sm w-full text-center">
+                <h3 class="text-xl font-bold mb-6">Select Questions Count</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <button onclick="startExam(25)" class="p-4 border-2 border-blue-100 rounded-2xl hover:bg-blue-600 hover:text-white font-bold transition">25</button>
+                    <button onclick="startExam(50)" class="p-4 border-2 border-blue-100 rounded-2xl hover:bg-blue-600 hover:text-white font-bold transition">50</button>
+                    <button onclick="startExam(75)" class="p-4 border-2 border-blue-100 rounded-2xl hover:bg-blue-600 hover:text-white font-bold transition">75</button>
+                    <button onclick="startExam(100)" class="p-4 border-2 border-blue-100 rounded-2xl hover:bg-blue-600 hover:text-white font-bold transition">100</button>
+                </div>
+            </div>
         </div>
 
-        <div id="dashboard" class="hide grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl w-full">
-            <button onclick="loadModule('M1')" class="bg-white p-6 rounded-xl shadow hover:shadow-lg text-left border-l-4 border-blue-600">
-                <h3 class="font-bold text-lg text-blue-800">M1-R5: IT Tools</h3>
-                <p class="text-sm text-gray-500">LibreOffice & OS</p>
-            </button>
-            <button onclick="loadModule('M2')" class="bg-white p-6 rounded-xl shadow hover:shadow-lg text-left border-l-4 border-green-600">
-                <h3 class="font-bold text-lg text-green-800">M2-R5: Web Design</h3>
-                <p class="text-sm text-gray-500">HTML, CSS, JS</p>
-            </button>
-        </div>
-
-        <div id="exam-ui" class="hide w-full max-w-6xl h-full flex gap-4 overflow-hidden py-4">
-            <div class="flex-1 bg-white rounded-xl shadow-lg flex flex-col overflow-hidden">
-                <div class="p-4 border-b bg-gray-50 font-bold flex justify-between">
-                    <span id="module-label">M1 Practice</span>
-                    <span id="q-number-title" class="text-blue-700">Question 1</span>
+        <section id="exam-ui" class="hide flex-1 flex overflow-hidden">
+            <div class="flex-1 flex flex-col bg-white overflow-hidden">
+                <div class="p-4 border-b flex justify-between bg-gray-50">
+                    <span id="current-module-label" class="font-bold text-gray-600"></span>
+                    <span id="q-index-label" class="font-bold text-blue-700"></span>
                 </div>
-                <div class="flex-1 p-8 overflow-y-auto">
-                    <h2 id="question-text" class="text-xl font-semibold text-gray-800 mb-8"></h2>
-                    <div id="options-container" class="space-y-4"></div>
+                <div class="flex-1 p-8 md:p-12 overflow-y-auto">
+                    <h2 id="q-text" class="text-2xl font-bold text-gray-800 mb-10 leading-relaxed"></h2>
+                    <div id="options-box" class="space-y-4 max-w-2xl"></div>
                 </div>
-                <div class="p-4 border-t flex justify-between bg-gray-50">
-                    <button onclick="prevQ()" class="bg-gray-200 px-6 py-2 rounded font-bold hover:bg-gray-300">Previous</button>
-                    <div>
-                        <button onclick="nextQ()" id="btn-next" class="bg-blue-600 text-white px-8 py-2 rounded font-bold hover:bg-blue-700">Next</button>
-                        <button onclick="submitExam()" id="btn-submit" class="hide bg-green-600 text-white px-8 py-2 rounded font-bold hover:bg-green-700">Submit Exam</button>
+                <div class="p-6 border-t flex justify-between items-center bg-gray-50">
+                    <button onclick="changeQ(-1)" class="px-8 py-3 bg-gray-200 rounded-xl font-bold hover:bg-gray-300">Previous</button>
+                    <div class="flex gap-4">
+                        <button onclick="changeQ(1)" id="next-btn" class="px-10 py-3 bg-blue-700 text-white rounded-xl font-bold hover:bg-blue-800 shadow-lg">Next</button>
+                        <button onclick="finishTest()" id="submit-btn" class="hide px-10 py-3 bg-green-600 text-white rounded-xl font-bold hover:bg-green-700 shadow-lg">Finish Test</button>
                     </div>
                 </div>
             </div>
 
-            <div class="w-72 bg-white rounded-xl shadow-lg p-4 flex flex-col">
-                <h4 class="font-bold mb-4 border-b pb-2">Question Palette</h4>
-                <div id="palette" class="flex flex-wrap gap-2 overflow-y-auto content-start flex-1"></div>
-                <div class="mt-4 pt-4 border-t text-xs space-y-2">
-                    <div class="flex items-center gap-2"><span class="w-3 h-3 bg-green-500 rounded"></span> Answered</div>
-                    <div class="flex items-center gap-2"><span class="w-3 h-3 bg-white border border-gray-400 rounded"></span> Not Visited</div>
+            <aside class="w-80 bg-gray-50 border-l flex flex-col p-5">
+                <h4 class="font-bold text-gray-700 mb-4 border-b pb-2">Question Palette</h4>
+                <div id="palette-grid" class="flex flex-wrap gap-2 overflow-y-auto content-start flex-1 p-1">
+                    </div>
+                <div class="mt-6 space-y-2 border-t pt-4">
+                    <div class="flex items-center gap-2 text-xs font-semibold">
+                        <span class="w-4 h-4 bg-green-500 rounded"></span> Answered
+                    </div>
+                    <div class="flex items-center gap-2 text-xs font-semibold">
+                        <span class="w-4 h-4 bg-red-500 rounded"></span> Skipped / Not Answered
+                    </div>
+                    <div class="flex items-center gap-2 text-xs font-semibold">
+                        <span class="w-4 h-4 bg-white border border-gray-400 rounded"></span> Not Visited
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section id="result-ui" class="hide w-full overflow-y-auto p-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-black text-gray-800">Score Report</h1>
+                    <p id="res-student-name" class="text-xl text-blue-600 mt-2"></p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-gray-50 p-8 rounded-3xl text-center border-b-4 border-blue-500">
+                        <p class="text-gray-400 uppercase text-xs font-bold mb-2">Grade</p>
+                        <p id="res-grade" class="text-5xl font-black"></p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-3xl text-center border-b-4 border-green-500">
+                        <p class="text-gray-400 uppercase text-xs font-bold mb-2">Score</p>
+                        <p id="res-score" class="text-4xl font-black"></p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-3xl text-center border-b-4 border-orange-500">
+                        <p class="text-gray-400 uppercase text-xs font-bold mb-2">Accuracy</p>
+                        <p id="res-percent" class="text-4xl font-black"></p>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold mb-6">Review Incorrect Answers:</h3>
+                <div id="analysis-box" class="space-y-6 pb-20"></div>
+                
+                <div class="fixed bottom-0 left-0 w-full p-4 bg-white border-t flex justify-center">
+                    <button onclick="location.reload()" class="bg-blue-700 text-white px-12 py-4 rounded-2xl font-bold shadow-2xl">Start New Practice</button>
                 </div>
             </div>
-        </div>
-
-        <div id="result-screen" class="hide w-full max-w-4xl bg-white rounded-2xl shadow-2xl p-8 overflow-y-auto max-h-full">
-            <div class="text-center mb-8">
-                <h1 class="text-3xl font-bold">Exam Result Summary</h1>
-                <p id="res-name" class="text-blue-600 font-bold mt-2"></p>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-                <div class="bg-blue-50 p-4 rounded text-center">
-                    <p class="text-xs text-gray-500">SCORE</p>
-                    <p id="res-score" class="text-2xl font-bold"></p>
-                </div>
-                <div class="bg-blue-50 p-4 rounded text-center">
-                    <p class="text-xs text-gray-500">PERCENTAGE</p>
-                    <p id="res-percent" class="text-2xl font-bold"></p>
-                </div>
-                <div class="bg-blue-50 p-4 rounded text-center border-2 border-blue-200">
-                    <p class="text-xs text-gray-500">GRADE</p>
-                    <p id="res-grade" class="text-3xl font-black text-blue-800"></p>
-                </div>
-                <div class="bg-blue-50 p-4 rounded text-center">
-                    <p class="text-xs text-gray-500">STATUS</p>
-                    <p id="res-status" class="text-lg font-bold"></p>
-                </div>
-            </div>
-
-            <h3 class="font-bold text-lg mb-4 border-b pb-2">Incorrect Answers Analysis:</h3>
-            <div id="incorrect-list" class="space-y-4 mb-8 text-sm"></div>
-
-            <button onclick="location.reload()" class="w-full bg-blue-700 text-white py-4 rounded font-bold">Restart Another Test</button>
-        </div>
-
+        </section>
     </main>
 
     <script>
-        let questions = [];
-        let userAnswers = {};
+        let rawQuestions = [];
+        let finalQuestions = [];
+        let answers = {}; // { index: selectedOption }
+        let visited = new Set(); // To track skipped vs not visited
         let cursor = 0;
-        let sName = "";
+        let studentName = "";
+        let mKey = "";
 
-        function initApp() {
-            sName = document.getElementById('student-name').value;
-            if(!sName) return alert("Naam zaroori hai!");
-            document.getElementById('welcome-screen').classList.add('hide');
-            document.getElementById('dashboard').classList.remove('hide');
+        function showModules() {
+            studentName = document.getElementById('s-name').value;
+            if(!studentName) return alert("Naam likhna zaroori hai!");
+            document.getElementById('name-box').classList.add('hide');
+            document.getElementById('module-box').classList.remove('hide');
         }
 
-        async function loadModule(m) {
+        async function pickModule(m) {
+            mKey = m;
             try {
                 const res = await fetch('Questions.json');
                 const data = await res.json();
-                questions = data[m].sort(() => 0.5 - Math.random()).slice(0, 50);
-                document.getElementById('dashboard').classList.add('hide');
-                document.getElementById('exam-ui').classList.remove('hide');
-                buildPalette();
-                renderQ();
-            } catch(e) { alert("JSON Load Error!"); }
+                rawQuestions = data[m];
+                document.getElementById('count-screen').classList.remove('hide');
+            } catch(e) { alert("Questions.json load nahi ho rahi!"); }
+        }
+
+        function startExam(limit) {
+            document.getElementById('count-screen').classList.add('hide');
+            document.getElementById('setup-area').classList.add('hide');
+            document.getElementById('exam-ui').classList.remove('hide');
+            
+            finalQuestions = rawQuestions.sort(() => 0.5 - Math.random()).slice(0, limit);
+            buildPalette();
+            renderQuestion();
         }
 
         function buildPalette() {
-            const p = document.getElementById('palette');
-            p.innerHTML = '';
-            questions.forEach((_, i) => {
-                const b = document.createElement('div');
-                b.className = `q-btn q-${i}`;
-                b.innerText = i + 1;
-                b.onclick = () => jumpTo(i);
-                p.appendChild(b);
+            const grid = document.getElementById('palette-grid');
+            grid.innerHTML = '';
+            finalQuestions.forEach((_, i) => {
+                const btn = document.createElement('div');
+                btn.className = `q-btn q-id-${i}`;
+                btn.innerText = i + 1;
+                btn.onclick = () => { cursor = i; renderQuestion(); };
+                grid.appendChild(btn);
             });
         }
 
-        function renderQ() {
-            const q = questions[cursor];
-            document.getElementById('q-number-title').innerText = `Question ${cursor + 1} of ${questions.length}`;
-            document.getElementById('question-text').innerText = q.question;
+        function renderQuestion() {
+            const q = finalQuestions[cursor];
+            visited.add(cursor);
             
-            const box = document.getElementById('options-container');
+            document.getElementById('current-module-label').innerText = "Module: " + mKey;
+            document.getElementById('q-index-label').innerText = `Question ${cursor + 1} / ${finalQuestions.length}`;
+            document.getElementById('q-text').innerText = q.question;
+            
+            const box = document.getElementById('options-box');
             box.innerHTML = '';
             
             q.options.forEach(opt => {
-                const btn = document.createElement('button');
-                btn.className = `option-card ${userAnswers[cursor] === opt ? 'active' : ''}`;
-                btn.innerText = opt;
-                btn.onclick = () => {
-                    userAnswers[cursor] = opt;
-                    document.querySelector(`.q-${cursor}`).classList.add('q-answered');
-                    renderQ();
+                const card = document.createElement('div');
+                card.className = `option-card ${answers[cursor] === opt ? 'active' : ''}`;
+                card.innerText = opt;
+                card.onclick = () => {
+                    answers[cursor] = opt;
+                    updatePaletteStyles();
+                    renderQuestion();
                 };
-                box.appendChild(btn);
+                box.appendChild(card);
             });
 
-            // Palette Highlights
-            document.querySelectorAll('.q-btn').forEach(b => b.classList.remove('q-current'));
-            document.querySelector(`.q-${cursor}`).classList.add('q-current');
-
-            // Button Toggle
-            document.getElementById('btn-next').classList.toggle('hide', cursor === questions.length - 1);
-            document.getElementById('btn-submit').classList.toggle('hide', cursor !== questions.length - 1);
-        }
-
-        function nextQ() { if(cursor < questions.length - 1) { cursor++; renderQ(); } }
-        function prevQ() { if(cursor > 0) { cursor--; renderQ(); } }
-        function jumpTo(i) { cursor = i; renderQ(); }
-
-        function submitExam() {
-            if(!confirm("Kya aap exam khatam karna chahte hain?")) return;
-            showResults();
-        }
-
-        function getGrade(p) {
-            if(p >= 85) return 'S';
-            if(p >= 75) return 'A';
-            if(p >= 65) return 'B';
-            if(p >= 55) return 'C';
-            if(p >= 50) return 'D';
-            return 'F';
-        }
-
-        function showResults() {
-            document.getElementById('exam-ui').classList.add('hide');
-            document.getElementById('result-screen').classList.remove('hide');
+            updatePaletteStyles();
             
-            let correctCount = 0;
-            let incorrectHTML = '';
+            // Buttons toggle
+            document.getElementById('next-btn').classList.toggle('hide', cursor === finalQuestions.length - 1);
+            document.getElementById('submit-btn').classList.toggle('hide', cursor !== finalQuestions.length - 1);
+        }
 
-            questions.forEach((q, i) => {
-                const uAns = userAnswers[i] || "Not Attempted";
+        function updatePaletteStyles() {
+            finalQuestions.forEach((_, i) => {
+                const b = document.querySelector(`.q-id-${i}`);
+                b.classList.remove('q-current', 'q-answered', 'q-skipped');
+                
+                if(i === cursor) b.classList.add('q-current');
+                
+                if(answers[i]) {
+                    b.classList.add('q-answered');
+                } else if(visited.has(i)) {
+                    b.classList.add('q-skipped');
+                }
+            });
+        }
+
+        function changeQ(dir) {
+            cursor += dir;
+            if(cursor < 0) cursor = 0;
+            if(cursor >= finalQuestions.length) cursor = finalQuestions.length - 1;
+            renderQuestion();
+        }
+
+        function finishTest() {
+            if(!confirm("Kripya check karlein, kya aap final submit karna chahte hain?")) return;
+            
+            document.getElementById('exam-ui').classList.add('hide');
+            document.getElementById('result-ui').classList.remove('hide');
+            
+            let correct = 0;
+            let analysisHTML = '';
+
+            finalQuestions.forEach((q, i) => {
+                const uAns = answers[i] || "Skipped";
                 if(uAns === q.answer) {
-                    correctCount++;
+                    correct++;
                 } else {
-                    incorrectHTML += `
-                        <div class="p-3 border-l-4 border-red-500 bg-red-50 rounded">
-                            <p class="font-bold">Q${i+1}: ${q.question}</p>
+                    analysisHTML += `
+                        <div class="p-6 bg-red-50 border-l-8 border-red-500 rounded-2xl">
+                            <p class="font-bold text-lg mb-2">Q${i+1}: ${q.question}</p>
                             <p class="text-red-600">Your Answer: ${uAns}</p>
-                            <p class="text-green-600 font-bold">Correct Answer: ${q.answer}</p>
+                            <p class="text-green-700 font-bold">Correct Answer: ${q.answer}</p>
                         </div>
                     `;
                 }
             });
 
-            const percent = Math.round((correctCount / questions.length) * 100);
-            document.getElementById('res-name').innerText = sName;
-            document.getElementById('res-score').innerText = `${correctCount} / ${questions.length}`;
-            document.getElementById('res-percent').innerText = `${percent}%`;
-            document.getElementById('res-grade').innerText = getGrade(percent);
-            document.getElementById('res-status').innerText = percent >= 50 ? "QUALIFIED" : "NOT QUALIFIED";
-            document.getElementById('res-status').className = percent >= 50 ? "text-green-600 font-bold" : "text-red-600 font-bold";
-            document.getElementById('incorrect-list').innerHTML = incorrectHTML || "<p class='text-green-600'>Wow! No incorrect answers.</p>";
+            const p = Math.round((correct / finalQuestions.length) * 100);
+            let grade = 'F';
+            if(p>=85) grade='S'; else if(p>=75) grade='A'; else if(p>=65) grade='B'; else if(p>=55) grade='C'; else if(p>=50) grade='D';
+
+            document.getElementById('res-student-name').innerText = studentName;
+            document.getElementById('res-grade').innerText = grade;
+            document.getElementById('res-score').innerText = `${correct} / ${finalQuestions.length}`;
+            document.getElementById('res-percent').innerText = p + "%";
+            document.getElementById('analysis-box').innerHTML = analysisHTML || "<p class='text-green-600 font-bold text-xl text-center'>Excellent! All answers are correct.</p>";
         }
     </script>
 </body>
