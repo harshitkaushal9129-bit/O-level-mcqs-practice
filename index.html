@@ -172,7 +172,7 @@
             mKey = m;
             try {
                 // Ensure filename matches exactly with your GitHub file
-                const res = await fetch('Questions.json');
+                const res = await fetch('questions.json');
                 if(!res.ok) throw new Error();
                 const data = await res.json();
                 rawQuestions = data[m];
