@@ -3,200 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIELIT MCQ Portal | Kaushal Institute</title>
+    <title>NIELIT Exam Portal | Kaushal Institute</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background-color: #f3f4f6; font-family: 'Segoe UI', sans-serif; }
-        .nav-blue { background-color: #1e40af; }
-        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.3s; }
-        .option-btn { border: 2px solid #e5e7eb; transition: 0.2s; text-align: left; background: white; }
-        .option-btn:hover:not(:disabled) { border-color: #3b82f6; background-color: #eff6ff; }
-        .selected-correct { background-color: #d1fae5 !important; border-color: #10b981 !important; color: #065f46; }
-        .selected-wrong { background-color: #fee2e2 !important; border-color: #ef4444 !important; color: #991b1b; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body { background-color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .nav-gradient { background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%); }
+        .option-btn { border: 1px solid #e2e8f0; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); text-align: left; background: white; }
+        .option-btn:hover:not(:disabled) { border-color: #3b82f6; background-color: #f0f7ff; transform: translateX(4px); }
+        .correct { background-color: #dcfce7 !important; border-color: #22c55e !important; color: #166534; position: relative; }
+        .correct::after { content: "\f058"; font-family: "Font Awesome 5 Free"; font-weight: 900; float: right; }
+        .wrong { background-color: #fee2e2 !important; border-color: #ef4444 !important; color: #991b1b; }
+        .wrong::after { content: "\f057"; font-family: "Font Awesome 5 Free"; font-weight: 900; float: right; }
+        .module-card { border-top: 4px solid transparent; transition: all 0.3s ease; }
+        .module-card:hover { transform: translateY(-8px); border-top-color: #3b82f6; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
     </style>
 </head>
 <body>
 
-    <nav class="nav-blue text-white shadow-lg py-4 px-6 flex justify-between items-center">
-        <div class="flex items-center gap-2">
-            <i class="fas fa-graduation-cap text-2xl"></i>
-            <span class="text-xl font-bold tracking-tight uppercase">Kaushal Institute</span>
-        </div>
-        <div id="user-info" class="hidden">
-            <span class="text-sm">Student: </span>
-            <span id="student-display-name" class="font-bold underline"></span>
-            <button onclick="logout()" class="ml-4 text-xs bg-red-500 px-2 py-1 rounded">Exit</button>
+    <nav class="nav-gradient text-white shadow-xl py-4 px-6 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-white p-2 rounded-lg">
+                    <i class="fas fa-user-graduate text-blue-800 text-xl"></i>
+                </div>
+                <h1 class="text-xl font-bold tracking-tight uppercase">NIELIT Exam Portal</h1>
+            </div>
+            <div id="user-display" class="hidden flex items-center gap-4 bg-white/10 px-4 py-2 rounded-full border border-white/20">
+                <span id="student-name-tag" class="text-sm font-semibold italic"></span>
+                <button onclick="location.reload()" class="bg-red-500 hover:bg-red-600 px-3 py-1 rounded-md text-xs transition">Exit</button>
+            </div>
         </div>
     </nav>
 
-    <div id="auth-section" class="container mx-auto mt-20 px-4 text-center">
-        <div class="max-w-md mx-auto bg-white p-8 rounded-xl shadow-md border-t-4 border-blue-600">
-            <h1 class="text-2xl font-bold text-gray-800 mb-2">Welcome Student!</h1>
-            <p class="text-gray-500 mb-6 italic">NIELIT MCQ Practice Portal</p>
-            
-            <div class="text-left mb-6">
-                <label class="block text-gray-700 text-sm font-bold mb-2">Apna Naam Likhein:</label>
-                <input type="text" id="student-name-input" placeholder="e.g. Rahul Kumar" 
-                       class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+    <section id="login-section" class="container mx-auto pt-20 px-4 flex justify-center">
+        <div class="max-w-md w-full bg-white p-10 rounded-2xl shadow-2xl border border-gray-100">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-extrabold text-gray-800 mb-2">Welcome!</h2>
+                <p class="text-gray-500">Apna naam daalkar practice shuru karein</p>
             </div>
-
-            <button id="start-btn" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition shadow-md">
-                Start Practice
+            <div class="mb-6">
+                <input type="text" id="name-input" placeholder="Enter Full Name" 
+                       class="w-full px-5 py-4 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition-all text-lg font-medium">
+            </div>
+            <button onclick="saveUser()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-200 transition-all flex items-center justify-center gap-2">
+                Get Started <i class="fas fa-arrow-right"></i>
             </button>
         </div>
-    </div>
+    </section>
 
-    <div id="dashboard" class="hidden container mx-auto mt-10 px-4">
-        <div class="text-center mb-10">
-            <h2 class="text-3xl font-bold text-gray-800">Choose Exam Module</h2>
-            <p class="text-gray-500">Apna module select karein aur practice shuru karein</p>
+    <section id="dashboard" class="hidden container mx-auto py-12 px-4">
+        <div class="mb-12 text-center">
+            <h3 class="text-3xl font-bold text-gray-800 mb-2">Select Revision Module</h3>
+            <p class="text-gray-500">2026 Updated Pattern MCQs</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 card-hover cursor-pointer" onclick="askCount('M1')">
-                <div class="text-blue-600 mb-4"><i class="fas fa-desktop text-3xl"></i></div>
-                <h3 class="text-lg font-bold">M1-R5</h3>
-                <p class="text-sm text-gray-500 italic">IT Tools & Basics</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-sm module-card cursor-pointer" onclick="selectModule('M1')">
+                <i class="fas fa-laptop-code text-4xl text-blue-600 mb-6"></i>
+                <h4 class="text-xl font-bold">M1-R5</h4>
+                <p class="text-gray-500 text-sm mt-2">IT Tools & Network Basics</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 card-hover cursor-pointer" onclick="askCount('M2')">
-                <div class="text-green-600 mb-4"><i class="fas fa-globe text-3xl"></i></div>
-                <h3 class="text-lg font-bold">M2-R5</h3>
-                <p class="text-sm text-gray-500 italic">Web Designing</p>
+            <div class="bg-white p-8 rounded-2xl shadow-sm module-card cursor-pointer" onclick="selectModule('M2')">
+                <i class="fas fa-file-code text-4xl text-green-600 mb-6"></i>
+                <h4 class="text-xl font-bold">M2-R5</h4>
+                <p class="text-gray-500 text-sm mt-2">Web Designing & Publishing</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 card-hover cursor-pointer" onclick="askCount('M3')">
-                <div class="text-yellow-600 mb-4"><i class="fab fa-python text-3xl"></i></div>
-                <h3 class="text-lg font-bold">M3-R5</h3>
-                <p class="text-sm text-gray-500 italic">Python Programming</p>
+            <div class="bg-white p-8 rounded-2xl shadow-sm module-card cursor-pointer" onclick="selectModule('M3')">
+                <i class="fab fa-python text-4xl text-yellow-500 mb-6"></i>
+                <h4 class="text-xl font-bold">M3-R5</h4>
+                <p class="text-gray-500 text-sm mt-2">Programming with Python</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 card-hover cursor-pointer" onclick="askCount('M4')">
-                <div class="text-purple-600 mb-4"><i class="fas fa-microchip text-3xl"></i></div>
-                <h3 class="text-lg font-bold">M4-R5</h3>
-                <p class="text-sm text-gray-500 italic">Internet of Things</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-70 flex items-center justify-center p-4 z-50">
-        <div class="bg-white rounded-xl max-w-sm w-full p-8 shadow-2xl text-center">
-            <h3 class="text-xl font-bold mb-6">Kitne Sawal Chahiye?</h3>
-            <div class="grid gap-4">
-                <button onclick="startQuiz(25)" class="py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white font-bold transition">25 Questions</button>
-                <button onclick="startQuiz(50)" class="py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white font-bold transition">50 Questions</button>
-                <button onclick="startQuiz(75)" class="py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white font-bold transition">75 Questions</button>
-            </div>
-            <button onclick="closeModal()" class="mt-6 text-gray-400 text-sm hover:underline">Wapas Jayein</button>
-        </div>
-    </div>
-
-    <div id="quiz-screen" class="hidden container mx-auto mt-10 px-4 max-w-3xl">
-        <div class="bg-white rounded-xl shadow-lg p-6 border-t-8 border-blue-600">
-            <div class="flex justify-between items-center mb-6 border-b pb-4">
-                <span id="module-title" class="font-black text-blue-800"></span>
-                <span id="q-stats" class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-xs font-bold"></span>
-            </div>
-            
-            <h2 id="q-text" class="text-xl font-bold mb-8 text-gray-800"></h2>
-            
-            <div id="options-box" class="grid gap-4"></div>
-
-            <div class="mt-10 flex justify-end">
-                <button id="next-btn" class="hidden bg-orange-500 hover:bg-orange-600 text-white px-10 py-3 rounded-lg font-bold shadow-lg transition">Next Question <i class="fas fa-arrow-right ml-2"></i></button>
+            <div class="bg-white p-8 rounded-2xl shadow-sm module-card cursor-pointer" onclick="selectModule('M4')">
+                <i class="fas fa-microchip text-4xl text-purple-600 mb-6"></i>
+                <h4 class="text-xl font-bold">M4-R5</h4>
+                <p class="text-gray-500 text-sm mt-2">Internet of Things (IoT)</p>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section id="quiz-area" class="hidden container mx-auto py-10 px-4 max-w-4xl">
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+            <div class="bg-gray-50 px-8 py-6 border-b flex justify-between items-center">
+                <div>
+                    <h5 id="current-m-title" class="font-bold text-blue-800 uppercase tracking-widest text-sm"></h5>
+                    <p id="q-count-display" class="text-xs text-gray-400 mt-1"></p>
+                </div>
+                <div id="progress-container" class="w-32 bg-gray-200 rounded-full h-2 shadow-inner">
+                    <div id="progress-bar" class="bg-blue-600 h-2 rounded-full transition-all duration-500" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div class="p-8 md:p-12">
+                <h2 id="question-text" class="text-2xl font-bold text-gray-800 mb-10 leading-relaxed"></h2>
+                <div id="options-grid" class="grid gap-4"></div>
+                
+                <div class="mt-12 flex justify-between items-center">
+                    <div class="text-gray-400 text-sm"><i class="fas fa-info-circle mr-1"></i> Sahi option par click karein</div>
+                    <button id="next-btn" class="hidden bg-orange-600 hover:bg-orange-700 text-white px-10 py-3 rounded-xl font-bold shadow-lg transition-all active:scale-95">
+                        Next Question <i class="fas fa-chevron-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
-        let studentName = "";
-        let currentModule = "";
-        let questions = [];
-        let cursor = 0;
+        let student = "";
+        let moduleKey = "";
+        let quizData = [];
+        let index = 0;
         let score = 0;
 
-        // Login with Name
-        document.getElementById('start-btn').onclick = () => {
-            const nameInput = document.getElementById('student-name-input').value.trim();
-            if(nameInput.length < 3) {
-                alert("Kripya apna poora naam likhein!");
-                return;
-            }
-            studentName = nameInput;
-            document.getElementById('auth-section').classList.add('hidden');
+        function saveUser() {
+            const input = document.getElementById('name-input').value.trim();
+            if (input.length < 3) return alert("Please enter your full name!");
+            student = input;
+            document.getElementById('login-section').classList.add('hidden');
             document.getElementById('dashboard').classList.remove('hidden');
-            document.getElementById('user-info').classList.remove('hidden');
-            document.getElementById('student-display-name').innerText = studentName;
-        };
+            document.getElementById('user-display').classList.remove('hidden');
+            document.getElementById('student-name-tag').innerText = student;
+        }
 
-        window.logout = () => location.reload();
-
-        window.askCount = (m) => {
-            currentModule = m;
-            document.getElementById('modal').classList.remove('hidden');
-        };
-
-        window.closeModal = () => document.getElementById('modal').classList.add('hidden');
-
-        window.startQuiz = async (limit) => {
-            closeModal();
+        async function selectModule(m) {
+            moduleKey = m;
             document.getElementById('dashboard').classList.add('hidden');
-            document.getElementById('quiz-screen').classList.remove('hidden');
+            document.getElementById('quiz-area').classList.remove('hidden');
             
             try {
+                // Ensure filename matches your GitHub (Small q or Capital Q)
                 const res = await fetch('questions.json');
                 const data = await res.json();
-                // Randomize and Slice
-                questions = (data[currentModule] || []).sort(() => 0.5 - Math.random()).slice(0, limit);
                 
-                if(questions.length === 0) {
-                    alert("Is module mein sawal nahi mile!");
-                    logout();
+                quizData = (data[moduleKey] || []).sort(() => 0.5 - Math.random()).slice(0, 50);
+                
+                if (quizData.length === 0) {
+                    alert("No questions found for this module!");
+                    location.reload();
+                    return;
                 }
-                showQuestion();
-            } catch (e) {
-                alert("questions.json file nahi mili!");
+                showQ();
+            } catch (err) {
+                alert("Error loading Questions.json. Make sure filename is correct!");
+                location.reload();
             }
-        };
+        }
 
-        function showQuestion() {
-            const q = questions[cursor];
-            document.getElementById('module-title').innerText = "Module: " + currentModule;
-            document.getElementById('q-stats').innerText = `Question ${cursor + 1} / ${questions.length}`;
-            document.getElementById('q-text').innerText = q.question;
+        function showQ() {
+            const q = quizData[index];
+            document.getElementById('current-m-title').innerText = "NIELIT " + moduleKey;
+            document.getElementById('q-count-display').innerText = `Progress: ${index + 1} of ${quizData.length}`;
+            document.getElementById('question-text').innerText = q.question;
+            document.getElementById('progress-bar').style.width = `${((index+1)/quizData.length)*100}%`;
             
-            const box = document.getElementById('options-box');
-            box.innerHTML = '';
+            const grid = document.getElementById('options-grid');
+            grid.innerHTML = '';
             
             q.options.forEach(opt => {
-                const b = document.createElement('button');
-                b.className = "option-btn p-4 rounded-lg font-semibold text-gray-700 shadow-sm";
-                b.innerText = opt;
-                b.onclick = () => {
-                    const btns = box.querySelectorAll('button');
-                    btns.forEach(btn => btn.disabled = true);
-                    if(opt === q.answer) {
-                        b.classList.add('selected-correct');
+                const btn = document.createElement('button');
+                btn.className = "option-btn p-5 rounded-2xl font-semibold text-gray-700";
+                btn.innerText = opt;
+                btn.onclick = () => {
+                    const all = grid.querySelectorAll('button');
+                    all.forEach(b => b.disabled = true);
+                    if (opt === q.answer) {
+                        btn.classList.add('correct');
                         score++;
                     } else {
-                        b.classList.add('selected-wrong');
-                        btns.forEach(btn => { if(btn.innerText === q.answer) btn.classList.add('selected-correct'); });
+                        btn.classList.add('wrong');
+                        all.forEach(b => { if(b.innerText === q.answer) b.classList.add('correct'); });
                     }
                     document.getElementById('next-btn').classList.remove('hidden');
                 };
-                box.appendChild(b);
+                grid.appendChild(btn);
             });
             document.getElementById('next-btn').classList.add('hidden');
         }
 
         document.getElementById('next-btn').onclick = () => {
-            cursor++;
-            if(cursor < questions.length) {
-                showQuestion();
-            } else {
-                const percentage = Math.round((score/questions.length)*100);
-                alert(`Badhai ho ${studentName}!\n\nAapka Score: ${score}/${questions.length} (${percentage}%)`);
-                location.reload();
+            index++;
+            if (index < quizData.length) showQ();
+            else {
+                showResult();
             }
         };
+
+        function showResult() {
+            const per = Math.round((score/quizData.length)*100);
+            const status = per >= 50 ? "PASSED" : "FAILED";
+            const color = per >= 50 ? "text-green-600" : "text-red-600";
+            
+            document.getElementById('quiz-area').innerHTML = `
+                <div class="bg-white rounded-3xl shadow-2xl p-10 text-center max-w-lg mx-auto border-t-8 border-blue-600">
+                    <h2 class="text-3xl font-bold mb-2">Quiz Result</h2>
+                    <p class="text-gray-500 mb-8">Well done, ${student}!</p>
+                    <div class="text-6xl font-black mb-4 ${color}">${per}%</div>
+                    <div class="text-xl font-bold mb-8 italic">Grade: ${status}</div>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-gray-50 p-4 rounded-xl">
+                            <span class="block text-gray-400 text-xs">Correct</span>
+                            <span class="text-xl font-bold text-green-600">${score}</span>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-xl">
+                            <span class="block text-gray-400 text-xs">Total</span>
+                            <span class="text-xl font-bold text-blue-600">${quizData.length}</span>
+                        </div>
+                    </div>
+                    <button onclick="location.reload()" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold shadow-lg hover:bg-blue-700">Practice Again</button>
+                </div>
+            `;
+        }
     </script>
 </body>
 </html>
