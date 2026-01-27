@@ -3,306 +3,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIELIT Exam Portal | Kaushal Institute</title>
+    <title>NIELIT Official CBT Portal | Kaushal Institute</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-        body { background-color: #f8fafc; font-family: 'Inter', sans-serif; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        body { background-color: #f0f2f5; font-family: 'Roboto', sans-serif; height: 100vh; overflow: hidden; }
+        .nielit-blue { background: #003366; }
+        .nielit-orange { background: #ff9933; }
         
-        /* Question Palette Colors */
-        .q-btn { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-weight: 700; border: 1px solid #d1d5db; cursor: pointer; background: white; transition: 0.3s; }
-        .q-answered { background: #16a34a !important; color: white !important; border-color: #15803d !important; }
-        .q-skipped { background: #dc2626 !important; color: white !important; border-color: #b91c1c !important; }
-        .q-current { ring: 4px; ring-color: #2563eb; border: 3px solid #2563eb !important; transform: scale(1.1); }
-        
-        /* Option Cards */
-        .option-card { border: 2px solid #e2e8f0; border-radius: 12px; padding: 18px; transition: 0.2s; background: white; width: 100%; text-align: left; cursor: pointer; font-weight: 500; }
-        .option-card:hover { border-color: #3b82f6; background: #f0f7ff; }
-        .option-card.active { border-color: #2563eb; background: #dbeafe; color: #1e40af; font-weight: 700; }
+        /* Official NIELIT Palette Shapes */
+        .q-btn { width: 38px; height: 38px; font-size: 13px; font-weight: bold; border: 1px solid #ccc; cursor: pointer; background: #fff; transition: 0.2s; }
+        .q-answered { 
+            background: #28a745 !important; color: white !important; 
+            clip-path: polygon(0% 20%, 20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%); 
+        }
+        .q-not-answered { 
+            background: #dc3545 !important; color: white !important; 
+            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); 
+        }
+        .q-current { border: 3px solid #000 !important; transform: scale(1.1); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+        .option-label { border: 1px solid #dee2e6; border-radius: 6px; padding: 14px; cursor: pointer; transition: 0.2s; display: block; background: #fff; }
+        .option-label:hover { background-color: #f1f5f9; border-color: #94a3b8; }
+        .option-input:checked + .option-label { border-color: #003366; background-color: #eff6ff; font-weight: bold; box-shadow: inset 0 0 0 1px #003366; }
         
         .hide { display: none !important; }
-        .custom-scroll::-webkit-scrollbar { width: 5px; height: 5px; }
+        .modal-bg { background: rgba(0,0,0,0.6); backdrop-filter: blur(3px); }
+        .custom-scroll::-webkit-scrollbar { width: 5px; }
         .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
     </style>
 </head>
 <body class="flex flex-col">
 
-    <header class="bg-blue-900 text-white p-4 shadow-lg flex justify-between items-center z-50">
-        <div class="flex items-center gap-2">
-            <i class="fas fa-laptop-code text-orange-400 text-xl"></i>
-            <h1 class="font-bold uppercase tracking-tight text-sm md:text-base">NIELIT CBT - Kaushal Institute</h1>
+    <header class="nielit-blue text-white px-4 py-2 flex justify-between items-center shrink-0 shadow-lg border-b border-white/10">
+        <div class="flex items-center gap-3">
+            <div class="bg-white p-1 rounded-sm"><img src="https://upload.wikimedia.org/wikipedia/en/b/b3/NIELIT_Logo.png" class="h-8 md:h-10"></div>
+            <div>
+                <h1 class="text-xs md:text-sm font-bold leading-tight">National Institute of Electronics & IT</h1>
+                <p class="text-[9px] md:text-[10px] text-orange-400 uppercase font-black tracking-widest">CBT Practice - Kaushal Institute</p>
+            </div>
         </div>
-        <div id="exam-timer" class="bg-red-600 px-4 py-1 rounded font-mono text-lg font-bold shadow-inner">90:00</div>
+        <div class="flex items-center gap-3">
+            <div id="exam-timer" class="bg-black/40 border border-white/20 px-4 py-1 rounded-md font-mono text-xl font-bold text-orange-400">90:00</div>
+            <button onclick="toggleModal('instruction-modal')" class="hidden sm:block bg-white/10 hover:bg-white/20 px-3 py-1 rounded text-xs font-bold uppercase">Help</button>
+        </div>
     </header>
 
-    <main class="flex-1 flex flex-col overflow-hidden relative">
+    <main class="flex-1 flex flex-col relative overflow-hidden">
         
-        <section id="setup-area" class="w-full h-full flex items-center justify-center p-4 bg-slate-100 overflow-y-auto">
-            <div id="name-box" class="bg-white p-8 rounded-3xl shadow-2xl max-w-md w-full text-center border-b-8 border-blue-900">
-                <h2 class="text-3xl font-black text-gray-800 mb-6">Welcome</h2>
-                <input type="text" id="s-name" placeholder="Enter Full Name" class="w-full p-4 border-2 rounded-2xl mb-6 outline-none focus:border-blue-600 text-lg">
-                <button onclick="showModules()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-bold text-xl shadow-lg transition-transform active:scale-95">Next <i class="fas fa-arrow-right ml-2"></i></button>
-            </div>
-
-            <div id="module-box" class="hide grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl w-full">
-                <div class="sm:col-span-2 text-center py-4"><h2 class="text-2xl font-bold">Select Module</h2></div>
-                <button onclick="pickModule('M1')" class="bg-white p-6 rounded-2xl shadow-md border-2 border-transparent hover:border-blue-600 flex flex-col gap-2">
-                    <span class="text-blue-700 font-black text-xl text-left">M1-R5</span>
-                    <span class="text-gray-500 text-sm text-left font-semibold">IT Tools & Network Basics</span>
-                </button>
-                <button onclick="pickModule('M2')" class="bg-white p-6 rounded-2xl shadow-md border-2 border-transparent hover:border-green-600 flex flex-col gap-2">
-                    <span class="text-green-700 font-black text-xl text-left">M2-R5</span>
-                    <span class="text-gray-500 text-sm text-left font-semibold">Web Design & Publishing</span>
-                </button>
-                <button onclick="pickModule('M3')" class="bg-white p-6 rounded-2xl shadow-md border-2 border-transparent hover:border-yellow-600 flex flex-col gap-2">
-                    <span class="text-yellow-700 font-black text-xl text-left">M3-R5</span>
-                    <span class="text-gray-500 text-sm text-left font-semibold">Python Programming</span>
-                </button>
-                <button onclick="pickModule('M4')" class="bg-white p-6 rounded-2xl shadow-md border-2 border-transparent hover:border-purple-600 flex flex-col gap-2">
-                    <span class="text-purple-700 font-black text-xl text-left">M4-R5</span>
-                    <span class="text-gray-500 text-sm text-left font-semibold">Internet of Things</span>
-                </button>
+        <section id="login-ui" class="absolute inset-0 z-[100] bg-slate-100 flex items-center justify-center p-4">
+            <div class="bg-white w-full max-w-md rounded-xl shadow-2xl overflow-hidden border border-gray-200">
+                <div class="nielit-blue p-5 text-center text-white">
+                    <h2 class="text-xl font-bold tracking-tight uppercase">System Login</h2>
+                </div>
+                <div class="p-8">
+                    <div class="mb-6">
+                        <label class="block text-[11px] font-black text-gray-500 uppercase mb-2 tracking-widest">Candidate Full Name</label>
+                        <input type="text" id="cand-name" class="w-full border-2 border-gray-100 p-4 rounded-xl outline-none focus:border-blue-900 transition-all text-lg font-bold" placeholder="Eg. Rahul Kumar">
+                    </div>
+                    <button onclick="goToModules()" class="w-full nielit-orange text-white py-4 rounded-xl font-black text-lg shadow-xl hover:brightness-110 active:scale-[0.98] transition-all">SIGN IN <i class="fas fa-sign-in-alt ml-2"></i></button>
+                </div>
             </div>
         </section>
 
-        <div id="count-screen" class="hide fixed inset-0 bg-black/70 flex items-center justify-center z-[100] p-4 backdrop-blur-sm">
-            <div class="bg-white p-8 rounded-3xl shadow-2xl max-w-sm w-full text-center">
-                <h3 class="text-xl font-bold mb-6">Select Question Count</h3>
+        <section id="module-ui" class="hide absolute inset-0 z-[90] bg-slate-50 p-6 overflow-y-auto">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex items-center gap-4 mb-8 border-b-2 border-gray-200 pb-4">
+                    <i class="fas fa-file-alt text-3xl text-blue-900"></i>
+                    <h2 class="text-2xl font-black text-gray-800 uppercase tracking-tight">Available Question Papers</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <button onclick="pickModule('M1')" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border-b-4 border-blue-900 text-left transition-all">
+                        <span class="block text-blue-900 font-black text-2xl mb-1">M1-R5</span>
+                        <span class="text-sm font-medium text-gray-500 group-hover:text-gray-800">IT Tools & Network Basics</span>
+                    </button>
+                    <button onclick="pickModule('M2')" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border-b-4 border-green-600 text-left transition-all">
+                        <span class="block text-green-700 font-black text-2xl mb-1">M2-R5</span>
+                        <span class="text-sm font-medium text-gray-500 group-hover:text-gray-800">Web Designing & Publishing</span>
+                    </button>
+                    <button onclick="pickModule('M3')" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border-b-4 border-yellow-500 text-left transition-all">
+                        <span class="block text-yellow-600 font-black text-2xl mb-1">M3-R5</span>
+                        <span class="text-sm font-medium text-gray-500 group-hover:text-gray-800">Python Programming</span>
+                    </button>
+                    <button onclick="pickModule('M4')" class="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl border-b-4 border-purple-600 text-left transition-all">
+                        <span class="block text-purple-700 font-black text-2xl mb-1">M4-R5</span>
+                        <span class="text-sm font-medium text-gray-500 group-hover:text-gray-800">IoT & its Applications</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div id="count-pop" class="hide modal-bg fixed inset-0 z-[110] flex items-center justify-center p-4">
+            <div class="bg-white rounded-2xl p-8 max-w-sm w-full shadow-2xl">
+                <h3 class="font-black text-xl mb-6 text-center text-gray-800 border-b pb-4">Set Question Count</h3>
                 <div class="grid grid-cols-2 gap-4">
-                    <button onclick="startExam(25)" class="p-4 bg-blue-50 text-blue-700 rounded-2xl hover:bg-blue-600 hover:text-white font-bold transition">25 Qns</button>
-                    <button onclick="startExam(50)" class="p-4 bg-blue-50 text-blue-700 rounded-2xl hover:bg-blue-600 hover:text-white font-bold transition">50 Qns</button>
-                    <button onclick="startExam(75)" class="p-4 bg-blue-50 text-blue-700 rounded-2xl hover:bg-blue-600 hover:text-white font-bold transition">75 Qns</button>
-                    <button onclick="startExam(100)" class="p-4 bg-blue-50 text-blue-700 rounded-2xl hover:bg-blue-600 hover:text-white font-bold transition">100 Qns</button>
+                    <button onclick="startFinal(25)" class="border-2 border-blue-50 p-4 rounded-xl font-black text-blue-700 hover:bg-blue-600 hover:text-white transition-all">25</button>
+                    <button onclick="startFinal(50)" class="border-2 border-blue-50 p-4 rounded-xl font-black text-blue-700 hover:bg-blue-600 hover:text-white transition-all">50</button>
+                    <button onclick="startFinal(75)" class="border-2 border-blue-50 p-4 rounded-xl font-black text-blue-700 hover:bg-blue-600 hover:text-white transition-all">75</button>
+                    <button onclick="startFinal(100)" class="border-2 border-blue-50 p-4 rounded-xl font-black text-blue-700 hover:bg-blue-600 hover:text-white transition-all">100</button>
                 </div>
             </div>
         </div>
 
-        <section id="exam-ui" class="hide flex flex-col md:flex-row h-full w-full overflow-hidden">
+        <section id="exam-ui" class="hide flex flex-col md:flex-row h-full">
             
-            <div class="flex-1 flex flex-col bg-white overflow-hidden order-1 md:order-1">
-                <div class="p-3 bg-gray-100 border-b flex justify-between font-bold text-xs uppercase text-gray-600">
-                    <span id="mod-label"></span>
-                    <span id="q-idx-label" class="text-blue-700"></span>
+            <div class="flex-1 flex flex-col bg-white overflow-hidden border-r border-gray-200">
+                <div class="bg-slate-100 p-3 border-b flex justify-between text-[11px] font-black text-gray-500 uppercase tracking-tighter">
+                    <span id="module-display"></span>
+                    <span id="q-number-display" class="text-blue-900"></span>
                 </div>
                 
-                <div class="flex-1 p-6 md:p-10 overflow-y-auto">
-                    <h2 id="q-text" class="text-lg md:text-2xl font-bold text-gray-800 mb-8 leading-snug"></h2>
-                    <div id="options-box" class="space-y-3"></div>
+                <div class="flex-1 p-6 md:p-14 overflow-y-auto custom-scroll">
+                    <h2 id="question-text" class="text-xl md:text-2xl font-bold text-gray-800 leading-relaxed mb-10"></h2>
+                    <div id="options-grid" class="space-y-4 max-w-3xl"></div>
                 </div>
 
-                <div class="p-4 border-t bg-gray-50 flex justify-between items-center shrink-0">
-                    <button onclick="changeQ(-1)" class="px-6 py-3 bg-slate-200 rounded-xl font-bold hover:bg-slate-300">
-                        <i class="fas fa-chevron-left"></i> Previous
-                    </button>
+                <div class="p-4 border-t bg-slate-50 flex justify-between items-center gap-2">
                     <div class="flex gap-2">
-                        <button onclick="changeQ(1)" id="next-btn" class="px-8 py-3 bg-blue-600 text-white rounded-xl font-bold shadow-md hover:bg-blue-700">
-                            Next <i class="fas fa-chevron-right ml-1"></i>
-                        </button>
-                        <button onclick="finishTest()" id="submit-btn" class="hide px-8 py-3 bg-green-600 text-white rounded-xl font-bold shadow-md hover:bg-green-700">
-                            Submit <i class="fas fa-check-double ml-1"></i>
-                        </button>
+                        <button onclick="moveQ(-1)" class="px-5 py-3 border-2 border-gray-200 rounded-xl font-bold bg-white hover:bg-gray-100 text-sm">PREVIOUS</button>
+                        <button onclick="clearResponse()" class="px-5 py-3 border-2 border-red-100 rounded-xl font-bold bg-white text-red-600 hover:bg-red-50 text-sm">CLEAR</button>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="moveQ(1)" id="btn-next" class="px-10 py-3 nielit-blue text-white rounded-xl font-black hover:brightness-125 shadow-lg text-sm tracking-widest">SAVE & NEXT <i class="fas fa-chevron-right ml-2"></i></button>
+                        <button onclick="submitExam()" id="btn-submit" class="hide px-10 py-3 bg-green-700 text-white rounded-xl font-black hover:brightness-110 shadow-lg text-sm tracking-widest">SUBMIT TEST <i class="fas fa-check-circle ml-2"></i></button>
                     </div>
                 </div>
             </div>
 
-            <aside class="w-full md:w-80 bg-gray-100 border-t md:border-t-0 md:border-l flex flex-col p-4 order-2 md:order-2 shrink-0 h-48 md:h-full">
-                <h4 class="font-bold text-gray-700 mb-3 text-sm flex items-center justify-between">
-                    <span>Question Palette</span>
-                    <span class="text-[10px] bg-gray-200 px-2 py-1 rounded">Click to Jump</span>
-                </h4>
-                <div id="palette-grid" class="flex flex-wrap gap-2 overflow-y-auto content-start flex-1 custom-scroll p-1"></div>
-                
-                <div class="hidden md:flex flex-col gap-2 mt-4 pt-4 border-t text-[10px] font-bold">
-                    <div class="flex items-center gap-2"><span class="w-3 h-3 bg-green-500 rounded"></span> Answered</div>
-                    <div class="flex items-center gap-2"><span class="w-3 h-3 bg-red-600 rounded"></span> Skipped</div>
-                    <div class="flex items-center gap-2"><span class="w-3 h-3 bg-white border border-gray-400 rounded"></span> Not Visited</div>
+            <aside class="w-full md:w-80 bg-gray-50 flex flex-col shrink-0 h-72 md:h-full border-t md:border-t-0">
+                <div class="p-5 bg-white border-b flex items-center justify-between">
+                    <div>
+                        <p class="text-[10px] text-gray-400 font-black uppercase tracking-widest">Candidate</p>
+                        <p id="display-name" class="font-black text-blue-900 uppercase leading-none mt-1"></p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-[10px] text-gray-400 font-black uppercase tracking-widest">Status</p>
+                        <p class="text-[10px] text-green-600 font-black animate-pulse uppercase">Live</p>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-slate-50 grid grid-cols-2 gap-3 text-[10px] font-black uppercase border-b">
+                    <div class="flex items-center gap-2 border bg-white p-2 rounded-lg">
+                        <span id="stat-ans" class="w-6 h-6 bg-green-600 text-white flex items-center justify-center rounded font-bold shadow-sm">0</span> Answered
+                    </div>
+                    <div class="flex items-center gap-2 border bg-white p-2 rounded-lg">
+                        <span id="stat-skip" class="w-6 h-6 bg-red-600 text-white flex items-center justify-center rounded font-bold shadow-sm">0</span> Skipped
+                    </div>
+                </div>
+
+                <div class="p-4 flex-1 overflow-y-auto custom-scroll">
+                    <h4 class="text-[11px] font-black text-gray-400 mb-4 uppercase tracking-widest text-center">Question Palette</h4>
+                    <div id="palette-box" class="flex flex-wrap gap-2 justify-center"></div>
                 </div>
             </aside>
         </section>
 
-        <section id="result-ui" class="hide fixed inset-0 bg-white z-[200] overflow-y-auto p-4 md:p-10">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-10">
-                    <h1 class="text-4xl font-black text-gray-800">Exam Summary</h1>
-                    <p id="res-name" class="text-blue-600 font-bold mt-2 uppercase"></p>
+        <section id="result-ui" class="hide absolute inset-0 z-[200] bg-white overflow-y-auto">
+            <div class="max-w-4xl mx-auto p-6 md:p-12 pb-24">
+                <div class="text-center py-12 border-b-2 border-dashed mb-10">
+                    <div class="w-20 h-20 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center mx-auto mb-4 border-4 border-blue-100">
+                        <i class="fas fa-graduation-cap text-3xl"></i>
+                    </div>
+                    <h1 class="text-4xl font-black text-gray-800 uppercase tracking-tighter">Evaluation Result</h1>
+                    <p class="text-blue-600 font-bold mt-2 uppercase tracking-widest" id="res-info"></p>
                 </div>
 
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-                    <div class="bg-blue-900 text-white p-6 rounded-3xl text-center">
-                        <p class="text-[10px] opacity-70">GRADE</p>
-                        <p id="res-grade" class="text-4xl font-black"></p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="nielit-blue p-10 rounded-3xl text-center text-white shadow-2xl shadow-blue-200">
+                        <span class="text-xs font-black opacity-60 tracking-widest uppercase">Official Grade</span>
+                        <p id="res-grade" class="text-7xl font-black mt-2"></p>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-3xl text-center">
-                        <p class="text-[10px] text-gray-500 uppercase">Score</p>
-                        <p id="res-score" class="text-2xl font-black text-gray-800"></p>
+                    <div class="bg-gray-50 p-10 rounded-3xl text-center border-2 border-gray-100">
+                        <span class="text-xs font-black text-gray-400 tracking-widest uppercase">Score Details</span>
+                        <p id="res-score-tally" class="text-4xl font-black text-gray-800 mt-2"></p>
+                        <p class="text-xs font-bold text-gray-400 mt-2" id="res-percent"></p>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-3xl text-center text-green-600">
-                        <p class="text-[10px] text-gray-500 uppercase">Correct</p>
-                        <p id="res-correct" class="text-2xl font-black"></p>
-                    </div>
-                    <div class="bg-gray-100 p-6 rounded-3xl text-center text-red-600">
-                        <p class="text-[10px] text-gray-500 uppercase">Wrong</p>
-                        <p id="res-wrong" class="text-2xl font-black"></p>
+                    <div class="bg-gray-50 p-10 rounded-3xl text-center border-2 border-gray-100">
+                        <span class="text-xs font-black text-gray-400 tracking-widest uppercase">Accuracy</span>
+                        <div id="accuracy-gauge" class="text-4xl font-black text-blue-900 mt-2"></div>
                     </div>
                 </div>
 
-                <div class="bg-orange-50 p-4 rounded-xl mb-6 border-l-4 border-orange-400 flex items-center gap-3">
-                    <i class="fas fa-exclamation-triangle text-orange-600"></i>
-                    <p class="text-sm font-bold text-orange-800">Incorrect answers listed below for review.</p>
+                <div class="space-y-6">
+                    <h3 class="text-xl font-black text-gray-800 uppercase border-l-4 border-blue-900 pl-4 mb-6">Incorrect Response Analysis</h3>
+                    <div id="analysis-list" class="grid grid-cols-1 gap-4"></div>
                 </div>
-                
-                <div id="analysis-box" class="space-y-4 pb-20"></div>
 
-                <div class="fixed bottom-0 left-0 w-full p-4 bg-white border-t flex gap-4 justify-center">
-                    <button onclick="location.reload()" class="w-full max-w-xs bg-blue-700 text-white py-4 rounded-2xl font-bold shadow-xl">New Test</button>
+                <div class="fixed bottom-0 left-0 w-full p-6 bg-white border-t flex justify-center">
+                    <button onclick="location.reload()" class="w-full max-w-md nielit-blue text-white py-4 rounded-2xl font-black shadow-2xl uppercase tracking-widest">Restart New Practice Session</button>
                 </div>
             </div>
         </section>
-
     </main>
 
+    <div id="instruction-modal" class="hide modal-bg fixed inset-0 z-[150] flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden">
+            <div class="p-5 nielit-blue text-white font-black flex justify-between uppercase tracking-widest text-sm">Examination Rules <button onclick="toggleModal('instruction-modal')" class="text-xl">&times;</button></div>
+            <div class="p-8 text-sm space-y-4 text-gray-600 font-medium">
+                <p class="flex gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i> Use 'Save & Next' to confirm your answer.</p>
+                <p class="flex gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i> Green shapes on palette indicate answered questions.</p>
+                <p class="flex gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i> Red shapes indicate visited but skipped questions.</p>
+                <p class="font-black text-blue-900 mt-6 border-t pt-4">NIELIT GRADING: S (85%+), A (75%+), B (65%+), C (55%+), D (50%+), F (Fail)</p>
+            </div>
+        </div>
+    </div>
+
     <script>
-        let rawData = [];
-        let examData = [];
-        let userAnswers = {};
+        let fullData = {};
+        let activeQuestions = [];
+        let answers = {};
         let visited = new Set();
         let currentIdx = 0;
-        let sName = "";
-        let timer = 90 * 60;
-        let interval;
+        let candidateName = "";
+        let selectedModule = "";
+        let timeLeft = 90 * 60;
+        let timerFunc;
 
-        function showModules() {
-            sName = document.getElementById('s-name').value;
-            if(sName.trim().length < 2) return alert("Enter Name!");
-            document.getElementById('name-box').classList.add('hide');
-            document.getElementById('module-box').classList.remove('hide');
+        function toggleModal(id) { document.getElementById(id).classList.toggle('hide'); }
+
+        function goToModules() {
+            candidateName = document.getElementById('cand-name').value.trim();
+            if(candidateName.length < 3) return alert("Please enter valid candidate name!");
+            document.getElementById('display-name').innerText = candidateName;
+            document.getElementById('login-ui').classList.add('hide');
+            document.getElementById('module-ui').classList.remove('hide');
         }
 
         async function pickModule(m) {
+            selectedModule = m;
             try {
-                // Fetching small letter filename 'questions.json'
                 const res = await fetch('questions.json');
-                const data = await res.json();
-                rawData = data[m];
-                document.getElementById('count-screen').classList.remove('hide');
-            } catch(e) { alert("questions.json file error!"); }
+                if(!res.ok) throw new Error();
+                fullData = await res.json();
+                document.getElementById('count-pop').classList.remove('hide');
+            } catch(e) { alert("questions.json loading failed! Check filename."); }
         }
 
-        function startExam(count) {
-            document.getElementById('count-screen').classList.add('hide');
-            document.getElementById('setup-area').classList.add('hide');
+        function startFinal(limit) {
+            document.getElementById('count-pop').classList.add('hide');
+            document.getElementById('module-ui').classList.add('hide');
             document.getElementById('exam-ui').classList.remove('hide');
             
-            examData = rawData.sort(() => 0.5 - Math.random()).slice(0, count);
-            startClock();
-            buildPalette();
+            activeQuestions = fullData[selectedModule].sort(() => 0.5 - Math.random()).slice(0, limit);
+            initPalette();
             renderQ();
+            startTimer();
         }
 
-        function startClock() {
-            interval = setInterval(() => {
-                timer--;
-                let min = Math.floor(timer/60);
-                let sec = timer%60;
-                document.getElementById('exam-timer').innerText = `${min}:${sec < 10 ? '0'+sec : sec}`;
-                if(timer <= 0) finishTest(true);
-            }, 1000);
-        }
-
-        function buildPalette() {
-            const grid = document.getElementById('palette-grid');
-            grid.innerHTML = '';
-            examData.forEach((_, i) => {
+        function initPalette() {
+            const box = document.getElementById('palette-box');
+            box.innerHTML = '';
+            activeQuestions.forEach((_, i) => {
                 const b = document.createElement('button');
-                b.className = `q-btn b-id-${i}`;
+                b.className = `q-btn p-id-${i}`;
                 b.innerText = i + 1;
                 b.onclick = () => { currentIdx = i; renderQ(); };
-                grid.appendChild(b);
+                box.appendChild(b);
             });
         }
 
         function renderQ() {
-            const q = examData[currentIdx];
+            const q = activeQuestions[currentIdx];
             visited.add(currentIdx);
             
-            document.getElementById('q-idx-label').innerText = `Question ${currentIdx + 1} of ${examData.length}`;
-            document.getElementById('q-text').innerText = q.question;
+            document.getElementById('module-display').innerText = "Paper: " + selectedModule;
+            document.getElementById('q-number-display').innerText = `Question ${currentIdx + 1} of ${activeQuestions.length}`;
+            document.getElementById('question-text').innerText = q.question;
             
-            const box = document.getElementById('options-box');
-            box.innerHTML = '';
+            const grid = document.getElementById('options-grid');
+            grid.innerHTML = '';
             
-            q.options.forEach(opt => {
-                const btn = document.createElement('button');
-                btn.className = `option-card ${userAnswers[currentIdx] === opt ? 'active' : ''}`;
-                btn.innerText = opt;
-                btn.onclick = () => { 
-                    userAnswers[currentIdx] = opt; 
-                    updatePalette(); 
-                    renderQ(); 
-                };
-                box.appendChild(btn);
+            q.options.forEach((opt, idx) => {
+                const id = `opt-${idx}`;
+                const checked = answers[currentIdx] === opt ? 'checked' : '';
+                grid.innerHTML += `
+                    <div>
+                        <input type="radio" name="option" id="${id}" class="hide option-input" ${checked} onchange="saveAnswer('${opt}')">
+                        <label for="${id}" class="option-label text-sm md:text-base">${opt}</label>
+                    </div>`;
             });
 
-            updatePalette();
-            
-            document.getElementById('next-btn').classList.toggle('hide', currentIdx === examData.length - 1);
-            document.getElementById('submit-btn').classList.toggle('hide', currentIdx !== examData.length - 1);
+            updatePaletteUI();
+            document.getElementById('btn-next').classList.toggle('hide', currentIdx === activeQuestions.length - 1);
+            document.getElementById('btn-submit').classList.toggle('hide', currentIdx !== activeQuestions.length - 1);
         }
 
-        function updatePalette() {
-            examData.forEach((_, i) => {
-                const b = document.querySelector(`.b-id-${i}`);
-                if(!b) return;
-                b.classList.remove('q-current', 'q-answered', 'q-skipped');
-                if(i === currentIdx) b.classList.add('q-current');
-                if(userAnswers[i]) b.classList.add('q-answered');
-                else if(visited.has(i)) b.classList.add('q-skipped');
-            });
+        function saveAnswer(val) {
+            answers[currentIdx] = val;
+            updatePaletteUI();
         }
 
-        function changeQ(dir) {
-            currentIdx += dir;
-            if(currentIdx < 0) currentIdx = 0;
-            if(currentIdx >= examData.length) currentIdx = examData.length - 1;
+        function clearResponse() {
+            delete answers[currentIdx];
             renderQ();
         }
 
-        function finishTest(auto = false) {
-            if(!auto && !confirm("Final Submit?")) return;
-            clearInterval(interval);
+        function updatePaletteUI() {
+            let ansCount = 0;
+            let skipCount = 0;
+            
+            activeQuestions.forEach((_, i) => {
+                const b = document.querySelector(`.p-id-${i}`);
+                if(!b) return;
+                b.classList.remove('q-current', 'q-answered', 'q-not-answered');
+                if(i === currentIdx) b.classList.add('q-current');
+                if(answers[i]) { b.classList.add('q-answered'); ansCount++; }
+                else if(visited.has(i)) { b.classList.add('q-not-answered'); skipCount++; }
+            });
+            
+            document.getElementById('stat-ans').innerText = ansCount;
+            document.getElementById('stat-skip').innerText = skipCount;
+        }
+
+        function moveQ(dir) {
+            currentIdx += dir;
+            if(currentIdx < 0) currentIdx = 0;
+            if(currentIdx >= activeQuestions.length) currentIdx = activeQuestions.length - 1;
+            renderQ();
+        }
+
+        function startTimer() {
+            timerFunc = setInterval(() => {
+                timeLeft--;
+                let m = Math.floor(timeLeft/60);
+                let s = timeLeft%60;
+                document.getElementById('exam-timer').innerText = `${m}:${s < 10 ? '0'+s : s}`;
+                if(timeLeft <= 0) submitExam(true);
+            }, 1000);
+        }
+
+        function submitExam(auto = false) {
+            if(!auto && !confirm("Are you sure you want to finish the exam?")) return;
+            clearInterval(timerFunc);
             
             document.getElementById('exam-ui').classList.add('hide');
             document.getElementById('result-ui').classList.remove('hide');
             
-            let correct = 0;
-            let analysis = '';
+            let score = 0;
+            let listHTML = '';
 
-            examData.forEach((q, i) => {
-                const uAns = userAnswers[i] || "Skipped";
-                if(uAns === q.answer) correct++;
+            activeQuestions.forEach((q, i) => {
+                const u = answers[i] || "Skipped";
+                if(u === q.answer) score++;
                 else {
-                    analysis += `
-                        <div class="p-5 bg-white border border-gray-200 rounded-2xl shadow-sm">
-                            <p class="font-bold text-gray-800 mb-2">Q${i+1}: ${q.question}</p>
-                            <div class="flex flex-col sm:flex-row gap-4 text-sm">
-                                <span class="text-red-600 font-bold italic">Your: ${uAns}</span>
-                                <span class="text-green-700 font-bold">Correct: ${q.answer}</span>
+                    listHTML += `
+                        <div class="bg-white p-6 rounded-2xl border-2 border-gray-100 shadow-sm border-l-8 border-l-red-500">
+                            <p class="font-bold text-gray-800">Q${i+1}. ${q.question}</p>
+                            <div class="flex flex-col md:flex-row gap-4 mt-3">
+                                <span class="text-xs font-black text-red-600 bg-red-50 px-3 py-1 rounded-full uppercase">Your: ${u}</span>
+                                <span class="text-xs font-black text-green-700 bg-green-50 px-3 py-1 rounded-full uppercase">Correct: ${q.answer}</span>
                             </div>
                         </div>`;
                 }
             });
 
-            const p = Math.round((correct/examData.length)*100);
+            const p = Math.round((score/activeQuestions.length)*100);
             let grade = 'F';
             if(p>=85) grade='S'; else if(p>=75) grade='A'; else if(p>=65) grade='B'; else if(p>=55) grade='C'; else if(p>=50) grade='D';
 
-            document.getElementById('res-name').innerText = sName;
+            document.getElementById('res-info').innerText = candidateName + " | " + selectedModule;
             document.getElementById('res-grade').innerText = grade;
-            document.getElementById('res-score').innerText = `${correct}/${examData.length}`;
-            document.getElementById('res-correct').innerText = correct;
-            document.getElementById('res-wrong').innerText = examData.length - correct;
-            document.getElementById('analysis-box').innerHTML = analysis || "<p class='text-center text-green-600 font-bold'>Perfect Score! No mistakes.</p>";
+            document.getElementById('res-score-tally').innerText = `${score} / ${activeQuestions.length}`;
+            document.getElementById('res-percent').innerText = p + "% Total Performance";
+            document.getElementById('accuracy-gauge').innerText = p + "%";
+            document.getElementById('analysis-list').innerHTML = listHTML || "<div class='text-center p-10 bg-green-50 rounded-2xl font-bold text-green-700'>Excellent! 100% Accuracy Achieved.</div>";
         }
     </script>
 </body>
