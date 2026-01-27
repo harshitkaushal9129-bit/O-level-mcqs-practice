@@ -1,0 +1,44 @@
+{
+  "M1": [
+    { "question": "LibreOffice Writer mein default font size kya hota hai?", "options": ["10", "12", "15", "11"], "answer": "12" },
+    { "question": "OTP ka full form kya hai?", "options": ["One Time Password", "One Time Pincode", "Only Testing Password", "None"], "answer": "One Time Password" },
+    { "question": "Linux ek __________ hai.", "options": ["Application Software", "Compiler", "Operating System", "Hardware"], "answer": "Operating System" },
+    { "question": "Blogger kiski service hai?", "options": ["Microsoft", "Google", "Yahoo", "Apple"], "answer": "Google" },
+    { "question": "QR Code ka arth kya hai?", "options": ["Quick Response", "Quality Response", "Quick Register", "None"], "answer": "Quick Response" },
+    { "question": "Calc mein select ki gayi cell ko delete karne ki shortcut key?", "options": ["Ctrl + -", "Ctrl + +", "Ctrl + D", "None"], "answer": "Ctrl + -" },
+    { "question": "IMPS ka poora naam kya hai?", "options": ["Immediate Payment Service", "Internal Payment Service", "Instant Money Service", "None"], "answer": "Immediate Payment Service" },
+    { "question": "Email ke janmdata kaun hain?", "options": ["Bill Gates", "Ray Tomlinson", "Tim Berners Lee", "Mark Zuckerberg"], "answer": "Ray Tomlinson" },
+    { "question": "LibreOffice mein Help ki shortcut key kya hai?", "options": ["F2", "F1", "F3", "F5"], "answer": "F1" },
+    { "question": "IPv4 address kitne bits ka hota hai?", "options": ["32 Bits", "64 Bits", "128 Bits", "16 Bits"], "answer": "32 Bits" },
+    { "question": "AEPS ka full form kya hai?", "options": ["Aadhaar Enabled Payment System", "Aadhaar Effective Payment System", "All Enabled Payment System", "None"], "answer": "Aadhaar Enabled Payment System" },
+    { "question": "Twitter ka naya naam kya hai?", "options": ["T", "X", "Meta", "Z"], "answer": "X" }
+  ],
+  "M2": [
+    { "question": "HTML mein sabse badi heading tag kaunsi hai?", "options": ["<h6>", "<h1>", "<h4>", "<head>"], "answer": "<h1>" },
+    { "question": "CSS ka use kiske liye hota hai?", "options": ["Design", "Structure", "Database", "Backend"], "answer": "Design" },
+    { "question": "HTML document shuru hota hai?", "options": ["<body>", "<head>", "<html>", "<title>"], "answer": "<html>" },
+    { "question": "JavaScript mein variable declare karne ka tarika?", "options": ["var", "int", "string", "dim"], "answer": "var" },
+    { "question": "HTML mein line break ke liye kaunsa tag hai?", "options": ["<lb>", "<br>", "<break>", "<hr>"], "answer": "<br>" },
+    { "question": "Notepad++ kya hai?", "options": ["Browser", "Text Editor", "Operating System", "Compiler"], "answer": "Text Editor" },
+    { "question": "External CSS ko link karne ke liye kaunsa tag use hota hai?", "options": ["<style>", "<link>", "<css>", "<script>"], "answer": "<link>" },
+    { "question": "WWW ka avishkar kisne kiya?", "options": ["Tim Berners Lee", "Vint Cerf", "Larry Page", "None"], "answer": "Tim Berners Lee" },
+    { "question": "HTML table mein row create karne ke liye?", "options": ["<td>", "<th>", "<tr>", "<table>"], "answer": "<tr>" },
+    { "question": "JavaScript ek __________ language hai.", "options": ["Client Side", "Server Side", "Both", "None"], "answer": "Both" }
+  ],
+  "M3": [
+    { "question": "Python mein 'if' condition ka sahi syntax?", "options": ["if x > 5:", "if x > 5 then", "if (x > 5)", "if x > 5;"], "answer": "if x > 5:" },
+    { "question": "Python mein comment ke liye kaunsa symbol hai?", "options": ["//", "/*", "#", "--"], "answer": "#" },
+    { "question": "Python file ka extension kya hota hai?", "options": [".py", ".python", ".pt", ".p"], "answer": ".py" },
+    { "question": "Python mein list mutable hoti hai?", "options": ["True", "False"], "answer": "True" },
+    { "question": "Tuple create karne ke liye kaunsa bracket?", "options": ["[]", "{}", "()", "<>"], "answer": "()" },
+    { "question": "Python mein output ke liye function?", "options": ["echo", "print()", "printf", "console.log"], "answer": "print()" },
+    { "question": "Range(5) kya generate karega?", "options": ["0,1,2,3,4,5", "1,2,3,4,5", "0,1,2,3,4", "1 to 5"], "answer": "0,1,2,3,4" }
+  ],
+  "M4": [
+    { "question": "IoT ka full form kya hai?", "options": ["Internet of Things", "Internet of Technology", "Information of Things", "None"], "answer": "Internet of Things" },
+    { "question": "Arduino IDE kis language par based hai?", "options": ["C/C++", "Python", "Java", "PHP"], "answer": "C/C++" },
+    { "question": "Sensors ka kaam kya hai?", "options": ["Data Processing", "Physical to Electrical signal", "Storage", "None"], "answer": "Physical to Electrical signal" },
+    { "question": "MQTT protocol kahan use hota hai?", "options": ["Web Designing", "IoT Communication", "Graphics", "None"], "answer": "IoT Communication" },
+    { "question": "LDR sensor ka use kya measure karne mein hota hai?", "options": ["Temperature", "Light Intensity", "Humidity", "Pressure"], "answer": "Light Intensity" }
+  ]
+}
