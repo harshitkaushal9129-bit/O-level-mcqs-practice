@@ -2,7 +2,7 @@ const CACHE_NAME = 'nielit-v1';
 const ASSETS = [
   'index.html',
   'manifest.json',
-  'https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/SNT.jpg'
+  'https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png'
 ];
 
 // Install Service Worker
