@@ -1,7 +1,6 @@
 {
-  "name": "NIELIT CBT Examination",
-  "short_name": "NIELIT App",
-  "description": "Kaushal Institute Official Exam Portal",
+  "name": "NIELIT Official CBT",
+  "short_name": "NIELIT Exam",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#f1f5f9",
