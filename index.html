@@ -6,18 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>NIELIT Official CBT </title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/png" href="https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png">
+<link rel="icon" type="image/png" href="https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png">
 
-    <meta name="theme-color" content="#003366">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="apple-touch-icon" href="https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png">
-    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#003366">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png">
+
+<link rel="manifest" href="manifest.json">
+
+
+
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         
+        /* SECURITY: Disable Selection & Touch Highlights */
         * { 
             -webkit-user-select: none; 
             -moz-user-select: none; 
@@ -29,12 +34,14 @@
 
         body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; height: 100vh; margin: 0; overflow: hidden; display: flex; flex-direction: column; }
         
+        /* NIELIT Palette Shapes */
         .q-btn { width: 32px; height: 32px; font-size: 11px; font-weight: 700; border: 1px solid #cbd5e1; cursor: pointer; background: #fff; transition: all 0.2s; display: flex; align-items: center; justify-content: center; }
         .q-answered { background: #16a34a !important; color: white !important; clip-path: polygon(0% 20%, 20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%); border: none; }
         .q-not-answered { background: #dc2626 !important; color: white !important; clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); border: none; }
         .q-marked { background: #7c3aed !important; color: white !important; border-radius: 50% !important; border: none; }
         .q-current { border: 3px solid #0f172a !important; transform: scale(1.1); z-index: 10; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
 
+        /* Modern Option Design */
         .opt-label { border: 2px solid #e2e8f0; border-radius: 12px; padding: 14px 20px; cursor: pointer; display: flex; align-items: center; background: #fff; transition: 0.2s; position: relative; gap: 12px; }
         .opt-label:hover { border-color: #94a3b8; background: #f8fafc; }
         .opt-input:checked + .opt-label { background: #eff6ff; border-color: #2563eb; color: #1e40af; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
@@ -43,6 +50,7 @@
         .hide { display: none !important; }
         .scroll-area { overflow-y: auto; flex: 1; -webkit-overflow-scrolling: touch; padding-bottom: 20px; }
         
+        /* Navigation Bar Fix for Landscape */
         .nav-footer { height: auto; min-height: 70px; background: #ffffff; border-top: 2px solid #e2e8f0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 10px 20px; gap: 10px; shrink: 0; }
 
         .btn-action { padding: 10px 20px; border-radius: 8px; font-weight: 700; text-transform: uppercase; font-size: 12px; transition: 0.2s; display: flex; align-items: center; gap: 8px; }
@@ -51,17 +59,17 @@
         .btn-mark { background: #7c3aed; color: white; }
         .btn-submit { background: #ef4444; color: white; }
         .btn-action:active { transform: scale(0.96); }
-
-        /* Donate Section Styles */
-        .donate-card { background: white; border: 2px dashed #003366; border-radius: 20px; padding: 20px; text-align: center; margin-top: 30px; box-shadow: 0 10px 15px rgba(0,0,0,0.05); }
-        .qr-frame { width: 180px; height: 180px; border: 8px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin: 15px auto; border-radius: 15px; }
     </style>
 </head>
 <body oncontextmenu="return false;">
 
     <header class="bg-[#003366] text-white p-3 flex justify-between items-center shadow-lg shrink-0 border-b-4 border-orange-500">
         <div class="flex items-center gap-3">
+          
                <img src="https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png" class="h-10 bg-white p-1 rounded">
+ 
+        
+                
             <div class="hidden sm:block">
                 <h1 class="text-sm font-bold uppercase leading-none">NIELIT Official Examination</h1>
                 <p class="text-[10px] text-orange-400 font-bold uppercase">CBT Interface | Kaushal Institute</p>
@@ -165,6 +173,21 @@
                     </div>
                 </footer>
             </div>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js')
+    .then(() => console.log("App ready to install!"))
+    .catch((err) => console.log("Error:", err));
+}
+
+// Browser ko install prompt dikhane ke liye force karna
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  // Aap chahen toh yahan koi button dikha sakte hain "Install App" ka
+});
+</script>
 
             <aside class="w-full md:w-80 bg-slate-50 flex flex-col shrink-0 h-48 md:h-full border-t md:border-t-0">
                 <div class="p-4 bg-white border-b flex justify-between items-center shadow-sm">
@@ -187,7 +210,7 @@
         </section>
 
         <section id="result-ui" class="hide absolute inset-0 z-[200] bg-white overflow-y-auto">
-            <div class="max-w-4xl mx-auto p-6 pb-40">
+            <div class="max-w-4xl mx-auto p-6 pb-32">
                 <div class="text-center mb-8 py-12 bg-gradient-to-br from-[#003366] to-blue-800 rounded-3xl text-white shadow-xl">
                     <h1 class="text-2xl font-bold uppercase tracking-widest opacity-80">Final Result</h1>
                     <p id="res-grade" class="text-9xl font-black my-4"></p>
@@ -211,61 +234,43 @@
                         <p id="res-total" class="text-3xl font-black text-blue-700"></p>
                     </div>
                 </div>
-
-                <div class="donate-card">
-                    <div class="flex items-center justify-center gap-3 mb-4">
-                        <i class="fas fa-coffee text-amber-600 text-2xl"></i>
-                        <h3 class="text-xl font-black text-[#003366] uppercase">Support the Developer</h3>
-                    </div>
-                    <p class="text-slate-600 text-sm mb-4 font-medium">If this portal helped you, consider supporting our work to keep it free forever.</p>
-                    
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=mandavikaushal913@okaxis%26pn=Kaushal%20Institute%26cu=INR" alt="UPI QR Code" class="qr-frame">
-                    
-                    <p class="text-[#003366] font-bold text-sm mt-3">UPI ID: mandavikaushal913@okaxis</p>
-                    
-                    <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-                        <a href="upi://pay?pa=mandavikaushal913@okaxis&pn=Kaushal%20Institute&cu=INR" class="bg-[#22c55e] text-white px-8 py-3 rounded-xl font-bold shadow-lg flex items-center justify-center gap-2 uppercase text-xs">
-                            <i class="fas fa-mobile-alt"></i> Pay via UPI App
-                        </a>
-                        <button onclick="location.reload()" class="bg-[#003366] text-white px-8 py-3 rounded-xl font-bold shadow-lg flex items-center justify-center gap-2 uppercase text-xs">
-                            <i class="fas fa-redo"></i> Take Another Test
-                        </button>
-                    </div>
-                </div>
-
-                <div class="space-y-6 mt-12">
+                <div class="space-y-6">
                     <h3 class="text-xl font-bold text-slate-800 border-l-8 border-orange-500 pl-4 uppercase">Detailed Analysis</h3>
                     <div id="error-analysis" class="space-y-4"></div>
+                </div>
+                <div class="fixed bottom-0 left-0 w-full p-6 bg-white/80 backdrop-blur-md border-t flex justify-center z-50">
+                    <button onclick="location.reload()" class="w-full max-w-md bg-[#003366] text-white py-4 rounded-2xl font-bold shadow-xl hover:bg-black transition-all uppercase tracking-widest">Restart New Test</button>
                 </div>
             </div>
         </section>
     </main>
 
     <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js')
-                .then(() => console.log("App ready to install!"))
-                .catch((err) => console.log("Error:", err));
-        }
-
-        let deferredPrompt;
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-        });
-
+        // --- STRICT SECURITY SYSTEM ---
+        
+        // 1. Block Right Click
         document.addEventListener('contextmenu', event => event.preventDefault());
 
+        // 2. Block Keyboard Shortcuts (F12, Inspect, Source)
         document.onkeydown = function(e) {
+            // F12
             if (e.keyCode == 123) return false;
+            // Ctrl+Shift+I (Inspect)
             if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+            // Ctrl+Shift+J (Console)
             if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+            // Ctrl+Shift+C (Element Selector)
             if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+            // Ctrl+U (View Source)
             if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+            // Ctrl+S (Save)
             if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) return false;
         };
 
+        // 3. Prevent Dragging Questions
         document.ondragstart = () => false;
+
+        // --- EXAM LOGIC ---
 
         let allData = {}, questions = [], userAnswers = {}, markedReview = new Set(), visited = new Set();
         let currentIdx = 0, candidateName = "", selectedModCode = "", selectedModName = "", timerSeconds = 90 * 60, interval;
