@@ -210,39 +210,59 @@ window.addEventListener('beforeinstallprompt', (e) => {
         </section>
 
         <section id="result-ui" class="hide absolute inset-0 z-[200] bg-white overflow-y-auto">
-            <div class="max-w-4xl mx-auto p-6 pb-32">
-                <div class="text-center mb-8 py-12 bg-gradient-to-br from-[#003366] to-blue-800 rounded-3xl text-white shadow-xl">
-                    <h1 class="text-2xl font-bold uppercase tracking-widest opacity-80">Final Result</h1>
-                    <p id="res-grade" class="text-9xl font-black my-4"></p>
-                    <p class="font-bold uppercase tracking-widest text-sm">Official NIELIT Grade</p>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-                    <div class="bg-slate-100 p-6 rounded-2xl text-center border-b-4 border-slate-400">
-                        <p class="text-[10px] text-slate-500 font-bold mb-1">PERCENTAGE</p>
-                        <p id="res-score" class="text-3xl font-black text-slate-800"></p>
-                    </div>
-                    <div class="bg-green-50 p-6 rounded-2xl text-center border-b-4 border-green-500">
-                        <p class="text-[10px] text-green-600 font-bold mb-1 uppercase">Correct</p>
-                        <p id="res-corr" class="text-3xl font-black text-green-700"></p>
-                    </div>
-                    <div class="bg-red-50 p-6 rounded-2xl text-center border-b-4 border-red-500">
-                        <p class="text-[10px] text-red-600 font-bold mb-1 uppercase">Wrong</p>
-                        <p id="res-wrng" class="text-3xl font-black text-red-700"></p>
-                    </div>
-                    <div class="bg-blue-50 p-6 rounded-2xl text-center border-b-4 border-blue-500">
-                        <p class="text-[10px] text-blue-600 font-bold mb-1 uppercase">Total</p>
-                        <p id="res-total" class="text-3xl font-black text-blue-700"></p>
-                    </div>
-                </div>
-                <div class="space-y-6">
-                    <h3 class="text-xl font-bold text-slate-800 border-l-8 border-orange-500 pl-4 uppercase">Detailed Analysis</h3>
-                    <div id="error-analysis" class="space-y-4"></div>
-                </div>
-                <div class="fixed bottom-0 left-0 w-full p-6 bg-white/80 backdrop-blur-md border-t flex justify-center z-50">
-                    <button onclick="location.reload()" class="w-full max-w-md bg-[#003366] text-white py-4 rounded-2xl font-bold shadow-xl hover:bg-black transition-all uppercase tracking-widest">Restart New Test</button>
-                </div>
+    <div class="max-w-4xl mx-auto p-6 pb-20">
+        <div class="text-center mb-8 py-12 bg-gradient-to-br from-[#003366] to-blue-800 rounded-3xl text-white shadow-xl">
+            <h1 class="text-2xl font-bold uppercase tracking-widest opacity-80">Final Result</h1>
+            <p id="res-grade" class="text-9xl font-black my-4"></p>
+            <p class="font-bold uppercase tracking-widest text-sm">Official NIELIT Grade</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            <div class="bg-slate-100 p-6 rounded-2xl text-center border-b-4 border-slate-400">
+                <p class="text-[10px] text-slate-500 font-bold mb-1">PERCENTAGE</p>
+                <p id="res-score" class="text-3xl font-black text-slate-800"></p>
             </div>
-        </section>
+            <div class="bg-green-50 p-6 rounded-2xl text-center border-b-4 border-green-500">
+                <p class="text-[10px] text-green-600 font-bold mb-1 uppercase">Correct</p>
+                <p id="res-corr" class="text-3xl font-black text-green-700"></p>
+            </div>
+            <div class="bg-red-50 p-6 rounded-2xl text-center border-b-4 border-red-500">
+                <p class="text-[10px] text-red-600 font-bold mb-1 uppercase">Wrong</p>
+                <p id="res-wrng" class="text-3xl font-black text-red-700"></p>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-2xl text-center border-b-4 border-blue-500">
+                <p class="text-[10px] text-blue-600 font-bold mb-1 uppercase">Total</p>
+                <p id="res-total" class="text-3xl font-black text-blue-700"></p>
+            </div>
+        </div>
+
+        <div class="bg-blue-50 border-2 border-dashed border-[#003366] rounded-3xl p-8 text-center mb-10">
+            <h3 class="text-lg font-bold text-[#003366] uppercase mb-1">Support the Developer</h3>
+            <p class="text-slate-500 text-[10px] mb-4">Aapki choti si madad humein naya content banane mein help karegi.</p>
+            
+            <div class="bg-white p-2 inline-block rounded-xl shadow-md mb-4 border border-slate-200">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=mandavikaushal913@okaxis%26pn=Kaushal%20Institute%26cu=INR" alt="UPI QR" class="w-32 h-32">
+            </div>
+            
+            <p class="text-[10px] font-bold text-slate-400 mb-4">UPI: mandavikaushal913@okaxis</p>
+            
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="upi://pay?pa=mandavikaushal913@okaxis&pn=Kaushal%20Institute&cu=INR" class="bg-green-600 text-white px-6 py-4 rounded-xl font-bold text-[10px] uppercase shadow-md flex items-center justify-center gap-2">
+                   <i class="fas fa-wallet text-sm"></i> Pay via UPI App
+                </a>
+                <button onclick="location.reload()" class="bg-[#003366] text-white px-6 py-4 rounded-xl font-bold text-[10px] uppercase shadow-md">
+                   Take Another Test
+                </button>
+            </div>
+        </div>
+
+        <div class="space-y-6">
+            <h3 class="text-xl font-bold text-slate-800 border-l-8 border-orange-500 pl-4 uppercase">Detailed Analysis</h3>
+            <div id="error-analysis" class="space-y-4"></div>
+        </div>
+    </div>
+</section>
+
     </main>
 
     <script>
@@ -382,17 +402,26 @@ window.addEventListener('beforeinstallprompt', (e) => {
         }
 
         function submitExam(auto = false) {
+                function submitExam(auto = false) {
             if (!auto && !confirm("Final submission?")) return;
             clearInterval(interval);
+            
+            // UI switch
             document.getElementById('exam-ui').classList.add('hide');
             document.getElementById('result-ui').classList.remove('hide');
+            
+            // Result UI ko top par scroll karna taaki Grade aur QR dikhe
+            document.getElementById('result-ui').scrollTo(0, 0);
+
             let correct = 0;
             const errBox = document.getElementById('error-analysis');
             errBox.innerHTML = '';
+
             questions.forEach((q, i) => {
                 const u = userAnswers[i] || "Not Answered";
                 const isCorrect = u === q.answer;
                 if (isCorrect) correct++;
+                
                 const card = document.createElement('div');
                 card.className = `p-6 rounded-2xl border-2 shadow-sm ${isCorrect ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`;
                 card.innerHTML = `
@@ -408,14 +437,19 @@ window.addEventListener('beforeinstallprompt', (e) => {
                     </div>`;
                 errBox.appendChild(card);
             });
+
+            // Grading System Update
             const scorePercent = Math.round((correct / questions.length) * 100);
             let grade = scorePercent >= 50 ? (scorePercent >= 85 ? 'S' : (scorePercent >= 75 ? 'A' : (scorePercent >= 65 ? 'B' : (scorePercent >= 55 ? 'C' : 'D')))) : 'F';
+            
+            // Stats ko Screen par likhna
             document.getElementById('res-grade').textContent = grade;
             document.getElementById('res-score').textContent = scorePercent + "%";
             document.getElementById('res-corr').textContent = correct;
             document.getElementById('res-wrng').textContent = questions.length - correct;
             document.getElementById('res-total').textContent = questions.length;
         }
+
     </script>
 </body>
 </html>
