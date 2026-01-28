@@ -2,21 +2,31 @@
   "name": "NIELIT Official CBT | Kaushal Institute",
   "short_name": "NIELIT Exam",
   "description": "Official Computer Based Test Interface by Kaushal Institute",
+  "id": "/O-level-mcqs-practice/",
   "start_url": "index.html",
+  "scope": "/O-level-mcqs-practice/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#f1f5f9",
   "theme_color": "#003366",
   "icons": [
     {
-      "src": "https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/SNT.jpg",
+      "src": "https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png",
       "sizes": "192x192",
-      "type": "image/jpeg"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/SNT.jpg",
+      "src": "https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png",
       "sizes": "512x512",
-      "type": "image/jpeg"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
