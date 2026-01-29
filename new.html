@@ -3,104 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Kaushal Institute</title>
+    <title>Kaushal Institute - Visitor Logs</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-database-compat.js"></script>
-    <style>
-        .hidden-panel { display: none; }
-        .visitor-card { background: #fff; border-left: 5px solid #003366; }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 </head>
-<body class="bg-slate-100 p-5">
+<body class="bg-slate-900 text-white min-h-screen p-4 md:p-10">
 
-    <div class="max-w-2xl mx-auto text-center">
-        <h1 class="text-2xl font-bold text-slate-800 mb-6">Visitor Monitoring System</h1>
-        
-        <button onclick="toggleAdminPanel()" class="bg-[#003366] text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-blue-800 transition-all uppercase tracking-wider">
-            <i class="fas fa-users-cog mr-2"></i> Show All Visitors Data
-        </button>
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-10">
+            <h1 class="text-3xl font-black text-orange-500 uppercase">Admin Control Panel</h1>
+            <p class="text-slate-400 text-sm">Real-time Visitor Tracking for Kaushal Institute</p>
+        </div>
 
-        <div id="admin-panel" class="hidden-panel mt-10">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-xl font-black text-red-600 uppercase">Live Visitor Logs</h2>
-                <span id="total-count" class="bg-red-600 text-white px-3 py-1 rounded-full text-xs">Total: 0</span>
+        <div class="flex justify-center mb-10">
+            <button onclick="toggleLogs()" class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-2xl font-bold shadow-xl transition-all flex items-center gap-3">
+                <i class="fas fa-database"></i> SHOW ALL VISITORS DATA
+            </button>
+        </div>
+
+        <div id="logs-section" class="hidden bg-white text-slate-800 rounded-3xl overflow-hidden shadow-2xl">
+            <div class="bg-slate-100 p-5 border-b flex justify-between items-center">
+                <h2 class="font-bold uppercase text-slate-600">Live Traffic Logs</h2>
+                <span id="visitor-count" class="bg-orange-500 text-white px-4 py-1 rounded-full text-xs font-bold">0 Users</span>
             </div>
             
-            <div id="visitor-list" class="space-y-4 text-left">
-                <p class="text-slate-400 text-center animate-pulse">Fetching records from database...</p>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead class="bg-slate-50 text-[10px] uppercase text-slate-400">
+                        <tr>
+                            <th class="p-4">IP Address</th>
+                            <th class="p-4">Date & Time</th>
+                            <th class="p-4">Device / OS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data-table" class="text-sm divide-y">
+                        </tbody>
+                </table>
             </div>
         </div>
     </div>
 
     <script>
-        // --- 1. FIREBASE CONFIGURATION ---
-        // Note: Ye ek demo config hai. Real time tracking ke liye aapko Firebase console se apni keys dalni hongi.
+        // 1. FIREBASE SETUP (Aapko apna Firebase account bana kar ye detail badalni hogi)
         const firebaseConfig = {
-            databaseURL: "https://your-project-id.firebaseio.com" 
+            databaseURL: "https://your-project-id.firebaseio.com" // <--- Yahan apna URL dalein
         };
-        
-        // Firebase ko initialize tabhi karein jab config sahi ho
-        // filhal hum simulation aur localStorage use karenge jo kaam waisa hi karega
-        
-        // --- 2. DATA TRACKING LOGIC ---
-        async function logVisitor() {
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+
+        // 2. VISITOR DATA CAPTURE (Ye har visit par chalega)
+        async function captureVisitor() {
             try {
-                // IP Address nikalna
                 const res = await fetch('https://api.ipify.org?format=json');
-                const data = await res.json();
-                const ip = data.ip;
+                const ipData = await res.json();
                 
-                const visitorInfo = {
-                    ip: ip,
-                    time: new Date().toLocaleString(),
-                    device: navigator.platform,
-                    browser: navigator.userAgent.split(') ')[0] + ')'
+                const newVisitor = {
+                    ip: ipData.ip,
+                    time: new Date().toLocaleString('en-IN'),
+                    platform: navigator.platform,
+                    agent: navigator.userAgent.slice(0, 50) + "..."
                 };
 
-                // Browser mein save karna (Simulating Database)
-                let allLogs = JSON.parse(localStorage.getItem('global_visitors') || '[]');
-                
-                // Check if IP already exists to avoid duplicates
-                if(!allLogs.find(v => v.ip === ip)) {
-                    allLogs.push(visitorInfo);
-                    localStorage.setItem('global_visitors', JSON.stringify(allLogs));
-                }
-            } catch (e) { console.log("Tracking error"); }
+                // Database mein "visitors" folder ke andar data save karein
+                db.ref('visitors').push(newVisitor);
+            } catch (err) { console.error("Tracking Error"); }
         }
 
-        // --- 3. UI LOGIC ---
-        function toggleAdminPanel() {
-            const panel = document.getElementById('admin-panel');
-            panel.classList.toggle('hidden-panel');
-            loadVisitors();
-        }
-
-        function loadVisitors() {
-            const container = document.getElementById('visitor-list');
-            const logs = JSON.parse(localStorage.getItem('global_visitors') || '[]');
-            document.getElementById('total-count').innerText = `Total: ${logs.length}`;
+        // 3. SHOW DATA LOGIC
+        function toggleLogs() {
+            const section = document.getElementById('logs-section');
+            section.classList.toggle('hidden');
             
-            if(logs.length === 0) {
-                container.innerHTML = "<p class='text-center text-slate-400'>No logs found.</p>";
-                return;
-            }
-
-            container.innerHTML = logs.reverse().map(v => `
-                <div class="visitor-card p-4 rounded-lg shadow-sm border border-slate-200">
-                    <div class="flex justify-between items-start">
-                        <span class="text-blue-700 font-bold font-mono text-sm">${v.ip}</span>
-                        <span class="text-[10px] text-slate-400 font-bold">${v.time}</span>
-                    </div>
-                    <p class="text-[11px] text-slate-600 mt-2"><b>OS:</b> ${v.device} | <b>Client:</b> ${v.browser}</p>
-                </div>
-            `).join('');
+            // Database se real-time data uthana
+            db.ref('visitors').on('value', (snapshot) => {
+                const data = snapshot.val();
+                const table = document.getElementById('data-table');
+                table.innerHTML = "";
+                
+                let count = 0;
+                for (let id in data) {
+                    count++;
+                    const v = data[id];
+                    table.innerHTML += `
+                        <tr class="hover:bg-blue-50 transition-colors">
+                            <td class="p-4 font-mono font-bold text-blue-600">${v.ip}</td>
+                            <td class="p-4 text-slate-500">${v.time}</td>
+                            <td class="p-4 text-xs font-medium text-slate-700">${v.platform} <br> <span class="text-[9px] text-slate-400">${v.agent}</span></td>
+                        </tr>
+                    `;
+                }
+                document.getElementById('visitor-count').innerText = `${count} Users Found`;
+            });
         }
 
-        // Auto Log on Page Load
-        logVisitor();
+        // Auto capture on load
+        captureVisitor();
     </script>
-
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
