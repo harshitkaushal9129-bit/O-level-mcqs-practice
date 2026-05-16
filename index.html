@@ -249,14 +249,7 @@
     </main>
 
     <script>
-        // --- SERVICE WORKER ---
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js')
-                .then(() => console.log("PWA Active"))
-                .catch((err) => console.log("PWA Error", err));
-        }
-
-        // --- SECURITY SYSTEM ---
+        
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.onkeydown = function(e) {
             if (e.keyCode == 123) return false;
@@ -420,6 +413,15 @@
             document.getElementById('res-wrng').textContent = questions.length - correct;
             document.getElementById('res-total').textContent = questions.length;
         }
+    </script>
+    <script>
+  if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log("PWA Active"))
+                .catch((err) => console.log("PWA Error", err));
+        }
+
+        
     </script>
 </body>
 </html>
