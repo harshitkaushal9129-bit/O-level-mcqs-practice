@@ -1,1 +1,130 @@
+{
+  "M1": [
+    {
+      "paper": "M1-R5",
+      "chapter": "Introduction to Computer",
+      "question": "What is the brain of a computer system?",
+      "options": ["ALU", "CPU", "RAM", "Control Unit"],
+      "answer": "CPU"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Introduction to Computer",
+      "question": "Which of the following is the fastest memory?",
+      "options": ["RAM", "ROM", "Cache Memory", "Hard Disk"],
+      "answer": "Cache Memory"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Operating System",
+      "question": "Which of the following is an open-source operating system?",
+      "options": ["Windows", "Linux", "macOS", "MS-DOS"],
+      "answer": "Linux"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Word Processing",
+      "question": "What is the default extension of LibreOffice Writer files?",
+      "options": [".odt", ".ods", ".odp", ".docx"],
+      "answer": ".odt"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Spreadsheet",
+      "question": "Which formula is correct to sum cells A1 to A5 in LibreOffice Calc?",
+      "options": ["=SUM(A1:A5)", "=ADD(A1:A5)", "=TOTAL(A1..A5)", "SUM(A1-A5)"],
+      "answer": "=SUM(A1:A5)"
+    }
+  ],
+  "M2": [
+    {
+      "paper": "M2-R5",
+      "chapter": "Introduction to Web Design",
+      "question": "What does HTML stand for?",
+      "options": ["Hyper Text Markup Language", "High Text Machine Language", "Hyper Tabular Marks Language", "None of these"],
+      "answer": "Hyper Text Markup Language"
+    },
+    {
+      "paper": "M2-R5",
+      "chapter": "HTML Basics",
+      "question": "Which HTML tag is used to define the largest heading?",
+      "options": ["<h6>", "<heading>", "<h1>", "<head>"],
+      "answer": "<h1>"
+    },
+    {
+      "paper": "M2-R5",
+      "chapter": "CSS",
+      "question": "Which property is used in CSS to change the background color?",
+      "options": ["color", "bgcolor", "background-color", "canvas-color"],
+      "answer": "background-color"
+    },
+    {
+      "paper": "M2-R5",
+      "chapter": "JavaScript",
+      "question": "Which built-in method is used to print content in the console?",
+      "options": ["console.print()", "console.log()", "document.write()", "window.alert()"],
+      "answer": "console.log()"
+    }
+  ],
+  "M3": [
+    {
+      "paper": "M3-R5",
+      "chapter": "Introduction to Python",
+      "question": "Who developed the Python programming language?",
+      "options": ["Dennis Ritchie", "Guido van Rossum", "James Gosling", "Bjarne Stroustrup"],
+      "answer": "Guido van Rossum"
+    },
+    {
+      "paper": "M3-R5",
+      "chapter": "Operators & Expressions",
+      "question": "What is the output of 2 ** 3 in Python?",
+      "options": ["6", "8", "9", "5"],
+      "answer": "8"
+    },
+    {
+      "paper": "M3-R5",
+      "chapter": "Data Types & Lists",
+      "question": "Which of the following data types is mutable in Python?",
+      "options": ["Tuple", "String", "List", "Integer"],
+      "answer": "List"
+    },
+    {
+      "paper": "M3-R5",
+      "chapter": "Functions",
+      "question": "Which keyword is used to define a function in Python?",
+      "options": ["func", "def", "function", "define"],
+      "answer": "def"
+    }
+  ],
+  "M4": [
+    {
+      "paper": "M4-R5",
+      "chapter": "Introduction to IoT",
+      "question": "What is the full form of IoT?",
+      "options": ["Internet of Things", "Intranet of Things", "Interconnect of Technology", "Instrument of Telemetry"],
+      "answer": "Internet of Things"
+    },
+    {
+      "paper": "M4-R5",
+      "chapter": "Sensors and Actuators",
+      "question": "Which sensor is used to measure temperature?",
+      "options": ["LDR", "DHT11", "Ultrasonic", "PIR"],
+      "answer": "DHT11"
+    },
+    {
+      "paper": "M4-R5",
+      "chapter": "IoT Protocols",
+      "question": "MQTT protocol is primarily based on which architecture?",
+      "options": ["Request/Response", "Publish/Subscribe", "Peer-to-Peer", "Client-Server Only"],
+      "answer": "Publish/Subscribe"
+    },
+    {
+      "paper": "M4-R5",
+      "chapter": "Microcontrollers",
+      "question": "What is the default microcontroller chip used in Arduino UNO?",
+      "options": ["ATmega328P", "ESP8266", "ATmega16", "ARM Cortex"],
+      "answer": "ATmega328P"
+    }
+  ]
+}
 
