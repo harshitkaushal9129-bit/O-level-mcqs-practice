@@ -134,6 +134,14 @@
                 </div>
 
                 <div id="step-2" class="hide bg-white p-8 rounded-2xl shadow-xl mt-4 text-center">
+                    <div class="mb-8 text-left max-w-2xl mx-auto">
+                        <p class="font-bold text-slate-800 text-sm uppercase tracking-wide mb-3 text-center md:text-left">
+                            <i class="fas fa-book-open text-blue-900 mr-2"></i>Select Chapters
+                        </p>
+                        <div id="chapter-list" class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 bg-slate-50 rounded-xl border max-h-48 overflow-y-auto">
+                            </div>
+                    </div>
+
                     <p class="font-bold text-slate-800 text-lg mb-6">Select Number of Questions</p>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
                         <button onclick="startExam(25)" class="py-4 rounded-xl border-2 border-slate-200 font-bold text-xl hover:bg-blue-50 hover:border-blue-600 transition-all">25</button>
@@ -276,13 +284,53 @@
                 const res = await fetch('questions.json');
                 allData = await res.json();
                 if(!allData[code]) throw new Error();
+                
+                // Chapter list filter karke dynamically render karna
+                const chListContainer = document.getElementById('chapter-list');
+                chListContainer.innerHTML = '';
+                
+                // Pure set se unique chapters find karna agar key objects me available ho
+                let uniqueChapters = new Set();
+                allData[code].forEach(q => {
+                    if(q.chapter) uniqueChapters.add(q.chapter);
+                });
+
+                if(uniqueChapters.size === 0) {
+                    chListContainer.innerHTML = `<p class="text-xs text-slate-400 italic">No specific chapters found. All questions will be loaded.</p>`;
+                } else {
+                    uniqueChapters.forEach(chName => {
+                        const label = document.createElement('label');
+                        label.className = "flex items-center gap-2 p-2 bg-white rounded-lg border cursor-pointer hover:bg-slate-100 text-xs font-semibold text-slate-700";
+                        label.innerHTML = `<input type="checkbox" checked value="${chName}" class="ch-filter-checkbox accent-blue-900"> <span class="truncate">${chName}</span>`;
+                        chListContainer.appendChild(label);
+                    });
+                }
+
                 document.getElementById('step-1').classList.add('hide');
                 document.getElementById('step-2').classList.remove('hide');
             } catch (e) { alert("Error: questions.json not found or data missing!"); }
         }
 
         function startExam(count) {
-            questions = allData[selectedModCode].sort(() => 0.5 - Math.random()).slice(0, count);
+            let baseQuestions = allData[selectedModCode];
+            const checkedBoxes = document.querySelectorAll('.ch-filter-checkbox:checked');
+            
+            // Agar chapters exist karte hain aur kuch checkboxes active hain, toh query filter lagayein
+            if(document.querySelectorAll('.ch-filter-checkbox').length > 0) {
+                if(checkedBoxes.length === 0) {
+                    alert("Kripya test shuru karne ke liye kam se kam ek chapter zaroor chunein!");
+                    return;
+                }
+                const activeChapters = Array.from(checkedBoxes).map(cb => cb.value);
+                baseQuestions = baseQuestions.filter(q => activeChapters.includes(q.chapter));
+            }
+
+            if(baseQuestions.length === 0) {
+                alert("Chune gaye chapters mein koi sawal nahi mila!");
+                return;
+            }
+
+            questions = baseQuestions.sort(() => 0.5 - Math.random()).slice(0, count);
             document.getElementById('module-ui').classList.add('hide');
             document.getElementById('exam-ui').classList.remove('hide');
             initPalette();
@@ -396,8 +444,8 @@
                         <div class="flex-1">
                             <p class="font-bold text-slate-800 mb-3">${q.question.replace(/</g, "&lt;")}</p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs font-bold uppercase">
-                                <div class="p-3 rounded-lg ${isCorrect ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}">Your: ${u}</div>
-                                ${!isCorrect ? `<div class="p-3 rounded-lg bg-emerald-100 text-emerald-800">Correct: ${q.answer}</div>` : ''}
+                                <div class="p-3 rounded-lg ${isCorrect ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}">Your: ${u.replace(/</g, "&lt;")}</div>
+                                ${!isCorrect ? `<div class="p-3 rounded-lg bg-emerald-100 text-emerald-800">Correct: ${q.answer.replace(/</g, "&lt;")}</div>` : ''}
                             </div>
                         </div>
                     </div>`;
@@ -415,13 +463,11 @@
         }
     </script>
     <script>
-  if ('serviceWorker' in navigator) {
+        if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js')
                 .then(() => console.log("PWA Active"))
                 .catch((err) => console.log("PWA Error", err));
         }
-
-        
     </script>
 </body>
 </html>
