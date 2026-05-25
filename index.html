@@ -301,7 +301,8 @@
                     uniqueChapters.forEach(chName => {
                         const label = document.createElement('label');
                         label.className = "flex items-center gap-2 p-2 bg-white rounded-lg border cursor-pointer hover:bg-slate-100 text-xs font-semibold text-slate-700";
-                        label.innerHTML = `<input type="checkbox" checked value="${chName}" class="ch-filter-checkbox accent-blue-900"> <span class="truncate">${chName}</span>`;
+                        // यहाँ checkbox को बदलकर radio किया गया है ताकि सिर्फ एक ही चैप्टर चुना जा सके
+                        label.innerHTML = `<input type="radio" name="chapter-filter" checked value="${chName}" class="ch-filter-radio accent-blue-900"> <span class="truncate">${chName}</span>`;
                         chListContainer.appendChild(label);
                     });
                 }
@@ -313,20 +314,21 @@
 
         function startExam(count) {
             let baseQuestions = allData[selectedModCode];
-            const checkedBoxes = document.querySelectorAll('.ch-filter-checkbox:checked');
+            // सिर्फ सिंगल सिलेक्टेड रेडियो बटन की वैल्यू निकाली जा रही है
+            const checkedRadio = document.querySelector('.ch-filter-radio:checked');
             
-            // Agar chapters exist karte hain aur kuch checkboxes active hain, toh query filter lagayein
-            if(document.querySelectorAll('.ch-filter-checkbox').length > 0) {
-                if(checkedBoxes.length === 0) {
-                    alert("Kripya test shuru karne ke liye kam se kam ek chapter zaroor chunein!");
+            // अगर चैप्टर्स लिस्ट रेंडर हुई है, तो सिलेक्टेड चैप्टर के बेसिस पर फ़िल्टर करें
+            if(document.querySelectorAll('.ch-filter-radio').length > 0) {
+                if(!checkedRadio) {
+                    alert("Kripya test shuru karne ke liye ek chapter zaroor chunein!");
                     return;
                 }
-                const activeChapters = Array.from(checkedBoxes).map(cb => cb.value);
-                baseQuestions = baseQuestions.filter(q => activeChapters.includes(q.chapter));
+                const activeChapter = checkedRadio.value;
+                baseQuestions = baseQuestions.filter(q => q.chapter === activeChapter);
             }
 
             if(baseQuestions.length === 0) {
-                alert("Chune gaye chapters mein koi sawal nahi mila!");
+                alert("Chune gaye chapter mein koi sawal nahi mila!");
                 return;
             }
 
