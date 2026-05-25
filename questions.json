@@ -300,12 +300,307 @@
     "options": ["ASCII", "Unicode", "EBCDIC", "BCD"],
     "answer": "Unicode"
   },
-    {
-      "chapter": "Introduction to Operating System",
-      "question": "What is the core part of an Operating System called?",
-      "options": ["Shell", "Kernel", "Command Prompt", "Registry"],
-      "answer": "Kernel"
-    },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is the core part of an Operating System called?",
+    "options": ["Shell", "Kernel", "Command Prompt", "Registry"],
+    "answer": "Kernel"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which of the following is an example of an open-source operating system?",
+    "options": ["Windows 11", "macOS", "Linux", "MS-DOS"],
+    "answer": "Linux"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What type of operating system is used in critical applications like satellite launching and medical equipment?",
+    "options": ["Batch Processing OS", "Real-Time Operating System (RTOS)", "Time-Sharing OS", "Network OS"],
+    "answer": "Real-Time Operating System (RTOS)"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which component of an operating system provides the interface for users to interact, like a command-line interpreter?",
+    "options": ["Kernel", "Shell", "Driver", "Thread"],
+    "answer": "Shell"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is a program in execution called?",
+    "options": ["Command", "Process", "Task Manager", "Function"],
+    "answer": "Process"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which of the following is a multi-user, time-sharing operating system developed in the 1970s?",
+    "options": ["MS-DOS", "Unix", "Windows 95", "Windows 3.1"],
+    "answer": "Unix"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is the full form of GUI in operating systems?",
+    "options": ["Graphical User Interface", "General User Integration", "Global User Interface", "Graphics Universal Interchange"],
+    "answer": "Graphical User Interface"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which scheduling algorithm allocates the CPU to the process that requests it first?",
+    "options": ["Shortest Job First (SJF)", "Round Robin (RR)", "First-Come, First-Served (FCFS)", "Priority Scheduling"],
+    "answer": "First-Come, First-Served (FCFS)"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is the default file system used by modern Windows operating systems (like Windows 10/11)?",
+    "options": ["FAT32", "NTFS", "ext4", "HPFS"],
+    "answer": "NTFS"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which condition occurs when two or more processes are blocked indefinitely, waiting for each other to release resources?",
+    "options": ["Starvation", "Deadlock", "Context Switching", "Paging"],
+    "answer": "Deadlock"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is the process of restarting an operating system that is already running called?",
+    "options": ["Cold Booting", "Warm Booting", "Hard Booting", "Shut Down"],
+    "answer": "Warm Booting"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which Linux command is used to display the contents of a directory?",
+    "options": ["dir", "ls", "cd", "pwd"],
+    "answer": "ls"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is the mechanism that temporarily moves a process out of main memory to a secondary storage (hard disk) called?",
+    "options": ["Swapping", "Caching", "Paging", "Fragmentation"],
+    "answer": "Swapping"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which type of operating system executes similar jobs grouped together without direct user interaction?",
+    "options": ["Time-sharing OS", "Batch Processing OS", "Distributed OS", "Network OS"],
+    "answer": "Batch Processing OS"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is the full form of CLI?",
+    "options": ["Command Line Interface", "Common Line Interconnect", "Control Logic Interface", "Computer Language Interpreter"],
+    "answer": "Command Line Interface"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which memory management technique maps a program's virtual address space into fixed-size blocks of physical memory?",
+    "options": ["Segmentation", "Paging", "Continuous Allocation", "Compaction"],
+    "answer": "Paging"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which Linux command is used to see the current working directory path?",
+    "options": ["cd", "mkdir", "pwd", "path"],
+    "answer": "pwd"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is the primary function of a device driver?",
+    "options": ["To run user application software", "To allow the OS to communicate with specific hardware components", "To scan files for viruses", "To back up system data"],
+    "answer": "To allow the OS to communicate with specific hardware components"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which of the following is NOT an operating system?",
+    "options": ["Windows Server", "Android", "Oracle", "Ubuntu"],
+    "answer": "Oracle"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is the name of the system software that loads the operating system kernel into the computer's memory during boot up?",
+    "options": ["Compiler", "Linker", "Bootstrap Loader", "Assembler"],
+    "answer": "Bootstrap Loader"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which Windows shortcut key combination is used to open the Task Manager instantly?",
+    "options": ["Ctrl + Alt + Del", "Ctrl + Shift + Esc", "Win + R", "Alt + F4"],
+    "answer": "Ctrl + Shift + Esc"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "In operating systems, what does 'SPOOLING' stand for?",
+    "options": ["Simultaneous Peripheral Operations On-Line", "Sequential Program Optimization Over-Line", "System Peripheral Output Organizational Logic", "Serial Port Output Oriented Loader"],
+    "answer": "Simultaneous Peripheral Operations On-Line"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which state does a process enter immediately after it is created or loaded into main memory?",
+    "options": ["Running State", "Waiting State", "Ready State", "Terminated State"],
+    "answer": "Ready State"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is the primary file system used in Linux operating systems?",
+    "options": ["NTFS", "FAT16", "ext4", "exFAT"],
+    "answer": "ext4"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which scheduling algorithm uses a time quantum or fixed time slice for fair CPU distribution?",
+    "options": ["Round Robin (RR)", "Shortest Remaining Time First", "First-Come First-Served", "Highest Response Ratio Next"],
+    "answer": "Round Robin (RR)"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What happens when the system spends more time swapping pages in and out of memory than executing actual instructions?",
+    "options": ["Deadlock", "Thrashing", "Starvation", "Paging fault"],
+    "answer": "Thrashing"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which interface allows multiple processors to work together to execute a single task split across them?",
+    "options": ["Multiprogramming", "Multiprocessing", "Multitasking", "Multithreading"],
+    "answer": "Multiprocessing"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which of the following is a mobile operating system developed by Apple?",
+    "options": ["Android", "Symbian", "iOS", "Tizen"],
+    "answer": "iOS"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is the default administrator account name in a Linux/Unix system?",
+    "options": ["Admin", "Administrator", "Root", "Superuser"],
+    "answer": "Root"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which system call is used in Unix-like systems to create a new child process?",
+    "options": ["fork()", "exec()", "create()", "spawn()"],
+    "answer": "fork()"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What type of fragmentation occurs when memory is divided into fixed-size blocks, and a process allocated a block leaves some unused space inside it?",
+    "options": ["External Fragmentation", "Internal Fragmentation", "Dynamic Fragmentation", "Virtual Fragmentation"],
+    "answer": "Internal Fragmentation"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which utility in Windows is used to check and repair errors on a hard disk drive?",
+    "options": ["Disk Defragmenter", "CHKDSK", "Disk Cleanup", "Regedit"],
+    "answer": "CHKDSK"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is the full form of API, which allows applications to request services from the operating system?",
+    "options": ["Application Programming Interface", "Advanced Program Integration", "Automated Process Interface", "Application Protocol Interconnect"],
+    "answer": "Application Programming Interface"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which character is used in Linux command line to pipe the output of one command as an input to another?",
+    "options": [">", "<", "|", "&"],
+    "answer": "|"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is the minimum number of bits required to uniquely identify a process in a system using a Process ID (PID)?",
+    "options": ["Depends on the OS architecture (e.g., 16-bit or 32-bit integers)", "Always 8 bits", "Always 64 bits", "Fixed at 4 bits"],
+    "answer": "Depends on the OS architecture (e.g., 16-bit or 32-bit integers)"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which type of software is an operating system categorized into?",
+    "options": ["Application Software", "System Software", "Programming Software", "Utility Software"],
+    "answer": "System Software"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which algorithm is used by the operating system to prevent deadlocks by checking resource allocation states?",
+    "options": ["Round Robin Algorithm", "Banker's Algorithm", "Page Replacement Algorithm", "Kruskal's Algorithm"],
+    "answer": "Banker's Algorithm"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is the full form of NTFS?",
+    "options": ["New Technology File System", "Network Technology File System", "New Tab File Sequence", "Node Transfer File Structure"],
+    "answer": "New Technology File System"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which Linux command is used to change file permissions?",
+    "options": ["chown", "chmod", "chgrp", "attrib"],
+    "answer": "chmod"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is the smallest allocatable unit of a hard disk space managed by a file system?",
+    "options": ["Sector", "Track", "Cluster / Block", "Byte"],
+    "answer": "Cluster / Block"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which of the following is a characteristic of a real-time operating system?",
+    "options": ["High throughput", "Deterministic and predictable response time", "Maximum CPU utilization", "Large memory footprint"],
+    "answer": "Deterministic and predictable response time"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is the name of the central database in Windows that stores configuration settings and options?",
+    "options": ["Kernel Space", "Windows Registry", "Control Panel", "System INI"],
+    "answer": "Windows Registry"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which operation switches the CPU from executing one process to another, saving the current state first?",
+    "options": ["Context Switching", "Process Migration", "Interrupt Handling", "Paging Allocation"],
+    "answer": "Context Switching"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which command in Windows command prompt (CMD) is used to clear the screen?",
+    "options": ["clear", "cls", "clean", "reset"],
+    "answer": "cls"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What type of OS runs on a group of independent, networked computers but appears to the user as a single computer?",
+    "options": ["Distributed Operating System", "Batch Operating System", "Network Operating System", "Embedded Operating System"],
+    "answer": "Distributed Operating System"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which data structure is maintained by the operating system to store all the information about a specific process?",
+    "options": ["Process Control Block (PCB)", "File Allocation Table (FAT)", "Page Map Table", "Ready Queue Stack"],
+    "answer": "Process Control Block (PCB)"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What is the name of the special page replacement policy that replaces the page that has not been used for the longest period of time?",
+    "options": ["FIFO (First In First Out)", "LRU (Least Recently Used)", "Optimal Page Replacement", "LIFO (Last In First Out)"],
+    "answer": "LRU (Least Recently Used)"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which of the following is a legacy 16-bit single-tasking operating system with a command-line interface?",
+    "options": ["MS-DOS", "Windows XP", "OS/2", "Linux Mint"],
+    "answer": "MS-DOS"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "What type of operating system allows multiple parts of a single program (threads) to run concurrently?",
+    "options": ["Multithreading OS", "Batch Processing OS", "Single-tasking OS", "Macro OS"],
+    "answer": "Multithreading OS"
+  },
+  {
+    "chapter": "Introduction to Operating System",
+    "question": "Which Linux command is used to create a new empty directory?",
+    "options": ["md", "mkdir", "create", "newdir"],
+    "answer": "mkdir"
+  },
+
     {
       "chapter": "Word Processing (LibreOffice Writer)",
       "question": "What is the default file extension of LibreOffice Writer?",
