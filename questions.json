@@ -600,13 +600,306 @@
     "options": ["md", "mkdir", "create", "newdir"],
     "answer": "mkdir"
   },
-
-    {
-      "chapter": "Word Processing (LibreOffice Writer)",
-      "question": "What is the default file extension of LibreOffice Writer?",
-      "options": [".doc", ".docx", ".odt", ".txt"],
-      "answer": ".odt"
-    },
+  {
+    "chapter": "Word Processing (LibreOffice Writer)",
+    "question": "What is the default file extension of LibreOffice Writer?",
+    "options": [".doc", ".docx", ".odt", ".txt"],
+    "answer": ".odt"
+  },
+  {
+    "chapter": "Word Processing (LibreOffice Writer)",
+    "question": "Which shortcut key is used for 'Save As' in LibreOffice Writer?",
+    "options": ["Ctrl + S", "Ctrl + Shift + S", "Ctrl + Alt + S", "F12"],
+    "answer": "Ctrl + Shift + S"
+  },
+  {
+    "chapter": "Word Processing (LibreOffice Writer)",
+    "question": "What is the maximum zoom percentage allowed in LibreOffice Writer?",
+    "options": ["100%", "400%", "600%", "1000%"],
+    "answer": "600%"
+  },
+  {
+    "chapter": "Word Processing (LibreOffice Writer)",
+    "question": "Which menu contains the 'Mail Merge Wizard' option in LibreOffice Writer?",
+    "options": ["File", "Edit", "Insert", "Tools"],
+    "answer": "Tools"
+  },
+  {
+    "chapter": "Word Processing (LibreOffice Writer)",
+    "question": "What is the shortcut key to insert a Page Break in LibreOffice Writer?",
+    "options": ["Ctrl + Enter", "Shift + Enter", "Alt + Enter", "Ctrl + Shift + Enter"],
+    "answer": "Ctrl + Enter"
+  },
+  {
+    "chapter": "Word Processing (LibreOffice Writer)",
+    "question": "In LibreOffice Writer, the shortcut key for superscript is ________.",
+    "options": ["Ctrl + Shift + P", "Ctrl + Shift + B", "Ctrl + Shift + S", "Ctrl + Equals"],
+    "answer": "Ctrl + Shift + P"
+  },
+  {
+    "chapter": "Word Processing (LibreOffice Writer)",
+    "question": "Which option is used to type text automatically with predefined shortcuts in Writer?",
+    "options": ["AutoFill", "AutoText", "AutoCorrect", "Macro"],
+    "answer": "AutoText"
+  },
+  {
+    "chapter": "Word Processing (LibreOffice Writer)",
+    "question": "What is the shortcut key to manage styles and formatting panel in Writer?",
+    "options": ["F5", "F7", "F11", "F12"],
+    "answer": "F11"
+  },
+  {
+    "chapter": "Word Processing (LibreOffice Writer)",
+    "question": "Which alignment is selected by default for text in LibreOffice Writer?",
+    "options": ["Left aligned", "Right aligned", "Centered", "Justified"],
+    "answer": "Left aligned"
+  },
+  {
+    "chapter": "Word Processing (LibreOffice Writer)",
+    "question": "What is the minimum zoom percentage available in LibreOffice Writer?",
+    "options": ["5%", "10%", "20%", "50%"],
+    "answer": "20%"
+  },
+  {
+    "chapter": "Word Processing (LibreOffice Writer)",
+    "question": "Which key combination is used for 'Double Underline' in LibreOffice Writer?",
+    "options": ["Ctrl + D", "Ctrl + Shift + D", "Ctrl + Alt + D", "Shift + U"],
+    "answer": "Ctrl + D"
+  },
+  {
+    "chapter": "Word Processing (LibreOffice Writer)",
+    "question": "Where is the Status Bar located in the LibreOffice Writer window?",
+    "options": ["Top of the screen", "Bottom of the screen", "Right side sidebar", "Below the title bar"],
+    "answer": "Bottom of the screen"
+  },
+  {
+    "chapter": "Spreadsheet (LibreOffice Calc)",
+    "question": "What is the default file extension of a LibreOffice Calc spreadsheet?",
+    "options": [".ods", ".xls", ".xlsx", ".odp"],
+    "answer": ".ods"
+  },
+  {
+    "chapter": "Spreadsheet (LibreOffice Calc)",
+    "question": "Every formula in LibreOffice Calc must always begin with which symbol?",
+    "options": ["@", "#", "=", "+"],
+    "answer": "="
+  },
+  {
+    "chapter": "Spreadsheet (LibreOffice Calc)",
+    "question": "What is the maximum number of rows available in a single sheet of LibreOffice Calc?",
+    "options": ["65536", "1048576", "256", "16384"],
+    "answer": "1048576"
+  },
+  {
+    "chapter": "Spreadsheet (LibreOffice Calc)",
+    "question": "What is the maximum number of columns available in a single sheet of LibreOffice Calc?",
+    "options": ["1024", "16384", "256", "4096"],
+    "answer": "16384"
+  },
+  {
+    "chapter": "Spreadsheet (LibreOffice Calc)",
+    "question": "What is the default number of sheets when you create a new Calc file?",
+    "options": ["1", "3", "5", "10"],
+    "answer": "1"
+  },
+  {
+    "chapter": "Spreadsheet (LibreOffice Calc)",
+    "question": "Which shortcut key opens the 'Function Wizard' in LibreOffice Calc?",
+    "options": ["Ctrl + F1", "Ctrl + F2", "F2", "Shift + F2"],
+    "answer": "Ctrl + F2"
+  },
+  {
+    "chapter": "Spreadsheet (LibreOffice Calc)",
+    "question": "What is the name of the box that shows the address of the currently active cell?",
+    "options": ["Formula Bar", "Status Bar", "Name Box", "Title Bar"],
+    "answer": "Name Box"
+  },
+  {
+    "chapter": "Spreadsheet (LibreOffice Calc)",
+    "question": "What error code is displayed in Calc when a column width is too narrow to display numbers?",
+    "options": ["#REF!", "#VALUE!", "###", "#NAME?"],
+    "answer": "###"
+  },
+  {
+    "chapter": "Spreadsheet (LibreOffice Calc)",
+    "question": "Which shortcut key is used to clear or delete the contents of a cell with options dialog?",
+    "options": ["Delete", "Backspace", "Ctrl + Delete", "Shift + Backspace"],
+    "answer": "Backspace"
+  },
+  {
+    "chapter": "Spreadsheet (LibreOffice Calc)",
+    "question": "What is the correct cell address for the very first cell in a Calc worksheet?",
+    "options": ["1A", "A1", "A-1", "Row1Col1"],
+    "answer": "A1"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "What is the default file extension of a LibreOffice Impress presentation?",
+    "options": [".odp", ".ppt", ".pptx", ".ods"],
+    "answer": ".odp"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which shortcut key runs the slideshow starting specifically from the current slide?",
+    "options": ["F5", "Shift + F5", "Ctrl + F5", "Alt + F5"],
+    "answer": "Shift + F5"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which of the following menus allows you to insert new slides into your presentation?",
+    "options": ["File", "Edit", "Slide", "Tools"],
+    "answer": "Slide"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "What is the maximum zoom level percentage supported by LibreOffice Impress?",
+    "options": ["400%", "600%", "1000%", "3000%"],
+    "answer": "3000%"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which view displays all slides as miniature thumbnails to easily rearrange them?",
+    "options": ["Normal View", "Slide Sorter View", "Outline View", "Notes View"],
+    "answer": "Slide Sorter View"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which key can be pressed to instantly exit or stop a running presentation slide show?",
+    "options": ["Enter", "Spacebar", "Escape (Esc)", "BackSpace"],
+    "answer": "Escape (Esc)"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "What is the default layout orientation of slides in LibreOffice Impress?",
+    "options": ["Portrait", "Landscape", "Square", "Vertical"],
+    "answer": "Landscape"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which feature is used to apply motion effects to individual objects on a single slide?",
+    "options": ["Slide Transition", "Custom Animation", "Slide Master", "Hyperlink view"],
+    "answer": "Custom Animation"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What is the full form of HTTP in web address architecture?",
+    "options": ["Hyper Text Transfer Protocol", "High Text Transfer Procedure", "Hyper Transfer Text Protocol", "Hyper Text Transmission Process"],
+    "answer": "Hyper Text Transfer Protocol"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which protocol is primarily used to securely transfer files between a client computer and a server?",
+    "options": ["HTTP", "SMTP", "FTP", "DNS"],
+    "answer": "FTP"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What was the name of the first operational packet-switching network, which became the foundation of the modern internet?",
+    "options": ["NSFNET", "ARPANET", "INTRANET", "ALOHANET"],
+    "answer": "ARPANET"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which of the following software programs is specifically used to navigate and view web pages?",
+    "options": ["Search Engine", "Web Browser", "Web Server", "Text Editor"],
+    "answer": "Web Browser"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What is the unique string identifier that defines the address of a specific resource or webpage on the internet?",
+    "options": ["IP Address", "URL", "MAC Address", "Domain Tag"],
+    "answer": "URL"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which network topology connects all nodes directly to a central hub or switch device?",
+    "options": ["Bus Topology", "Star Topology", "Ring Topology", "Mesh Topology"],
+    "answer": "Star Topology"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What is the structural size of an IPv6 address in computer networking systems?",
+    "options": ["32 bits", "64 bits", "128 bits", "256 bits"],
+    "answer": "128 bits"
+  },
+  {
+    "chapter": "E-mail, Social Networking and E-Governance Services",
+    "question": "Which network protocol is universally used to send outgoing emails from a client application?",
+    "options": ["POP3", "IMAP", "SMTP", "HTTP"],
+    "answer": "SMTP"
+  },
+  {
+    "chapter": "E-mail, Social Networking and E-Governance Services",
+    "question": "When sending an email, which field hides the identity of secondary recipients from other readers?",
+    "options": ["To", "Cc", "Bcc", "Subject"],
+    "answer": "Bcc"
+  },
+  {
+    "chapter": "E-mail, Social Networking and E-Governance Services",
+    "question": "What is the microblogging platform characterized by brief posts that was originally rebranded as 'X'?",
+    "options": ["Facebook", "Instagram", "Twitter", "LinkedIn"],
+    "answer": "Twitter"
+  },
+  {
+    "chapter": "E-mail, Social Networking and E-Governance Services",
+    "question": "Which Indian national e-governance mobile application provides citizens unified access to multiple central and state government services?",
+    "options": ["BHIM", "UMANG", "mParivahan", "DigiLocker"],
+    "answer": "UMANG"
+  },
+  {
+    "chapter": "E-mail, Social Networking and E-Governance Services",
+    "question": "What is the secure cloud-based platform provided by the Government of India for storing and verifying official digital documents?",
+    "options": ["Google Drive", "DigiLocker", "Dropbox", "E-Seva Cloud"],
+    "answer": "DigiLocker"
+  },
+  {
+    "chapter": "Digital Financial Tools and Applications",
+    "question": "What does the financial tool acronym UPI stand for?",
+    "options": ["Unified Payments Interface", "Universal Payment Integration", "United Premium Interface", "Unique Payment Identifier"],
+    "answer": "Unified Payments Interface"
+  },
+  {
+    "chapter": "Digital Financial Tools and Applications",
+    "question": "What is the short code string used to access banking services without internet connectivity over USSD?",
+    "options": ["*99#", "*121#", "*100#", "*88#"],
+    "answer": "*99#"
+  },
+  {
+    "chapter": "Digital Financial Tools and Applications",
+    "question": "What is the alphanumeric code used to uniquely identify a bank branch for online electronic money transfers within India?",
+    "options": ["PAN Code", "IFSC", "MICR", "SWIFT"],
+    "answer": "IFSC"
+  },
+  {
+    "chapter": "Digital Financial Tools and Applications",
+    "question": "Which payment clearing system handles high-value transactions in real-time continuous settlement mode within India?",
+    "options": ["NEFT", "RTGS", "IMPS", "AEPS"],
+    "answer": "RTGS"
+  },
+  {
+    "chapter": "Digital Financial Tools and Applications",
+    "question": "How many digits are present in the Card Verification Value (CVV) code printed on standard debit cards?",
+    "options": ["3", "4", "12", "16"],
+    "answer": "3"
+  },
+  {
+    "chapter": "Overview of Future Skills & Cyber Security",
+    "question": "What is the trick practice of sending fake communication disguised as legitimate sources to steal credentials called?",
+    "options": ["Phishing", "Spamming", "Hacking", "Spying"],
+    "answer": "Phishing"
+  },
+  {
+    "chapter": "Overview of Future Skills & Cyber Security",
+    "question": "Which software utility monitored system tool acts as a traffic filter barrier between an internal private network and public internet?",
+    "options": ["Antivirus", "Firewall", "Spyware cleaner", "Router tracker"],
+    "answer": "Firewall"
+  },
+  {
+    "chapter": "Overview of Future Skills & Cyber Security",
+    "question": "What type of malware self-replicates across computer networks independently without needing to attach to a host file?",
+    "options": ["Trojan Horse", "Worm", "Virus", "Adware"],
+    "answer": "Worm"
+  },
     {
       "chapter": "Spreadsheet (LibreOffice Calc)",
       "question": "Which formula is correct to add values from cell A1 to A5 in LibreOffice Calc?",
