@@ -281,7 +281,10 @@
         async function selectMod(code) {
             selectedModCode = code;
             try {
-                const res = await fetch('questions.json');
+             // const res = await fetch('./questions.json'); 
+// या सीधे अपने GitHub Pages का पूरा URL डाल दें:
+const res = await fetch('https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/questions.json');
+
                 allData = await res.json();
                 if(!allData[code]) throw new Error();
                 
