@@ -1,26 +1,106 @@
 {
   "M1": [
-    {
-      "paper": "M1-R5",
-      "chapter": "Introduction to Computer",
-      "question": "What is the brain of a computer system?",
-      "options": ["ALU", "CPU", "RAM", "Control Unit"],
-      "answer": "CPU"
-    },
-    {
-      "paper": "M1-R5",
-      "chapter": "Introduction to Computer",
-      "question": "Which of the following is the fastest memory?",
-      "options": ["RAM", "ROM", "Cache Memory", "Hard Disk"],
-      "answer": "Cache Memory"
-    },
-    {
-      "paper": "M1-R5",
-      "chapter": "Operating System",
-      "question": "Which of the following is an open-source operating system?",
-      "options": ["Windows", "Linux", "macOS", "MS-DOS"],
-      "answer": "Linux"
-    },
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the brain of a computer system?", "options": ["ALU", "CPU", "RAM", "Control Unit"], "answer": "CPU"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which of the following is the fastest memory?", "options": ["RAM", "ROM", "Cache Memory", "Hard Disk"], "answer": "Cache Memory"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which generation of computers used Integrated Circuits (ICs)?", "options": ["First", "Second", "Third", "Fourth"], "answer": "Third"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "1 Terabyte (TB) is equal to:", "options": ["1024 GB", "1024 MB", "1024 KB", "1024 PB"], "answer": "1024 GB"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which of the following is non-volatile memory?", "options": ["RAM", "Cache", "ROM", "Register"], "answer": "ROM"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "MICR stands for:", "options": ["Magnetic Ink Character Recognition", "Magnetic Ink Code Reader", "Magnetic Inline Character Reader", "None of these"], "answer": "Magnetic Ink Character Recognition"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which of the following is an output device?", "options": ["Keyboard", "Mouse", "Light Pen", "Plotter"], "answer": "Plotter"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the full form of ALU?", "options": ["Arithmetic Logic Unit", "Allowed Logic Unit", "Arithmetic Layer Unit", "Array Logic Unit"], "answer": "Arithmetic Logic Unit"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Software that manages and coordinates computer hardware is called:", "options": ["Application Software", "System Software", "Shareware", "Firmware"], "answer": "System Software"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which memory acts as a buffer between CPU and RAM?", "options": ["ROM", "Cache Memory", "Hard Disk", "SSD"], "answer": "Cache Memory"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Who is known as the father of modern computers?", "options": ["Alan Turing", "Charles Babbage", "John von Neumann", "Blaise Pascal"], "answer": "Charles Babbage"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the full form of EEPROM?", "options": ["Electrically Erasable Programmable Read Only Memory", "Easily Erasable Programmable Read Only Memory", "Electronic Erasable Programmable Read Only Memory", "Electric Engine Program Read Only Memory"], "answer": "Electrically Erasable Programmable Read Only Memory"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which component is used in fourth-generation computers?", "options": ["Vacuum Tubes", "Transistors", "Integrated Circuits", "Microprocessors / VLSI"], "answer": "Microprocessors / VLSI"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which of the following is the smallest unit of storage?", "options": ["Bit", "Nibble", "Byte", "Kilobyte"], "answer": "Bit"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "1 Nibble is equal to how many bits?", "options": ["2 bits", "4 bits", "8 bits", "16 bits"], "answer": "4 bits"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which architecture is followed by most modern digital computers?", "options": ["Harvard Architecture", "John von Neumann Architecture", "Turing Architecture", "Pascal Architecture"], "answer": "John von Neumann Architecture"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the full form of USB?", "options": ["Universal Serial Bus", "Uniform Serial Bus", "Universal System Bus", "Unique Serial Bus"], "answer": "Universal Serial Bus"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which of the following is an example of an primary input device?", "options": ["Monitor", "Printer", "Keyboard", "Speaker"], "answer": "Keyboard"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which type of computer is primarily used for weather forecasting?", "options": ["Microcomputer", "Mainframe Computer", "Minicomputer", "Supercomputer"], "answer": "Supercomputer"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the full form of SMPS?", "options": ["Switched Mode Power Supply", "Simple Mode Power Supply", "Storage Mode Power System", "Switched Mode Power System"], "answer": "Switched Mode Power Supply"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What type of device is a touch screen?", "options": ["Input device", "Output device", "Both Input and Output", "Storage device"], "answer": "Both Input and Output"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which component manages the timing and synchronization of operations within the CPU?", "options": ["ALU", "Control Unit", "Registers", "RAM"], "answer": "Control Unit"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which storage device has the highest data transfer speed?", "options": ["HDD", "Floppy Disk", "SSD", "CD-ROM"], "answer": "SSD"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is India's first indigenous supercomputer called?", "options": ["PARAM 8000", "PRATYUSH", "MIHIR", "SAGA-220"], "answer": "PARAM 8000"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What does POST stand for in computer hardware boot processes?", "options": ["Power On Self Test", "Power Only System Test", "Program On System Track", "Program Operational Self Test"], "answer": "Power On Self Test"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which of the following stores data on a magnetic platter?", "options": ["Pen Drive", "Hard Disk Drive", "Blu-ray Disc", "SSD"], "answer": "Hard Disk Drive"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What type of system software initialized the computer hardware during booting?", "options": ["Operating System", "BIOS", "Device Driver", "Utility Software"], "answer": "BIOS"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the full form of OMR?", "options": ["Optical Mark Recognition", "Optical Magnetic Reader", "Open Mark Reader", "Optical Mark Register"], "answer": "Optical Mark Recognition"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "A pixel can be defined as:", "options": ["A computer code", "The smallest addressable element of a digital image", "A type of memory chip", "A point on a hard drive track"], "answer": "The smallest addressable element of a digital image"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which statement is true about RAM?", "options": ["It is slower than secondary storage", "It is non-volatile", "It holds the data currently being processed by the CPU", "It permanently saves files"], "answer": "It holds the data currently being processed by the CPU"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which type of printer uses a ribbon and tiny pins to strike characters on paper?", "options": ["Laser Printer", "Inkjet Printer", "Dot Matrix Printer", "Thermal Printer"], "answer": "Dot Matrix Printer"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What type of ports are commonly used to connect a monitor to a PC?", "options": ["HDMI / VGA", "PS/2", "RJ-45", "MIDI"], "answer": "HDMI / VGA"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the full form of VDU?", "options": ["Visual Display Unit", "Virtual Data Unit", "Visual Data Utility", "Volume Display Unit"], "answer": "Visual Display Unit"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the binary equivalent of decimal number 10?", "options": ["1001", "1010", "1100", "1111"], "answer": "1010"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which unit is used to measure the clock speed of a modern CPU?", "options": ["Megabits per second", "Gigahertz (GHz)", "Lines per minute", "Kilobytes"], "answer": "Gigahertz (GHz)"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What does ASCII stand for?", "options": ["American Standard Code for Information Interchange", "African Standard Code for Information Interchange", "American Standard Code for Internet Infrastructure", "Analytical Standard Code for Information Interchange"], "answer": "American Standard Code for Information Interchange"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which generation of computers introduced the concept of Artificial Intelligence?", "options": ["Third", "Fourth", "Fifth", "Sixth"], "answer": "Fifth"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the standard storage capacity of a normal DVD?", "options": ["700 MB", "4.7 GB", "25 GB", "1 TB"], "answer": "4.7 GB"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which of the following is utility software?", "options": ["Linux", "MS Word", "Antivirus", "VLC Player"], "answer": "Antivirus"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What are the small storage locations inside the CPU itself called?", "options": ["Cache", "RAM", "Registers", "ROM"], "answer": "Registers"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which technology is used in optical storage media like CDs and DVDs?", "options": ["Magnetic fields", "Laser beams", "Flash chips", "Vacuum tubes"], "answer": "Laser beams"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the full form of CRT?", "options": ["Cathode Ray Tube", "Central Read Terminal", "Calculated Rate Track", "Cathode Ray Transfer"], "answer": "Cathode Ray Tube"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which system component maintains the system date and time even when the PC is off?", "options": ["RAM", "CMOS Battery", "CPU Cache", "Microprocessor"], "answer": "CMOS Battery"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What type of code is a barcode?", "options": ["An optical machine-readable representation of data", "A biometric code", "A magnetic track code", "A encrypted file system"], "answer": "An optical machine-readable representation of data"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which language is directly understood by the computer hardware without a translator?", "options": ["Assembly Language", "High-Level Language", "Machine Language", "SQL"], "answer": "Machine Language"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the function of a compiler?", "options": ["Translates high-level code to machine code line-by-line", "Translates entire high-level program into machine code at once", "Translates assembly language to machine code", "Manages peripheral devices"], "answer": "Translates entire high-level program into machine code at once"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What type of application software is open-source?", "options": ["Proprietary", "Free and open for modification (OSS)", "Freeware but restricted source code", "Shareware"], "answer": "Free and open for modification (OSS)"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "How many Megabytes (MB) make up 1 Gigabyte (GB)?", "options": ["1000", "1024", "2048", "512"], "answer": "1024"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which device is used to enter hand-drawn images into a computer?", "options": ["Plotter", "Graphic Tablet / Digitizer", "Printer", "OCR Reader"], "answer": "Graphic Tablet / Digitizer"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the full form of DPI in reference to printers?", "options": ["Dots Per Inch", "Data Per Inch", "Digital Picture Interface", "Dots Per Image"], "answer": "Dots Per Inch"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the first calculating device invented by humans?", "options": ["Napier's Bones", "Pascaline", "Abacus", "Analytical Engine"], "answer": "Abacus"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which computer generation used vacuum tubes?", "options": ["First", "Second", "Third", "Fourth"], "answer": "First"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Who designed the Analytical Engine?", "options": ["Charles Babbage", "Lady Ada Lovelace", "Herman Hollerith", "Dennis Ritchie"], "answer": "Charles Babbage"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Who is considered the world's first computer programmer?", "options": ["Charles Babbage", "Lady Ada Lovelace", "Alan Turing", "Steve Wozniak"], "answer": "Lady Ada Lovelace"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which memory cannot be programmed after manufacturing?", "options": ["SRAM", "DRAM", "ROM", "EEPROM"], "answer": "ROM"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What type of access mechanism does a magnetic tape use?", "options": ["Random Access", "Sequential Access", "Direct Access", "Indexed Access"], "answer": "Sequential Access"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which software translator reads a high-level program line by line?", "options": ["Compiler", "Interpreter", "Assembler", "Linker"], "answer": "Interpreter"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which of the following is hardware?", "options": ["Operating System", "Device Driver", "Motherboard", "Compiler"], "answer": "Motherboard"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the full form of PROM?", "options": ["Programmable Read Only Memory", "Programmed Read Only Memory", "Primary Read Only Memory", "Portable Read Only Memory"], "answer": "Programmable Read Only Memory"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which memory needs to be refreshed thousands of times per second?", "options": ["SRAM", "DRAM", "ROM", "Hard Disk"], "answer": "DRAM"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What does a firmware mean?", "options": ["Application software package", "A mix of hardware and software embedded on a hardware chip", "Open-source system software", "The metallic body of CPU"], "answer": "A mix of hardware and software embedded on a hardware chip"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What type of computer handles data in continuous physical magnitudes like voltage or temperature?", "options": ["Digital Computer", "Analog Computer", "Hybrid Computer", "Mainframe Computer"], "answer": "Analog Computer"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What type of computer combines both analog and digital features?", "options": ["Supercomputer", "Microcomputer", "Hybrid Computer", "Server"], "answer": "Hybrid Computer"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which device uses a standard QWERTY layout?", "options": ["Mouse", "Keyboard", "Scanner", "Joystick"], "answer": "Keyboard"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What type of memory is a pen drive?", "options": ["Flash Memory", "Magnetic Storage", "Optical Storage", "Volatile Memory"], "answer": "Flash Memory"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which port is most commonly used to connect speakers or headphones?", "options": ["Serial Port", "3.5mm Audio Jack", "VGA Port", "Parallel Port"], "answer": "3.5mm Audio Jack"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What does GIGO stand for in computer science?", "options": ["Garbage In Garbage Out", "Garbage Input Garbage Output", "General Input General Output", "Global Input Global Output"], "answer": "Garbage In Garbage Out"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which of the following describes the execution of multiple tasks by a single CPU simultaneously via time-sharing?", "options": ["Multiprocessing", "Multitasking", "Real-time processing", "Batch processing"], "answer": "Multitasking"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the full form of SSD?", "options": ["Solid State Drive", "Static State Drive", "Secure Storage Drive", "Solid Static Device"], "answer": "Solid State Drive"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which memory retains data even after the power supply is cut off?", "options": ["RAM", "Non-Volatile Memory", "Cache Memory", "Virtual Memory"], "answer": "Non-Volatile Memory"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the storage capacity of a standard CD-ROM?", "options": ["1.44 MB", "700 MB", "4.7 GB", "8.5 GB"], "answer": "700 MB"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which generation of computers used transistors instead of vacuum tubes?", "options": ["First", "Second", "Third", "Fourth"], "answer": "Second"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the purpose of an assembler?", "options": ["Converts assembly language into machine code", "Converts high level language into machine code", "Assembles computer hardware parts", "Debugs operating system errors"], "answer": "Converts assembly language into machine code"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the full form of LCD?", "options": ["Liquid Crystal Display", "Liquid Compact Disc", "Light Crystal Display", "Linear Crystal Display"], "answer": "Liquid Crystal Display"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which unit is responsible for mathematical and logical comparisons?", "options": ["CU", "MU", "ALU", "BIOS"], "answer": "ALU"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which of the following is a pointing input device?", "options": ["Keyboard", "Mouse", "Printer", "Scanner"], "answer": "Mouse"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What type of storage is a hard disk categorized as?", "options": ["Primary Storage", "Secondary Storage", "Cache Storage", "Volatile Storage"], "answer": "Secondary Storage"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which of the following is an example of System Software?", "options": ["LibreOffice", "VLC Media Player", "Windows Operating System", "Google Chrome"], "answer": "Windows Operating System"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "1 Petabyte (PB) is equal to:", "options": ["1024 TB", "1024 GB", "1024 EB", "1024 MB"], "answer": "1024 TB"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the full form of LED?", "options": ["Light Emitting Diode", "Liquid Emitting Diode", "Light Electronic Device", "Low Energy Diode"], "answer": "Light Emitting Diode"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which memory allocation technique uses a portion of the hard drive to simulate additional RAM?", "options": ["Cache Memory", "Virtual Memory", "Static RAM", "Flash Memory"], "answer": "Virtual Memory"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which of the following is a non-impact printer?", "options": ["Dot Matrix Printer", "Daisy Wheel Printer", "Laser Printer", "Line Printer"], "answer": "Laser Printer"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What type of device is a digital camera?", "options": ["Input Device", "Output Device", "Storage Device", "Processing Device"], "answer": "Input Device"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which computer component contains the sockets where CPU and memory chips are plugged?", "options": ["Hard Drive", "Power Supply", "Motherboard", "Sound Card"], "answer": "Motherboard"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the default data format that digital circuits work on?", "options": ["Decimal System", "Binary System", "Hexadecimal System", "Octal System"], "answer": "Binary System"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the full form of Bit?", "options": ["Binary Digit", "Binary Integer", "Binit", "Basic Unit"], "answer": "Binary Digit"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "1 Byte contains how many bits?", "options": ["4", "8", "16", "1024"], "answer": "8"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which of the following can read handwritten text or typed characters and turn them into digital text?", "options": ["OMR", "OCR", "MICR", "Barcode Reader"], "answer": "OCR"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What does OCR stand for?", "options": ["Optical Character Recognition", "Optical Code Reader", "Online Character Reader", "Optimal Character Registry"], "answer": "Optical Character Recognition"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which port is used to connect a traditional dial-up telephone line or networking patch cable?", "options": ["USB Port", "Parallel Port", "RJ-45 / RJ-11 Ethernet/Modem Port", "VGA Port"], "answer": "RJ-45 / RJ-11 Ethernet/Modem Port"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which device is used to produce high-quality vector graphics and architectural blueprints?", "options": ["Laser Printer", "Plotter", "Inkjet Printer", "Scanner"], "answer": "Plotter"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What type of software is an internet web browser like Google Chrome?", "options": ["System Software", "Application Software", "Utility Software", "Firmware"], "answer": "Application Software"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which of the following is considered static memory that does not lose data on shutdown but cannot be rewritten easily?", "options": ["RAM", "ROM", "Cache", "SRAM"], "answer": "ROM"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the full form of LSI technology used in computers?", "options": ["Large Scale Integration", "Low Scale Integration", "Linear System Integration", "Logical System Interface"], "answer": "Large Scale Integration"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "The speed of secondary storage devices is measured in terms of:", "options": ["Clock Speed", "Data Transfer Rate (e.g., MB/s)", "GigaHertz", "DPI"], "answer": "Data Transfer Rate (e.g., MB/s)"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What type of operating ecosystem are supercomputers typically built on?", "options": ["Windows Home", "Linux/Unix variants", "MS-DOS", "macOS"], "answer": "Linux/Unix variants"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which system component is directly responsible for rendering images onto your display screen?", "options": ["Sound Card", "Graphics Card / GPU", "Network Card", "SMPS"], "answer": "Graphics Card / GPU"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "What is the full form of VLSI?", "options": ["Very Large Scale Integration", "Volume Large Scale Integration", "Virtual Logic System Interface", "Variable Linear System Integration"], "answer": "Very Large Scale Integration"},
+{"paper": "M1-R5", "chapter": "Introduction to Computer", "question": "Which memory type uses flip-flops to store data and is faster but more expensive?", "options": ["DRAM", "SRAM", "EEPROM", "Flash Drive"], "answer": "SRAM"},
+          
+
     {
       "paper": "M1-R5",
       "chapter": "Word Processing",
@@ -30,11 +110,488 @@
     },
     {
       "paper": "M1-R5",
+      "chapter": "Word Processing",
+      "question": "What is the shortcut key for 'Save As' in LibreOffice Writer?",
+      "options": ["Ctrl + S", "Ctrl + Shift + S", "F12", "Ctrl + Alt + S"],
+      "answer": "Ctrl + Shift + S"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Word Processing",
+      "question": "What is the maximum zoom percentage in LibreOffice Writer?",
+      "options": ["400%", "500%", "600%", "300%"],
+      "answer": "600%"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Word Processing",
+      "question": "Which shortcut key is used to insert a page break in LibreOffice Writer?",
+      "options": ["Ctrl + Enter", "Shift + Enter", "Alt + Enter", "Ctrl + Shift + Enter"],
+      "answer": "Ctrl + Enter"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Word Processing",
+      "question": "What is the shortcut key for double underlining in LibreOffice Writer?",
+      "options": ["Ctrl + D", "Ctrl + Shift + D", "Ctrl + Alt + D", "None of these"],
+      "answer": "Ctrl + D"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Word Processing",
+      "question": "Superscript, Subscript, and Strikethrough are known as:",
+      "options": ["Font Effects", "Font Styles", "Text Effects", "Font Face"],
+      "answer": "Font Effects"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Word Processing",
+      "question": "What is the shortcut key for 'Find and Replace' in LibreOffice Writer?",
+      "options": ["Ctrl + F", "Ctrl + H", "Ctrl + R", "Ctrl + G"],
+      "answer": "Ctrl + H"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Word Processing",
+      "question": "Which menu contains the 'Mail Merge' wizard option?",
+      "options": ["File", "Edit", "Insert", "Tools"],
+      "answer": "Tools"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Word Processing",
+      "question": "What is the shortcut key to toggle formatting marks (Hide/Show) in Writer?",
+      "options": ["Ctrl + F10", "F10", "Shift + F10", "Alt + F10"],
+      "answer": "Ctrl + F10"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Word Processing",
+      "question": "What is the default font size in LibreOffice Writer?",
+      "options": ["10", "11", "12", "14"],
+      "answer": "12"
+    },
+    {
+      "paper": "M1-R5",
       "chapter": "Spreadsheet",
       "question": "Which formula is correct to sum cells A1 to A5 in LibreOffice Calc?",
       "options": ["=SUM(A1:A5)", "=ADD(A1:A5)", "=TOTAL(A1..A5)", "SUM(A1-A5)"],
       "answer": "=SUM(A1:A5)"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Spreadsheet",
+      "question": "What is the default extension of LibreOffice Calc?",
+      "options": [".odt", ".ods", ".odp", ".csv"],
+      "answer": ".ods"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Spreadsheet",
+      "question": "What is the total number of columns in LibreOffice Calc?",
+      "options": ["1024", "16384", "256", "4096"],
+      "answer": "1024"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Spreadsheet",
+      "question": "What is the shortcut key to insert a new cell/row/column in Calc?",
+      "options": ["Ctrl + +", "Ctrl + -", "Ctrl + Alt + C", "Shift + +"],
+      "answer": "Ctrl + +"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Spreadsheet",
+      "question": "What error occurs when a formula contains an invalid cell reference?",
+      "options": ["#VALUE!", "#NAME?", "#REF!", "###"],
+      "answer": "#REF!"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Spreadsheet",
+      "question": "What is the intersection of a row and a column called?",
+      "options": ["Box", "Cell", "Block", "Table"],
+      "answer": "Cell"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Spreadsheet",
+      "question": "What is the maximum number of rows in a single LibreOffice Calc sheet?",
+      "options": ["65536", "1048576", "100000", "524288"],
+      "answer": "1048576"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Spreadsheet",
+      "question": "What is the shortcut key to open the 'Format Cells' dialog box?",
+      "options": ["Ctrl + 1", "Ctrl + F", "Alt + 1", "Shift + 1"],
+      "answer": "Ctrl + 1"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Spreadsheet",
+      "question": "Every formula in LibreOffice Calc must start with which symbol?",
+      "options": ["$", "@", "=", "+"],
+      "answer": "="
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Spreadsheet",
+      "question": "What happens when text is larger than the cell width in Calc?",
+      "options": ["It gets deleted", "It displays ###", "It overflows to the next cell if empty", "It auto-fits automatically"],
+      "answer": "It overflows to the next cell if empty"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Presentation",
+      "question": "What is the default extension of LibreOffice Impress files?",
+      "options": [".odt", ".ods", ".odp", ".ppt"],
+      "answer": ".odp"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Presentation",
+      "question": "Which shortcut key is used to start a slideshow from the first slide?",
+      "options": ["F5", "Shift + F5", "Ctrl + F5", "Alt + F5"],
+      "answer": "F5"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Presentation",
+      "question": "Which shortcut key is used to start the slideshow from the current slide?",
+      "options": ["F5", "Shift + F5", "Ctrl + Shift + F5", "Alt + F5"],
+      "answer": "Shift + F5"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Presentation",
+      "question": "What is the maximum zoom level in LibreOffice Impress?",
+      "options": ["400%", "600%", "1000%", "3000%"],
+      "answer": "3000%"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Presentation",
+      "question": "Which view is used to rearrange slides easily?",
+      "options": ["Normal View", "Slide Sorter View", "Outline View", "Notes View"],
+      "answer": "Slide Sorter View"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Presentation",
+      "question": "What is the shortcut key to insert a new slide in Impress?",
+      "options": ["Ctrl + N", "Ctrl + M", "Ctrl + S", "Shift + N"],
+      "answer": "Ctrl + M"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Presentation",
+      "question": "Which key is used to end/stop a slideshow?",
+      "options": ["Enter", "Spacebar", "Esc", "Backspace"],
+      "answer": "Esc"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Presentation",
+      "question": "What is the default page orientation of slides in LibreOffice Impress?",
+      "options": ["Portrait", "Landscape", "Square", "Vertical"],
+      "answer": "Landscape"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Presentation",
+      "question": "Which layout is applied by default when you open a new presentation?",
+      "options": ["Blank Slide", "Title Slide", "Title and Content", "Two Content"],
+      "answer": "Title Slide"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Presentation",
+      "question": "Can we export an Impress presentation directly as a PDF?",
+      "options": ["Yes", "No", "Only via external converter", "Only certain slides"],
+      "answer": "Yes"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Introduction to Internet and WWW",
+      "question": "What is the full form of WWW?",
+      "options": ["World Wide Web", "World Whole Web", "Wide World Web", "Web World Wide"],
+      "answer": "World Wide Web"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Introduction to Internet and WWW",
+      "question": "Which protocol is used to transfer files over the Internet?",
+      "options": ["HTTP", "FTP", "SMTP", "POP3"],
+      "answer": "FTP"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Introduction to Internet and WWW",
+      "question": "What is the full form of DNS?",
+      "options": ["Domain Name System", "Data Name System", "Digital Network Service", "Domain Network Security"],
+      "answer": "Domain Name System"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Introduction to Internet and WWW",
+      "question": "Which of the following is NOT a web browser?",
+      "options": ["Google Chrome", "Mozilla Firefox", "Google", "Safari"],
+      "answer": "Google"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Introduction to Internet and WWW",
+      "question": "What is the address of a web page called?",
+      "options": ["IP Address", "URL", "MAC Address", "Domain"],
+      "answer": "URL"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Introduction to Internet and WWW",
+      "question": "Which protocol ensures secure data transmission over the WWW?",
+      "options": ["HTTP", "HTTPS", "FTP", "SMTP"],
+      "answer": "HTTPS"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Introduction to Internet and WWW",
+      "question": "What is the full form of ISP?",
+      "options": ["Internet Service Provider", "Internet System Protocol", "International Service Provider", "Internet Security Protocol"],
+      "answer": "Internet Service Provider"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Introduction to Internet and WWW",
+      "question": "The first page of a website is called:",
+      "options": ["Main Page", "Home Page", "Web Page", "Index Page"],
+      "answer": "Home Page"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Introduction to Internet and WWW",
+      "question": "What is the size of an IPv4 address?",
+      "options": ["32 bits", "64 bits", "128 bits", "16 bits"],
+      "answer": "32 bits"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Introduction to Internet and WWW",
+      "question": "What is the size of an IPv6 address?",
+      "options": ["32 bits", "64 bits", "128 bits", "256 bits"],
+      "answer": "128 bits"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "E-mail, Social Networking and E-Governance Services",
+      "question": "Which protocol is used to send emails?",
+      "options": ["POP3", "IMAP", "SMTP", "HTTP"],
+      "answer": "SMTP"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "E-mail, Social Networking and E-Governance Services",
+      "question": "What is the full form of CC in email?",
+      "options": ["Carbon Copy", "Credit Copy", "Character Copy", "Common Copy"],
+      "answer": "Carbon Copy"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "E-mail, Social Networking and E-Governance Services",
+      "question": "What does BCC stand for in email?",
+      "options": ["Blind Carbon Copy", "Best Carbon Copy", "Block Carbon Copy", "Backward Carbon Copy"],
+      "answer": "Blind Carbon Copy"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "E-mail, Social Networking and E-Governance Services",
+      "question": "What is the maximum attachment size limit in Gmail?",
+      "options": ["15 MB", "20 MB", "25 MB", "50 MB"],
+      "answer": "25 MB"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "E-mail, Social Networking and E-Governance Services",
+      "question": "Which app is used for checking train status and booking under e-Governance?",
+      "options": ["IRCTC Connect", "DigiLocker", "UMANG", "mParivahan"],
+      "answer": "IRCTC Connect"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "E-mail, Social Networking and E-Governance Services",
+      "question": "What is the character limit for a single post on Twitter (X) for standard users?",
+      "options": ["140", "280", "500", "Unlimited"],
+      "answer": "280"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "E-mail, Social Networking and E-Governance Services",
+      "question": "Which platform is primarily used for professional networking and job search?",
+      "options": ["Facebook", "Instagram", "LinkedIn", "Pinterest"],
+      "answer": "LinkedIn"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "E-mail, Social Networking and E-Governance Services",
+      "question": "DigiLocker uses which of the following for user authentication?",
+      "options": ["Aadhaar Card", "PAN Card", "Driving License", "Voter ID"],
+      "answer": "Aadhaar Card"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "E-mail, Social Networking and E-Governance Services",
+      "question": "What is the short-code/USSD code used for Mobile Banking services?",
+      "options": ["*99#", "*121#", "*100#", "*141#"],
+      "answer": "*99#"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "E-mail, Social Networking and E-Governance Services",
+      "question": "What is the purpose of the UMANG app?",
+      "options": ["Single platform for all Indian e-Gov services", "Online Shopping", "Gaming", "Social Networking"],
+      "answer": "Single platform for all Indian e-Gov services"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Digital Financial Tools and Applications",
+      "question": "What is the full form of UPI?",
+      "options": ["Unified Payments Interface", "United Payments Interface", "Universal Payment Institution", "Unique Payments Interface"],
+      "answer": "Unified Payments Interface"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Digital Financial Tools and Applications",
+      "question": "Which organization developed the BHIM UPI app?",
+      "options": ["RBI", "NPCI", "SBI", "Ministry of IT"],
+      "answer": "NPCI"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Digital Financial Tools and Applications",
+      "question": "What is the daily limit for transactions via BHIM UPI (standard)?",
+      "options": ["Rs. 10,000", "Rs. 50,000", "Rs. 1,00,000", "Rs. 2,00,000"],
+      "answer": "Rs. 1,00,000"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Digital Financial Tools and Applications",
+      "question": "What is the full form of AEPS?",
+      "options": ["Aadhaar Enabled Payment System", "Aadhaar Efficient Payment System", "All Efficient Payment Service", "Annual Electronic Payment System"],
+      "answer": "Aadhaar Enabled Payment System"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Digital Financial Tools and Applications",
+      "question": "How many digits are there in a CVV number on a debit/credit card?",
+      "options": ["2", "3", "4", "16"],
+      "answer": "3"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Digital Financial Tools and Applications",
+      "question": "Which digital payment method works on an offline mode using USSD?",
+      "options": ["UPI", "AEPS", "*99#", "RTGS"],
+      "answer": "*99#"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Digital Financial Tools and Applications",
+      "question": "What is the full form of RTGS?",
+      "options": ["Real Time Gross Settlement", "Real Time General Settlement", "Rapid Transfer Gross System", "Regular Time Gross Settlement"],
+      "answer": "Real Time Gross Settlement"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Digital Financial Tools and Applications",
+      "question": "Which electronic fund transfer system operates 24x7 in batches?",
+      "options": ["NEFT", "RTGS", "IMPS", "UPI"],
+      "answer": "NEFT"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Digital Financial Tools and Applications",
+      "question": "What is the maximum number of digits in an Aadhaar number?",
+      "options": ["10", "11", "12", "16"],
+      "answer": "12"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Digital Financial Tools and Applications",
+      "question": "What does OTP stand for?",
+      "options": ["One Time Password", "One Time Pin", "Only Text Password", "Over The Phone"],
+      "answer": "One Time Password"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Overview of Futureskills & Cyber Security",
+      "question": "Who is known as the father of Artificial Intelligence (AI)?",
+      "options": ["Alan Turing", "John McCarthy", "Charles Babbage", "Tim Berners-Lee"],
+      "answer": "John McCarthy"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Overview of Futureskills & Cyber Security",
+      "question": "Which of the following is an example of an IoT device?",
+      "options": ["Smart Thermostat", "Traditional Watch", "Simple Calculator", "Paper Book"],
+      "answer": "Smart Thermostat"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Overview of Futureskills & Cyber Security",
+      "question": "What is the full form of IoT?",
+      "options": ["Internet of Things", "Interoperability of Technology", "Internet of Tools", "Internal of Things"],
+      "answer": "Internet of Things"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Overview of Futureskills & Cyber Security",
+      "question": "Malicious software designed to disrupt, damage, or gain unauthorized access is called:",
+      "options": ["Firmware", "Malware", "Shareware", "Freeware"],
+      "answer": "Malware"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Overview of Futureskills & Cyber Security",
+      "question": "What is the practice of tricking users into revealing sensitive information via fake emails/websites?",
+      "options": ["Phishing", "Hacking", "Spamming", "Spoofing"],
+      "answer": "Phishing"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Overview of Futureskills & Cyber Security",
+      "question": "Which of the following is used to protect a private network from unauthorized external access?",
+      "options": ["Antivirus", "Firewall", "Router", "Switch"],
+      "answer": "Firewall"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Overview of Futureskills & Cyber Security",
+      "question": "What does cloud computing offer?",
+      "options": ["On-demand delivery of IT resources over the Internet", "Offline storage on local drive", "Hard disk repair", "Weather forecasting software"],
+      "answer": "On-demand delivery of IT resources over the Internet"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Overview of Futureskills & Cyber Security",
+      "question": "Which technology uses a decentralized and distributed digital ledger?",
+      "options": ["Cloud Computing", "Blockchain", "Big Data", "Artificial Intelligence"],
+      "answer": "Blockchain"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Overview of Futureskills & Cyber Security",
+      "question": "What type of cyberattack blocks access to a computer system until a sum of money is paid?",
+      "options": ["Spyware", "Ransomware", "Trojan Horse", "Worm"],
+      "answer": "Ransomware"
+    },
+    {
+      "paper": "M1-R5",
+      "chapter": "Overview of Futureskills & Cyber Security",
+      "question": "In 3D printing, what is another term used for the process?",
+      "options": ["Subtractive Manufacturing", "Additive Manufacturing", "Laser Cutting", "CNC Milling"],
+      "answer": "Additive Manufacturing"
     }
+
   ],
   "M2": [
     {
