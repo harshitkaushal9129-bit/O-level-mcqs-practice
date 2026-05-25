@@ -1,150 +1,66 @@
 {
   "M1": [
     {
-      "chapter": "Information Technology Tools",
+      "chapter": "Introduction to Computer",
       "question": "Which of the following is the fastest memory in a computer system?",
       "options": ["RAM", "ROM", "Cache Memory", "Hard Disk"],
       "answer": "Cache Memory"
     },
     {
-      "chapter": "Information Technology Tools",
-      "question": "What is the full form of ALU?",
-      "options": ["Arithmetic Logic Unit", "Advanced Logic Unit", "Array Logic Utility", "Application Logic User"],
-      "answer": "Arithmetic Logic Unit"
-    },
-    {
-      "chapter": "Information Technology Tools",
-      "question": "Which component is known as the brain of the computer?",
-      "options": ["Monitor", "CPU", "Keyboard", "Hard Disk"],
-      "answer": "CPU"
-    },
-    {
-      "chapter": "Information Technology Tools",
-      "question": "1 Terabyte (TB) is equal to how many Gigabytes (GB)?",
-      "options": ["1000 GB", "1024 GB", "512 GB", "2048 GB"],
-      "answer": "1024 GB"
-    },
-    {
-      "chapter": "Information Technology Tools",
-      "question": "Which of the following is an input device?",
-      "options": ["Printer", "Monitor", "Scanner", "Plotter"],
-      "answer": "Scanner"
-    },
-    {
-      "chapter": "Information Technology Tools",
-      "question": "What type of device is a digital camera?",
-      "options": ["Input", "Output", "Storage", "Software"],
-      "answer": "Input"
-    },
-    {
-      "chapter": "Information Technology Tools",
-      "question": "Which memory is non-volatile in nature?",
-      "options": ["RAM", "ROM", "Cache", "Virtual Memory"],
-      "answer": "ROM"
-    },
-    {
-      "chapter": "Information Technology Tools",
-      "question": "BIOS stands for what?",
-      "options": ["Basic Input Output System", "Binary Input Output System", "Base Instruction Output System", "Basic Interface Operating System"],
-      "answer": "Basic Input Output System"
-    },
-    {
-      "chapter": "Information Technology Tools",
-      "question": "Which of the following is secondary storage?",
-      "options": ["RAM", "ROM", "SSD", "Cache"],
-      "answer": "SSD"
-    },
-    {
-      "chapter": "Information Technology Tools",
-      "question": "What is the shortcut key to permanently delete a file in Windows?",
-      "options": ["Delete", "Shift + Delete", "Ctrl + Delete", "Alt + Delete"],
-      "answer": "Shift + Delete"
-    },
-    {
-      "chapter": "Operating System",
-      "question": "Which of the following is an open-source operating system?",
-      "options": ["Windows 10", "macOS", "Linux", "Windows 11"],
-      "answer": "Linux"
-    },
-    {
-      "chapter": "Operating System",
-      "question": "What is the extension of an executable file in Windows?",
-      "options": [".txt", ".exe", ".pdf", ".docx"],
-      "answer": ".exe"
-    },
-    {
-      "chapter": "Operating System",
-      "question": "Which command is used in Linux to list files?",
-      "options": ["dir", "list", "ls", "show"],
-      "answer": "ls"
-    },
-    {
-      "chapter": "Operating System",
-      "question": "What is the main function of an operating system?",
-      "options": ["Word processing", "Resource management", "Database calculation", "Web browsing"],
-      "answer": "Resource management"
-    },
-    {
-      "chapter": "Operating System",
-      "question": "Which of the following is a Single User Operating System?",
-      "options": ["UNIX", "MS-DOS", "Linux", "Windows Server"],
-      "answer": "MS-DOS"
-    },
-    {
-      "chapter": "Operating System",
-      "question": "In Linux, which command is used to create a new directory?",
-      "options": ["mkdir", "cd", "rmdir", "newdir"],
-      "answer": "mkdir"
-    },
-    {
-      "chapter": "Operating System",
-      "question": "What is GUI stand for?",
-      "options": ["Graphical User Interface", "General User Interface", "Global User Index", "Group User Interface"],
-      "answer": "Graphical User Interface"
-    },
-    {
-      "chapter": "Operating System",
-      "question": "Which file system is standard for modern Windows operating systems?",
-      "options": ["FAT32", "NTFS", "EXT4", "HPFS"],
-      "answer": "NTFS"
-    },
-    {
-      "chapter": "Operating System",
+      "chapter": "Introduction to Operating System",
       "question": "What is the core part of an Operating System called?",
       "options": ["Shell", "Kernel", "Command Prompt", "Registry"],
       "answer": "Kernel"
     },
     {
-      "chapter": "Operating System",
-      "question": "Which shortcut key opens the Task Manager in Windows?",
-      "options": ["Ctrl + Alt + Delete", "Ctrl + Shift + Esc", "Alt + F4", "Win + R"],
-      "answer": "Ctrl + Shift + Esc"
+      "chapter": "Word Processing (LibreOffice Writer)",
+      "question": "What is the default file extension of LibreOffice Writer?",
+      "options": [".doc", ".docx", ".odt", ".txt"],
+      "answer": ".odt"
+    },
+    {
+      "chapter": "Spreadsheet (LibreOffice Calc)",
+      "question": "Which formula is correct to add values from cell A1 to A5 in LibreOffice Calc?",
+      "options": ["=ADD(A1:A5)", "=SUM(A1:A5)", "=TOTAL(A1:A5)", "=A1+A5"],
+      "answer": "=SUM(A1:A5)"
+    },
+    {
+      "chapter": "Presentation (LibreOffice Impress)",
+      "question": "Which shortcut key is used to start a slide show from the first slide in Impress?",
+      "options": ["F5", "Shift + F5", "Ctrl + F5", "Alt + F5"],
+      "answer": "F5"
+    },
+    {
+      "chapter": "Introduction to Internet and WWW",
+      "question": "What is the full form of DNS in computer networks?",
+      "options": ["Data Network System", "Domain Name System", "Digital Network Service", "Domain Network Security"],
+      "answer": "Domain Name System"
+    },
+    {
+      "chapter": "E-mail, Social Networking and E-Governance Services",
+      "question": "Which of the following protocol is used to receive emails?",
+      "options": ["SMTP", "POP3", "FTP", "HTTP"],
+      "answer": "POP3"
+    },
+    {
+      "chapter": "Digital Financial Tools and Applications",
+      "question": "What is the maximum daily transaction limit for UPI in standard banking guidelines?",
+      "options": ["Rs. 10,000", "Rs. 50,000", "Rs. 1,000,000", "Rs. 2,000,000"],
+      "answer": "Rs. 1,000,000"
+    },
+    {
+      "chapter": "Overview of Future Skills & Cyber Security",
+      "question": "Which of the following is a type of malicious software that encrypts data and demands payment for decryption?",
+      "options": ["Spyware", "Ransomware", "Trojan Horse", "Worm"],
+      "answer": "Ransomware"
     }
   ],
   "M2": [
     {
-      "chapter": "HTML Basics",
-      "question": "Which HTML tag is used to define the largest heading?",
-      "options": ["<h6>", "<heading>", "<head>", "<h1>"],
-      "answer": "<h1>"
-    },
-    {
-      "chapter": "HTML Basics",
-      "question": "What is the correct tag for creating a line break in HTML?",
-      "options": ["<break>", "<br>", "<lb>", "<hr>"],
-      "answer": "<br>"
-    },
-    {
-      "chapter": "HTML Basics",
-      "question": "Choose the correct HTML element to define important text:",
-      "options": ["<important>", "<strong>", "<i>", "<b>"],
-      "answer": "<strong>"
-    },
-    {
-      "chapter": "HTML Basics",
-      "question": "Which character is used to indicate an end tag in HTML?",
-      "options": ["*", "/", "<", "^"],
-      "answer": "/"
+      "chapter": "Introduction to Web Design",
+      "question": "Which of the following is a client-side language?",
+      "options": ["PHP", "Python", "JavaScript", "Java"],
+      "answer": "JavaScript"
     },
     {
       "chapter": "HTML Basics",
@@ -153,132 +69,36 @@
       "answer": "<a href='url'>Link Text</a>"
     },
     {
-      "chapter": "HTML Basics",
-      "question": "Which tag is used to create an ordered list in HTML?",
-      "options": ["<ul>", "<list>", "<ol>", "<dl>"],
-      "answer": "<ol>"
-    },
-    {
-      "chapter": "HTML Basics",
-      "question": "What is the correct HTML tag for inserting an image?",
-      "options": ["<img href='img.gif'>", "<image src='img.gif'>", "<img src='img.gif'>", "<img alt='img.gif'>"],
-      "answer": "<img src='img.gif'>"
-    },
-    {
-      "chapter": "HTML Basics",
-      "question": "Which tag is used to create a table row in HTML?",
-      "options": ["<td>", "<th>", "<tr>", "<table>"],
-      "answer": "<tr>"
-    },
-    {
-      "chapter": "HTML Basics",
-      "question": "In HTML, form input fields are enclosed within which tag?",
-      "options": ["<input>", "<form>", "<fieldset>", "<select>"],
-      "answer": "<form>"
-    },
-    {
-      "chapter": "HTML Basics",
-      "question": "What does HTML stand for?",
-      "options": ["Hyper Text Markup Language", "Home Tool Markup Language", "Hyperlinks and Text Markup Language", "Hyper Technical Management Language"],
-      "answer": "Hyper Text Markup Language"
-    },
-    {
-      "chapter": "CSS Styling",
-      "question": "What does CSS stand for?",
-      "options": ["Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"],
-      "answer": "Cascading Style Sheets"
-    },
-    {
-      "chapter": "CSS Styling",
-      "question": "Where is the correct place to refer to an external style sheet?",
-      "options": ["In the <body> section", "At the very end of the document", "In the <head> section", "Inside the <footer> section"],
-      "answer": "In the <head> section"
-    },
-    {
-      "chapter": "CSS Styling",
-      "question": "Which CSS property is used to change the background color?",
-      "options": ["color", "background-color", "bgcolor", "color-background"],
-      "answer": "background-color"
-    },
-    {
-      "chapter": "CSS Styling",
-      "question": "Which CSS property controls the text size?",
-      "options": ["font-style", "text-size", "font-size", "text-style"],
-      "answer": "font-size"
-    },
-    {
-      "chapter": "CSS Styling",
+      "chapter": "Cascading Style Sheets (CSS)",
       "question": "How do you select an element with id 'demo' in CSS?",
       "options": [".demo", "#demo", "*demo", "demo"],
       "answer": "#demo"
     },
     {
-      "chapter": "CSS Styling",
-      "question": "How do you select elements with class name 'test' in CSS?",
-      "options": ["#test", ".test", "test", "*test"],
-      "answer": ".test"
+      "chapter": "CSS Framework",
+      "question": "W3.CSS is a standard CSS framework developed by whom?",
+      "options": ["Twitter", "Google", "W3Schools", "Microsoft"],
+      "answer": "W3Schools"
     },
     {
-      "chapter": "CSS Styling",
-      "question": "Which property is used to change the left margin of an element in CSS?",
-      "options": ["margin-left", "padding-left", "indent-left", "margin-left-padding"],
-      "answer": "margin-left"
+      "chapter": "JavaScript and Angular JS",
+      "question": "Which directive is used to initialize an AngularJS application?",
+      "options": ["ng-init", "ng-app", "ng-model", "ng-controller"],
+      "answer": "ng-app"
     },
     {
-      "chapter": "CSS Styling",
-      "question": "How do you make the text bold in CSS?",
-      "options": ["font:bold;", "font-weight:bold;", "text-style:bold;", "font-style:bold;"],
-      "answer": "font-weight:bold;"
-    },
-    {
-      "chapter": "CSS Styling",
-      "question": "Which CSS property is used to change the text color of an element?",
-      "options": ["font-color", "text-color", "color", "fgcolor"],
-      "answer": "color"
-    },
-    {
-      "chapter": "CSS Styling",
-      "question": "What is the default value of the position property in CSS?",
-      "options": ["absolute", "relative", "static", "fixed"],
-      "answer": "static"
+      "chapter": "Photo Editor, Web Publishing & Browsing",
+      "question": "What is the process of transfering files from a local computer to a web server called?",
+      "options": ["Downloading", "Uploading", "FTP hosting", "Browsing"],
+      "answer": "Uploading"
     }
   ],
   "M3": [
     {
-      "chapter": "Introduction to Python",
-      "question": "Who developed Python Programming Language?",
-      "options": ["Wick van Rossum", "Guido van Rossum", "Dennis Ritchie", "James Gosling"],
-      "answer": "Guido van Rossum"
-    },
-    {
-      "chapter": "Introduction to Python",
-      "question": "Which of the following is a correct variable name in Python?",
-      "options": ["1myvar", "my-var", "my_var", "my var!"],
-      "answer": "my_var"
-    },
-    {
-      "chapter": "Introduction to Python",
-      "question": "Which extension is used to save a Python file?",
-      "options": [".pt", ".py", ".pyt", ".python"],
-      "answer": ".py"
-    },
-    {
-      "chapter": "Introduction to Python",
-      "question": "Is Python case sensitive when dealing with identifiers?",
-      "options": ["Yes", "No", "Machine dependent", "Compiler dependent"],
-      "answer": "Yes"
-    },
-    {
-      "chapter": "Introduction to Python",
-      "question": "Which of the following functions is a built-in function in python?",
-      "options": ["print()", "seed()", "sqrt()", "factorial()"],
-      "answer": "print()"
-    },
-    {
-      "chapter": "Introduction to Python",
-      "question": "What is the maximum possible length of an identifier in Python?",
-      "options": ["31 characters", "63 characters", "79 characters", "Any length"],
-      "answer": "Any length"
+      "chapter": "Introduction to Programming",
+      "question": "A graphical representation of an algorithm is known as what?",
+      "options": ["Pseudo code", "Flowchart", "Program", "Logic Tree"],
+      "answer": "Flowchart"
     },
     {
       "chapter": "Introduction to Python",
@@ -287,103 +107,49 @@
       "answer": "#"
     },
     {
-      "chapter": "Introduction to Python",
-      "question": "Python is an ______ language.",
-      "options": ["Compiled", "Interpreted", "Low-level", "Assembly"],
-      "answer": "Interpreted"
+      "chapter": "Operators, Expressions and Python Statements",
+      "question": "What is the output of the expression 11 // 2 in Python?",
+      "options": ["5.5", "5", "1", "6"],
+      "answer": "5"
     },
     {
-      "chapter": "Introduction to Python",
-      "question": "Which keyword is used to define a function in Python?",
-      "options": ["function", "def", "func", "define"],
+      "chapter": "Conditional Statements and Loops",
+      "question": "Which statement is used to stop the current loop execution instantly?",
+      "options": ["continue", "break", "pass", "exit"],
+      "answer": "break"
+    },
+    {
+      "chapter": "Functions",
+      "question": "Which keyword is used to define a user-defined function in Python?",
+      "options": ["def", "func", "function", "define"],
       "answer": "def"
     },
     {
-      "chapter": "Introduction to Python",
-      "question": "What is the correct way to create a set in Python?",
-      "options": ["{}", "set()", "[]", "()"],
-      "answer": "set()"
+      "chapter": "Scope and Modules",
+      "question": "Which built-in module in Python is used to generate pseudo-random numbers?",
+      "options": ["math", "random", "sys", "os"],
+      "answer": "random"
     },
     {
-      "chapter": "Python Data Types",
-      "question": "What is the output of print(type([])) in Python?",
-      "options": ["<class 'tuple'>", "<class 'list'>", "<class 'set'>", "<class 'dict'>"],
-      "answer": "<class 'list'>"
-    },
-    {
-      "chapter": "Python Data Types",
+      "chapter": "Strings, Lists, Tuples and Dictionaries",
       "question": "Which data type in Python is mutable?",
       "options": ["Tuple", "List", "String", "Integer"],
       "answer": "List"
     },
     {
-      "chapter": "Python Data Types",
-      "question": "What is the output of len(['hello', 2, 4, [1, 2]])?",
-      "options": ["4", "5", "6", "3"],
-      "answer": "4"
+      "chapter": "File Processing",
+      "question": "Which mode is used to open a file for writing data at the end of the existing content?",
+      "options": ["'w'", "'r'", "'a'", "'x'"],
+      "answer": "'a'"
     },
     {
-      "chapter": "Python Data Types",
-      "question": "Which of the following collections defines a TUPLE?",
-      "options": ["['apple', 'banana']", "('apple', 'banana')", "{'apple', 'banana'}", "{'a':1}"],
-      "answer": "('apple', 'banana')"
-    },
-    {
-      "chapter": "Python Data Types",
-      "question": "How do you add an element to the end of a list in Python?",
-      "options": ["add()", "insert()", "append()", "push()"],
-      "answer": "append()"
-    },
-    {
-      "chapter": "Python Data Types",
-      "question": "Which method removes all elements from a dictionary?",
-      "options": ["delete()", "clear()", "remove()", "pop()"],
-      "answer": "clear()"
-    },
-    {
-      "chapter": "Python Data Types",
-      "question": "What does a dictionary contain?",
-      "options": ["Values only", "Keys only", "Key-Value Pairs", "Lists only"],
-      "answer": "Key-Value Pairs"
-    },
-    {
-      "chapter": "Python Data Types",
-      "question": "Which function converts a string to an integer in Python?",
-      "options": ["str()", "int()", "float()", "integer()"],
-      "answer": "int()"
-    },
-    {
-      "chapter": "Python Data Types",
-      "question": "What is the output of 'abc'.upper()?",
-      "options": ["abc", "Abc", "ABC", "Error"],
-      "answer": "ABC"
-    },
-    {
-      "chapter": "Python Data Types",
-      "question": "Can a dictionary have duplicate keys?",
-      "options": ["Yes", "No", "Depends on values", "Only if it is empty"],
-      "answer": "No"
+      "chapter": "Scope and Exception Handling",
+      "question": "Which block handles the exceptions raised in the 'try' block?",
+      "options": ["catch", "except", "finally", "error"],
+      "answer": "except"
     }
   ],
   "M4": [
-    {
-      "chapter": "Introduction to IoT",
-      "question": "What does IoT stand for?",
-      "options": ["Internet of Technology", "Internet of Things", "Intranet of Things", "Integrated of Tools"],
-      "answer": "Internet of Things"
-    },
-    {
-      "chapter": "Introduction to IoT",
-      "question": "Who coined the term 'Internet of Things'?",
-      "options": ["Kevin Ashton", "John McCarthy", "Tim Berners-Lee", "Steve Jobs"],
-      "answer": "Kevin Ashton"
-    },
-    {
-      "chapter": "Introduction to IoT",
-      "question": "Which of the following is a primary component of an IoT ecosystem?",
-      "options": ["Sensors", "Monitor", "Printer", "CD-ROM"],
-      "answer": "Sensors"
-    },
     {
       "chapter": "Introduction to IoT",
       "question": "What is the main function of an Actuator in IoT?",
@@ -391,100 +157,34 @@
       "answer": "To convert electrical signals into physical action"
     },
     {
-      "chapter": "Introduction to IoT",
-      "question": "Which of these is a smart IoT device application?",
-      "options": ["Smart Thermostat", "Mechanical Watch", "Offline Radio", "Standard Calculator"],
-      "answer": "Smart Thermostat"
+      "chapter": "Things and Connections",
+      "question": "Which sensor is used to detect or measure distance from an object using sound waves?",
+      "options": ["DHT11", "Ultrasonic Sensor", "LDR", "PIR Sensor"],
+      "answer": "Ultrasonic Sensor"
     },
     {
-      "chapter": "Introduction to IoT",
-      "question": "What layer connects physical devices to the cloud database?",
-      "options": ["Network Layer", "Application Layer", "Physical Layer", "Presentation Layer"],
-      "answer": "Network Layer"
+      "chapter": "IoT Devices and Programming",
+      "question": "Which function runs continuously in an Arduino program loop sketch?",
+      "options": ["setup()", "loop()", "main()", "run()"],
+      "answer": "loop()"
     },
     {
-      "chapter": "Introduction to IoT",
-      "question": "What type of data do IoT sensors collect?",
-      "options": ["Analog or Digital raw physical quantities", "Only text files", "Only SQL Queries", "None of these"],
-      "answer": "Analog or Digital raw physical quantities"
-    },
-    {
-      "chapter": "Introduction to IoT",
-      "question": "Which of the following challenges is biggest in IoT deployment?",
-      "options": ["Security and Privacy", "Screen Resolution", "Keyboard compatibility", "Audio Quality"],
-      "answer": "Security and Privacy"
-    },
-    {
-      "chapter": "Introduction to IoT",
-      "question": "IoT devices usually run on which type of software systems?",
-      "options": ["RTOS (Real Time Operating System)", "MS-DOS", "Windows Server", "None"],
-      "answer": "RTOS (Real Time Operating System)"
-    },
-    {
-      "chapter": "Introduction to IoT",
-      "question": "What converts real-world physical values like temperature into electrical signals?",
-      "options": ["Sensor", "Actuator", "LED", "Speaker"],
-      "answer": "Sensor"
-    },
-    {
-      "chapter": "IoT Protocols",
-      "question": "Which protocol is extremely lightweight and heavily used in IoT architecture?",
-      "options": ["HTTP", "MQTT", "FTP", "SMTP"],
-      "answer": "MQTT"
-    },
-    {
-      "chapter": "IoT Protocols",
-      "question": "What is the full form of MQTT?",
-      "options": ["Message Queuing Telemetry Transport", "Message Queue Turbo Transport", "Machine Query Telemetry Transmission", "Multi Queue Telemetry Tracking"],
-      "answer": "Message Queuing Telemetry Transport"
-    },
-    {
-      "chapter": "IoT Protocols",
+      "chapter": "IoT Communication Protocols and Security",
       "question": "MQTT uses which model for communication?",
       "options": ["Request-Response", "Publish-Subscribe", "Peer-to-Peer", "Client-Server traditional"],
       "answer": "Publish-Subscribe"
     },
     {
-      "chapter": "IoT Protocols",
-      "question": "What does CoAP stand for in IoT?",
-      "options": ["Constrained Application Protocol", "Cooperative Application Protocol", "Common Access Protocol", "Control Appliance Protocol"],
-      "answer": "Constrained Application Protocol"
+      "chapter": "Logic Building and Optimization Using Python",
+      "question": "Which Python library is widely used to handle GPIO pins on a Raspberry Pi device?",
+      "options": ["RPi.GPIO", "NumPy", "Socket", "Requests"],
+      "answer": "RPi.GPIO"
     },
     {
-      "chapter": "IoT Protocols",
-      "question": "Which wireless protocol has the longest range for low power IoT devices?",
-      "options": ["Bluetooth", "LoRaWAN", "Wi-Fi", "Zigbee"],
-      "answer": "LoRaWAN"
-    },
-    {
-      "chapter": "IoT Protocols",
-      "question": "What is the frequency band generally used by Zigbee devices?",
-      "options": ["2.4 GHz", "5 GHz", "900 MHz", "100 MHz"],
-      "answer": "2.4 GHz"
-    },
-    {
-      "chapter": "IoT Protocols",
-      "question": "Which protocol works directly over UDP instead of TCP?",
-      "options": ["HTTP", "CoAP", "MQTT", "FTP"],
-      "answer": "CoAP"
-    },
-    {
-      "chapter": "IoT Protocols",
-      "question": "IPv6 provides how many bits addressing spaces?",
-      "options": ["32 bits", "64 bits", "128 bits", "256 bits"],
-      "answer": "128 bits"
-    },
-    {
-      "chapter": "IoT Protocols",
-      "question": "What is the central controller node in an MQTT setup called?",
-      "options": ["Broker", "Server", "Client", "Master"],
-      "answer": "Broker"
-    },
-    {
-      "chapter": "IoT Protocols",
-      "question": "Which protocol is mostly preferred for near-field communication (within cms range)?",
-      "options": ["NFC", "Wi-Fi", "LoRa", "HTTP"],
-      "answer": "NFC"
+      "chapter": "IoT Case Studies and Future Trends",
+      "question": "Which IoT architecture model is used to process data closer to the edge devices rather than centralized cloud?",
+      "options": ["Fog Computing", "Mainframe Computing", "Grid Computing", "Batch Computing"],
+      "answer": "Fog Computing"
     }
   ]
 }
