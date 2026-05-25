@@ -1,11 +1,305 @@
 {
   "M1": [
-    {
-      "chapter": "Introduction to Computer",
-      "question": "Which of the following is the fastest memory in a computer system?",
-      "options": ["RAM", "ROM", "Cache Memory", "Hard Disk"],
-      "answer": "Cache Memory"
-    },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which of the following is the fastest memory in a computer system?",
+    "options": ["RAM", "ROM", "Cache Memory", "Hard Disk"],
+    "answer": "Cache Memory"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Who is known as the father of modern computers?",
+    "options": ["Alan Turing", "Charles Babbage", "John von Neumann", "Blaise Pascal"],
+    "answer": "Charles Babbage"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which electronic components were used in First Generation Computers?",
+    "options": ["Transistors", "Integrated Circuits", "Vacuum Tubes", "Microprocessors"],
+    "answer": "Vacuum Tubes"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "What is the full form of ALU in computer architecture?",
+    "options": ["Arithmetic Logic Unit", "Advanced Logic Unit", "Array Logic Unit", "Application Logic Unit"],
+    "answer": "Arithmetic Logic Unit"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which of the following is a permanent non-volatile memory?",
+    "options": ["RAM", "ROM", "Cache", "SRAM"],
+    "answer": "ROM"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "One Gigabyte (1 GB) is equal to how many Megabytes (MB)?",
+    "options": ["1000 MB", "1024 MB", "512 MB", "2048 MB"],
+    "answer": "1024 MB"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which computer generation introduced the concept of Microprocessors?",
+    "options": ["Second Generation", "Third Generation", "Fourth Generation", "Fifth Generation"],
+    "answer": "Fourth Generation"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which of the following is an input device?",
+    "options": ["Monitor", "Printer", "Light Pen", "Plotter"],
+    "answer": "Light Pen"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "What is the main brain of any computer system called?",
+    "options": ["Motherboard", "CPU", "Hard Disk", "Control Unit"],
+    "answer": "CPU"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which type of computer is primarily used in weather forecasting and scientific research?",
+    "options": ["Mainframe Computer", "Mini Computer", "Supercomputer", "Microcomputer"],
+    "answer": "Supercomputer"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "What is the smallest unit of data in a computer?",
+    "options": ["Byte", "Nibble", "Bit", "Kilobyte"],
+    "answer": "Bit"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "A collection of 4 bits is known as a ________.",
+    "options": ["Byte", "Nibble", "Word", "Block"],
+    "answer": "Nibble"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which of the following is an example of secondary memory?",
+    "options": ["RAM", "ROM", "Solid State Drive (SSD)", "Register"],
+    "answer": "Solid State Drive (SSD)"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Artificial Intelligence (AI) is associated with which generation of computers?",
+    "options": ["Third Generation", "Fourth Generation", "Fifth Generation", "Sixth Generation"],
+    "answer": "Fifth Generation"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "What is the full form of GUI?",
+    "options": ["Graphical User Interface", "General User Interface", "Global User Index", "Graphic Universal Integration"],
+    "answer": "Graphical User Interface"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which part of the CPU coordinates the movement of data and instructions?",
+    "options": ["ALU", "Control Unit", "Registers", "RAM"],
+    "answer": "Control Unit"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which device is used to convert hard copy text/images into digital soft copy?",
+    "options": ["Printer", "Plotter", "Scanner", "Monitor"],
+    "answer": "Scanner"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "What does RAM stand for?",
+    "options": ["Read Access Memory", "Random Access Memory", "Ready Application Module", "Remote Access Memory"],
+    "answer": "Random Access Memory"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which of the following is an impact printer?",
+    "options": ["Laser Printer", "Inkjet Printer", "Dot Matrix Printer", "Thermal Printer"],
+    "answer": "Dot Matrix Printer"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "The speed of modern CPUS is generally measured in ________.",
+    "options": ["Kilohertz (kHz)", "Megabytes (MB)", "Gigahertz (GHz)", "Megabits (Mb)"],
+    "answer": "Gigahertz (GHz)"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which memory type needs continuous refreshing to retain data?",
+    "options": ["SRAM", "DRAM", "ROM", "Flash Memory"],
+    "answer": "DRAM"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "What is the full form of EEPROM?",
+    "options": ["Electrically Erasable Programmable Read-Only Memory", "Extended Easily Programmable Read-Only Memory", "Electronic Erasable Production Read-Only Memory", "Efficient Erasable Programmable Read-Only Memory"],
+    "answer": "Electrically Erasable Programmable Read-Only Memory"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which of the following is an example of system software?",
+    "options": ["MS Word", "Google Chrome", "Operating System", "Photoshop"],
+    "answer": "Operating System"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "What was the name of the first general-purpose electronic digital computer?",
+    "options": ["UNIVAC", "ENIAC", "EDVAC", "ABACUS"],
+    "answer": "ENIAC"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which port is most commonly used to connect modern keyboards, mice, and flash drives?",
+    "options": ["VGA Port", "Serial Port", "USB Port", "Parallel Port"],
+    "answer": "USB Port"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "What is the base of the Hexadecimal number system?",
+    "options": ["2", "8", "10", "16"],
+    "answer": "16"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which of the following is used to produce high-quality vector graphics and large architectural drawings?",
+    "options": ["Inkjet Printer", "Plotter", "Laser Printer", "Dot Matrix"],
+    "answer": "Plotter"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Where are the basic bios boot instructions stored permanently?",
+    "options": ["RAM", "ROM Chip", "Hard Disk", "Cache Memory"],
+    "answer": "ROM Chip"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Integrated Circuits (ICs) were introduced in which generation of computers?",
+    "options": ["First Generation", "Second Generation", "Third Generation", "Fourth Generation"],
+    "answer": "Third Generation"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "What is the binary equivalent of the decimal number 5?",
+    "options": ["100", "101", "110", "111"],
+    "answer": "101"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which register holds the address of the next instruction to be executed?",
+    "options": ["Accumulator", "Program Counter (PC)", "Instruction Register", "Memory Data Register"],
+    "answer": "Program Counter (PC)"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which of the following is volatile memory?",
+    "options": ["Hard Disk", "SSD", "RAM", "CD-ROM"],
+    "answer": "RAM"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "What does ASCII stand for?",
+    "options": ["American Standard Code for Information Interchange", "Asian Standard Code for Audio Integration", "American Security Code for Information Interchange", "Advanced Standard Code for Information Interchange"],
+    "answer": "American Standard Code for Information Interchange"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which device acts as both an input and output device?",
+    "options": ["Scanner", "Touch Screen Monitor", "Keyboard", "Printer"],
+    "answer": "Touch Screen Monitor"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "What is the full form of VDU?",
+    "options": ["Visual Display Unit", "Virtual Data Unit", "Video Dynamic Unit", "Visual Digital Union"],
+    "answer": "Visual Display Unit"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which storage device has the highest data transfer rate among secondary storage options?",
+    "options": ["Floppy Disk", "Hard Disk Drive (HDD)", "Solid State Drive (SSD)", "DVD-ROM"],
+    "answer": "Solid State Drive (SSD)"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "The physically executable components of a computer system are called ________.",
+    "options": ["Software", "Hardware", "Firmware", "Shareware"],
+    "answer": "Hardware"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which type of software is distributed freely but requires payment for advanced features after a trial period?",
+    "options": ["Open Source Software", "Freeware", "Shareware", "Public Domain Software"],
+    "answer": "Shareware"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "What type of computer architecture is followed by most modern computers?",
+    "options": ["Harvard Architecture", "Von Neumann Architecture", "Analytical Engine Model", "Eniac Architecture"],
+    "answer": "Von Neumann Architecture"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which secondary storage device uses optical laser technology to read and write data?",
+    "options": ["Hard Disk", "CD-RW", "Solid State Drive", "Magnetic Tape"],
+    "answer": "CD-RW"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "What is the full form of CMOS in relation to computers?",
+    "options": ["Complementary Metal-Oxide-Semiconductor", "Common Machine Operating System", "Computer Memory Output System", "Core Module Operating Software"],
+    "answer": "Complementary Metal-Oxide-Semiconductor"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which of the following is considered the first calculation device in human history?",
+    "options": ["Pascaline", "Analytical Engine", "Abacus", "Napier's Bones"],
+    "answer": "Abacus"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "What is the term used for the process of loading an operating system into RAM?",
+    "options": ["Processing", "Booting", "Executing", "Compiling"],
+    "answer": "Booting"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which component protects the internal parts of a computer from external electrical spikes?",
+    "options": ["SMPS", "Motherboard", "UPS", "CPU Fan"],
+    "answer": "UPS"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which type of memory is directly integrated inside the CPU chip to hold current data values?",
+    "options": ["Registers", "RAM", "ROM", "Virtual Memory"],
+    "answer": "Registers"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "What is the capacity of a standard high-density Floppy Disk?",
+    "options": ["700 MB", "4.7 GB", "1.44 MB", "2.88 MB"],
+    "answer": "1.44 MB"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "The binary system uses only two digits, which are ________.",
+    "options": ["1 and 2", "0 and 1", "A and B", "9 and 10"],
+    "answer": "0 and 1"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which memory acts as an overflow space when the physical RAM is completely full?",
+    "options": ["Cache Memory", "Flash Memory", "Virtual Memory", "EEPROM"],
+    "answer": "Virtual Memory"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "What is the full form of Motherboard Form Factor standard ATX?",
+    "options": ["Advanced Technology Extended", "Advanced Terminal Exchange", "Automated Transfer eXcellent", "All Technology eXecution"],
+    "answer": "Advanced Technology Extended"
+  },
+  {
+    "chapter": "Introduction to Computer",
+    "question": "Which encoding standard represents characters globally for almost all languages?",
+    "options": ["ASCII", "Unicode", "EBCDIC", "BCD"],
+    "answer": "Unicode"
+  },
     {
       "chapter": "Introduction to Operating System",
       "question": "What is the core part of an Operating System called?",
