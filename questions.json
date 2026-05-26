@@ -1032,42 +1032,305 @@
     "options": ["Combine", "Merge", "Group", "Connect"],
     "answer": "Group"
   },
-
   {
     "chapter": "Introduction to Internet and WWW",
-    "question": "Which protocol is primarily used to securely transfer files between a client computer and a server?",
-    "options": ["HTTP", "SMTP", "FTP", "DNS"],
-    "answer": "FTP"
+    "question": "Which of the following is considered the 'Father of the Internet'?",
+    "options": ["Tim Berners-Lee", "Vint Cerf", "Charles Babbage", "Ray Tomlinson"],
+    "answer": "Vint Cerf"
   },
   {
     "chapter": "Introduction to Internet and WWW",
-    "question": "What was the name of the first operational packet-switching network, which became the foundation of the modern internet?",
-    "options": ["NSFNET", "ARPANET", "INTRANET", "ALOHANET"],
-    "answer": "ARPANET"
+    "question": "Who invented the World Wide Web (WWW)?",
+    "options": ["Vint Cerf", "Tim Berners-Lee", "Bill Gates", "Steve Jobs"],
+    "answer": "Tim Berners-Lee"
   },
   {
     "chapter": "Introduction to Internet and WWW",
-    "question": "Which of the following software programs is specifically used to navigate and view web pages?",
-    "options": ["Search Engine", "Web Browser", "Web Server", "Text Editor"],
-    "answer": "Web Browser"
+    "question": "Which protocol is used for fetching or viewing webpages from a web server?",
+    "options": ["FTP", "HTTP", "SMTP", "SSH"],
+    "answer": "HTTP"
   },
   {
     "chapter": "Introduction to Internet and WWW",
-    "question": "What is the unique string identifier that defines the address of a specific resource or webpage on the internet?",
-    "options": ["IP Address", "URL", "MAC Address", "Domain Tag"],
-    "answer": "URL"
+    "question": "What is the secure version of HTTP that encrypts communication between a browser and a website?",
+    "options": ["HTTP+S", "SHTTP", "HTTPS", "FTPS"],
+    "answer": "HTTPS"
   },
   {
     "chapter": "Introduction to Internet and WWW",
-    "question": "Which network topology connects all nodes directly to a central hub or switch device?",
-    "options": ["Bus Topology", "Star Topology", "Ring Topology", "Mesh Topology"],
-    "answer": "Star Topology"
+    "question": "Which of the following is NOT a web browser?",
+    "options": ["Google Chrome", "Mozilla Firefox", "Google Search", "Apple Safari"],
+    "answer": "Google Search"
   },
   {
     "chapter": "Introduction to Internet and WWW",
-    "question": "What is the structural size of an IPv6 address in computer networking systems?",
-    "options": ["32 bits", "64 bits", "128 bits", "256 bits"],
-    "answer": "128 bits"
+    "question": "What is the full form of DNS in networking?",
+    "options": ["Data Name System", "Domain Name System", "Digital Network Service", "Domain Network Security"],
+    "answer": "Domain Name System"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which protocol is responsible for dividing data into packets and ensuring they arrive safely at the destination?",
+    "options": ["TCP/IP", "HTTP", "FTP", "SMTP"],
+    "answer": "TCP/IP"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What is the full form of ISP?",
+    "options": ["Internet Service Provider", "International Service Provider", "Internet System Protocol", "Internal Server Portal"],
+    "answer": "Internet Service Provider"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which device is used to connect a computer to an internet service provider via telephone lines or cable?",
+    "options": ["Hub", "Switch", "Modem", "Repeater"],
+    "answer": "Modem"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What does MODEM stand for?",
+    "options": ["Modulation Demodulation", "Modulator-Demodulator", "Modern Memory", "Mobile Demodulator"],
+    "answer": "Modulator-Demodulator"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What is the structural size of an IPv4 address?",
+    "options": ["16 bits", "32 bits", "64 bits", "128 bits"],
+    "answer": "32 bits"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which protocol is primarily used for sending emails over the internet?",
+    "options": ["POP3", "IMAP", "SMTP", "HTTP"],
+    "answer": "SMTP"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which protocol allows a client to download emails from a server and delete them from the server?",
+    "options": ["SMTP", "POP3", "IMAP", "FTP"],
+    "answer": "POP3"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which email protocol allows you to view and manage emails directly on the mail server without downloading them?",
+    "options": ["SMTP", "POP3", "IMAP", "HTTP"],
+    "answer": "IMAP"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What is a network that is private to a specific organization and not accessible to the public called?",
+    "options": ["Internet", "Intranet", "Extranet", "LAN"],
+    "answer": "Intranet"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "A private network that allows controlled access from the outside for trusted partners or vendors is called:",
+    "options": ["Internet", "Intranet", "Extranet", "MAN"],
+    "answer": "Extranet"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What type of network topology has a single backbone cable to which all nodes are connected?",
+    "options": ["Star Topology", "Bus Topology", "Ring Topology", "Mesh Topology"],
+    "answer": "Bus Topology"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "In which topology does every node have a dedicated point-to-point link to every other node?",
+    "options": ["Mesh Topology", "Star Topology", "Tree Topology", "Bus Topology"],
+    "answer": "Mesh Topology"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which type of network spans across a city or a large campus?",
+    "options": ["LAN", "MAN", "WAN", "PAN"],
+    "answer": "MAN"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "The Internet is the best example of which type of network?",
+    "options": ["LAN", "MAN", "WAN", "PAN"],
+    "answer": "WAN"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which of the following represents a valid IPv4 address format?",
+    "options": ["192.168.1.1", "192-168-1-1", "192:168:1:1", "256.100.0.1"],
+    "answer": "192.168.1.1"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What is the first page that opens when you visit a website called?",
+    "options": ["Main Page", "Home Page", "Index Page", "Front Page"],
+    "answer": "Home Page"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which language is primarily used to create the structure of static web pages?",
+    "options": ["HTML", "CSS", "JavaScript", "Python"],
+    "answer": "HTML"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What does HTML stand for?",
+    "options": ["Hyper Text Markup Language", "High Text Machine Language", "Hyper Tabular Model Language", "Hyper Text Media Language"],
+    "answer": "Hyper Text Markup Language"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which of the following is a web search engine?",
+    "options": ["Google Chrome", "Opera", "Bing", "Safari"],
+    "answer": "Bing"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What is a 'Cookie' in the context of the web?",
+    "options": ["A virus that deletes web history", "A small text file stored by the browser to save user preferences", "A type of web browser", "A hardware component used for internet speed"],
+    "answer": "A small text file stored by the browser to save user preferences"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which of the following domain extensions is reserved for educational institutions?",
+    "options": [".com", ".org", ".edu", ".gov"],
+    "answer": ".edu"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What does '.gov' indicate in a website URL?",
+    "options": ["Governor website", "Government website", "Global organization", "Commercial website"],
+    "answer": "Government website"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which port number is standard for HTTP traffic?",
+    "options": ["21", "25", "80", "443"],
+    "answer": "80"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which port number is standard for HTTPS traffic?",
+    "options": ["80", "23", "443", "110"],
+    "answer": "443"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What is the full form of URL?",
+    "options": ["Uniform Resource Locator", "Universal Resource Link", "Uniform Resource Linker", "Universal Reference Locator"],
+    "answer": "Uniform Resource Locator"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Buying and selling goods or services over the internet is known as:",
+    "options": ["E-Mail", "E-Commerce", "E-Governance", "E-Banking"],
+    "answer": "E-Commerce"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which program or system analyzes websites to create an index of terms for search engines?",
+    "options": ["Web Crawler / Spider", "Web Server", "Router", "Firewall"],
+    "answer": "Web Crawler / Spider"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What is a software or hardware security system that monitors and filters incoming and outgoing network traffic?",
+    "options": ["Malware", "Firewall", "Antivirus", "Switch"],
+    "answer": "Firewall"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which of the following is the smallest type of network, usually centered around a single person in a single location?",
+    "options": ["LAN", "MAN", "WAN", "PAN"],
+    "answer": "PAN"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What is the full form of PAN in computer networking?",
+    "options": ["Permanent Account Number", "Personal Area Network", "Public Access Network", "Private Area Network"],
+    "answer": "Personal Area Network"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Bluetooth is an example of which type of network?",
+    "options": ["LAN", "MAN", "PAN", "WAN"],
+    "answer": "PAN"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which component of a URL specifies the protocol to be used (e.g., http://)?",
+    "options": ["Domain Name", "Scheme", "Path", "Subdomain"],
+    "answer": "Scheme"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What is a collection of interconnected web pages sharing a common domain name called?",
+    "options": ["Web Server", "Website", "Web Browser", "Hyperlink"],
+    "answer": "Website"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which protocol is used for remote login or terminal emulation over a network securely?",
+    "options": ["Telnet", "SSH", "FTP", "HTTP"],
+    "answer": "SSH"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What is the unsecure protocol used for remote login that sends data in plain text?",
+    "options": ["SSH", "Telnet", "SFTP", "HTTPS"],
+    "answer": "Telnet"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What does a '404 Not Found' error message typically mean?",
+    "options": ["The server is down", "The requested webpage does not exist on the server", "The internet connection is lost", "Access is forbidden"],
+    "answer": "The requested webpage does not exist on the server"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which of the following is an example of an open-source web browser?",
+    "options": ["Internet Explorer", "Mozilla Firefox", "Apple Safari", "Microsoft Edge"],
+    "answer": "Mozilla Firefox"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What is the process of transferring files from your local computer to a remote web server called?",
+    "options": ["Downloading", "Uploading", "Streaming", "Browsing"],
+    "answer": "Uploading"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What is the full form of Wi-Fi?",
+    "options": ["Wireless Fidelity", "Wireless Focus", "Wired Finder", "Wireless Function"],
+    "answer": "Wireless Fidelity"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which network device operates at the physical layer of the OSI model to regenerate signals over long distances?",
+    "options": ["Bridge", "Switch", "Repeater", "Router"],
+    "answer": "Repeater"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which device connects multiple networks together and routes data packets based on IP addresses?",
+    "options": ["Hub", "Switch", "Router", "Modem"],
+    "answer": "Router"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "What is a hyperlink?",
+    "options": ["A type of fast internet cable", "A text or image that jumps to another webpage when clicked", "A secure network protocol", "An email attachment"],
+    "answer": "A text or image that jumps to another webpage when clicked"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "IPv6 addresses are represented using which numbering system?",
+    "options": ["Decimal", "Binary", "Hexadecimal", "Octal"],
+    "answer": "Hexadecimal"
+  },
+  {
+    "chapter": "Introduction to Internet and WWW",
+    "question": "Which of the following is a physical path over which a message travels from sender to receiver?",
+    "options": ["Protocol", "Medium", "Signal", "Packet"],
+    "answer": "Medium"
   },
   {
     "chapter": "E-mail, Social Networking and E-Governance Services",
