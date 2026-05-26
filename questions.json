@@ -781,11 +781,258 @@
     "answer": "Custom Animation"
   },
   {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What is the full form of HTTP in web address architecture?",
-    "options": ["Hyper Text Transfer Protocol", "High Text Transfer Procedure", "Hyper Transfer Text Protocol", "Hyper Text Transmission Process"],
-    "answer": "Hyper Text Transfer Protocol"
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "In LibreOffice Impress, presentations created can be exported directly into which format?",
+    "options": [".exe", ".pdf", ".mp3", ".txt"],
+    "answer": ".pdf"
   },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "What is the default name given to a newly opened presentation in LibreOffice Impress?",
+    "options": ["Presentation1", "Document1", "Untitled 1 - LibreOffice Impress", "New Presentation"],
+    "answer": "Untitled 1 - LibreOffice Impress"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which menu contains the options to Open, Save, or Close a presentation file?",
+    "options": ["Edit", "Slide", "File", "Tools"],
+    "answer": "File"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which file extension belongs to a LibreOffice Impress Template?",
+    "options": [".otp", ".pot", ".odp", ".stc"],
+    "answer": ".otp"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "What is the minimum zoom level percentage allowed in LibreOffice Impress?",
+    "options": ["5%", "10%", "20%", "50%"],
+    "answer": "5%"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Where is the Status Bar located in the LibreOffice Impress window interface?",
+    "options": ["At the top", "At the bottom", "On the left side", "On the right side"],
+    "answer": "At the bottom"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "The default aspect ratio for a new slide in modern LibreOffice Impress is:",
+    "options": ["4:3", "16:10", "16:9", "1:1"],
+    "answer": "16:9"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which view allows you to see and edit only the text content of your slides in a structured hierarchy?",
+    "options": ["Normal View", "Outline View", "Slide Sorter View", "Slide Show View"],
+    "answer": "Outline View"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "If you want to add notes that are visible only to the presenter during a speech, which view should you use?",
+    "options": ["Outline View", "Master View", "Notes View", "Handout View"],
+    "answer": "Notes View"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which feature or slide acts as a blueprint to apply a consistent background and fonts across all slides?",
+    "options": ["Slide Transition", "Slide Master", "First Slide", "Slide Sorter"],
+    "answer": "Slide Master"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "How many document views are readily available as main tabs right above the workspace area in Impress?",
+    "options": ["3", "4", "5", "6"],
+    "answer": "5"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which view is explicitly designed to configure how your slides will look when printed out together on paper?",
+    "options": ["Slide Sorter View", "Handout View", "Notes View", "Outline View"],
+    "answer": "Handout View"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which shortcut key runs the slideshow starting specifically from the very first slide?",
+    "options": ["F5", "Shift + F5", "Ctrl + F5", "Alt + F5"],
+    "answer": "F5"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "What is the shortcut key to insert a brand new, blank slide into an active presentation?",
+    "options": ["Ctrl + N", "Ctrl + M", "Ctrl + S", "Ctrl + T"],
+    "answer": "Ctrl + M"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "During a running slideshow, pressing which key pauses the show and displays a pure black screen?",
+    "options":["W", "B", "N", "P"],
+    "answer": "B"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which shortcut key is used to duplicate a selected object or slide in Impress?",
+    "options": ["Ctrl + D", "Ctrl + Shift + D", "Alt + D", "Shift + D"],
+    "answer": "Ctrl + D"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "What is the shortcut key combination to clear direct formatting from selected text in Impress?",
+    "options": ["Ctrl + Space", "Ctrl + M", "Ctrl + Shift + A", "Shift + M"],
+    "answer": "Ctrl + M"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "To add decorative, stylized text with 3D effects into a slide, which feature should you use?",
+    "options": ["WordArt", "Fontwork", "TextArt", "ClipArt"],
+    "answer": "Fontwork"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Tables, Charts, Images, and Audio clips can all be placed into a slide using options found under which menu?",
+    "options": ["View", "Format", "Insert", "Slide"],
+    "answer": "Insert"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which component pane is located on the right side of the Impress screen, giving quick access to properties and layouts?",
+    "options": ["Slide Pane", "Menu Bar", "Sidebar", "Tool Bar"],
+    "answer": "Sidebar"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which key do you hold down while dragging a corner handle of a shape to resize it proportionally?",
+    "options": ["Ctrl", "Alt", "Shift", "Spacebar"],
+    "answer": "Shift"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "In LibreOffice Impress, Macro options are located under which menu tab?",
+    "options": ["Insert", "Format", "Tools", "Slide Show"],
+    "answer": "Tools"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which feature lets you draw standard mathematical or flow chart shapes directly onto a slide?",
+    "options": ["Drawing Toolbar", "Form Toolbar", "Line Tool", "Fontwork"],
+    "answer": "Drawing Toolbar"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "What is the name of the visual movement effect that happens when the presentation switches from one slide to the next?",
+    "options": ["Custom Animation", "Object Animation", "Slide Transition", "Slide Duration"],
+    "answer": "Slide Transition"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which of the following is a valid option category under the Custom Animation settings pane?",
+    "options": ["Entrance", "Emphasis", "Exit", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Can a single slide transition effect be globally applied to all slides in a presentation at once?",
+    "options": ["No, it must be added manually", "Yes, using 'Apply Transition to All Slides'", "Yes, but only for the first 5 slides", "No, transitions are always randomized"],
+    "answer": "Yes, using 'Apply Transition to All Slides'"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which setting in the Slide Transition panel allows a slide to change automatically after a specific number of seconds?",
+    "options": ["On Mouse Click", "After", "Duration", "Loop"],
+    "answer": "After"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which feature allows you to create a secondary version of a slide show that plays only a select few chosen slides?",
+    "options": ["Rehearse Timings", "Custom Slide Show", "Slide Sorter", "Hide Slide"],
+    "answer": "Custom Slide Show"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "If you want a slide to remain inside the file but prevent it from appearing during a live show, which option do you use?",
+    "options": ["Delete Slide", "Hide Slide", "Remove Slide", "Freeze Slide"],
+    "answer": "Hide Slide"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which feature can record the exact amount of time you spend speaking on each slide for automatic advancement?",
+    "options": ["Custom Animation", "Rehearse Timings", "Slide Transition", "Presenter Console"],
+    "answer": "Rehearse Timings"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "What tool panel automatically displays on the presenter's screen showing elapsed time while the audience sees the slide?",
+    "options": ["Slide Master View", "Presenter Console", "Control Panel", "Dashboard View"],
+    "answer": "Presenter Console"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "To create an interactive link on a slide that immediately opens a website URL when clicked, you should insert a:",
+    "options": ["Transition", "Hyperlink", "Custom Shape", "Macro"],
+    "answer": "Hyperlink"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Where can you find the options to turn on or off screen layout helpers like the Rulers and Grid lines?",
+    "options": ["Insert Menu", "Format Menu", "Tools Menu", "View Menu"],
+    "answer": "View Menu"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which option under the Slide menu allows you to change the actual background color or dimensions of a slide?",
+    "options": ["Slide Properties", "Slide Transition", "Layout Properties", "Page Settings"],
+    "answer": "Slide Properties"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Under which menu can you find the 'Spellcheck' tool to look for typographical errors in your presentation?",
+    "options": ["Edit", "View", "Tools", "Slide Show"],
+    "answer": "Tools"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "To quickly adjust the layered stacking order of overlapping shapes on a slide, which menu path is used?",
+    "options": ["Insert -> Layer", "Format -> Arrange", "Tools -> Align", "Slide -> Organize"],
+    "answer": "Format -> Arrange"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which of the following is NOT a standard, pre-built slide layout template found in the Impress side panel?",
+    "options": ["Title Slide", "Title, Content", "Title and 2 Content", "3D Chart Animation Layout"],
+    "answer": "3D Chart Animation Layout"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Can you insert dynamic video or audio clips directly into a LibreOffice Impress slide workspace?",
+    "options": ["No, it only supports static graphics", "Yes, via Insert -> Audio or Video", "Yes, but only as animated GIFs", "No, videos require external plugins"],
+    "answer": "Yes, via Insert -> Audio or Video"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which key shortcut instantly opens the built-in Help manual document panel for LibreOffice Impress?",
+    "options": ["F1", "F2", "F7", "F11"],
+    "answer": "F1"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "What is the shortcut key to open the Template Manager dialog box in LibreOffice Impress?",
+    "options": ["Ctrl + T", "Ctrl + Shift + N", "Ctrl + Alt + T", "Shift + F11"],
+    "answer": "Ctrl + Shift + N"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which panel on the left side of the screen shows a vertical strip of all slides in sequence?",
+    "options": ["Slide Pane", "Sidebar", "Status Bar", "Navigator"],
+    "answer": "Slide Pane"
+  },
+  {
+    "chapter": "Presentation (LibreOffice Impress)",
+    "question": "Which feature under Tools menu allows you to group multiple objects together so they behave as a single entity?",
+    "options": ["Combine", "Merge", "Group", "Connect"],
+    "answer": "Group"
+  },
+
   {
     "chapter": "Introduction to Internet and WWW",
     "question": "Which protocol is primarily used to securely transfer files between a client computer and a server?",
