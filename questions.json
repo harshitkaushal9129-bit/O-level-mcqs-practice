@@ -535,8 +535,7 @@
   {"chapter": "Photo Editor, Web Publishing & Browsing", "question": "What is the process of retrieving data or website media resources from remote server networks down into local machines?", "options": ["Uploading", "Downloading", "Caching", "Publishing"], "answer": "Downloading"},
   {"chapter": "Photo Editor, Web Publishing & Browsing", "question": "What tracking metric evaluates digital image clarity details by tiny individual color grid squares?", "options": ["Vectors", "Pixels", "Inches", "Layers"], "answer": "Pixels"},
  {"chapter": "HTML Basics", "question": "How do you create a hyperlink in HTML?", "options": ["<a href='url'>Link Text</a>", "<a>url</a>", "<link src='url'>", "<href url='Link'>"], "answer": "<a href='url'>Link Text</a>"},
-    {"chapter": "Cascading Style Sheets (CSS)", "question": "How do you select an element with id 'demo' in CSS?", "options": [".demo", "#demo", "*demo", "demo"], "answer": "#demo"},
-    {"chapter": "CSS Framework", "question": "W3.CSS is a standard CSS framework developed by whom?", "options": ["Twitter", "Google", "W3Schools", "Microsoft"], "answer": "W3Schools"},
+        {"chapter": "CSS Framework", "question": "W3.CSS is a standard CSS framework developed by whom?", "options": ["Twitter", "Google", "W3Schools", "Microsoft"], "answer": "W3Schools"},
     {"chapter": "JavaScript and Angular JS", "question": "Which directive is used to initialize an AngularJS application?", "options": ["ng-init", "ng-app", "ng-model", "ng-controller"], "answer": "ng-app"},
     {"chapter": "Photo Editor, Web Publishing & Browsing", "question": "What is the process of transfering files from a local computer to a web server called?", "options": ["Downloading", "Uploading", "FTP hosting", "Browsing"], "answer": "Uploading"}
   ],
