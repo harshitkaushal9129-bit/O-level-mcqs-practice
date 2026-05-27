@@ -1,1582 +1,272 @@
 {
   "M1": [
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which of the following is the fastest memory in a computer system?",
-    "options": ["RAM", "ROM", "Cache Memory", "Hard Disk"],
-    "answer": "Cache Memory"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Who is known as the father of modern computers?",
-    "options": ["Alan Turing", "Charles Babbage", "John von Neumann", "Blaise Pascal"],
-    "answer": "Charles Babbage"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which electronic components were used in First Generation Computers?",
-    "options": ["Transistors", "Integrated Circuits", "Vacuum Tubes", "Microprocessors"],
-    "answer": "Vacuum Tubes"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "What is the full form of ALU in computer architecture?",
-    "options": ["Arithmetic Logic Unit", "Advanced Logic Unit", "Array Logic Unit", "Application Logic Unit"],
-    "answer": "Arithmetic Logic Unit"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which of the following is a permanent non-volatile memory?",
-    "options": ["RAM", "ROM", "Cache", "SRAM"],
-    "answer": "ROM"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "One Gigabyte (1 GB) is equal to how many Megabytes (MB)?",
-    "options": ["1000 MB", "1024 MB", "512 MB", "2048 MB"],
-    "answer": "1024 MB"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which computer generation introduced the concept of Microprocessors?",
-    "options": ["Second Generation", "Third Generation", "Fourth Generation", "Fifth Generation"],
-    "answer": "Fourth Generation"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which of the following is an input device?",
-    "options": ["Monitor", "Printer", "Light Pen", "Plotter"],
-    "answer": "Light Pen"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "What is the main brain of any computer system called?",
-    "options": ["Motherboard", "CPU", "Hard Disk", "Control Unit"],
-    "answer": "CPU"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which type of computer is primarily used in weather forecasting and scientific research?",
-    "options": ["Mainframe Computer", "Mini Computer", "Supercomputer", "Microcomputer"],
-    "answer": "Supercomputer"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "What is the smallest unit of data in a computer?",
-    "options": ["Byte", "Nibble", "Bit", "Kilobyte"],
-    "answer": "Bit"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "A collection of 4 bits is known as a ________.",
-    "options": ["Byte", "Nibble", "Word", "Block"],
-    "answer": "Nibble"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which of the following is an example of secondary memory?",
-    "options": ["RAM", "ROM", "Solid State Drive (SSD)", "Register"],
-    "answer": "Solid State Drive (SSD)"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Artificial Intelligence (AI) is associated with which generation of computers?",
-    "options": ["Third Generation", "Fourth Generation", "Fifth Generation", "Sixth Generation"],
-    "answer": "Fifth Generation"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "What is the full form of GUI?",
-    "options": ["Graphical User Interface", "General User Interface", "Global User Index", "Graphic Universal Integration"],
-    "answer": "Graphical User Interface"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which part of the CPU coordinates the movement of data and instructions?",
-    "options": ["ALU", "Control Unit", "Registers", "RAM"],
-    "answer": "Control Unit"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which device is used to convert hard copy text/images into digital soft copy?",
-    "options": ["Printer", "Plotter", "Scanner", "Monitor"],
-    "answer": "Scanner"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "What does RAM stand for?",
-    "options": ["Read Access Memory", "Random Access Memory", "Ready Application Module", "Remote Access Memory"],
-    "answer": "Random Access Memory"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which of the following is an impact printer?",
-    "options": ["Laser Printer", "Inkjet Printer", "Dot Matrix Printer", "Thermal Printer"],
-    "answer": "Dot Matrix Printer"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "The speed of modern CPUS is generally measured in ________.",
-    "options": ["Kilohertz (kHz)", "Megabytes (MB)", "Gigahertz (GHz)", "Megabits (Mb)"],
-    "answer": "Gigahertz (GHz)"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which memory type needs continuous refreshing to retain data?",
-    "options": ["SRAM", "DRAM", "ROM", "Flash Memory"],
-    "answer": "DRAM"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "What is the full form of EEPROM?",
-    "options": ["Electrically Erasable Programmable Read-Only Memory", "Extended Easily Programmable Read-Only Memory", "Electronic Erasable Production Read-Only Memory", "Efficient Erasable Programmable Read-Only Memory"],
-    "answer": "Electrically Erasable Programmable Read-Only Memory"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which of the following is an example of system software?",
-    "options": ["MS Word", "Google Chrome", "Operating System", "Photoshop"],
-    "answer": "Operating System"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "What was the name of the first general-purpose electronic digital computer?",
-    "options": ["UNIVAC", "ENIAC", "EDVAC", "ABACUS"],
-    "answer": "ENIAC"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which port is most commonly used to connect modern keyboards, mice, and flash drives?",
-    "options": ["VGA Port", "Serial Port", "USB Port", "Parallel Port"],
-    "answer": "USB Port"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "What is the base of the Hexadecimal number system?",
-    "options": ["2", "8", "10", "16"],
-    "answer": "16"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which of the following is used to produce high-quality vector graphics and large architectural drawings?",
-    "options": ["Inkjet Printer", "Plotter", "Laser Printer", "Dot Matrix"],
-    "answer": "Plotter"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Where are the basic bios boot instructions stored permanently?",
-    "options": ["RAM", "ROM Chip", "Hard Disk", "Cache Memory"],
-    "answer": "ROM Chip"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Integrated Circuits (ICs) were introduced in which generation of computers?",
-    "options": ["First Generation", "Second Generation", "Third Generation", "Fourth Generation"],
-    "answer": "Third Generation"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "What is the binary equivalent of the decimal number 5?",
-    "options": ["100", "101", "110", "111"],
-    "answer": "101"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which register holds the address of the next instruction to be executed?",
-    "options": ["Accumulator", "Program Counter (PC)", "Instruction Register", "Memory Data Register"],
-    "answer": "Program Counter (PC)"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which of the following is volatile memory?",
-    "options": ["Hard Disk", "SSD", "RAM", "CD-ROM"],
-    "answer": "RAM"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "What does ASCII stand for?",
-    "options": ["American Standard Code for Information Interchange", "Asian Standard Code for Audio Integration", "American Security Code for Information Interchange", "Advanced Standard Code for Information Interchange"],
-    "answer": "American Standard Code for Information Interchange"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which device acts as both an input and output device?",
-    "options": ["Scanner", "Touch Screen Monitor", "Keyboard", "Printer"],
-    "answer": "Touch Screen Monitor"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "What is the full form of VDU?",
-    "options": ["Visual Display Unit", "Virtual Data Unit", "Video Dynamic Unit", "Visual Digital Union"],
-    "answer": "Visual Display Unit"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which storage device has the highest data transfer rate among secondary storage options?",
-    "options": ["Floppy Disk", "Hard Disk Drive (HDD)", "Solid State Drive (SSD)", "DVD-ROM"],
-    "answer": "Solid State Drive (SSD)"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "The physically executable components of a computer system are called ________.",
-    "options": ["Software", "Hardware", "Firmware", "Shareware"],
-    "answer": "Hardware"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which type of software is distributed freely but requires payment for advanced features after a trial period?",
-    "options": ["Open Source Software", "Freeware", "Shareware", "Public Domain Software"],
-    "answer": "Shareware"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "What type of computer architecture is followed by most modern computers?",
-    "options": ["Harvard Architecture", "Von Neumann Architecture", "Analytical Engine Model", "Eniac Architecture"],
-    "answer": "Von Neumann Architecture"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which secondary storage device uses optical laser technology to read and write data?",
-    "options": ["Hard Disk", "CD-RW", "Solid State Drive", "Magnetic Tape"],
-    "answer": "CD-RW"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "What is the full form of CMOS in relation to computers?",
-    "options": ["Complementary Metal-Oxide-Semiconductor", "Common Machine Operating System", "Computer Memory Output System", "Core Module Operating Software"],
-    "answer": "Complementary Metal-Oxide-Semiconductor"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which of the following is considered the first calculation device in human history?",
-    "options": ["Pascaline", "Analytical Engine", "Abacus", "Napier's Bones"],
-    "answer": "Abacus"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "What is the term used for the process of loading an operating system into RAM?",
-    "options": ["Processing", "Booting", "Executing", "Compiling"],
-    "answer": "Booting"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which component protects the internal parts of a computer from external electrical spikes?",
-    "options": ["SMPS", "Motherboard", "UPS", "CPU Fan"],
-    "answer": "UPS"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which type of memory is directly integrated inside the CPU chip to hold current data values?",
-    "options": ["Registers", "RAM", "ROM", "Virtual Memory"],
-    "answer": "Registers"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "What is the capacity of a standard high-density Floppy Disk?",
-    "options": ["700 MB", "4.7 GB", "1.44 MB", "2.88 MB"],
-    "answer": "1.44 MB"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "The binary system uses only two digits, which are ________.",
-    "options": ["1 and 2", "0 and 1", "A and B", "9 and 10"],
-    "answer": "0 and 1"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which memory acts as an overflow space when the physical RAM is completely full?",
-    "options": ["Cache Memory", "Flash Memory", "Virtual Memory", "EEPROM"],
-    "answer": "Virtual Memory"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "What is the full form of Motherboard Form Factor standard ATX?",
-    "options": ["Advanced Technology Extended", "Advanced Terminal Exchange", "Automated Transfer eXcellent", "All Technology eXecution"],
-    "answer": "Advanced Technology Extended"
-  },
-  {
-    "chapter": "Introduction to Computer",
-    "question": "Which encoding standard represents characters globally for almost all languages?",
-    "options": ["ASCII", "Unicode", "EBCDIC", "BCD"],
-    "answer": "Unicode"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is the core part of an Operating System called?",
-    "options": ["Shell", "Kernel", "Command Prompt", "Registry"],
-    "answer": "Kernel"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which of the following is an example of an open-source operating system?",
-    "options": ["Windows 11", "macOS", "Linux", "MS-DOS"],
-    "answer": "Linux"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What type of operating system is used in critical applications like satellite launching and medical equipment?",
-    "options": ["Batch Processing OS", "Real-Time Operating System (RTOS)", "Time-Sharing OS", "Network OS"],
-    "answer": "Real-Time Operating System (RTOS)"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which component of an operating system provides the interface for users to interact, like a command-line interpreter?",
-    "options": ["Kernel", "Shell", "Driver", "Thread"],
-    "answer": "Shell"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is a program in execution called?",
-    "options": ["Command", "Process", "Task Manager", "Function"],
-    "answer": "Process"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which of the following is a multi-user, time-sharing operating system developed in the 1970s?",
-    "options": ["MS-DOS", "Unix", "Windows 95", "Windows 3.1"],
-    "answer": "Unix"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is the full form of GUI in operating systems?",
-    "options": ["Graphical User Interface", "General User Integration", "Global User Interface", "Graphics Universal Interchange"],
-    "answer": "Graphical User Interface"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which scheduling algorithm allocates the CPU to the process that requests it first?",
-    "options": ["Shortest Job First (SJF)", "Round Robin (RR)", "First-Come, First-Served (FCFS)", "Priority Scheduling"],
-    "answer": "First-Come, First-Served (FCFS)"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is the default file system used by modern Windows operating systems (like Windows 10/11)?",
-    "options": ["FAT32", "NTFS", "ext4", "HPFS"],
-    "answer": "NTFS"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which condition occurs when two or more processes are blocked indefinitely, waiting for each other to release resources?",
-    "options": ["Starvation", "Deadlock", "Context Switching", "Paging"],
-    "answer": "Deadlock"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is the process of restarting an operating system that is already running called?",
-    "options": ["Cold Booting", "Warm Booting", "Hard Booting", "Shut Down"],
-    "answer": "Warm Booting"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which Linux command is used to display the contents of a directory?",
-    "options": ["dir", "ls", "cd", "pwd"],
-    "answer": "ls"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is the mechanism that temporarily moves a process out of main memory to a secondary storage (hard disk) called?",
-    "options": ["Swapping", "Caching", "Paging", "Fragmentation"],
-    "answer": "Swapping"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which type of operating system executes similar jobs grouped together without direct user interaction?",
-    "options": ["Time-sharing OS", "Batch Processing OS", "Distributed OS", "Network OS"],
-    "answer": "Batch Processing OS"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is the full form of CLI?",
-    "options": ["Command Line Interface", "Common Line Interconnect", "Control Logic Interface", "Computer Language Interpreter"],
-    "answer": "Command Line Interface"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which memory management technique maps a program's virtual address space into fixed-size blocks of physical memory?",
-    "options": ["Segmentation", "Paging", "Continuous Allocation", "Compaction"],
-    "answer": "Paging"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which Linux command is used to see the current working directory path?",
-    "options": ["cd", "mkdir", "pwd", "path"],
-    "answer": "pwd"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is the primary function of a device driver?",
-    "options": ["To run user application software", "To allow the OS to communicate with specific hardware components", "To scan files for viruses", "To back up system data"],
-    "answer": "To allow the OS to communicate with specific hardware components"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which of the following is NOT an operating system?",
-    "options": ["Windows Server", "Android", "Oracle", "Ubuntu"],
-    "answer": "Oracle"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is the name of the system software that loads the operating system kernel into the computer's memory during boot up?",
-    "options": ["Compiler", "Linker", "Bootstrap Loader", "Assembler"],
-    "answer": "Bootstrap Loader"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which Windows shortcut key combination is used to open the Task Manager instantly?",
-    "options": ["Ctrl + Alt + Del", "Ctrl + Shift + Esc", "Win + R", "Alt + F4"],
-    "answer": "Ctrl + Shift + Esc"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "In operating systems, what does 'SPOOLING' stand for?",
-    "options": ["Simultaneous Peripheral Operations On-Line", "Sequential Program Optimization Over-Line", "System Peripheral Output Organizational Logic", "Serial Port Output Oriented Loader"],
-    "answer": "Simultaneous Peripheral Operations On-Line"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which state does a process enter immediately after it is created or loaded into main memory?",
-    "options": ["Running State", "Waiting State", "Ready State", "Terminated State"],
-    "answer": "Ready State"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is the primary file system used in Linux operating systems?",
-    "options": ["NTFS", "FAT16", "ext4", "exFAT"],
-    "answer": "ext4"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which scheduling algorithm uses a time quantum or fixed time slice for fair CPU distribution?",
-    "options": ["Round Robin (RR)", "Shortest Remaining Time First", "First-Come First-Served", "Highest Response Ratio Next"],
-    "answer": "Round Robin (RR)"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What happens when the system spends more time swapping pages in and out of memory than executing actual instructions?",
-    "options": ["Deadlock", "Thrashing", "Starvation", "Paging fault"],
-    "answer": "Thrashing"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which interface allows multiple processors to work together to execute a single task split across them?",
-    "options": ["Multiprogramming", "Multiprocessing", "Multitasking", "Multithreading"],
-    "answer": "Multiprocessing"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which of the following is a mobile operating system developed by Apple?",
-    "options": ["Android", "Symbian", "iOS", "Tizen"],
-    "answer": "iOS"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is the default administrator account name in a Linux/Unix system?",
-    "options": ["Admin", "Administrator", "Root", "Superuser"],
-    "answer": "Root"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which system call is used in Unix-like systems to create a new child process?",
-    "options": ["fork()", "exec()", "create()", "spawn()"],
-    "answer": "fork()"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What type of fragmentation occurs when memory is divided into fixed-size blocks, and a process allocated a block leaves some unused space inside it?",
-    "options": ["External Fragmentation", "Internal Fragmentation", "Dynamic Fragmentation", "Virtual Fragmentation"],
-    "answer": "Internal Fragmentation"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which utility in Windows is used to check and repair errors on a hard disk drive?",
-    "options": ["Disk Defragmenter", "CHKDSK", "Disk Cleanup", "Regedit"],
-    "answer": "CHKDSK"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is the full form of API, which allows applications to request services from the operating system?",
-    "options": ["Application Programming Interface", "Advanced Program Integration", "Automated Process Interface", "Application Protocol Interconnect"],
-    "answer": "Application Programming Interface"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which character is used in Linux command line to pipe the output of one command as an input to another?",
-    "options": [">", "<", "|", "&"],
-    "answer": "|"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is the minimum number of bits required to uniquely identify a process in a system using a Process ID (PID)?",
-    "options": ["Depends on the OS architecture (e.g., 16-bit or 32-bit integers)", "Always 8 bits", "Always 64 bits", "Fixed at 4 bits"],
-    "answer": "Depends on the OS architecture (e.g., 16-bit or 32-bit integers)"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which type of software is an operating system categorized into?",
-    "options": ["Application Software", "System Software", "Programming Software", "Utility Software"],
-    "answer": "System Software"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which algorithm is used by the operating system to prevent deadlocks by checking resource allocation states?",
-    "options": ["Round Robin Algorithm", "Banker's Algorithm", "Page Replacement Algorithm", "Kruskal's Algorithm"],
-    "answer": "Banker's Algorithm"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is the full form of NTFS?",
-    "options": ["New Technology File System", "Network Technology File System", "New Tab File Sequence", "Node Transfer File Structure"],
-    "answer": "New Technology File System"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which Linux command is used to change file permissions?",
-    "options": ["chown", "chmod", "chgrp", "attrib"],
-    "answer": "chmod"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is the smallest allocatable unit of a hard disk space managed by a file system?",
-    "options": ["Sector", "Track", "Cluster / Block", "Byte"],
-    "answer": "Cluster / Block"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which of the following is a characteristic of a real-time operating system?",
-    "options": ["High throughput", "Deterministic and predictable response time", "Maximum CPU utilization", "Large memory footprint"],
-    "answer": "Deterministic and predictable response time"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is the name of the central database in Windows that stores configuration settings and options?",
-    "options": ["Kernel Space", "Windows Registry", "Control Panel", "System INI"],
-    "answer": "Windows Registry"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which operation switches the CPU from executing one process to another, saving the current state first?",
-    "options": ["Context Switching", "Process Migration", "Interrupt Handling", "Paging Allocation"],
-    "answer": "Context Switching"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which command in Windows command prompt (CMD) is used to clear the screen?",
-    "options": ["clear", "cls", "clean", "reset"],
-    "answer": "cls"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What type of OS runs on a group of independent, networked computers but appears to the user as a single computer?",
-    "options": ["Distributed Operating System", "Batch Operating System", "Network Operating System", "Embedded Operating System"],
-    "answer": "Distributed Operating System"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which data structure is maintained by the operating system to store all the information about a specific process?",
-    "options": ["Process Control Block (PCB)", "File Allocation Table (FAT)", "Page Map Table", "Ready Queue Stack"],
-    "answer": "Process Control Block (PCB)"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What is the name of the special page replacement policy that replaces the page that has not been used for the longest period of time?",
-    "options": ["FIFO (First In First Out)", "LRU (Least Recently Used)", "Optimal Page Replacement", "LIFO (Last In First Out)"],
-    "answer": "LRU (Least Recently Used)"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which of the following is a legacy 16-bit single-tasking operating system with a command-line interface?",
-    "options": ["MS-DOS", "Windows XP", "OS/2", "Linux Mint"],
-    "answer": "MS-DOS"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "What type of operating system allows multiple parts of a single program (threads) to run concurrently?",
-    "options": ["Multithreading OS", "Batch Processing OS", "Single-tasking OS", "Macro OS"],
-    "answer": "Multithreading OS"
-  },
-  {
-    "chapter": "Introduction to Operating System",
-    "question": "Which Linux command is used to create a new empty directory?",
-    "options": ["md", "mkdir", "create", "newdir"],
-    "answer": "mkdir"
-  },
-  {
-    "chapter": "Word Processing (LibreOffice Writer)",
-    "question": "What is the default file extension of LibreOffice Writer?",
-    "options": [".doc", ".docx", ".odt", ".txt"],
-    "answer": ".odt"
-  },
-  {
-    "chapter": "Word Processing (LibreOffice Writer)",
-    "question": "Which shortcut key is used for 'Save As' in LibreOffice Writer?",
-    "options": ["Ctrl + S", "Ctrl + Shift + S", "Ctrl + Alt + S", "F12"],
-    "answer": "Ctrl + Shift + S"
-  },
-  {
-    "chapter": "Word Processing (LibreOffice Writer)",
-    "question": "What is the maximum zoom percentage allowed in LibreOffice Writer?",
-    "options": ["100%", "400%", "600%", "1000%"],
-    "answer": "600%"
-  },
-  {
-    "chapter": "Word Processing (LibreOffice Writer)",
-    "question": "Which menu contains the 'Mail Merge Wizard' option in LibreOffice Writer?",
-    "options": ["File", "Edit", "Insert", "Tools"],
-    "answer": "Tools"
-  },
-  {
-    "chapter": "Word Processing (LibreOffice Writer)",
-    "question": "What is the shortcut key to insert a Page Break in LibreOffice Writer?",
-    "options": ["Ctrl + Enter", "Shift + Enter", "Alt + Enter", "Ctrl + Shift + Enter"],
-    "answer": "Ctrl + Enter"
-  },
-  {
-    "chapter": "Word Processing (LibreOffice Writer)",
-    "question": "In LibreOffice Writer, the shortcut key for superscript is ________.",
-    "options": ["Ctrl + Shift + P", "Ctrl + Shift + B", "Ctrl + Shift + S", "Ctrl + Equals"],
-    "answer": "Ctrl + Shift + P"
-  },
-  {
-    "chapter": "Word Processing (LibreOffice Writer)",
-    "question": "Which option is used to type text automatically with predefined shortcuts in Writer?",
-    "options": ["AutoFill", "AutoText", "AutoCorrect", "Macro"],
-    "answer": "AutoText"
-  },
-  {
-    "chapter": "Word Processing (LibreOffice Writer)",
-    "question": "What is the shortcut key to manage styles and formatting panel in Writer?",
-    "options": ["F5", "F7", "F11", "F12"],
-    "answer": "F11"
-  },
-  {
-    "chapter": "Word Processing (LibreOffice Writer)",
-    "question": "Which alignment is selected by default for text in LibreOffice Writer?",
-    "options": ["Left aligned", "Right aligned", "Centered", "Justified"],
-    "answer": "Left aligned"
-  },
-  {
-    "chapter": "Word Processing (LibreOffice Writer)",
-    "question": "What is the minimum zoom percentage available in LibreOffice Writer?",
-    "options": ["5%", "10%", "20%", "50%"],
-    "answer": "20%"
-  },
-  {
-    "chapter": "Word Processing (LibreOffice Writer)",
-    "question": "Which key combination is used for 'Double Underline' in LibreOffice Writer?",
-    "options": ["Ctrl + D", "Ctrl + Shift + D", "Ctrl + Alt + D", "Shift + U"],
-    "answer": "Ctrl + D"
-  },
-  {
-    "chapter": "Word Processing (LibreOffice Writer)",
-    "question": "Where is the Status Bar located in the LibreOffice Writer window?",
-    "options": ["Top of the screen", "Bottom of the screen", "Right side sidebar", "Below the title bar"],
-    "answer": "Bottom of the screen"
-  },
-  {
-    "chapter": "Spreadsheet (LibreOffice Calc)",
-    "question": "What is the default file extension of a LibreOffice Calc spreadsheet?",
-    "options": [".ods", ".xls", ".xlsx", ".odp"],
-    "answer": ".ods"
-  },
-  {
-    "chapter": "Spreadsheet (LibreOffice Calc)",
-    "question": "Every formula in LibreOffice Calc must always begin with which symbol?",
-    "options": ["@", "#", "=", "+"],
-    "answer": "="
-  },
-  {
-    "chapter": "Spreadsheet (LibreOffice Calc)",
-    "question": "What is the maximum number of rows available in a single sheet of LibreOffice Calc?",
-    "options": ["65536", "1048576", "256", "16384"],
-    "answer": "1048576"
-  },
-  {
-    "chapter": "Spreadsheet (LibreOffice Calc)",
-    "question": "What is the maximum number of columns available in a single sheet of LibreOffice Calc?",
-    "options": ["1024", "16384", "256", "4096"],
-    "answer": "16384"
-  },
-  {
-    "chapter": "Spreadsheet (LibreOffice Calc)",
-    "question": "What is the default number of sheets when you create a new Calc file?",
-    "options": ["1", "3", "5", "10"],
-    "answer": "1"
-  },
-  {
-    "chapter": "Spreadsheet (LibreOffice Calc)",
-    "question": "Which shortcut key opens the 'Function Wizard' in LibreOffice Calc?",
-    "options": ["Ctrl + F1", "Ctrl + F2", "F2", "Shift + F2"],
-    "answer": "Ctrl + F2"
-  },
-  {
-    "chapter": "Spreadsheet (LibreOffice Calc)",
-    "question": "What is the name of the box that shows the address of the currently active cell?",
-    "options": ["Formula Bar", "Status Bar", "Name Box", "Title Bar"],
-    "answer": "Name Box"
-  },
-  {
-    "chapter": "Spreadsheet (LibreOffice Calc)",
-    "question": "What error code is displayed in Calc when a column width is too narrow to display numbers?",
-    "options": ["#REF!", "#VALUE!", "###", "#NAME?"],
-    "answer": "###"
-  },
-  {
-    "chapter": "Spreadsheet (LibreOffice Calc)",
-    "question": "Which shortcut key is used to clear or delete the contents of a cell with options dialog?",
-    "options": ["Delete", "Backspace", "Ctrl + Delete", "Shift + Backspace"],
-    "answer": "Backspace"
-  },
-  {
-    "chapter": "Spreadsheet (LibreOffice Calc)",
-    "question": "What is the correct cell address for the very first cell in a Calc worksheet?",
-    "options": ["1A", "A1", "A-1", "Row1Col1"],
-    "answer": "A1"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "What is the default file extension of a LibreOffice Impress presentation?",
-    "options": [".odp", ".ppt", ".pptx", ".ods"],
-    "answer": ".odp"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which shortcut key runs the slideshow starting specifically from the current slide?",
-    "options": ["F5", "Shift + F5", "Ctrl + F5", "Alt + F5"],
-    "answer": "Shift + F5"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which of the following menus allows you to insert new slides into your presentation?",
-    "options": ["File", "Edit", "Slide", "Tools"],
-    "answer": "Slide"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "What is the maximum zoom level percentage supported by LibreOffice Impress?",
-    "options": ["400%", "600%", "1000%", "3000%"],
-    "answer": "3000%"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which view displays all slides as miniature thumbnails to easily rearrange them?",
-    "options": ["Normal View", "Slide Sorter View", "Outline View", "Notes View"],
-    "answer": "Slide Sorter View"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which key can be pressed to instantly exit or stop a running presentation slide show?",
-    "options": ["Enter", "Spacebar", "Escape (Esc)", "BackSpace"],
-    "answer": "Escape (Esc)"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "What is the default layout orientation of slides in LibreOffice Impress?",
-    "options": ["Portrait", "Landscape", "Square", "Vertical"],
-    "answer": "Landscape"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which feature is used to apply motion effects to individual objects on a single slide?",
-    "options": ["Slide Transition", "Custom Animation", "Slide Master", "Hyperlink view"],
-    "answer": "Custom Animation"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "In LibreOffice Impress, presentations created can be exported directly into which format?",
-    "options": [".exe", ".pdf", ".mp3", ".txt"],
-    "answer": ".pdf"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "What is the default name given to a newly opened presentation in LibreOffice Impress?",
-    "options": ["Presentation1", "Document1", "Untitled 1 - LibreOffice Impress", "New Presentation"],
-    "answer": "Untitled 1 - LibreOffice Impress"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which menu contains the options to Open, Save, or Close a presentation file?",
-    "options": ["Edit", "Slide", "File", "Tools"],
-    "answer": "File"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which file extension belongs to a LibreOffice Impress Template?",
-    "options": [".otp", ".pot", ".odp", ".stc"],
-    "answer": ".otp"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "What is the minimum zoom level percentage allowed in LibreOffice Impress?",
-    "options": ["5%", "10%", "20%", "50%"],
-    "answer": "5%"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Where is the Status Bar located in the LibreOffice Impress window interface?",
-    "options": ["At the top", "At the bottom", "On the left side", "On the right side"],
-    "answer": "At the bottom"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "The default aspect ratio for a new slide in modern LibreOffice Impress is:",
-    "options": ["4:3", "16:10", "16:9", "1:1"],
-    "answer": "16:9"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which view allows you to see and edit only the text content of your slides in a structured hierarchy?",
-    "options": ["Normal View", "Outline View", "Slide Sorter View", "Slide Show View"],
-    "answer": "Outline View"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "If you want to add notes that are visible only to the presenter during a speech, which view should you use?",
-    "options": ["Outline View", "Master View", "Notes View", "Handout View"],
-    "answer": "Notes View"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which feature or slide acts as a blueprint to apply a consistent background and fonts across all slides?",
-    "options": ["Slide Transition", "Slide Master", "First Slide", "Slide Sorter"],
-    "answer": "Slide Master"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "How many document views are readily available as main tabs right above the workspace area in Impress?",
-    "options": ["3", "4", "5", "6"],
-    "answer": "5"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which view is explicitly designed to configure how your slides will look when printed out together on paper?",
-    "options": ["Slide Sorter View", "Handout View", "Notes View", "Outline View"],
-    "answer": "Handout View"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which shortcut key runs the slideshow starting specifically from the very first slide?",
-    "options": ["F5", "Shift + F5", "Ctrl + F5", "Alt + F5"],
-    "answer": "F5"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "What is the shortcut key to insert a brand new, blank slide into an active presentation?",
-    "options": ["Ctrl + N", "Ctrl + M", "Ctrl + S", "Ctrl + T"],
-    "answer": "Ctrl + M"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "During a running slideshow, pressing which key pauses the show and displays a pure black screen?",
-    "options":["W", "B", "N", "P"],
-    "answer": "B"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which shortcut key is used to duplicate a selected object or slide in Impress?",
-    "options": ["Ctrl + D", "Ctrl + Shift + D", "Alt + D", "Shift + D"],
-    "answer": "Ctrl + D"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "What is the shortcut key combination to clear direct formatting from selected text in Impress?",
-    "options": ["Ctrl + Space", "Ctrl + M", "Ctrl + Shift + A", "Shift + M"],
-    "answer": "Ctrl + M"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "To add decorative, stylized text with 3D effects into a slide, which feature should you use?",
-    "options": ["WordArt", "Fontwork", "TextArt", "ClipArt"],
-    "answer": "Fontwork"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Tables, Charts, Images, and Audio clips can all be placed into a slide using options found under which menu?",
-    "options": ["View", "Format", "Insert", "Slide"],
-    "answer": "Insert"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which component pane is located on the right side of the Impress screen, giving quick access to properties and layouts?",
-    "options": ["Slide Pane", "Menu Bar", "Sidebar", "Tool Bar"],
-    "answer": "Sidebar"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which key do you hold down while dragging a corner handle of a shape to resize it proportionally?",
-    "options": ["Ctrl", "Alt", "Shift", "Spacebar"],
-    "answer": "Shift"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "In LibreOffice Impress, Macro options are located under which menu tab?",
-    "options": ["Insert", "Format", "Tools", "Slide Show"],
-    "answer": "Tools"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which feature lets you draw standard mathematical or flow chart shapes directly onto a slide?",
-    "options": ["Drawing Toolbar", "Form Toolbar", "Line Tool", "Fontwork"],
-    "answer": "Drawing Toolbar"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "What is the name of the visual movement effect that happens when the presentation switches from one slide to the next?",
-    "options": ["Custom Animation", "Object Animation", "Slide Transition", "Slide Duration"],
-    "answer": "Slide Transition"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which of the following is a valid option category under the Custom Animation settings pane?",
-    "options": ["Entrance", "Emphasis", "Exit", "All of the above"],
-    "answer": "All of the above"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Can a single slide transition effect be globally applied to all slides in a presentation at once?",
-    "options": ["No, it must be added manually", "Yes, using 'Apply Transition to All Slides'", "Yes, but only for the first 5 slides", "No, transitions are always randomized"],
-    "answer": "Yes, using 'Apply Transition to All Slides'"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which setting in the Slide Transition panel allows a slide to change automatically after a specific number of seconds?",
-    "options": ["On Mouse Click", "After", "Duration", "Loop"],
-    "answer": "After"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which feature allows you to create a secondary version of a slide show that plays only a select few chosen slides?",
-    "options": ["Rehearse Timings", "Custom Slide Show", "Slide Sorter", "Hide Slide"],
-    "answer": "Custom Slide Show"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "If you want a slide to remain inside the file but prevent it from appearing during a live show, which option do you use?",
-    "options": ["Delete Slide", "Hide Slide", "Remove Slide", "Freeze Slide"],
-    "answer": "Hide Slide"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which feature can record the exact amount of time you spend speaking on each slide for automatic advancement?",
-    "options": ["Custom Animation", "Rehearse Timings", "Slide Transition", "Presenter Console"],
-    "answer": "Rehearse Timings"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "What tool panel automatically displays on the presenter's screen showing elapsed time while the audience sees the slide?",
-    "options": ["Slide Master View", "Presenter Console", "Control Panel", "Dashboard View"],
-    "answer": "Presenter Console"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "To create an interactive link on a slide that immediately opens a website URL when clicked, you should insert a:",
-    "options": ["Transition", "Hyperlink", "Custom Shape", "Macro"],
-    "answer": "Hyperlink"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Where can you find the options to turn on or off screen layout helpers like the Rulers and Grid lines?",
-    "options": ["Insert Menu", "Format Menu", "Tools Menu", "View Menu"],
-    "answer": "View Menu"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which option under the Slide menu allows you to change the actual background color or dimensions of a slide?",
-    "options": ["Slide Properties", "Slide Transition", "Layout Properties", "Page Settings"],
-    "answer": "Slide Properties"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Under which menu can you find the 'Spellcheck' tool to look for typographical errors in your presentation?",
-    "options": ["Edit", "View", "Tools", "Slide Show"],
-    "answer": "Tools"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "To quickly adjust the layered stacking order of overlapping shapes on a slide, which menu path is used?",
-    "options": ["Insert -> Layer", "Format -> Arrange", "Tools -> Align", "Slide -> Organize"],
-    "answer": "Format -> Arrange"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which of the following is NOT a standard, pre-built slide layout template found in the Impress side panel?",
-    "options": ["Title Slide", "Title, Content", "Title and 2 Content", "3D Chart Animation Layout"],
-    "answer": "3D Chart Animation Layout"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Can you insert dynamic video or audio clips directly into a LibreOffice Impress slide workspace?",
-    "options": ["No, it only supports static graphics", "Yes, via Insert -> Audio or Video", "Yes, but only as animated GIFs", "No, videos require external plugins"],
-    "answer": "Yes, via Insert -> Audio or Video"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which key shortcut instantly opens the built-in Help manual document panel for LibreOffice Impress?",
-    "options": ["F1", "F2", "F7", "F11"],
-    "answer": "F1"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "What is the shortcut key to open the Template Manager dialog box in LibreOffice Impress?",
-    "options": ["Ctrl + T", "Ctrl + Shift + N", "Ctrl + Alt + T", "Shift + F11"],
-    "answer": "Ctrl + Shift + N"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which panel on the left side of the screen shows a vertical strip of all slides in sequence?",
-    "options": ["Slide Pane", "Sidebar", "Status Bar", "Navigator"],
-    "answer": "Slide Pane"
-  },
-  {
-    "chapter": "Presentation (LibreOffice Impress)",
-    "question": "Which feature under Tools menu allows you to group multiple objects together so they behave as a single entity?",
-    "options": ["Combine", "Merge", "Group", "Connect"],
-    "answer": "Group"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which of the following is considered the 'Father of the Internet'?",
-    "options": ["Tim Berners-Lee", "Vint Cerf", "Charles Babbage", "Ray Tomlinson"],
-    "answer": "Vint Cerf"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Who invented the World Wide Web (WWW)?",
-    "options": ["Vint Cerf", "Tim Berners-Lee", "Bill Gates", "Steve Jobs"],
-    "answer": "Tim Berners-Lee"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which protocol is used for fetching or viewing webpages from a web server?",
-    "options": ["FTP", "HTTP", "SMTP", "SSH"],
-    "answer": "HTTP"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What is the secure version of HTTP that encrypts communication between a browser and a website?",
-    "options": ["HTTP+S", "SHTTP", "HTTPS", "FTPS"],
-    "answer": "HTTPS"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which of the following is NOT a web browser?",
-    "options": ["Google Chrome", "Mozilla Firefox", "Google Search", "Apple Safari"],
-    "answer": "Google Search"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What is the full form of DNS in networking?",
-    "options": ["Data Name System", "Domain Name System", "Digital Network Service", "Domain Network Security"],
-    "answer": "Domain Name System"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which protocol is responsible for dividing data into packets and ensuring they arrive safely at the destination?",
-    "options": ["TCP/IP", "HTTP", "FTP", "SMTP"],
-    "answer": "TCP/IP"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What is the full form of ISP?",
-    "options": ["Internet Service Provider", "International Service Provider", "Internet System Protocol", "Internal Server Portal"],
-    "answer": "Internet Service Provider"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which device is used to connect a computer to an internet service provider via telephone lines or cable?",
-    "options": ["Hub", "Switch", "Modem", "Repeater"],
-    "answer": "Modem"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What does MODEM stand for?",
-    "options": ["Modulation Demodulation", "Modulator-Demodulator", "Modern Memory", "Mobile Demodulator"],
-    "answer": "Modulator-Demodulator"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What is the structural size of an IPv4 address?",
-    "options": ["16 bits", "32 bits", "64 bits", "128 bits"],
-    "answer": "32 bits"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which protocol is primarily used for sending emails over the internet?",
-    "options": ["POP3", "IMAP", "SMTP", "HTTP"],
-    "answer": "SMTP"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which protocol allows a client to download emails from a server and delete them from the server?",
-    "options": ["SMTP", "POP3", "IMAP", "FTP"],
-    "answer": "POP3"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which email protocol allows you to view and manage emails directly on the mail server without downloading them?",
-    "options": ["SMTP", "POP3", "IMAP", "HTTP"],
-    "answer": "IMAP"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What is a network that is private to a specific organization and not accessible to the public called?",
-    "options": ["Internet", "Intranet", "Extranet", "LAN"],
-    "answer": "Intranet"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "A private network that allows controlled access from the outside for trusted partners or vendors is called:",
-    "options": ["Internet", "Intranet", "Extranet", "MAN"],
-    "answer": "Extranet"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What type of network topology has a single backbone cable to which all nodes are connected?",
-    "options": ["Star Topology", "Bus Topology", "Ring Topology", "Mesh Topology"],
-    "answer": "Bus Topology"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "In which topology does every node have a dedicated point-to-point link to every other node?",
-    "options": ["Mesh Topology", "Star Topology", "Tree Topology", "Bus Topology"],
-    "answer": "Mesh Topology"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which type of network spans across a city or a large campus?",
-    "options": ["LAN", "MAN", "WAN", "PAN"],
-    "answer": "MAN"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "The Internet is the best example of which type of network?",
-    "options": ["LAN", "MAN", "WAN", "PAN"],
-    "answer": "WAN"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which of the following represents a valid IPv4 address format?",
-    "options": ["192.168.1.1", "192-168-1-1", "192:168:1:1", "256.100.0.1"],
-    "answer": "192.168.1.1"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What is the first page that opens when you visit a website called?",
-    "options": ["Main Page", "Home Page", "Index Page", "Front Page"],
-    "answer": "Home Page"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which language is primarily used to create the structure of static web pages?",
-    "options": ["HTML", "CSS", "JavaScript", "Python"],
-    "answer": "HTML"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What does HTML stand for?",
-    "options": ["Hyper Text Markup Language", "High Text Machine Language", "Hyper Tabular Model Language", "Hyper Text Media Language"],
-    "answer": "Hyper Text Markup Language"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which of the following is a web search engine?",
-    "options": ["Google Chrome", "Opera", "Bing", "Safari"],
-    "answer": "Bing"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What is a 'Cookie' in the context of the web?",
-    "options": ["A virus that deletes web history", "A small text file stored by the browser to save user preferences", "A type of web browser", "A hardware component used for internet speed"],
-    "answer": "A small text file stored by the browser to save user preferences"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which of the following domain extensions is reserved for educational institutions?",
-    "options": [".com", ".org", ".edu", ".gov"],
-    "answer": ".edu"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What does '.gov' indicate in a website URL?",
-    "options": ["Governor website", "Government website", "Global organization", "Commercial website"],
-    "answer": "Government website"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which port number is standard for HTTP traffic?",
-    "options": ["21", "25", "80", "443"],
-    "answer": "80"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which port number is standard for HTTPS traffic?",
-    "options": ["80", "23", "443", "110"],
-    "answer": "443"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What is the full form of URL?",
-    "options": ["Uniform Resource Locator", "Universal Resource Link", "Uniform Resource Linker", "Universal Reference Locator"],
-    "answer": "Uniform Resource Locator"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Buying and selling goods or services over the internet is known as:",
-    "options": ["E-Mail", "E-Commerce", "E-Governance", "E-Banking"],
-    "answer": "E-Commerce"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which program or system analyzes websites to create an index of terms for search engines?",
-    "options": ["Web Crawler / Spider", "Web Server", "Router", "Firewall"],
-    "answer": "Web Crawler / Spider"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What is a software or hardware security system that monitors and filters incoming and outgoing network traffic?",
-    "options": ["Malware", "Firewall", "Antivirus", "Switch"],
-    "answer": "Firewall"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which of the following is the smallest type of network, usually centered around a single person in a single location?",
-    "options": ["LAN", "MAN", "WAN", "PAN"],
-    "answer": "PAN"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What is the full form of PAN in computer networking?",
-    "options": ["Permanent Account Number", "Personal Area Network", "Public Access Network", "Private Area Network"],
-    "answer": "Personal Area Network"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Bluetooth is an example of which type of network?",
-    "options": ["LAN", "MAN", "PAN", "WAN"],
-    "answer": "PAN"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which component of a URL specifies the protocol to be used (e.g., http://)?",
-    "options": ["Domain Name", "Scheme", "Path", "Subdomain"],
-    "answer": "Scheme"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What is a collection of interconnected web pages sharing a common domain name called?",
-    "options": ["Web Server", "Website", "Web Browser", "Hyperlink"],
-    "answer": "Website"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which protocol is used for remote login or terminal emulation over a network securely?",
-    "options": ["Telnet", "SSH", "FTP", "HTTP"],
-    "answer": "SSH"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What is the unsecure protocol used for remote login that sends data in plain text?",
-    "options": ["SSH", "Telnet", "SFTP", "HTTPS"],
-    "answer": "Telnet"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What does a '404 Not Found' error message typically mean?",
-    "options": ["The server is down", "The requested webpage does not exist on the server", "The internet connection is lost", "Access is forbidden"],
-    "answer": "The requested webpage does not exist on the server"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which of the following is an example of an open-source web browser?",
-    "options": ["Internet Explorer", "Mozilla Firefox", "Apple Safari", "Microsoft Edge"],
-    "answer": "Mozilla Firefox"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What is the process of transferring files from your local computer to a remote web server called?",
-    "options": ["Downloading", "Uploading", "Streaming", "Browsing"],
-    "answer": "Uploading"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What is the full form of Wi-Fi?",
-    "options": ["Wireless Fidelity", "Wireless Focus", "Wired Finder", "Wireless Function"],
-    "answer": "Wireless Fidelity"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which network device operates at the physical layer of the OSI model to regenerate signals over long distances?",
-    "options": ["Bridge", "Switch", "Repeater", "Router"],
-    "answer": "Repeater"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which device connects multiple networks together and routes data packets based on IP addresses?",
-    "options": ["Hub", "Switch", "Router", "Modem"],
-    "answer": "Router"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "What is a hyperlink?",
-    "options": ["A type of fast internet cable", "A text or image that jumps to another webpage when clicked", "A secure network protocol", "An email attachment"],
-    "answer": "A text or image that jumps to another webpage when clicked"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "IPv6 addresses are represented using which numbering system?",
-    "options": ["Decimal", "Binary", "Hexadecimal", "Octal"],
-    "answer": "Hexadecimal"
-  },
-  {
-    "chapter": "Introduction to Internet and WWW",
-    "question": "Which of the following is a physical path over which a message travels from sender to receiver?",
-    "options": ["Protocol", "Medium", "Signal", "Packet"],
-    "answer": "Medium"
-  },
-  {
-    "chapter": "E-mail, Social Networking and E-Governance Services",
-    "question": "Which network protocol is universally used to send outgoing emails from a client application?",
-    "options": ["POP3", "IMAP", "SMTP", "HTTP"],
-    "answer": "SMTP"
-  },
-  {
-    "chapter": "E-mail, Social Networking and E-Governance Services",
-    "question": "When sending an email, which field hides the identity of secondary recipients from other readers?",
-    "options": ["To", "Cc", "Bcc", "Subject"],
-    "answer": "Bcc"
-  },
-  {
-    "chapter": "E-mail, Social Networking and E-Governance Services",
-    "question": "What is the microblogging platform characterized by brief posts that was originally rebranded as 'X'?",
-    "options": ["Facebook", "Instagram", "Twitter", "LinkedIn"],
-    "answer": "Twitter"
-  },
-  {
-    "chapter": "E-mail, Social Networking and E-Governance Services",
-    "question": "Which Indian national e-governance mobile application provides citizens unified access to multiple central and state government services?",
-    "options": ["BHIM", "UMANG", "mParivahan", "DigiLocker"],
-    "answer": "UMANG"
-  },
-  {
-    "chapter": "E-mail, Social Networking and E-Governance Services",
-    "question": "What is the secure cloud-based platform provided by the Government of India for storing and verifying official digital documents?",
-    "options": ["Google Drive", "DigiLocker", "Dropbox", "E-Seva Cloud"],
-    "answer": "DigiLocker"
-  },
-  {
-    "chapter": "Digital Financial Tools and Applications",
-    "question": "What does the financial tool acronym UPI stand for?",
-    "options": ["Unified Payments Interface", "Universal Payment Integration", "United Premium Interface", "Unique Payment Identifier"],
-    "answer": "Unified Payments Interface"
-  },
-  {
-    "chapter": "Digital Financial Tools and Applications",
-    "question": "What is the short code string used to access banking services without internet connectivity over USSD?",
-    "options": ["*99#", "*121#", "*100#", "*88#"],
-    "answer": "*99#"
-  },
-  {
-    "chapter": "Digital Financial Tools and Applications",
-    "question": "What is the alphanumeric code used to uniquely identify a bank branch for online electronic money transfers within India?",
-    "options": ["PAN Code", "IFSC", "MICR", "SWIFT"],
-    "answer": "IFSC"
-  },
-  {
-    "chapter": "Digital Financial Tools and Applications",
-    "question": "Which payment clearing system handles high-value transactions in real-time continuous settlement mode within India?",
-    "options": ["NEFT", "RTGS", "IMPS", "AEPS"],
-    "answer": "RTGS"
-  },
-  {
-    "chapter": "Digital Financial Tools and Applications",
-    "question": "How many digits are present in the Card Verification Value (CVV) code printed on standard debit cards?",
-    "options": ["3", "4", "12", "16"],
-    "answer": "3"
-  },
-  {
-    "chapter": "Overview of Future Skills & Cyber Security",
-    "question": "What is the trick practice of sending fake communication disguised as legitimate sources to steal credentials called?",
-    "options": ["Phishing", "Spamming", "Hacking", "Spying"],
-    "answer": "Phishing"
-  },
-  {
-    "chapter": "Overview of Future Skills & Cyber Security",
-    "question": "Which software utility monitored system tool acts as a traffic filter barrier between an internal private network and public internet?",
-    "options": ["Antivirus", "Firewall", "Spyware cleaner", "Router tracker"],
-    "answer": "Firewall"
-  },
-  {
-    "chapter": "Overview of Future Skills & Cyber Security",
-    "question": "What type of malware self-replicates across computer networks independently without needing to attach to a host file?",
-    "options": ["Trojan Horse", "Worm", "Virus", "Adware"],
-    "answer": "Worm"
-  },
-    {
-      "chapter": "Spreadsheet (LibreOffice Calc)",
-      "question": "Which formula is correct to add values from cell A1 to A5 in LibreOffice Calc?",
-      "options": ["=ADD(A1:A5)", "=SUM(A1:A5)", "=TOTAL(A1:A5)", "=A1+A5"],
-      "answer": "=SUM(A1:A5)"
-    },
-    {
-      "chapter": "Presentation (LibreOffice Impress)",
-      "question": "Which shortcut key is used to start a slide show from the first slide in Impress?",
-      "options": ["F5", "Shift + F5", "Ctrl + F5", "Alt + F5"],
-      "answer": "F5"
-    },
-    {
-      "chapter": "Introduction to Internet and WWW",
-      "question": "What is the full form of DNS in computer networks?",
-      "options": ["Data Network System", "Domain Name System", "Digital Network Service", "Domain Network Security"],
-      "answer": "Domain Name System"
-    },
-    {
-      "chapter": "E-mail, Social Networking and E-Governance Services",
-      "question": "Which of the following protocol is used to receive emails?",
-      "options": ["SMTP", "POP3", "FTP", "HTTP"],
-      "answer": "POP3"
-    },
-    {
-      "chapter": "Digital Financial Tools and Applications",
-      "question": "What is the maximum daily transaction limit for UPI in standard banking guidelines?",
-      "options": ["Rs. 10,000", "Rs. 50,000", "Rs. 1,000,000", "Rs. 2,000,000"],
-      "answer": "Rs. 1,000,000"
-    },
-    {
-      "chapter": "Overview of Future Skills & Cyber Security",
-      "question": "Which of the following is a type of malicious software that encrypts data and demands payment for decryption?",
-      "options": ["Spyware", "Ransomware", "Trojan Horse", "Worm"],
-      "answer": "Ransomware"
-    }
+    {"chapter": "Introduction to Computer", "question": "Which of the following is the fastest memory in a computer system?", "options": ["RAM", "ROM", "Cache Memory", "Hard Disk"], "answer": "Cache Memory"},
+    {"chapter": "Introduction to Computer", "question": "Who is known as the father of modern computers?", "options": ["Alan Turing", "Charles Babbage", "John von Neumann", "Blaise Pascal"], "answer": "Charles Babbage"},
+    {"chapter": "Introduction to Computer", "question": "Which electronic components were used in First Generation Computers?", "options": ["Transistors", "Integrated Circuits", "Vacuum Tubes", "Microprocessors"], "answer": "Vacuum Tubes"},
+    {"chapter": "Introduction to Computer", "question": "What is the full form of ALU in computer architecture?", "options": ["Arithmetic Logic Unit", "Advanced Logic Unit", "Array Logic Unit", "Application Logic Unit"], "answer": "Arithmetic Logic Unit"},
+    {"chapter": "Introduction to Computer", "question": "Which of the following is a permanent non-volatile memory?", "options": ["RAM", "ROM", "Cache", "SRAM"], "answer": "ROM"},
+    {"chapter": "Introduction to Computer", "question": "One Gigabyte (1 GB) is equal to how many Megabytes (MB)?", "options": ["1000 MB", "1024 MB", "512 MB", "2048 MB"], "answer": "1024 MB"},
+    {"chapter": "Introduction to Computer", "question": "Which computer generation introduced the concept of Microprocessors?", "options": ["Second Generation", "Third Generation", "Fourth Generation", "Fifth Generation"], "answer": "Fourth Generation"},
+    {"chapter": "Introduction to Computer", "question": "Which of the following is an input device?", "options": ["Monitor", "Printer", "Light Pen", "Plotter"], "answer": "Light Pen"},
+    {"chapter": "Introduction to Computer", "question": "What is the main brain of any computer system called?", "options": ["Motherboard", "CPU", "Hard Disk", "Control Unit"], "answer": "CPU"},
+    {"chapter": "Introduction to Computer", "question": "Which type of computer is primarily used in weather forecasting and scientific research?", "options": ["Mainframe Computer", "Mini Computer", "Supercomputer", "Microcomputer"], "answer": "Supercomputer"},
+    {"chapter": "Introduction to Computer", "question": "What is the smallest unit of data in a computer?", "options": ["Byte", "Nibble", "Bit", "Kilobyte"], "answer": "Bit"},
+    {"chapter": "Introduction to Computer", "question": "A collection of 4 bits is known as a ________.", "options": ["Byte", "Nibble", "Word", "Block"], "answer": "Nibble"},
+    {"chapter": "Introduction to Computer", "question": "Which of the following is an example of secondary memory?", "options": ["RAM", "ROM", "Solid State Drive (SSD)", "Register"], "answer": "Solid State Drive (SSD)"},
+    {"chapter": "Introduction to Computer", "question": "Artificial Intelligence (AI) is associated with which generation of computers?", "options": ["Third Generation", "Fourth Generation", "Fifth Generation", "Sixth Generation"], "answer": "Fifth Generation"},
+    {"chapter": "Introduction to Computer", "question": "What is the full form of GUI?", "options": ["Graphical User Interface", "General User Interface", "Global User Index", "Graphic Universal Integration"], "answer": "Graphical User Interface"},
+    {"chapter": "Introduction to Computer", "question": "Which part of the CPU coordinates the movement of data and instructions?", "options": ["ALU", "Control Unit", "Registers", "RAM"], "answer": "Control Unit"},
+    {"chapter": "Introduction to Computer", "question": "Which device is used to convert hard copy text/images into digital soft copy?", "options": ["Printer", "Plotter", "Scanner", "Monitor"], "answer": "Scanner"},
+    {"chapter": "Introduction to Computer", "question": "What does RAM stand for?", "options": ["Read Access Memory", "Random Access Memory", "Ready Application Module", "Remote Access Memory"], "answer": "Random Access Memory"},
+    {"chapter": "Introduction to Computer", "question": "Which of the following is an impact printer?", "options": ["Laser Printer", "Inkjet Printer", "Dot Matrix Printer", "Thermal Printer"], "answer": "Dot Matrix Printer"},
+    {"chapter": "Introduction to Computer", "question": "The speed of modern CPUS is generally measured in ________.", "options": ["Kilohertz (kHz)", "Megabytes (MB)", "Gigahertz (GHz)", "Megabits (Mb)"], "answer": "Gigahertz (GHz)"},
+    {"chapter": "Introduction to Computer", "question": "Which memory type needs continuous refreshing to retain data?", "options": ["SRAM", "DRAM", "ROM", "Flash Memory"], "answer": "DRAM"},
+    {"chapter": "Introduction to Computer", "question": "What is the full form of EEPROM?", "options": ["Electrically Erasable Programmable Read-Only Memory", "Extended Easily Programmable Read-Only Memory", "Electronic Erasable Production Read-Only Memory", "Efficient Erasable Programmable Read-Only Memory"], "answer": "Electrically Erasable Programmable Read-Only Memory"},
+    {"chapter": "Introduction to Computer", "question": "Which of the following is an example of system software?", "options": ["MS Word", "Google Chrome", "Operating System", "Photoshop"], "answer": "Operating System"},
+    {"chapter": "Introduction to Computer", "question": "What was the name of the first general-purpose electronic digital computer?", "options": ["UNIVAC", "ENIAC", "EDVAC", "ABACUS"], "answer": "ENIAC"},
+    {"chapter": "Introduction to Computer", "question": "Which port is most commonly used to connect modern keyboards, mice, and flash drives?", "options": ["VGA Port", "Serial Port", "USB Port", "Parallel Port"], "answer": "USB Port"},
+    {"chapter": "Introduction to Computer", "question": "What is the base of the Hexadecimal number system?", "options": ["2", "8", "10", "16"], "answer": "16"},
+    {"chapter": "Introduction to Computer", "question": "Which of the following is used to produce high-quality vector graphics and large architectural drawings?", "options": ["Inkjet Printer", "Plotter", "Laser Printer", "Dot Matrix"], "answer": "Plotter"},
+    {"chapter": "Introduction to Computer", "question": "Where are the basic bios boot instructions stored permanently?", "options": ["RAM", "ROM Chip", "Hard Disk", "Cache Memory"], "answer": "ROM Chip"},
+    {"chapter": "Introduction to Computer", "question": "Integrated Circuits (ICs) were introduced in which generation of computers?", "options": ["First Generation", "Second Generation", "Third Generation", "Fourth Generation"], "answer": "Third Generation"},
+    {"chapter": "Introduction to Computer", "question": "What is the binary equivalent of the decimal number 5?", "options": ["100", "101", "110", "111"], "answer": "101"},
+    {"chapter": "Introduction to Computer", "question": "Which register holds the address of the next instruction to be executed?", "options": ["Accumulator", "Program Counter (PC)", "Instruction Register", "Memory Data Register"], "answer": "Program Counter (PC)"},
+    {"chapter": "Introduction to Computer", "question": "Which of the following is volatile memory?", "options": ["Hard Disk", "SSD", "RAM", "CD-ROM"], "answer": "RAM"},
+    {"chapter": "Introduction to Computer", "question": "What does ASCII stand for?", "options": ["American Standard Code for Information Interchange", "Asian Standard Code for Audio Integration", "American Security Code for Information Interchange", "Advanced Standard Code for Information Interchange"], "answer": "American Standard Code for Information Interchange"},
+    {"chapter": "Introduction to Computer", "question": "Which device acts as both an input and output device?", "options": ["Scanner", "Touch Screen Monitor", "Keyboard", "Printer"], "answer": "Touch Screen Monitor"},
+    {"chapter": "Introduction to Computer", "question": "What is the full form of VDU?", "options": ["Visual Display Unit", "Virtual Data Unit", "Video Dynamic Unit", "Visual Digital Union"], "answer": "Visual Display Unit"},
+    {"chapter": "Introduction to Computer", "question": "Which storage device has the highest data transfer rate among secondary storage options?", "options": ["Floppy Disk", "Hard Disk Drive (HDD)", "Solid State Drive (SSD)", "DVD-ROM"], "answer": "Solid State Drive (SSD)"},
+    {"chapter": "Introduction to Computer", "question": "The physically executable components of a computer system are called ________.", "options": ["Software", "Hardware", "Firmware", "Shareware"], "answer": "Hardware"},
+    {"chapter": "Introduction to Computer", "question": "Which type of software is distributed freely but requires payment for advanced features after a trial period?", "options": ["Open Source Software", "Freeware", "Shareware", "Public Domain Software"], "answer": "Shareware"},
+    {"chapter": "Introduction to Computer", "question": "What type of computer architecture is followed by most modern computers?", "options": ["Harvard Architecture", "Von Neumann Architecture", "Analytical Engine Model", "Eniac Architecture"], "answer": "Von Neumann Architecture"},
+    {"chapter": "Introduction to Computer", "question": "Which secondary storage device uses optical laser technology to read and write data?", "options": ["Hard Disk", "CD-RW", "Solid State Drive", "Magnetic Tape"], "answer": "CD-RW"},
+    {"chapter": "Introduction to Computer", "question": "What is the full form of CMOS in relation to computers?", "options": ["Complementary Metal-Oxide-Semiconductor", "Common Machine Operating System", "Computer Memory Output System", "Core Module Operating Software"], "answer": "Complementary Metal-Oxide-Semiconductor"},
+    {"chapter": "Introduction to Computer", "question": "Which of the following is considered the first calculation device in human history?", "options": ["Pascaline", "Analytical Engine", "Abacus", "Napier's Bones"], "answer": "Abacus"},
+    {"chapter": "Introduction to Computer", "question": "What is the term used for the process of loading an operating system into RAM?", "options": ["Processing", "Booting", "Executing", "Compiling"], "answer": "Booting"},
+    {"chapter": "Introduction to Computer", "question": "Which component protects the internal parts of a computer from external electrical spikes?", "options": ["SMPS", "Motherboard", "UPS", "CPU Fan"], "answer": "UPS"},
+    {"chapter": "Introduction to Computer", "question": "Which type of memory is directly integrated inside the CPU chip to hold current data values?", "options": ["Registers", "RAM", "ROM", "Virtual Memory"], "answer": "Registers"},
+    {"chapter": "Introduction to Computer", "question": "What is the capacity of a standard high-density Floppy Disk?", "options": ["700 MB", "4.7 GB", "1.44 MB", "2.88 MB"], "answer": "1.44 MB"},
+    {"chapter": "Introduction to Computer", "question": "The binary system uses only two digits, which are ________.", "options": ["1 and 2", "0 and 1", "A and B", "9 and 10"], "answer": "0 and 1"},
+    {"chapter": "Introduction to Computer", "question": "Which memory acts as an overflow space when the physical RAM is completely full?", "options": ["Cache Memory", "Flash Memory", "Virtual Memory", "EEPROM"], "answer": "Virtual Memory"},
+    {"chapter": "Introduction to Computer", "question": "What is the full form of Motherboard Form Factor standard ATX?", "options": ["Advanced Technology Extended", "Advanced Terminal Exchange", "Automated Transfer eXcellent", "All Technology eXecution"], "answer": "Advanced Technology Extended"},
+    {"chapter": "Introduction to Computer", "question": "Which encoding standard represents characters globally for almost all languages?", "options": ["ASCII", "Unicode", "EBCDIC", "BCD"], "answer": "Unicode"},
+    {"chapter": "Introduction to Operating System", "question": "What is the core part of an Operating System called?", "options": ["Shell", "Kernel", "Command Prompt", "Registry"], "answer": "Kernel"},
+    {"chapter": "Introduction to Operating System", "question": "Which of the following is an example of an open-source operating system?", "options": ["Windows 11", "macOS", "Linux", "MS-DOS"], "answer": "Linux"},
+    {"chapter": "Introduction to Operating System", "question": "What type of operating system is used in critical applications like satellite launching and medical equipment?", "options": ["Batch Processing OS", "Real-Time Operating System (RTOS)", "Time-Sharing OS", "Network OS"], "answer": "Real-Time Operating System (RTOS)"},
+    {"chapter": "Introduction to Operating System", "question": "Which component of an operating system provides the interface for users to interact, like a command-line interpreter?", "options": ["Kernel", "Shell", "Driver", "Thread"], "answer": "Shell"},
+    {"chapter": "Introduction to Operating System", "question": "What is a program in execution called?", "options": ["Command", "Process", "Task Manager", "Function"], "answer": "Process"},
+    {"chapter": "Introduction to Operating System", "question": "Which of the following is a multi-user, time-sharing operating system developed in the 1970s?", "options": ["MS-DOS", "Unix", "Windows 95", "Windows 3.1"], "answer": "Unix"},
+    {"chapter": "Introduction to Operating System", "question": "What is the full form of GUI in operating systems?", "options": ["Graphical User Interface", "General User Integration", "Global User Interface", "Graphics Universal Interchange"], "answer": "Graphical User Interface"},
+    {"chapter": "Introduction to Operating System", "question": "Which scheduling algorithm allocates the CPU to the process that requests it first?", "options": ["Shortest Job First (SJF)", "Round Robin (RR)", "First-Come, First-Served (FCFS)", "Priority Scheduling"], "answer": "First-Come, First-Served (FCFS)"},
+    {"chapter": "Introduction to Operating System", "question": "What is the default file system used by modern Windows operating systems (like Windows 10/11)?", "options": ["FAT32", "NTFS", "ext4", "HPFS"], "answer": "NTFS"},
+    {"chapter": "Introduction to Operating System", "question": "Which condition occurs when two or more processes are blocked indefinitely, waiting for each other to release resources?", "options": ["Starvation", "Deadlock", "Context Switching", "Paging"], "answer": "Deadlock"},
+    {"chapter": "Introduction to Operating System", "question": "What is the process of restarting an operating system that is already running called?", "options": ["Cold Booting", "Warm Booting", "Hard Booting", "Shut Down"], "answer": "Warm Booting"},
+    {"chapter": "Introduction to Operating System", "question": "Which Linux command is used to display the contents of a directory?", "options": ["dir", "ls", "cd", "pwd"], "answer": "ls"},
+    {"chapter": "Introduction to Operating System", "question": "What is the mechanism that temporarily moves a process out of main memory to a secondary storage (hard disk) called?", "options": ["Swapping", "Caching", "Paging", "Fragmentation"], "answer": "Swapping"},
+    {"chapter": "Introduction to Operating System", "question": "Which type of operating system executes similar jobs grouped together without direct user interaction?", "options": ["Time-sharing OS", "Batch Processing OS", "Distributed OS", "Network OS"], "answer": "Batch Processing OS"},
+    {"chapter": "Introduction to Operating System", "question": "What is the full form of CLI?", "options": ["Command Line Interface", "Common Line Interconnect", "Control Logic Interface", "Computer Language Interpreter"], "answer": "Command Line Interface"},
+    {"chapter": "Introduction to Operating System", "question": "Which memory management technique maps a program's virtual address space into fixed-size blocks of physical memory?", "options": ["Segmentation", "Paging", "Continuous Allocation", "Compaction"], "answer": "Paging"},
+    {"chapter": "Introduction to Operating System", "question": "Which Linux command is used to see the current working directory path?", "options": ["cd", "mkdir", "pwd", "path"], "answer": "pwd"},
+    {"chapter": "Introduction to Operating System", "question": "What is the primary function of a device driver?", "options": ["To run user application software", "To allow the OS to communicate with specific hardware components", "To scan files for viruses", "To back up system data"], "answer": "To allow the OS to communicate with specific hardware components"},
+    {"chapter": "Introduction to Operating System", "question": "Which of the following is NOT an operating system?", "options": ["Windows Server", "Android", "Oracle", "Ubuntu"], "answer": "Oracle"},
+    {"chapter": "Introduction to Operating System", "question": "What is the name of the system software that loads the operating system kernel into the computer's memory during boot up?", "options": ["Compiler", "Linker", "Bootstrap Loader", "Assembler"], "answer": "Bootstrap Loader"},
+    {"chapter": "Introduction to Operating System", "question": "Which Windows shortcut key combination is used to open the Task Manager instantly?", "options": ["Ctrl + Alt + Del", "Ctrl + Shift + Esc", "Win + R", "Alt + F4"], "answer": "Ctrl + Shift + Esc"},
+    {"chapter": "Introduction to Operating System", "question": "In operating systems, what does 'SPOOLING' stand for?", "options": ["Simultaneous Peripheral Operations On-Line", "Sequential Program Optimization Over-Line", "System Peripheral Output Organizational Logic", "Serial Port Output Oriented Loader"], "answer": "Simultaneous Peripheral Operations On-Line"},
+    {"chapter": "Introduction to Operating System", "question": "Which state does a process enter immediately after it is created or loaded into main memory?", "options": ["Running State", "Waiting State", "Ready State", "Terminated State"], "answer": "Ready State"},
+    {"chapter": "Introduction to Operating System", "question": "What is the primary file system used in Linux operating systems?", "options": ["NTFS", "FAT16", "ext4", "exFAT"], "answer": "ext4"},
+    {"chapter": "Introduction to Operating System", "question": "Which scheduling algorithm uses a time quantum or fixed time slice for fair CPU distribution?", "options": ["Round Robin (RR)", "Shortest Remaining Time First", "First-Come First-Served", "Highest Response Ratio Next"], "answer": "Round Robin (RR)"},
+    {"chapter": "Introduction to Operating System", "question": "What happens when the system spends more time swapping pages in and out of memory than executing actual instructions?", "options": ["Deadlock", "Thrashing", "Starvation", "Paging fault"], "answer": "Thrashing"},
+    {"chapter": "Introduction to Operating System", "question": "Which interface allows multiple processors to work together to execute a single task split across them?", "options": ["Multiprogramming", "Multiprocessing", "Multitasking", "Multithreading"], "answer": "Multiprocessing"},
+    {"chapter": "Introduction to Operating System", "question": "Which of the following is a mobile operating system developed by Apple?", "options": ["Android", "Symbian", "iOS", "Tizen"], "answer": "iOS"},
+    {"chapter": "Introduction to Operating System", "question": "What is the default administrator account name in a Linux/Unix system?", "options": ["Admin", "Administrator", "Root", "Superuser"], "answer": "Root"},
+    {"chapter": "Introduction to Operating System", "question": "Which system call is used in Unix-like systems to create a new child process?", "options": ["fork()", "exec()", "create()", "spawn()"], "answer": "fork()"},
+    {"chapter": "Introduction to Operating System", "question": "What type of fragmentation occurs when memory is divided into fixed-size blocks, and a process allocated a block leaves some unused space inside it?", "options": ["External Fragmentation", "Internal Fragmentation", "Dynamic Fragmentation", "Virtual Fragmentation"], "answer": "Internal Fragmentation"},
+    {"chapter": "Introduction to Operating System", "question": "Which utility in Windows is used to check and repair errors on a hard disk drive?", "options": ["Disk Defragmenter", "CHKDSK", "Disk Cleanup", "Regedit"], "answer": "CHKDSK"},
+    {"chapter": "Introduction to Operating System", "question": "What is the full form of API, which allows applications to request services from the operating system?", "options": ["Application Programming Interface", "Advanced Program Integration", "Automated Process Interface", "Application Protocol Interconnect"], "answer": "Application Programming Interface"},
+    {"chapter": "Introduction to Operating System", "question": "Which character is used in Linux command line to pipe the output of one command as an input to another?", "options": [">", "<", "|", "&"], "answer": "|"},
+    {"chapter": "Introduction to Operating System", "question": "What is the minimum number of bits required to uniquely identify a process in a system using a Process ID (PID)?", "options": ["Depends on the OS architecture (e.g., 16-bit or 32-bit integers)", "Always 8 bits", "Always 64 bits", "Fixed at 4 bits"], "answer": "Depends on the OS architecture (e.g., 16-bit or 32-bit integers)"},
+    {"chapter": "Introduction to Operating System", "question": "Which type of software is an operating system categorized into?", "options": ["Application Software", "System Software", "Programming Software", "Utility Software"], "answer": "System Software"},
+    {"chapter": "Introduction to Operating System", "question": "Which algorithm is used by the operating system to prevent deadlocks by checking resource allocation states?", "options": ["Round Robin Algorithm", "Banker's Algorithm", "Page Replacement Algorithm", "Kruskal's Algorithm"], "answer": "Banker's Algorithm"},
+    {"chapter": "Introduction to Operating System", "question": "What is the full form of NTFS?", "options": ["New Technology File System", "Network Technology File System", "New Tab File Sequence", "Node Transfer File Structure"], "answer": "New Technology File System"},
+    {"chapter": "Introduction to Operating System", "question": "Which Linux command is used to change file permissions?", "options": ["chown", "chmod", "chgrp", "attrib"], "answer": "chmod"},
+    {"chapter": "Introduction to Operating System", "question": "What is the smallest allocatable unit of a hard disk space managed by a file system?", "options": ["Sector", "Track", "Cluster / Block", "Byte"], "answer": "Cluster / Block"},
+    {"chapter": "Introduction to Operating System", "question": "Which of the following is a characteristic of a real-time operating system?", "options": ["High throughput", "Deterministic and predictable response time", "Maximum CPU utilization", "Large memory footprint"], "answer": "Deterministic and predictable response time"},
+    {"chapter": "Introduction to Operating System", "question": "What is the name of the central database in Windows that stores configuration settings and options?", "options": ["Kernel Space", "Windows Registry", "Control Panel", "System INI"], "answer": "Windows Registry"},
+    {"chapter": "Introduction to Operating System", "question": "Which operation switches the CPU from executing one process to another, saving the current state first?", "options": ["Context Switching", "Process Migration", "Interrupt Handling", "Paging Allocation"], "answer": "Context Switching"},
+    {"chapter": "Introduction to Operating System", "question": "Which command in Windows command prompt (CMD) is used to clear the screen?", "options": ["clear", "cls", "clean", "reset"], "answer": "cls"},
+    {"chapter": "Introduction to Operating System", "question": "What type of OS runs on a group of independent, networked computers but appears to the user as a single computer?", "options": ["Distributed Operating System", "Batch Operating System", "Network Operating System", "Embedded Operating System"], "answer": "Distributed Operating System"},
+    {"chapter": "Introduction to Operating System", "question": "Which data structure is maintained by the operating system to store all the information about a specific process?", "options": ["Process Control Block (PCB)", "File Allocation Table (FAT)", "Page Map Table", "Ready Queue Stack"], "answer": "Process Control Block (PCB)"},
+    {"chapter": "Introduction to Operating System", "question": "What is the name of the special page replacement policy that replaces the page that has not been used for the longest period of time?", "options": ["FIFO (First In First Out)", "LRU (Least Recently Used)", "Optimal Page Replacement", "LIFO (Last In First Out)"], "answer": "LRU (Least Recently Used)"},
+    {"chapter": "Introduction to Operating System", "question": "Which of the following is a legacy 16-bit single-tasking operating system with a command-line interface?", "options": ["MS-DOS", "Windows XP", "OS/2", "Linux Mint"], "answer": "MS-DOS"},
+    {"chapter": "Introduction to Operating System", "question": "What type of operating system allows multiple parts of a single program (threads) to run concurrently?", "options": ["Multithreading OS", "Batch Processing OS", "Single-tasking OS", "Macro OS"], "answer": "Multithreading OS"},
+    {"chapter": "Introduction to Operating System", "question": "Which Linux command is used to create a new empty directory?", "options": ["md", "mkdir", "create", "newdir"], "answer": "mkdir"},
+    {"chapter": "Word Processing (LibreOffice Writer)", "question": "What is the default file extension of LibreOffice Writer?", "options": [".doc", ".docx", ".odt", ".txt"], "answer": ".odt"},
+    {"chapter": "Word Processing (LibreOffice Writer)", "question": "Which shortcut key is used for 'Save As' in LibreOffice Writer?", "options": ["Ctrl + S", "Ctrl + Shift + S", "Ctrl + Alt + S", "F12"], "answer": "Ctrl + Shift + S"},
+    {"chapter": "Word Processing (LibreOffice Writer)", "question": "What is the maximum zoom percentage allowed in LibreOffice Writer?", "options": ["100%", "400%", "600%", "1000%"], "answer": "600%"},
+    {"chapter": "Word Processing (LibreOffice Writer)", "question": "Which menu contains the 'Mail Merge Wizard' option in LibreOffice Writer?", "options": ["File", "Edit", "Insert", "Tools"], "answer": "Tools"},
+    {"chapter": "Word Processing (LibreOffice Writer)", "question": "What is the shortcut key to insert a Page Break in LibreOffice Writer?", "options": ["Ctrl + Enter", "Shift + Enter", "Alt + Enter", "Ctrl + Shift + Enter"], "answer": "Ctrl + Enter"},
+    {"chapter": "Word Processing (LibreOffice Writer)", "question": "In LibreOffice Writer, the shortcut key for superscript is ________.", "options": ["Ctrl + Shift + P", "Ctrl + Shift + B", "Ctrl + Shift + S", "Ctrl + Equals"], "answer": "Ctrl + Shift + P"},
+    {"chapter": "Word Processing (LibreOffice Writer)", "question": "Which option is used to type text automatically with predefined shortcuts in Writer?", "options": ["AutoFill", "AutoText", "AutoCorrect", "Macro"], "answer": "AutoText"},
+    {"chapter": "Word Processing (LibreOffice Writer)", "question": "What is the shortcut key to manage styles and formatting panel in Writer?", "options": ["F5", "F7", "F11", "F12"], "answer": "F11"},
+    {"chapter": "Word Processing (LibreOffice Writer)", "question": "Which alignment is selected by default for text in LibreOffice Writer?", "options": ["Left aligned", "Right aligned", "Centered", "Justified"], "answer": "Left aligned"},
+    {"chapter": "Word Processing (LibreOffice Writer)", "question": "What is the minimum zoom percentage available in LibreOffice Writer?", "options": ["5%", "10%", "20%", "50%"], "answer": "20%"},
+    {"chapter": "Word Processing (LibreOffice Writer)", "question": "Which key combination is used for 'Double Underline' in LibreOffice Writer?", "options": ["Ctrl + D", "Ctrl + Shift + D", "Ctrl + Alt + D", "Shift + U"], "answer": "Ctrl + D"},
+    {"chapter": "Word Processing (LibreOffice Writer)", "question": "Where is the Status Bar located in the LibreOffice Writer window?", "options": ["Top of the screen", "Bottom of the screen", "Right side sidebar", "Below the title bar"], "answer": "Bottom of the screen"},
+    {"chapter": "Spreadsheet (LibreOffice Calc)", "question": "What is the default file extension of a LibreOffice Calc spreadsheet?", "options": [".ods", ".xls", ".xlsx", ".odp"], "answer": ".ods"},
+    {"chapter": "Spreadsheet (LibreOffice Calc)", "question": "Every formula in LibreOffice Calc must always begin with which symbol?", "options": ["@", "#", "=", "+"], "answer": "="},
+    {"chapter": "Spreadsheet (LibreOffice Calc)", "question": "What is the maximum number of rows available in a single sheet of LibreOffice Calc?", "options": ["65536", "1048576", "256", "16384"], "answer": "1048576"},
+    {"chapter": "Spreadsheet (LibreOffice Calc)", "question": "What is the maximum number of columns available in a single sheet of LibreOffice Calc?", "options": ["1024", "16384", "256", "4096"], "answer": "16384"},
+    {"chapter": "Spreadsheet (LibreOffice Calc)", "question": "What is the default number of sheets when you create a new Calc file?", "options": ["1", "3", "5", "10"], "answer": "1"},
+    {"chapter": "Spreadsheet (LibreOffice Calc)", "question": "Which shortcut key opens the 'Function Wizard' in LibreOffice Calc?", "options": ["Ctrl + F1", "Ctrl + F2", "F2", "Shift + F2"], "answer": "Ctrl + F2"},
+    {"chapter": "Spreadsheet (LibreOffice Calc)", "question": "What is the name of the box that shows the address of the currently active cell?", "options": ["Formula Bar", "Status Bar", "Name Box", "Title Bar"], "answer": "Name Box"},
+    {"chapter": "Spreadsheet (LibreOffice Calc)", "question": "What error code is displayed in Calc when a column width is too narrow to display numbers?", "options": ["#REF!", "#VALUE!", "###", "#NAME?"], "answer": "###"},
+    {"chapter": "Spreadsheet (LibreOffice Calc)", "question": "Which shortcut key is used to clear or delete the contents of a cell with options dialog?", "options": ["Delete", "Backspace", "Ctrl + Delete", "Shift + Backspace"], "answer": "Backspace"},
+    {"chapter": "Spreadsheet (LibreOffice Calc)", "question": "What is the correct cell address for the very first cell in a Calc worksheet?", "options": ["1A", "A1", "A-1", "Row1Col1"], "answer": "A1"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "What is the default file extension of a LibreOffice Impress presentation?", "options": [".odp", ".ppt", ".pptx", ".ods"], "answer": ".odp"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which shortcut key runs the slideshow starting specifically from the current slide?", "options": ["F5", "Shift + F5", "Ctrl + F5", "Alt + F5"], "answer": "Shift + F5"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which of the following menus allows you to insert new slides into your presentation?", "options": ["File", "Edit", "Slide", "Tools"], "answer": "Slide"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "What is the maximum zoom level percentage supported by LibreOffice Impress?", "options": ["400%", "600%", "1000%", "3000%"], "answer": "3000%"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which view displays all slides as miniature thumbnails to easily rearrange them?", "options": ["Normal View", "Slide Sorter View", "Outline View", "Notes View"], "answer": "Slide Sorter View"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which key can be pressed to instantly exit or stop a running presentation slide show?", "options": ["Enter", "Spacebar", "Escape (Esc)", "BackSpace"], "answer": "Escape (Esc)"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "What is the default layout orientation of slides in LibreOffice Impress?", "options": ["Portrait", "Landscape", "Square", "Vertical"], "answer": "Landscape"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which feature is used to apply motion effects to individual objects on a single slide?", "options": ["Slide Transition", "Custom Animation", "Slide Master", "Hyperlink view"], "answer": "Custom Animation"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "In LibreOffice Impress, presentations created can be exported directly into which format?", "options": [".exe", ".pdf", ".mp3", ".txt"], "answer": ".pdf"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "What is the default name given to a newly opened presentation in LibreOffice Impress?", "options": ["Presentation1", "Document1", "Untitled 1 - LibreOffice Impress", "New Presentation"], "answer": "Untitled 1 - LibreOffice Impress"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which menu contains the options to Open, Save, or Close a presentation file?", "options": ["Edit", "Slide", "File", "Tools"], "answer": "File"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which file extension belongs to a LibreOffice Impress Template?", "options": [".otp", ".pot", ".odp", ".stc"], "answer": ".otp"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "What is the minimum zoom level percentage allowed in LibreOffice Impress?", "options": ["5%", "10%", "20%", "50%"], "answer": "5%"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Where is the Status Bar located in the LibreOffice Impress window interface?", "options": ["At the top", "At the bottom", "On the left side", "On the right side"], "answer": "At the bottom"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "The default aspect ratio for a new slide in modern LibreOffice Impress is:", "options": ["4:3", "16:10", "16:9", "1:1"], "answer": "16:9"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which view allows you to see and edit only the text content of your slides in a structured hierarchy?", "options": ["Normal View", "Outline View", "Slide Sorter View", "Slide Show View"], "answer": "Outline View"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "If you want to add notes that are visible only to the presenter during a speech, which view should you use?", "options": ["Outline View", "Master View", "Notes View", "Handout View"], "answer": "Notes View"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which feature or slide acts as a blueprint to apply a consistent background and fonts across all slides?", "options": ["Slide Transition", "Slide Master", "First Slide", "Slide Sorter"], "answer": "Slide Master"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "How many document views are readily available as main tabs right above the workspace area in Impress?", "options": ["3", "4", "5", "6"], "answer": "5"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which view is explicitly designed to configure how your slides will look when printed out together on paper?", "options": ["Slide Sorter View", "Handout View", "Notes View", "Outline View"], "answer": "Handout View"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which shortcut key runs the slideshow starting specifically from the very first slide?", "options": ["F5", "Shift + F5", "Ctrl + F5", "Alt + F5"], "answer": "F5"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "What is the shortcut key to insert a brand new, blank slide into an active presentation?", "options": ["Ctrl + N", "Ctrl + M", "Ctrl + S", "Ctrl + T"], "answer": "Ctrl + M"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "During a running slideshow, pressing which key pauses the show and displays a pure black screen?", "options": ["W", "B", "N", "P"], "answer": "B"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which shortcut key is used to duplicate a selected object or slide in Impress?", "options": ["Ctrl + D", "Ctrl + Shift + D", "Alt + D", "Shift + D"], "answer": "Ctrl + D"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "What is the shortcut key combination to clear direct formatting from selected text in Impress?", "options": ["Ctrl + Space", "Ctrl + M", "Ctrl + Shift + A", "Shift + M"], "answer": "Ctrl + M"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "To add decorative, stylized text with 3D effects into a slide, which feature should you use?", "options": ["WordArt", "Fontwork", "TextArt", "ClipArt"], "answer": "Fontwork"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Tables, Charts, Images, and Audio clips can all be placed into a slide using options found under which menu?", "options": ["View", "Format", "Insert", "Slide"], "answer": "Insert"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which component pane is located on the right side of the Impress screen, giving quick access to properties and layouts?", "options": ["Slide Pane", "Menu Bar", "Sidebar", "Tool Bar"], "answer": "Sidebar"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which key do you hold down while dragging a corner handle of a shape to resize it proportionally?", "options": ["Ctrl", "Alt", "Shift", "Spacebar"], "answer": "Shift"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "In LibreOffice Impress, Macro options are located under which menu tab?", "options": ["Insert", "Format", "Tools", "Slide Show"], "answer": "Tools"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which feature lets you draw standard mathematical or flow chart shapes directly onto a slide?", "options": ["Drawing Toolbar", "Form Toolbar", "Line Tool", "Fontwork"], "answer": "Drawing Toolbar"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "What is the name of the visual movement effect that happens when the presentation switches from one slide to the next?", "options": ["Custom Animation", "Object Animation", "Slide Transition", "Slide Duration"], "answer": "Slide Transition"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which of the following is a valid option category under the Custom Animation settings pane?", "options": ["Entrance", "Emphasis", "Exit", "All of the above"], "answer": "All of the above"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Can a single slide transition effect be globally applied to all slides in a presentation at once?", "options": ["No, it must be added manually", "Yes, using 'Apply Transition to All Slides'", "Yes, but only for the first 5 slides", "No, transitions are always randomized"], "answer": "Yes, using 'Apply Transition to All Slides'"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which setting in the Slide Transition panel allows a slide to change automatically after a specific number of seconds?", "options": ["On Mouse Click", "After", "Duration", "Loop"], "answer": "After"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which feature allows you to create a secondary version of a slide show that plays only a select few chosen slides?", "options": ["Rehearse Timings", "Custom Slide Show", "Slide Sorter", "Hide Slide"], "answer": "Custom Slide Show"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "If you want a slide to remain inside the file but prevent it from appearing during a live show, which option do you use?", "options": ["Delete Slide", "Hide Slide", "Remove Slide", "Freeze Slide"], "answer": "Hide Slide"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which feature can record the exact amount of time you spend speaking on each slide for automatic advancement?", "options": ["Custom Animation", "Rehearse Timings", "Slide Transition", "Presenter Console"], "answer": "Rehearse Timings"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "What tool panel automatically displays on the presenter's screen showing elapsed time while the audience sees the slide?", "options": ["Slide Master View", "Presenter Console", "Control Panel", "Dashboard View"], "answer": "Presenter Console"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "To create an interactive link on a slide that immediately opens a website URL when clicked, you should insert a:", "options": ["Transition", "Hyperlink", "Custom Shape", "Macro"], "answer": "Hyperlink"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Where can you find the options to turn on or off screen layout helpers like the Rulers and Grid lines?", "options": ["Insert Menu", "Format Menu", "Tools Menu", "View Menu"], "answer": "View Menu"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which option under the Slide menu allows you to change the actual background color or dimensions of a slide?", "options": ["Slide Properties", "Slide Transition", "Layout Properties", "Page Settings"], "answer": "Slide Properties"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Under which menu can you find the 'Spellcheck' tool to look for typographical errors in your presentation?", "options": ["Edit", "View", "Tools", "Slide Show"], "answer": "Tools"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "To quickly adjust the layered stacking order of overlapping shapes on a slide, which menu path is used?", "options": ["Insert -> Layer", "Format -> Arrange", "Tools -> Align", "Slide -> Organize"], "answer": "Format -> Arrange"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which of the following is NOT a standard, pre-built slide layout template found in the Impress side panel?", "options": ["Title Slide", "Title, Content", "Title and 2 Content", "3D Chart Animation Layout"], "answer": "3D Chart Animation Layout"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Can you insert dynamic video or audio clips directly into a LibreOffice Impress slide workspace?", "options": ["No, it only supports static graphics", "Yes, via Insert -> Audio or Video", "Yes, but only as animated GIFs", "No, videos require external plugins"], "answer": "Yes, via Insert -> Audio or Video"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which key shortcut instantly opens the built-in Help manual document panel for LibreOffice Impress?", "options": ["F1", "F2", "F7", "F11"], "answer": "F1"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "What is the shortcut key to open the Template Manager dialog box in LibreOffice Impress?", "options": ["Ctrl + T", "Ctrl + Shift + N", "Ctrl + Alt + T", "Shift + F11"], "answer": "Ctrl + Shift + N"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which panel on the left side of the screen shows a vertical strip of all slides in sequence?", "options": ["Slide Pane", "Sidebar", "Status Bar", "Navigator"], "answer": "Slide Pane"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which feature under Tools menu allows you to group multiple objects together so they behave as a single entity?", "options": ["Combine", "Merge", "Group", "Connect"], "answer": "Group"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which of the following is considered the 'Father of the Internet'?", "options": ["Tim Berners-Lee", "Vint Cerf", "Charles Babbage", "Ray Tomlinson"], "answer": "Vint Cerf"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Who invented the World Wide Web (WWW)?", "options": ["Vint Cerf", "Tim Berners-Lee", "Bill Gates", "Steve Jobs"], "answer": "Tim Berners-Lee"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which protocol is used for fetching or viewing webpages from a web server?", "options": ["FTP", "HTTP", "SMTP", "SSH"], "answer": "HTTP"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What is the secure version of HTTP that encrypts communication between a browser and a website?", "options": ["HTTP+S", "SHTTP", "HTTPS", "FTPS"], "answer": "HTTPS"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which of the following is NOT a web browser?", "options": ["Google Chrome", "Mozilla Firefox", "Google Search", "Apple Safari"], "answer": "Google Search"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What is the full form of DNS in networking?", "options": ["Data Name System", "Domain Name System", "Digital Network Service", "Domain Network Security"], "answer": "Domain Name System"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which protocol is responsible for dividing data into packets and ensuring they arrive safely at the destination?", "options": ["TCP/IP", "HTTP", "FTP", "SMTP"], "answer": "TCP/IP"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What is the full form of ISP?", "options": ["Internet Service Provider", "International Service Provider", "Internet System Protocol", "Internal Server Portal"], "answer": "Internet Service Provider"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which device is used to connect a computer to an internet service provider via telephone lines or cable?", "options": ["Hub", "Switch", "Modem", "Repeater"], "answer": "Modem"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What does MODEM stand for?", "options": ["Modulation Demodulation", "Modulator-Demodulator", "Modern Memory", "Mobile Demodulator"], "answer": "Modulator-Demodulator"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What is the structural size of an IPv4 address?", "options": ["16 bits", "32 bits", "64 bits", "128 bits"], "answer": "32 bits"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which protocol is primarily used for sending emails over the internet?", "options": ["POP3", "IMAP", "SMTP", "HTTP"], "answer": "SMTP"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which protocol allows a client to download emails from a server and delete them from the server?", "options": ["SMTP", "POP3", "IMAP", "FTP"], "answer": "POP3"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which email protocol allows you to view and manage emails directly on the mail server without downloading them?", "options": ["SMTP", "POP3", "IMAP", "HTTP"], "answer": "IMAP"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What is a network that is private to a specific organization and not accessible to the public called?", "options": ["Internet", "Intranet", "Extranet", "LAN"], "answer": "Intranet"},
+    {"chapter": "Introduction to Internet and WWW", "question": "A private network that allows controlled access from the outside for trusted partners or vendors is called:", "options": ["Internet", "Intranet", "Extranet", "MAN"], "answer": "Extranet"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What type of network topology has a single backbone cable to which all nodes are connected?", "options": ["Star Topology", "Bus Topology", "Ring Topology", "Mesh Topology"], "answer": "Bus Topology"},
+    {"chapter": "Introduction to Internet and WWW", "question": "In which topology does every node have a dedicated point-to-point link to every other node?", "options": ["Mesh Topology", "Star Topology", "Tree Topology", "Bus Topology"], "answer": "Mesh Topology"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which type of network spans across a city or a large campus?", "options": ["LAN", "MAN", "WAN", "PAN"], "answer": "MAN"},
+    {"chapter": "Introduction to Internet and WWW", "question": "The Internet is the best example of which type of network?", "options": ["LAN", "MAN", "WAN", "PAN"], "answer": "WAN"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which of the following represents a valid IPv4 address format?", "options": ["192.168.1.1", "192-168-1-1", "192:168:1:1", "256.100.0.1"], "answer": "192.168.1.1"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What is the first page that opens when you visit a website called?", "options": ["Main Page", "Home Page", "Index Page", "Front Page"], "answer": "Home Page"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which language is primarily used to create the structure of static web pages?", "options": ["HTML", "CSS", "JavaScript", "Python"], "answer": "HTML"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What does HTML stand for?", "options": ["Hyper Text Markup Language", "High Text Machine Language", "Hyper Tabular Model Language", "Hyper Text Media Language"], "answer": "Hyper Text Markup Language"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which of the following is a web search engine?", "options": ["Google Chrome", "Opera", "Bing", "Safari"], "answer": "Bing"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What is a 'Cookie' in the context of the web?", "options": ["A virus that deletes web history", "A small text file stored by the browser to save user preferences", "A type of web browser", "A hardware component used for internet speed"], "answer": "A small text file stored by the browser to save user preferences"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which of the following domain extensions is reserved for educational institutions?", "options": [".com", ".org", ".edu", ".gov"], "answer": ".edu"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What does '.gov' indicate in a website URL?", "options": ["Governor website", "Government website", "Global organization", "Commercial website"], "answer": "Government website"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which port number is standard for HTTP traffic?", "options": ["21", "25", "80", "443"], "answer": "80"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which port number is standard for HTTPS traffic?", "options": ["80", "23", "443", "110"], "answer": "443"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What is the full form of URL?", "options": ["Uniform Resource Locator", "Universal Resource Link", "Uniform Resource Linker", "Universal Reference Locator"], "answer": "Uniform Resource Locator"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Buying and selling goods or services over the internet is known as:", "options": ["E-Mail", "E-Commerce", "E-Governance", "E-Banking"], "answer": "E-Commerce"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which program or system analyzes websites to create an index of terms for search engines?", "options": ["Web Crawler / Spider", "Web Server", "Router", "Firewall"], "answer": "Web Crawler / Spider"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What is a software or hardware security system that monitors and filters incoming and outgoing network traffic?", "options": ["Malware", "Firewall", "Antivirus", "Switch"], "answer": "Firewall"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which of the following is the smallest type of network, usually centered around a single person in a single location?", "options": ["LAN", "MAN", "WAN", "PAN"], "answer": "PAN"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What is the full form of PAN in computer networking?", "options": ["Permanent Account Number", "Personal Area Network", "Public Access Network", "Private Area Network"], "answer": "Personal Area Network"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Bluetooth is an example of which type of network?", "options": ["LAN", "MAN", "PAN", "WAN"], "answer": "PAN"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which component of a URL specifies the protocol to be used (e.g., http://)?", "options": ["Domain Name", "Scheme", "Path", "Subdomain"], "answer": "Scheme"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What is a collection of interconnected web pages sharing a common domain name called?", "options": ["Web Server", "Website", "Web Browser", "Hyperlink"], "answer": "Website"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which protocol is used for remote login or terminal emulation over a network securely?", "options": ["Telnet", "SSH", "FTP", "HTTP"], "answer": "SSH"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What is the unsecure protocol used for remote login that sends data in plain text?", "options": ["SSH", "Telnet", "SFTP", "HTTPS"], "answer": "Telnet"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What does a '404 Not Found' error message typically mean?", "options": ["The server is down", "The requested webpage does not exist on the server", "The internet connection is lost", "Access is forbidden"], "answer": "The requested webpage does not exist on the server"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which of the following is an example of an open-source web browser?", "options": ["Internet Explorer", "Mozilla Firefox", "Apple Safari", "Microsoft Edge"], "answer": "Mozilla Firefox"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What is the process of transferring files from your local computer to a remote web server called?", "options": ["Downloading", "Uploading", "Streaming", "Browsing"], "answer": "Uploading"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What is the full form of Wi-Fi?", "options": ["Wireless Fidelity", "Wireless Focus", "Wired Finder", "Wireless Function"], "answer": "Wireless Fidelity"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which network device operates at the physical layer of the OSI model to regenerate signals over long distances?", "options": ["Bridge", "Switch", "Repeater", "Router"], "answer": "Repeater"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which device connects multiple networks together and routes data packets based on IP addresses?", "options": ["Hub", "Switch", "Router", "Modem"], "answer": "Router"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What is a hyperlink?", "options": ["A type of fast internet cable", "A text or image that jumps to another webpage when clicked", "A secure network protocol", "An email attachment"], "answer": "A text or image that jumps to another webpage when clicked"},
+    {"chapter": "Introduction to Internet and WWW", "question": "IPv6 addresses are represented using which numbering system?", "options": ["Decimal", "Binary", "Hexadecimal", "Octal"], "answer": "Hexadecimal"},
+    {"chapter": "Introduction to Internet and WWW", "question": "Which of the following is a physical path over which a message travels from sender to receiver?", "options": ["Protocol", "Medium", "Signal", "Packet"], "answer": "Medium"},
+    {"chapter": "E-mail, Social Networking and E-Governance Services", "question": "Which network protocol is universally used to send outgoing emails from a client application?", "options": ["POP3", "IMAP", "SMTP", "HTTP"], "answer": "SMTP"},
+    {"chapter": "E-mail, Social Networking and E-Governance Services", "question": "When sending an email, which field hides the identity of secondary recipients from other readers?", "options": ["To", "Cc", "Bcc", "Subject"], "answer": "Bcc"},
+    {"chapter": "E-mail, Social Networking and E-Governance Services", "question": "What is the microblogging platform characterized by brief posts that was originally rebranded as 'X'?", "options": ["Facebook", "Instagram", "Twitter", "LinkedIn"], "answer": "Twitter"},
+    {"chapter": "E-mail, Social Networking and E-Governance Services", "question": "Which Indian national e-governance mobile application provides citizens unified access to multiple central and state government services?", "options": ["BHIM", "UMANG", "mParivahan", "DigiLocker"], "answer": "UMANG"},
+    {"chapter": "E-mail, Social Networking and E-Governance Services", "question": "What is the secure cloud-based platform provided by the Government of India for storing and verifying official digital documents?", "options": ["Google Drive", "DigiLocker", "Dropbox", "E-Seva Cloud"], "answer": "DigiLocker"},
+    {"chapter": "Digital Financial Tools and Applications", "question": "What does the financial tool acronym UPI stand for?", "options": ["Unified Payments Interface", "Universal Payment Integration", "United Premium Interface", "Unique Payment Identifier"], "answer": "Unified Payments Interface"},
+    {"chapter": "Digital Financial Tools and Applications", "question": "What is the short code string used to access banking services without internet connectivity over USSD?", "options": ["*99#", "*121#", "*100#", "*88#"], "answer": "*99#"},
+    {"chapter": "Digital Financial Tools and Applications", "question": "What is the alphanumeric code used to uniquely identify a bank branch for online electronic money transfers within India?", "options": ["PAN Code", "IFSC", "MICR", "SWIFT"], "answer": "IFSC"},
+    {"chapter": "Digital Financial Tools and Applications", "question": "Which payment clearing system handles high-value transactions in real-time continuous settlement mode within India?", "options": ["NEFT", "RTGS", "IMPS", "AEPS"], "answer": "RTGS"},
+    {"chapter": "Digital Financial Tools and Applications", "question": "How many digits are present in the Card Verification Value (CVV) code printed on standard debit cards?", "options": ["3", "4", "12", "16"], "answer": "3"},
+    {"chapter": "Overview of Future Skills & Cyber Security", "question": "What is the trick practice of sending fake communication disguised as legitimate sources to steal credentials called?", "options": ["Phishing", "Spamming", "Hacking", "Spying"], "answer": "Phishing"},
+    {"chapter": "Overview of Future Skills & Cyber Security", "question": "Which software utility monitored system tool acts as a traffic filter barrier between an internal private network and public internet?", "options": ["Antivirus", "Firewall", "Spyware cleaner", "Router tracker"], "answer": "Firewall"},
+    {"chapter": "Overview of Future Skills & Cyber Security", "question": "What type of malware self-replicates across computer networks independently without needing to attach to a host file?", "options": ["Trojan Horse", "Worm", "Virus", "Adware"], "answer": "Worm"},
+    {"chapter": "Spreadsheet (LibreOffice Calc)", "question": "Which formula is correct to add values from cell A1 to A5 in LibreOffice Calc?", "options": ["=ADD(A1:A5)", "=SUM(A1:A5)", "=TOTAL(A1:A5)", "=A1+A5"], "answer": "=SUM(A1:A5)"},
+    {"chapter": "Presentation (LibreOffice Impress)", "question": "Which shortcut key is used to start a slide show from the first slide in Impress?", "options": ["F5", "Shift + F5", "Ctrl + F5", "Alt + F5"], "answer": "F5"},
+    {"chapter": "Introduction to Internet and WWW", "question": "What is the full form of DNS in computer networks?", "options": ["Data Network System", "Domain Name System", "Digital Network Service", "Domain Network Security"], "answer": "Domain Name System"},
+    {"chapter": "E-mail, Social Networking and E-Governance Services", "question": "Which of the following protocol is used to receive emails?", "options": ["SMTP", "POP3", "FTP", "HTTP"], "answer": "POP3"},
+    {"chapter": "Digital Financial Tools and Applications", "question": "What is the maximum daily transaction limit for UPI in standard banking guidelines?", "options": ["Rs. 10,000", "Rs. 50,000", "Rs. 1,000,000", "Rs. 2,000,000"], "answer": "Rs. 1,000,000"},
+    {"chapter": "Overview of Future Skills & Cyber Security", "question": "Which of the following is a type of malicious software that encrypts data and demands payment for decryption?", "options": ["Spyware", "Ransomware", "Trojan Horse", "Worm"], "answer": "Ransomware"}
   ],
   "M2": [
-    {
-      "chapter": "Introduction to Web Design",
-      "question": "Which of the following is a client-side language?",
-      "options": ["PHP", "Python", "JavaScript", "Java"],
-      "answer": "JavaScript"
-    },
-    {
-      "chapter": "HTML Basics",
-      "question": "How do you create a hyperlink in HTML?",
-      "options": ["<a href='url'>Link Text</a>", "<a>url</a>", "<link src='url'>", "<href url='Link'>"],
-      "answer": "<a href='url'>Link Text</a>"
-    },
-    {
-      "chapter": "Cascading Style Sheets (CSS)",
-      "question": "How do you select an element with id 'demo' in CSS?",
-      "options": [".demo", "#demo", "*demo", "demo"],
-      "answer": "#demo"
-    },
-    {
-      "chapter": "CSS Framework",
-      "question": "W3.CSS is a standard CSS framework developed by whom?",
-      "options": ["Twitter", "Google", "W3Schools", "Microsoft"],
-      "answer": "W3Schools"
-    },
-    {
-      "chapter": "JavaScript and Angular JS",
-      "question": "Which directive is used to initialize an AngularJS application?",
-      "options": ["ng-init", "ng-app", "ng-model", "ng-controller"],
-      "answer": "ng-app"
-    },
-    {
-      "chapter": "Photo Editor, Web Publishing & Browsing",
-      "question": "What is the process of transfering files from a local computer to a web server called?",
-      "options": ["Downloading", "Uploading", "FTP hosting", "Browsing"],
-      "answer": "Uploading"
-    }
+    {"chapter": "Introduction to Web Design", "question": "Which of the following is a client-side language?", "options": ["PHP", "Python", "JavaScript", "Java"], "answer": "JavaScript"},
+    {"chapter": "HTML Basics", "question": "How do you create a hyperlink in HTML?", "options": ["<a href='url'>Link Text</a>", "<a>url</a>", "<link src='url'>", "<href url='Link'>"], "answer": "<a href='url'>Link Text</a>"},
+    {"chapter": "Cascading Style Sheets (CSS)", "question": "How do you select an element with id 'demo' in CSS?", "options": [".demo", "#demo", "*demo", "demo"], "answer": "#demo"},
+    {"chapter": "CSS Framework", "question": "W3.CSS is a standard CSS framework developed by whom?", "options": ["Twitter", "Google", "W3Schools", "Microsoft"], "answer": "W3Schools"},
+    {"chapter": "JavaScript and Angular JS", "question": "Which directive is used to initialize an AngularJS application?", "options": ["ng-init", "ng-app", "ng-model", "ng-controller"], "answer": "ng-app"},
+    {"chapter": "Photo Editor, Web Publishing & Browsing", "question": "What is the process of transfering files from a local computer to a web server called?", "options": ["Downloading", "Uploading", "FTP hosting", "Browsing"], "answer": "Uploading"}
   ],
   "M3": [
-    {
-      "chapter": "Introduction to Programming",
-      "question": "A graphical representation of an algorithm is known as what?",
-      "options": ["Pseudo code", "Flowchart", "Program", "Logic Tree"],
-      "answer": "Flowchart"
-    },
-    {
-      "chapter": "Introduction to Python",
-      "question": "Which character is used to give single-line comments in Python?",
-      "options": ["//", "/*", "#", "!"],
-      "answer": "#"
-    },
-    {
-      "chapter": "Operators, Expressions and Python Statements",
-      "question": "What is the output of the expression 11 // 2 in Python?",
-      "options": ["5.5", "5", "1", "6"],
-      "answer": "5"
-    },
-    {
-      "chapter": "Conditional Statements and Loops",
-      "question": "Which statement is used to stop the current loop execution instantly?",
-      "options": ["continue", "break", "pass", "exit"],
-      "answer": "break"
-    },
-    {
-      "chapter": "Functions",
-      "question": "Which keyword is used to define a user-defined function in Python?",
-      "options": ["def", "func", "function", "define"],
-      "answer": "def"
-    },
-    {
-      "chapter": "Scope and Modules",
-      "question": "Which built-in module in Python is used to generate pseudo-random numbers?",
-      "options": ["math", "random", "sys", "os"],
-      "answer": "random"
-    },
-    {
-      "chapter": "Strings, Lists, Tuples and Dictionaries",
-      "question": "Which data type in Python is mutable?",
-      "options": ["Tuple", "List", "String", "Integer"],
-      "answer": "List"
-    },
-    {
-      "chapter": "File Processing",
-      "question": "Which mode is used to open a file for writing data at the end of the existing content?",
-      "options": ["'w'", "'r'", "'a'", "'x'"],
-      "answer": "'a'"
-    },
-    {
-      "chapter": "Scope and Exception Handling",
-      "question": "Which block handles the exceptions raised in the 'try' block?",
-      "options": ["catch", "except", "finally", "error"],
-      "answer": "except"
-    }
+    {"chapter": "Introduction to Programming", "question": "A graphical representation of an algorithm is known as what?", "options": ["Pseudo code", "Flowchart", "Program", "Logic Tree"], "answer": "Flowchart"},
+    {"chapter": "Introduction to Python", "question": "Which character is used to give single-line comments in Python?", "options": ["//", "/*", "#", "!"], "answer": "#"},
+    {"chapter": "Operators, Expressions and Python Statements", "question": "What is the output of the expression 11 // 2 in Python?", "options": ["5.5", "5", "1", "6"], "answer": "5"},
+    {"chapter": "Conditional Statements and Loops", "question": "Which statement is used to stop the current loop execution instantly?", "options": ["continue", "break", "pass", "exit"], "answer": "break"},
+    {"chapter": "Functions", "question": "Which keyword is used to define a user-defined function in Python?", "options": ["def", "func", "function", "define"], "answer": "def"},
+    {"chapter": "Scope and Modules", "question": "Which built-in module in Python is used to generate pseudo-random numbers?", "options": ["math", "random", "sys", "os"], "answer": "random"},
+    {"chapter": "Strings, Lists, Tuples and Dictionaries", "question": "Which data type in Python is mutable?", "options": ["Tuple", "List", "String", "Integer"], "answer": "List"},
+    {"chapter": "File Processing", "question": "Which mode is used to open a file for writing data at the end of the existing content?", "options": ["'w'", "'r'", "'a'", "'x'"], "answer": "'a'"},
+    {"chapter": "Scope and Exception Handling", "question": "Which block handles the exceptions raised in the 'try' block?", "options": ["catch", "except", "finally", "error"], "answer": "except"}
   ],
   "M4": [
-    {
-      "chapter": "Introduction to IoT",
-      "question": "What is the main function of an Actuator in IoT?",
-      "options": ["To sense data", "To convert electrical signals into physical action", "To store big data", "To route internet traffic"],
-      "answer": "To convert electrical signals into physical action"
-    },
-    {
-      "chapter": "Things and Connections",
-      "question": "Which sensor is used to detect or measure distance from an object using sound waves?",
-      "options": ["DHT11", "Ultrasonic Sensor", "LDR", "PIR Sensor"],
-      "answer": "Ultrasonic Sensor"
-    },
-    {
-      "chapter": "IoT Devices and Programming",
-      "question": "Which function runs continuously in an Arduino program loop sketch?",
-      "options": ["setup()", "loop()", "main()", "run()"],
-      "answer": "loop()"
-    },
-    {
-      "chapter": "IoT Communication Protocols and Security",
-      "question": "MQTT uses which model for communication?",
-      "options": ["Request-Response", "Publish-Subscribe", "Peer-to-Peer", "Client-Server traditional"],
-      "answer": "Publish-Subscribe"
-    },
-    {
-      "chapter": "Logic Building and Optimization Using Python",
-      "question": "Which Python library is widely used to handle GPIO pins on a Raspberry Pi device?",
-      "options": ["RPi.GPIO", "NumPy", "Socket", "Requests"],
-      "answer": "RPi.GPIO"
-    },
-    {
-      "chapter": "IoT Case Studies and Future Trends",
-      "question": "Which IoT architecture model is used to process data closer to the edge devices rather than centralized cloud?",
-      "options": ["Fog Computing", "Mainframe Computing", "Grid Computing", "Batch Computing"],
-      "answer": "Fog Computing"
-    }
+    {"chapter": "Introduction to IoT", "question": "What is the main function of an Actuator in IoT?", "options": ["To sense data", "To convert electrical signals into physical action", "To store big data", "To route internet traffic"], "answer": "To convert electrical signals into physical action"},
+    {"chapter": "Things and Connections", "question": "Which sensor is used to detect or measure distance from an object using sound waves?", "options": ["DHT11", "Ultrasonic Sensor", "LDR", "PIR Sensor"], "answer": "Ultrasonic Sensor"},
+    {"chapter": "IoT Devices and Programming", "question": "Which function runs continuously in an Arduino program loop sketch?", "options": ["setup()", "loop()", "main()", "run()"], "answer": "loop()"},
+    {"chapter": "IoT Communication Protocols and Security", "question": "MQTT uses which model for communication?", "options": ["Request-Response", "Publish-Subscribe", "Peer-to-Peer", "Client-Server traditional"], "answer": "Publish-Subscribe"},
+    {"chapter": "Logic Building and Optimization Using Python", "question": "Which Python library is widely used to handle GPIO pins on a Raspberry Pi device?", "options": ["RPi.GPIO", "NumPy", "Socket", "Requests"], "answer": "RPi.GPIO"},
+    {"chapter": "IoT Case Studies and Future Trends", "question": "Which IoT architecture model is used to process data closer to the edge devices rather than centralized cloud?", "options": ["Fog Computing", "Mainframe Computing", "Grid Computing", "Batch Computing"], "answer": "Fog Computing"}
   ]
 }
