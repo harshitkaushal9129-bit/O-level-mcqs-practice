@@ -1,10 +1,10 @@
-const CACHE_NAME = 'nielit-v1';
+const CACHE_NAME = 'nielit-v2'; // Cache version update kiya taaki changes apply ho sakein
 const ASSETS = [
   './',
   'index.html',
   'manifest.json',
-  'https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png',
-  'https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/questions.json',
+  './mcqs.png',         // Relative path use kiya CORS issue se bachne ke liye
+  './questions.json',    // Relative path use kiya exact cache matching ke liye
   
   // External CSS, JS and Fonts cached for Offline usage
   'https://cdn.tailwindcss.com',
@@ -37,12 +37,20 @@ self.addEventListener('activate', (e) => {
   );
 });
 
-// Fetching Assets (Network Fallback Strategy)
+// Fetching Assets (Cache First with Network Fallback Strategy)
 self.addEventListener('fetch', (e) => {
   e.respondWith(
-    caches.match(e.request).then((response) => {
-      // Agar cache mein mile toh wahi return karo, nahi to network se fetch karo
-      return response || fetch(e.request);
+    caches.match(e.request).then((cachedResponse) => {
+      // 1. Agar cache mein asset mil gaya, toh bina network ke directly return karo
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+
+      // 2. Agar cache mein nahi mila (jaise koi nayi request), toh network se fetch karo
+      return fetch(e.request).catch((err) => {
+        console.log('Network request failed and asset not in cache:', err);
+        // Aap chahein toh yahan return kuch default error mesh ya blank data bhej sakte hain
+      });
     })
   );
 });
