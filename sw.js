@@ -1,57 +1,75 @@
-const CACHE_NAME = 'nielit-v3'; // Cache version badal diya taaki naya code force-load ho
+const CACHE_NAME = 'nielit-cbt-offline-v3';
 
-const ASSETS = [
-  './',
-  'index.html',
-  'manifest.json',
-  
-  // CORS issue se bachne ke liye inhein Request object ke through fetch karenge
-  new Request('https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png', { mode: 'cors' }),
-  new Request('https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/questions.json', { mode: 'cors' }),
-  
-  // External CSS, JS and Fonts
+// उन सभी ऑनलाइन लिंक्स की लिस्ट जो आपके HTML में हैं, इन्हें यहीं से कैश कर लिया जाएगा
+const ASSETS_TO_CACHE = [
+  './',                  // आपकी मुख्य वेबसाइट का रूट
+  './index.html',        // आपकी HTML फ़ाइल
+  './questions.json',    // आपकी सवालों वाली JSON फ़ाइल (इसे लोकल फोल्डर में ही रखें)
+  './manifest.json',     // PWA की फाइल
+
+  // ऑनलाइन लोगो लिंक (बिना HTML बदले ऑफलाइन चलाने के लिए)
+  'https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png',
+
+  // ऑनलाइन स्क्रिप्ट्स, फॉन्ट्स और क्यूआर कोड लाइब्रेरी जो आपके HTML में लिंक्ड हैं
   'https://cdn.tailwindcss.com',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
-  'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap',
-  
-  // Font Awesome files
-  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2',
-  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2'
+  'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js',
+  'https://fonts.googleapis.com/css2?family=Inter:wght=400;500;600;700;800;900&display=swap'
 ];
 
-// Install Service Worker
-self.addEventListener('install', (e) => {
-  e.waitUntil(
+// 1. Install: पहली बार ओपन होते ही सारा ऑनलाइन माल-मसाला डाउनलोड करके कैश में डालो
+self.addEventListener('install', (event) => {
+  event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('Caching assets with CORS bypass...');
-      return cache.addAll(ASSETS);
-    }).then(() => self.skipWaiting())
+      console.log('[Service Worker] All Online Assets & Logo Pre-cached!');
+      return cache.addAll(ASSETS_TO_CACHE);
+    }).then(() => {
+      return self.skipWaiting();
+    })
   );
 });
 
-// Activate & Cleanup Old Caches
-self.addEventListener('activate', (e) => {
-  e.waitUntil(
-    caches.keys().then((keys) => {
+// 2. Activate: पुराना कचरा साफ करो ताकि ऐप एकदम फ्रेश रहे
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
       return Promise.all(
-        keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
+        cacheNames.map((cache) => {
+          if (cache !== CACHE_NAME) {
+            console.log('[Service Worker] Clearing old cache storage');
+            return caches.delete(cache);
+          }
+        })
       );
-    }).then(() => self.clients.claim())
+    }).then(() => {
+      return self.clients.claim();
+    })
   );
 });
 
-// Fetching Assets (Cache First Strategy)
-self.addEventListener('fetch', (e) => {
-  e.respondWith(
-    caches.match(e.request).then((cachedResponse) => {
-      // Agar cache mein data hai toh turant return karo (Offline mode ke liye)
+// 3. Fetch: अब इंटरनेट हो या न हो, जब भी HTML ऑनलाइन लिंक्स मांगेगा, सर्विस वर्कर उसे कैश से निकाल कर देगा
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((cachedResponse) => {
+      // अगर तिजोरी (Cache) में फाइल मिल गई, तो बिना इंटरनेट के तुरंत स्क्रीन पर दिखाओ
       if (cachedResponse) {
         return cachedResponse;
       }
-      
-      // Agar cache mein nahi hai toh network se fetch karo
-      return fetch(e.request).catch((err) => {
-        console.error('Fetch failed offline:', err);
+
+      // अगर कोई नई चीज है, तो इंटरनेट से मंगाओ और साथ ही उसकी एक कॉपी तिजोरी में रख लो
+      return fetch(event.request).then((networkResponse) => {
+        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
+          return networkResponse;
+        }
+
+        const responseToCache = networkResponse.clone();
+        caches.open(CACHE_NAME).then((cache) => {
+          cache.put(event.request, responseToCache);
+        });
+
+        return networkResponse;
+      }).catch(() => {
+        console.log('[Service Worker] Device completely offline. Fetch bypassed.');
       });
     })
   );
