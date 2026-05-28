@@ -1,17 +1,20 @@
-const CACHE_NAME = 'nielit-v2'; // Cache version update kiya taaki changes apply ho sakein
+const CACHE_NAME = 'nielit-v3'; // Cache version badal diya taaki naya code force-load ho
+
 const ASSETS = [
   './',
   'index.html',
   'manifest.json',
-  './mcqs.png',         // Relative path use kiya CORS issue se bachne ke liye
-  './questions.json',    // Relative path use kiya exact cache matching ke liye
   
-  // External CSS, JS and Fonts cached for Offline usage
+  // CORS issue se bachne ke liye inhein Request object ke through fetch karenge
+  new Request('https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png', { mode: 'cors' }),
+  new Request('https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/questions.json', { mode: 'cors' }),
+  
+  // External CSS, JS and Fonts
   'https://cdn.tailwindcss.com',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
   'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap',
   
-  // Font Awesome files (Taaki icons offline gayab na hon)
+  // Font Awesome files
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2'
 ];
@@ -20,9 +23,9 @@ const ASSETS = [
 self.addEventListener('install', (e) => {
   e.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('Caching assets...');
+      console.log('Caching assets with CORS bypass...');
       return cache.addAll(ASSETS);
-    }).then(() => self.skipWaiting()) // Instantly active karne ke liye
+    }).then(() => self.skipWaiting())
   );
 });
 
@@ -37,19 +40,18 @@ self.addEventListener('activate', (e) => {
   );
 });
 
-// Fetching Assets (Cache First with Network Fallback Strategy)
+// Fetching Assets (Cache First Strategy)
 self.addEventListener('fetch', (e) => {
   e.respondWith(
     caches.match(e.request).then((cachedResponse) => {
-      // 1. Agar cache mein asset mil gaya, toh bina network ke directly return karo
+      // Agar cache mein data hai toh turant return karo (Offline mode ke liye)
       if (cachedResponse) {
         return cachedResponse;
       }
-
-      // 2. Agar cache mein nahi mila (jaise koi nayi request), toh network se fetch karo
+      
+      // Agar cache mein nahi hai toh network se fetch karo
       return fetch(e.request).catch((err) => {
-        console.log('Network request failed and asset not in cache:', err);
-        // Aap chahein toh yahan return kuch default error mesh ya blank data bhej sakte hain
+        console.error('Fetch failed offline:', err);
       });
     })
   );
