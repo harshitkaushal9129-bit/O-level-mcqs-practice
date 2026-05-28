@@ -1,4 +1,4 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta name="google-site-verification" content="3u-bffBhDmIhZ-iWngNqKoDKfHkl99MPFVcftrypsr4" />
@@ -15,6 +15,10 @@
     <link rel="manifest" href="manifest.json">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- qrcode.min.js Library yahan include ki gayi hai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
         
@@ -220,7 +224,6 @@
                     <p id="res-grade" class="text-9xl font-black my-4"></p>
                     <p class="font-bold uppercase tracking-widest text-sm">Official NIELIT Grade</p>
                     
-                    <!-- Quick utility actions right inside the score hero card -->
                     <div class="mt-6 flex justify-center gap-3 no-print">
                         <button onclick="window.print()" class="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-white/20 transition-all">
                             <i class="fas fa-print"></i> Print Result
@@ -254,15 +257,15 @@
                     <h3 class="text-lg font-bold text-[#003366] uppercase mb-1">Support the Developer</h3>
                     <p class="text-slate-500 text-[10px] mb-4">Aapki choti si madad humein naya content banane mein help karegi.</p>
                     
-                    <!-- Fixed Pure SVG Offline Data QR Code Layout -->
+                    <!-- DYNAMIC QR CODE INTERFACE -->
                     <div class="bg-white p-3 inline-block rounded-xl shadow-md mb-4 border border-slate-200">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 25 25' shape-rendering='crispEdges'><path d='M0 0h7v7H0zm1 1h5v5H1zm1 1h3v3H2zm5-2h1v1H7zm1 1h1v1H8zm-1 1h1v1H7zm2-3h1v2H9zm1 1h1v2h-1zm1-1h4v1h-4zm3 1h2v1h-2zm-1 1h1v1h-1zm1 1h2v1h-2zm-3 1h1v2h-1zm1 0h1v1h-1zm0 1h2v1h-2zm4-3h4v7h-4zm1 1h3v5h-3zm1 1h1v3h-1zm-11 5h7v7H0zm1 1h5v5H1zm2 2h3v3H3zm5-2h1v1H8zm1 2h1v2H9zm-2 1h1v1H7zm4-4h2v1h-2zm3 0h1v3h-1zm-3 2h2v1h-2zm0 2h1v2h-1zm1-1h2v1h-2zm2 2h2v1h-2zm4-5h1v1h-1zm1 1h1v1h-1zm-2 1h2v1h-2zm2 1h1v1h-1zm-2 1h1v2h-1zm2 0h2v1h-2zm-1 1h1v1h-1z' fill='%23003366'/></svg>" class="w-32 h-32" alt="UPI QR Code">
+                        <div id="qrcode" class="flex justify-center items-center w-32 h-32 mx-auto"></div>
                     </div>
                     
                     <p class="text-[10px] font-bold text-slate-400 mb-4">UPI: mandavikaushal913@okaxis</p>
                     
                     <div class="flex flex-col sm:flex-row gap-3 justify-center">
-                        <a href="upi://pay?pa=mandavikaushal913@okaxis&pn=Kaushal%20Institute&cu=INR" class="bg-green-600 text-white px-6 py-4 rounded-xl font-bold text-[10px] uppercase shadow-md flex items-center justify-center gap-2">
+                        <a id="dynamic-upi-link" href="upi://pay?pa=mandavikaushal913@okaxis&pn=Kaushal%20Institute&cu=INR" class="bg-green-600 text-white px-6 py-4 rounded-xl font-bold text-[10px] uppercase shadow-md flex items-center justify-center gap-2">
                            <i class="fas fa-wallet text-sm"></i> Pay via UPI App
                         </a>
                         <button onclick="location.reload()" class="bg-[#003366] text-white px-6 py-4 rounded-xl font-bold text-[10px] uppercase shadow-md">
@@ -280,7 +283,6 @@
     </main>
 
     <script>
-        
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.onkeydown = function(e) {
             if (e.keyCode == 123) return false;
@@ -304,18 +306,13 @@
         async function selectMod(code) {
             selectedModCode = code;
             try {
-                // const res = await fetch('./questions.json'); 
-                // या सीधे अपने GitHub Pages का पूरा URL डाल दें:
                 const res = await fetch('https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/questions.json');
-
                 allData = await res.json();
                 if(!allData[code]) throw new Error();
                 
-                // Chapter list filter karke dynamically render karna
                 const chListContainer = document.getElementById('chapter-list');
                 chListContainer.innerHTML = '';
                 
-                // Pure set se unique chapters find karna agar key objects me available ho
                 let uniqueChapters = new Set();
                 allData[code].forEach(q => {
                     if(q.chapter) uniqueChapters.add(q.chapter);
@@ -327,7 +324,6 @@
                     uniqueChapters.forEach(chName => {
                         const label = document.createElement('label');
                         label.className = "flex items-center gap-2 p-2 bg-white rounded-lg border cursor-pointer hover:bg-slate-100 text-xs font-semibold text-slate-700";
-                        // यहाँ checkbox को बदलकर radio किया गया है ताकि सिर्फ एक ही चैप्टर चुना जा सके
                         label.innerHTML = `<input type="radio" name="chapter-filter" checked value="${chName}" class="ch-filter-radio accent-blue-900"> <span class="truncate">${chName}</span>`;
                         chListContainer.appendChild(label);
                     });
@@ -340,10 +336,8 @@
 
         function startExam(count) {
             let baseQuestions = allData[selectedModCode];
-            // सिर्फ सिंगल सिलेक्टेड रेडियो बटन की वैल्यू निकाली जा रही है
             const checkedRadio = document.querySelector('.ch-filter-radio:checked');
             
-            // अगर चैप्टर्स लिस्ट रेंडर हुई है, तो सिलेक्टेड चैप्टर के बेसिस पर फ़िल्तर करें
             if(document.querySelectorAll('.ch-filter-radio').length > 0) {
                 if(!checkedRadio) {
                     alert("Kripya test shuru karne ke liye ek chapter zaroor chunein!");
@@ -364,6 +358,9 @@
             initPalette();
             renderQuestion();
             startTimer();
+            
+            // Exam Start hote hi background me dynamic QR code layer ko ready kar dena
+            generateDynamicQRCode();
         }
 
         function startTimer() {
@@ -490,7 +487,28 @@
             document.getElementById('res-total').textContent = questions.length;
         }
 
-        // Native Native Sharing & Clipboard Backup Handler
+        // Dedicated Function to Generate QR Code Using qrcode.min.js
+        function generateDynamicQRCode() {
+            const upiId = "mandavikaushal913@okaxis";
+            const upiUrl = `upi://pay?pa=${upiId}&pn=Kaushal%20Institute&cu=INR`;
+            
+            // Mobile anchor tag dynamic intent update
+            document.getElementById('dynamic-upi-link').href = upiUrl;
+            
+            // Clean container before injecting new canvas canvas
+            const qrContainer = document.getElementById("qrcode");
+            qrContainer.innerHTML = "";
+            
+            new QRCode(qrContainer, {
+                text: upiUrl,
+                width: 128,
+                height: 128,
+                colorDark: "#003366", // Matching Theme Palette
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        }
+
         function shareScore() {
             const score = document.getElementById('res-score').textContent;
             const grade = document.getElementById('res-grade').textContent;
