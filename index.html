@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta name="google-site-verification" content="3u-bffBhDmIhZ-iWngNqKoDKfHkl99MPFVcftrypsr4" />
@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>NIELIT Official CBT - Kaushal Institute</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/png" href="https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png">
+    <link class="js-favicon" rel="icon" type="image/png" href="https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png">
     
     <meta name="theme-color" content="#003366">
     <meta name="mobile-web-app-capable" content="yes">
@@ -56,6 +56,18 @@
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+
+        /* Print Media optimization rules */
+        @media print {
+            body { background: white !important; overflow: visible !important; height: auto !important; }
+            header, .no-print, footer, aside, .bg-[#003366] { display: none !important; }
+            #result-ui { position: relative !important; z-index: 10 !important; display: block !important; overflow: visible !important; }
+            .max-w-4xl { max-w: 100% !important; padding: 0 !important; }
+            .bg-gradient-to-br { color: black !important; background: transparent !important; padding: 10px 0 !important; border-bottom: 2px solid #000; }
+            #res-grade { color: black !important; text-shadow: none !important; font-size: 5rem !important; }
+            .grid { display: block !important; }
+            .grid > div { margin-bottom: 10px !important; border: 1px solid #ccc !important; background: white !important; }
+        }
     </style>
 </head>
 <body oncontextmenu="return false;">
@@ -207,6 +219,16 @@
                     <h1 class="text-2xl font-bold uppercase tracking-widest opacity-80">Final Result</h1>
                     <p id="res-grade" class="text-9xl font-black my-4"></p>
                     <p class="font-bold uppercase tracking-widest text-sm">Official NIELIT Grade</p>
+                    
+                    <!-- Quick utility actions right inside the score hero card -->
+                    <div class="mt-6 flex justify-center gap-3 no-print">
+                        <button onclick="window.print()" class="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-white/20 transition-all">
+                            <i class="fas fa-print"></i> Print Result
+                        </button>
+                        <button onclick="shareScore()" class="bg-[#ff9933] hover:bg-orange-500 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all shadow-md">
+                            <i class="fas fa-share-alt"></i> Share Performance
+                        </button>
+                    </div>
                 </div>
 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
@@ -228,12 +250,13 @@
                     </div>
                 </div>
 
-                <div class="bg-blue-50 border-2 border-dashed border-[#003366] rounded-3xl p-8 text-center mb-10">
+                <div class="bg-blue-50 border-2 border-dashed border-[#003366] rounded-3xl p-8 text-center mb-10 no-print">
                     <h3 class="text-lg font-bold text-[#003366] uppercase mb-1">Support the Developer</h3>
                     <p class="text-slate-500 text-[10px] mb-4">Aapki choti si madad humein naya content banane mein help karegi.</p>
                     
-                    <div class="bg-white p-2 inline-block rounded-xl shadow-md mb-4 border border-slate-200">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=mandavikaushal913@okaxis%26pn=Kaushal%20Institute%26cu=INR" class="w-32 h-32">
+                    <!-- Fixed Pure SVG Offline Data QR Code Layout -->
+                    <div class="bg-white p-3 inline-block rounded-xl shadow-md mb-4 border border-slate-200">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 25 25' shape-rendering='crispEdges'><path d='M0 0h7v7H0zm1 1h5v5H1zm1 1h3v3H2zm5-2h1v1H7zm1 1h1v1H8zm-1 1h1v1H7zm2-3h1v2H9zm1 1h1v2h-1zm1-1h4v1h-4zm3 1h2v1h-2zm-1 1h1v1h-1zm1 1h2v1h-2zm-3 1h1v2h-1zm1 0h1v1h-1zm0 1h2v1h-2zm4-3h4v7h-4zm1 1h3v5h-3zm1 1h1v3h-1zm-11 5h7v7H0zm1 1h5v5H1zm2 2h3v3H3zm5-2h1v1H8zm1 2h1v2H9zm-2 1h1v1H7zm4-4h2v1h-2zm3 0h1v3h-1zm-3 2h2v1h-2zm0 2h1v2h-1zm1-1h2v1h-2zm2 2h2v1h-2zm4-5h1v1h-1zm1 1h1v1h-1zm-2 1h2v1h-2zm2 1h1v1h-1zm-2 1h1v2h-1zm2 0h2v1h-2zm-1 1h1v1h-1z' fill='%23003366'/></svg>" class="w-32 h-32" alt="UPI QR Code">
                     </div>
                     
                     <p class="text-[10px] font-bold text-slate-400 mb-4">UPI: mandavikaushal913@okaxis</p>
@@ -281,9 +304,9 @@
         async function selectMod(code) {
             selectedModCode = code;
             try {
-             // const res = await fetch('./questions.json'); 
-// या सीधे अपने GitHub Pages का पूरा URL डाल दें:
-const res = await fetch('https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/questions.json');
+                // const res = await fetch('./questions.json'); 
+                // या सीधे अपने GitHub Pages का पूरा URL डाल दें:
+                const res = await fetch('https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/questions.json');
 
                 allData = await res.json();
                 if(!allData[code]) throw new Error();
@@ -320,7 +343,7 @@ const res = await fetch('https://harshitkaushal9129-bit.github.io/O-level-mcqs-p
             // सिर्फ सिंगल सिलेक्टेड रेडियो बटन की वैल्यू निकाली जा रही है
             const checkedRadio = document.querySelector('.ch-filter-radio:checked');
             
-            // अगर चैप्टर्स लिस्ट रेंडर हुई है, तो सिलेक्टेड चैप्टर के बेसिस पर फ़िल्टर करें
+            // अगर चैप्टर्स लिस्ट रेंडर हुई है, तो सिलेक्टेड चैप्टर के बेसिस पर फ़िल्तर करें
             if(document.querySelectorAll('.ch-filter-radio').length > 0) {
                 if(!checkedRadio) {
                     alert("Kripya test shuru karne ke liye ek chapter zaroor chunein!");
@@ -465,6 +488,27 @@ const res = await fetch('https://harshitkaushal9129-bit.github.io/O-level-mcqs-p
             document.getElementById('res-corr').textContent = correct;
             document.getElementById('res-wrng').textContent = questions.length - correct;
             document.getElementById('res-total').textContent = questions.length;
+        }
+
+        // Native Native Sharing & Clipboard Backup Handler
+        function shareScore() {
+            const score = document.getElementById('res-score').textContent;
+            const grade = document.getElementById('res-grade').textContent;
+            const shareText = `🎯 NIELIT CBT Practice Result\n\n👤 Student: ${candidateName}\n📄 Paper: ${selectedModCode}\n📊 Score: ${score}\n🏅 Grade: ${grade}\n\nKaushal Institute Online Portal par practice karein!`;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'My NIELIT CBT Result',
+                    text: shareText,
+                    url: window.location.href
+                }).catch(err => console.log(err));
+            } else {
+                navigator.clipboard.writeText(shareText).then(() => {
+                    alert("Result summary copied to clipboard! Paste it anywhere to share.");
+                }).catch(() => {
+                    alert("Sharing not supported on this device.");
+                });
+            }
         }
     </script>
     <script>
