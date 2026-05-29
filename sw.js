@@ -6,6 +6,7 @@ const CACHE_NAME = 'nielit-cbt-v1';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
+  '/questions.json',
   '/manifest.json',
   'https://cdn.tailwindcss.com',
   'https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png',
