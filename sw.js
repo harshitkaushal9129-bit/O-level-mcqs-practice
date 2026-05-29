@@ -1,76 +1,76 @@
-const CACHE_NAME = 'nielit-cbt-offline-v3';
+// sw.js - Service Worker for NIELIT Official CBT
 
-// उन सभी ऑनलाइन लिंक्स की लिस्ट जो आपके HTML में हैं, इन्हें यहीं से कैश कर लिया जाएगा
+const CACHE_NAME = 'nielit-cbt-v1';
+
+// 1. Un assets ki list jo app ko offline chalane ke liye zaroori hain
 const ASSETS_TO_CACHE = [
-  './',                  // आपकी मुख्य वेबसाइट का रूट
-  './index.html',        // आपकी HTML फ़ाइल
-  './questions.json',    // आपकी सवालों वाली JSON फ़ाइल (इसे लोकल फोल्डर में ही रखें)
-  './manifest.json',     // PWA की फाइल
-
-  // ऑनलाइन लोगो लिंक (बिना HTML बदले ऑफलाइन चलाने के लिए)
-  'https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png',
-
-  // ऑनलाइन स्क्रिप्ट्स, फॉन्ट्स और क्यूआर कोड लाइब्रेरी जो आपके HTML में लिंक्ड हैं
+  '/',
+  '/index.html',
+  '/manifest.json',
   'https://cdn.tailwindcss.com',
+  'https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
-  'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js',
-  'https://fonts.googleapis.com/css2?family=Inter:wght=400;500;600;700;800;900&display=swap'
+  'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js'
 ];
 
-// 1. Install: पहली बार ओपन होते ही सारा ऑनलाइन माल-मसाला डाउनलोड करके कैश में डालो
+// --- INSTALL EVENT ---
+// Jab Service Worker pehli baar load hoga, saare important assets ko cache me save karega
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[Service Worker] All Online Assets & Logo Pre-cached!');
+      console.log('Core assets caching complete!');
       return cache.addAll(ASSETS_TO_CACHE);
-    }).then(() => {
-      return self.skipWaiting();
-    })
+    }).then(() => self.skipWaiting()) // Naye service worker ko turant activate karne ke liye
   );
 });
 
-// 2. Activate: पुराना कचरा साफ करो ताकि ऐप एकदम फ्रेश रहे
+// --- ACTIVATE EVENT ---
+// Agar aap future me koi naya cache version late hain, toh yeh purane caches ko delete kar dega
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cache) => {
           if (cache !== CACHE_NAME) {
-            console.log('[Service Worker] Clearing old cache storage');
+            console.log('Old cache cleared:', cache);
             return caches.delete(cache);
           }
         })
       );
-    }).then(() => {
-      return self.clients.claim();
-    })
+    }).then(() => self.clients.claim())
   );
 });
 
-// 3. Fetch: अब इंटरनेट हो या न हो, जब भी HTML ऑनलाइन लिंक्स मांगेगा, सर्विस वर्कर उसे कैश से निकाल कर देगा
+// --- FETCH EVENT (Network-First with Cache Fallback) ---
+// Questions JSON aur online updates ke liye Network-First best hai taaki naye sawal hamesha mil sakein.
+// Agar internet nahi hoga, toh yeh cache se load kara dega.
 self.addEventListener('fetch', (event) => {
+  // Sirf standard HTTP/HTTPS requests ko intercept karein (UPI protocols ko chhodkar)
+  if (!event.request.url.startsWith('http')) return;
+
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      // अगर तिजोरी (Cache) में फाइल मिल गई, तो बिना इंटरनेट के तुरंत स्क्रीन पर दिखाओ
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-
-      // अगर कोई नई चीज है, तो इंटरनेट से मंगाओ और साथ ही उसकी एक कॉपी तिजोरी में रख लो
-      return fetch(event.request).then((networkResponse) => {
-        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-          return networkResponse;
+    fetch(event.request)
+      .then((networkResponse) => {
+        // Agar network sahi chal raha hai, toh response ki ek copy cache me save/update kar lo
+        if (networkResponse.status === 200) {
+          const responseClone = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseClone);
+          });
         }
-
-        const responseToCache = networkResponse.clone();
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, responseToCache);
-        });
-
         return networkResponse;
-      }).catch(() => {
-        console.log('[Service Worker] Device completely offline. Fetch bypassed.');
-      });
-    })
+      })
+      .catch(() => {
+        // Agar internet band hai, toh check karo kya yeh file cache me save hai
+        return caches.match(event.request).then((cachedResponse) => {
+          if (cachedResponse) {
+            return cachedResponse;
+          }
+          // Agar cache me bhi nahi hai aur image request hai, toh default icon return karein
+          if (event.request.headers.get('accept').includes('image')) {
+            return caches.match('https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/mcqs.png');
+          }
+        });
+      })
   );
 });
