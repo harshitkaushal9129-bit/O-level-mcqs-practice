@@ -1012,9 +1012,7 @@
 {"chapter": "Introduction to Programming", "question": "Which item represents an entity that acts as an interface between human instructions and hardware operations?", "options": ["Hard Drive", "Programming Language", "Power Supply", "Monitor Cable"], "answer": "Programming Language"},
 {"chapter": "Introduction to Programming", "question": "What type of error is a spelling mistake in a language keyword?", "options": ["Syntax Error", "Logical Error", "Runtime Error", "Semantic Error"], "answer": "Syntax Error"},
 {"chapter": "Introduction to Programming", "question": "The final stage of software development that ensures the program continues to work properly in production is:", "options": ["Analysis", "Design", "Implementation", "Maintenance"], "answer": "Maintenance"},
-
-          
-          {"chapter": "Introduction to Programming", "question": "A graphical representation of an algorithm is known as what?", "options": ["Pseudo code", "Flowchart", "Program", "Logic Tree"], "answer": "Flowchart"},
+{"chapter": "Introduction to Programming", "question": "A graphical representation of an algorithm is known as what?", "options": ["Pseudo code", "Flowchart", "Program", "Logic Tree"], "answer": "Flowchart"},
     {"chapter": "Introduction to Python", "question": "Which character is used to give single-line comments in Python?", "options": ["//", "/*", "#", "!"], "answer": "#"},
     {"chapter": "Operators, Expressions and Python Statements", "question": "What is the output of the expression 11 // 2 in Python?", "options": ["5.5", "5", "1", "6"], "answer": "5"},
     {"chapter": "Conditional Statements and Loops", "question": "Which statement is used to stop the current loop execution instantly?", "options": ["continue", "break", "pass", "exit"], "answer": "break"},
