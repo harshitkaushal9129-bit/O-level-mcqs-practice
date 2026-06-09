@@ -1,163 +1,10 @@
 {
   "M1": [  
-    {"chapter": "Introduction to Computer","question": "Which of the following is the fastest memory in a computer system?\n(निम्नलिखित में से कौन सी कंप्यूटर सिस्टम lमें सबसे तेज़ मेमोरी है?)","options": ["RAM", "ROM", "Cache Memory (कैश मेमोरी)", "Hard Disk (हार्ड डिस्क)"],"answer": "Cache Memory"},
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Who is known as the father of modern computers?\n(आधुनिक कंप्यूटर का जनक किसे माना जाता है?)",
-        "options": ["Alan Turing (एलन ट्यूरिंग)", "Charles Babbage (चार्ल्स बैबेज)", "John von Neumann (जॉन वॉन न्यूमैन)", "Blaise Pascal (ब्लेज पास्कल)"],
-        "answer": "Charles Babbage"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which electronic components were used in First Generation Computers?\n(प्रथम पीढ़ी के कंप्यूटरों में किन इलेक्ट्रॉनिक घटकों का उपयोग किया गया था?)",
-        "options": ["Transistors (ट्रांजिस्टर)", "Integrated Circuits (इंटीग्रेटेड सर्किट)", "Vacuum Tubes (वैक्यूम ट्यूब)", "Microprocessors (माइक्रोप्रोसेसर)"],
-        "answer": "Vacuum Tubes"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "What is the full form of ALU in computer architecture?\n(कंप्यूटर आर्किटेक्चर में ALU का पूर्ण रूप क्या है?)",
-        "options": ["Arithmetic Logic Unit", "Advanced Logic Unit", "Array Logic Unit", "Application Logic Unit"],
-        "answer": "Arithmetic Logic Unit"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which of the following is a permanent non-volatile memory?\n(निम्नलिखित में से कौन सी एक स्थायी नॉन-वोलेटाइल मेमोरी है?)",
-        "options": ["RAM", "ROM", "Cache (कैश)", "SRAM"],
-        "answer": "ROM"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "One Gigabyte (1 GB) is equal to how many Megabytes (MB)?\n(एक गीगाबाइट (1 GB) कितने मेगाबाइट (MB) के बराबर होता है?)",
-        "options": ["1000 MB", "1024 MB", "512 MB", "2048 MB"],
-        "answer": "1024 MB"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which computer generation introduced the concept of Microprocessors?\n(किस कंप्यूटर पीढ़ी में माइक्रोप्रोसेसर की अवधारणा पेश की गई थी?)",
-        "options": ["Second Generation (दूसरी पीढ़ी)", "Third Generation (तीसरी पीढ़ी)", "Fourth Generation (चौथी पीढ़ी)", "Fifth Generation (पांचवीं पीढ़ी)"],
-        "answer": "Fourth Generation"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which of the following is an input device?\n(निम्नलिखित में से कौन सा एक इनपुट डिवाइस है?)",
-        "options": ["Monitor (मॉनिटर)", "Printer (प्रिंटर)", "Light Pen (लाइट पेन)", "Plotter (प्लॉटर)"],
-        "answer": "Light Pen"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "What is the main brain of any computer system called?\n(किसी भी कंप्यूटर सिस्टम का मुख्य दिमाग क्या कहलाता है?)",
-        "options": ["Motherboard (मदरबोर्ड)", "CPU", "Hard Disk (हार्ड डिस्क)", "Control Unit (कंट्रोल यूनिट)"],
-        "answer": "CPU"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which type of computer is primarily used in weather forecasting and scientific research?\n(मौसम के पूर्वानुमान और वैज्ञानिक अनुसंधान में मुख्य रूप से किस प्रकार के कंप्यूटर का उपयोग किया जाता है?)",
-        "options": ["Mainframe Computer (मेनफ्रेम कंप्यूटर)", "Mini Computer (मिनी कंप्यूटर)", "Supercomputer (सुपरकंप्यूटर)", "Microcomputer (माइक्रोकंप्यूटर)"],
-        "answer": "Supercomputer"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "What is the smallest unit of data in a computer?\n(कंप्यूटर में डेटा की सबसे छोटी इकाई क्या है?)",
-        "options": ["Byte (बाइट)", "Nibble (निबल)", "Bit (बिट)", "Kilobyte (किलोबाइट)"],
-        "answer": "Bit"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "A collection of 4 bits is known as a ________.\n(4 बिट्स के संग्रह को ________ के रूप में जाना जाता है।)",
-        "options": ["Byte (बाइट)", "Nibble (निबल)", "Word (वर्ड)", "Block (ब्लॉक)"],
-        "answer": "Nibble"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which of the following is an example of secondary memory?\n(निम्नलिखित में से कौन सा सेकेंडरी मेमोरी का उदाहरण है?)",
-        "options": ["RAM", "ROM", "Solid State Drive (SSD)", "Register (रजिस्टर)"],
-        "answer": "Solid State Drive (SSD)"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Artificial Intelligence (AI) is associated with which generation of computers?\n(आर्टिफिशियल इंटेलिजेंस (AI) कंप्यूटर की किस पीढ़ी से संबंधित है?)",
-        "options": ["Third Generation (तीसरी पीढ़ी)", "Fourth Generation (चौथी पीढ़ी)", "Fifth Generation (पांचवीं पीढ़ी)", "Sixth Generation (छठी पीढ़ी)"],
-        "answer": "Fifth Generation"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "What is the full form of GUI?\n(GUI का पूर्ण रूप क्या है?)",
-        "options": ["Graphical User Interface", "General User Interface", "Global User Index", "Graphic Universal Integration"],
-        "answer": "Graphical User Interface"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which part of the CPU coordinates the movement of data and instructions?\n(CPU का कौन सा भाग डेटा और निर्देशों के संचलन का समन्वय करता है?)",
-        "options": ["ALU", "Control Unit (कंट्रोल यूनिट)", "Registers (रजिस्टर)", "RAM"],
-        "answer": "Control Unit"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which device is used to convert hard copy text/images into digital soft copy?\n(हार्ड कॉपी टेक्स्ट/इमेजेस को डिजिटल सॉफ्ट कॉपी में बदलने के लिए किस डिवाइस का उपयोग किया जाता है?)",
-        "options": ["Printer (प्रिंटर)", "Plotter (प्लॉटर)", "Scanner (स्कैनर)", "Monitor (मॉनिटर)"],
-        "answer": "Scanner"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "What does RAM stand for?\n(RAM का क्या अर्थ है?)",
-        "options": ["Read Access Memory", "Random Access Memory", "Ready Application Module", "Remote Access Memory"],
-        "answer": "Random Access Memory"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which of the following is an impact printer?\n(निम्नलिखित में से कौन सा एक इम्पैक्ट प्रिंटर है?)",
-        "options": ["Laser Printer (लेजर प्रिंटर)", "Inkjet Printer (इंकजेट प्रिंटर)", "Dot Matrix Printer (डॉट मैट्रिक्स प्रिंटर)", "Thermal Printer (थर्मल प्रिंटर)"],
-        "answer": "Dot Matrix Printer"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "The speed of modern CPUs is generally measured in ________.\n(आधुनिक CPU की गति आम तौर पर ________ में मापी जाती है।)",
-        "options": ["Kilohertz (kHz)", "Megabytes (MB)", "Gigahertz (GHz)", "Megabits (Mb)"],
-        "answer": "Gigahertz (GHz)"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which memory type needs continuous refreshing to retain data?\n(डेटा बनाए रखने के लिए किस मेमोरी प्रकार को लगातार रिफ्रेश करने की आवश्यकता होती है?)",
-        "options": ["SRAM", "DRAM", "ROM", "Flash Memory (फ्लैश मेमोरी)"],
-        "answer": "DRAM"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "What is the full form of EEPROM?\n(EEPROM का पूर्ण रूप क्या है?)",
-        "options": ["Electrically Erasable Programmable Read-Only Memory", "Extended Easily Programmable Read-Only Memory", "Electronic Erasable Production Read-Only Memory", "Efficient Erasable Programmable Read-Only Memory"],
-        "answer": "Electrically Erasable Programmable Read-Only Memory"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which of the following is an example of system software?\n(निम्नलिखित में से कौन सा सिस्टम सॉफ्टवेयर का एक उदाहरण है?)",
-        "options": ["MS Word", "Google Chrome", "Operating System (ऑपरेटिंग सिस्टम)", "Photoshop"],
-        "answer": "Operating System"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "What was the name of the first general-purpose electronic digital computer?\n(पहले सामान्य उद्देश्य वाले इलेक्ट्रॉनिक डिजिटल कंप्यूटर का नाम क्या था?)",
-        "options": ["UNIVAC", "ENIAC", "EDVAC", "ABACUS"],
-        "answer": "ENIAC"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which port is most commonly used to connect modern keyboards, mice, and flash drives?\n(आधुनिक कीबोर्ड, माउस और फ्लैश ड्राइव को जोड़ने के लिए सबसे अधिक किस पोर्ट का उपयोग किया जाता है?)",
-        "options": ["VGA Port", "Serial Port", "USB Port", "Parallel Port"],
-        "answer": "USB Port"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "What is the base of the Hexadecimal number system?\n(हेक्साडेसिमल संख्या प्रणाली का आधार क्या है?)",
-        "options": ["2", "8", "10", "16"],
-        "answer": "16"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which of the following is used to produce high-quality vector graphics and large architectural drawings?\n(उच्च गुणवत्ता वाले वेक्टर ग्राफिक्स और बड़े आर्किटेक्चरल ड्रॉइंग बनाने के लिए निम्नलिखित में से किसका उपयोग किया जाता है?)",
-        "options": ["Inkjet Printer (इंकजेट प्रिंटर)", "Plotter (प्लॉटर)", "Laser Printer (लेजर प्रिंटर)", "Dot Matrix (डॉट मैट्रिक्स)"],
-        "answer": "Plotter"
-    },
-    {"chapter": "Introduction to Computer", "question": "Which of the following is the fastest memory in a computer system?\n(निम्नलिखित में से कौन सी कंप्यूटर सिस्टम lमें सबसे तेज़ मेमोरी है?)", "options": ["RAM", "ROM", "Cache Memory (कैश मेमोरी)", "Hard Disk (हार्ड डिस्क)"], "answer": "Cache Memory"},
+
+
+
+    
+{"chapter": "Introduction to Computer", "question": "Which of the following is the fastest memory in a computer system?\n(निम्नलिखित में से कौन सी कंप्यूटर सिस्टम lमें सबसे तेज़ मेमोरी है?)", "options": ["RAM", "ROM", "Cache Memory (कैश मेमोरी)", "Hard Disk (हार्ड डिस्क)"], "answer": "Cache Memory"},
 {"chapter": "Introduction to Computer", "question": "Who is known as the father of modern computers?\n(आधुनिक कंप्यूटर का जनक किसे माना जाता है?)", "options": ["Alan Turing (एलन ट्यूरिंग)", "Charles Babbage (चार्ल्स बैबेज)", "John von Neumann (जॉन वॉन न्यूमैन)", "Blaise Pascal (ब्लेज पास्कल)"], "answer": "Charles Babbage"},
 {"chapter": "Introduction to Computer", "question": "Which electronic components were used in First Generation Computers?\n(प्रथम पीढ़ी के कंप्यूटरों में किन इलेक्ट्रॉनिक घटकों का उपयोग किया गया था?)", "options": ["Transistors (ट्रांजिस्टर)", "Integrated Circuits (इंटीग्रेटेड सर्किट)", "Vacuum Tubes (वैक्यूम ट्यूब)", "Microprocessors (माइक्रोप्रोसेसर)"], "answer": "Vacuum Tubes"},
 {"chapter": "Introduction to Computer", "question": "What is the full form of ALU in computer architecture?\n(कंप्यूटर आर्किटेक्चर में ALU का पूर्ण रूप क्या है?)", "options": ["Arithmetic Logic Unit", "Advanced Logic Unit", "Array Logic Unit", "Application Logic Unit"], "answer": "Arithmetic Logic Unit"},
@@ -207,75 +54,70 @@
 {"chapter": "Introduction to Computer", "question": "Which memory acts as an overflow space when the physical RAM is completely full?\n(जब फिजिकल RAM पूरी तरह से भर जाती है तो कौन सी मेमोरी ओवरफ्लो释放 स्पेस के रूप में कार्य करती है?)", "options": ["Cache Memory (कैश मेमोरी)", "Flash Memory (फ्लैश मेमोरी)", "Virtual Memory (वर्चुअल मेमोरी)", "EEPROM"], "answer": "Virtual Memory"},
 {"chapter": "Introduction to Computer", "question": "What is the full form of Motherboard Form Factor standard ATX?\n(मदरबोर्ड फॉर्म फैक्टर मानक ATX का पूर्ण रूप क्या है?)", "options": ["Advanced Technology Extended", "Advanced Terminal Exchange", "Automated Transfer eXcellent", "All Technology eXecution"], "answer": "Advanced Technology Extended"},
 {"chapter": "Introduction to Computer", "question": "Which encoding standard represents characters globally for almost all languages?\n(कौन सा एन्कोडिंग मानक लगभग सभी भाषाओं के लिए विश्व स्तर पर वर्णों का प्रतिनिधित्व करता है?)", "options": ["ASCII", "Unicode (यूनिकोड)", "EBCDIC", "BCD"], "answer": "Unicode"},
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which memory acts as an overflow space when the physical RAM is completely full?\n(जब फिजिकल RAM पूरी तरह से भर जाती है तो कौन सी मेमोरी ओवरफ्लो स्पेस के रूप में कार्य करती है?)",
-        "options": ["Cache Memory (कैश मेमोरी)", "Flash Memory (फ्लैश मेमोरी)", "Virtual Memory (वर्चुअल मेमोरी)", "EEPROM"],
-        "answer": "Virtual Memory"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "What is the full form of Motherboard Form Factor standard ATX?\n(मदरबोर्ड फॉर्म फैक्टर मानक ATX का पूर्ण रूप क्या है?)",
-        "options": ["Advanced Technology Extended", "Advanced Terminal Exchange", "Automated Transfer eXcellent", "All Technology eXecution"],
-        "answer": "Advanced Technology Extended"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which encoding standard represents characters globally for almost all languages?\n(कौन सा एन्कोडिंग मानक लगभग सभी भाषाओं के लिए विश्व स्तर पर वर्णों का प्रतिनिधित्व करता है?)",
-        "options": ["ASCII", "Unicode (यूनिकोड)", "EBCDIC", "BCD"],
-        "answer": "Unicode"
-    },
-  {"chapter": "Introduction to Operating System", "question": "What is the core part of an Operating System called?", "options": ["Shell", "Kernel", "Command Prompt", "Registry"], "answer": "Kernel"},
-    {"chapter": "Introduction to Operating System", "question": "Which of the following is an example of an open-source operating system?", "options": ["Windows 11", "macOS", "Linux", "MS-DOS"], "answer": "Linux"},
-    {"chapter": "Introduction to Operating System", "question": "What type of operating system is used in critical applications like satellite launching and medical equipment?", "options": ["Batch Processing OS", "Real-Time Operating System (RTOS)", "Time-Sharing OS", "Network OS"], "answer": "Real-Time Operating System (RTOS)"},
-    {"chapter": "Introduction to Operating System", "question": "Which component of an operating system provides the interface for users to interact, like a command-line interpreter?", "options": ["Kernel", "Shell", "Driver", "Thread"], "answer": "Shell"},
-    {"chapter": "Introduction to Operating System", "question": "What is a program in execution called?", "options": ["Command", "Process", "Task Manager", "Function"], "answer": "Process"},
-    {"chapter": "Introduction to Operating System", "question": "Which of the following is a multi-user, time-sharing operating system developed in the 1970s?", "options": ["MS-DOS", "Unix", "Windows 95", "Windows 3.1"], "answer": "Unix"},
-    {"chapter": "Introduction to Operating System", "question": "What is the full form of GUI in operating systems?", "options": ["Graphical User Interface", "General User Integration", "Global User Interface", "Graphics Universal Interchange"], "answer": "Graphical User Interface"},
-    {"chapter": "Introduction to Operating System", "question": "Which scheduling algorithm allocates the CPU to the process that requests it first?", "options": ["Shortest Job First (SJF)", "Round Robin (RR)", "First-Come, First-Served (FCFS)", "Priority Scheduling"], "answer": "First-Come, First-Served (FCFS)"},
-    {"chapter": "Introduction to Operating System", "question": "What is the default file system used by modern Windows operating systems (like Windows 10/11)?", "options": ["FAT32", "NTFS", "ext4", "HPFS"], "answer": "NTFS"},
-    {"chapter": "Introduction to Operating System", "question": "Which condition occurs when two or more processes are blocked indefinitely, waiting for each other to release resources?", "options": ["Starvation", "Deadlock", "Context Switching", "Paging"], "answer": "Deadlock"},
-    {"chapter": "Introduction to Operating System", "question": "What is the process of restarting an operating system that is already running called?", "options": ["Cold Booting", "Warm Booting", "Hard Booting", "Shut Down"], "answer": "Warm Booting"},
-    {"chapter": "Introduction to Operating System", "question": "Which Linux command is used to display the contents of a directory?", "options": ["dir", "ls", "cd", "pwd"], "answer": "ls"},
-    {"chapter": "Introduction to Operating System", "question": "What is the mechanism that temporarily moves a process out of main memory to a secondary storage (hard disk) called?", "options": ["Swapping", "Caching", "Paging", "Fragmentation"], "answer": "Swapping"},
-    {"chapter": "Introduction to Operating System", "question": "Which type of operating system executes similar jobs grouped together without direct user interaction?", "options": ["Time-sharing OS", "Batch Processing OS", "Distributed OS", "Network OS"], "answer": "Batch Processing OS"},
-    {"chapter": "Introduction to Operating System", "question": "What is the full form of CLI?", "options": ["Command Line Interface", "Common Line Interconnect", "Control Logic Interface", "Computer Language Interpreter"], "answer": "Command Line Interface"},
-    {"chapter": "Introduction to Operating System", "question": "Which memory management technique maps a program's virtual address space into fixed-size blocks of physical memory?", "options": ["Segmentation", "Paging", "Continuous Allocation", "Compaction"], "answer": "Paging"},
-    {"chapter": "Introduction to Operating System", "question": "Which Linux command is used to see the current working directory path?", "options": ["cd", "mkdir", "pwd", "path"], "answer": "pwd"},
-    {"chapter": "Introduction to Operating System", "question": "What is the primary function of a device driver?", "options": ["To run user application software", "To allow the OS to communicate with specific hardware components", "To scan files for viruses", "To back up system data"], "answer": "To allow the OS to communicate with specific hardware components"},
-    {"chapter": "Introduction to Operating System", "question": "Which of the following is NOT an operating system?", "options": ["Windows Server", "Android", "Oracle", "Ubuntu"], "answer": "Oracle"},
-    {"chapter": "Introduction to Operating System", "question": "What is the name of the system software that loads the operating system kernel into the computer's memory during boot up?", "options": ["Compiler", "Linker", "Bootstrap Loader", "Assembler"], "answer": "Bootstrap Loader"},
-    {"chapter": "Introduction to Operating System", "question": "Which Windows shortcut key combination is used to open the Task Manager instantly?", "options": ["Ctrl + Alt + Del", "Ctrl + Shift + Esc", "Win + R", "Alt + F4"], "answer": "Ctrl + Shift + Esc"},
-    {"chapter": "Introduction to Operating System", "question": "In operating systems, what does 'SPOOLING' stand for?", "options": ["Simultaneous Peripheral Operations On-Line", "Sequential Program Optimization Over-Line", "System Peripheral Output Organizational Logic", "Serial Port Output Oriented Loader"], "answer": "Simultaneous Peripheral Operations On-Line"},
-    {"chapter": "Introduction to Operating System", "question": "Which state does a process enter immediately after it is created or loaded into main memory?", "options": ["Running State", "Waiting State", "Ready State", "Terminated State"], "answer": "Ready State"},
-    {"chapter": "Introduction to Operating System", "question": "What is the primary file system used in Linux operating systems?", "options": ["NTFS", "FAT16", "ext4", "exFAT"], "answer": "ext4"},
-    {"chapter": "Introduction to Operating System", "question": "Which scheduling algorithm uses a time quantum or fixed time slice for fair CPU distribution?", "options": ["Round Robin (RR)", "Shortest Remaining Time First", "First-Come First-Served", "Highest Response Ratio Next"], "answer": "Round Robin (RR)"},
-    {"chapter": "Introduction to Operating System", "question": "What happens when the system spends more time swapping pages in and out of memory than executing actual instructions?", "options": ["Deadlock", "Thrashing", "Starvation", "Paging fault"], "answer": "Thrashing"},
-    {"chapter": "Introduction to Operating System", "question": "Which interface allows multiple processors to work together to execute a single task split across them?", "options": ["Multiprogramming", "Multiprocessing", "Multitasking", "Multithreading"], "answer": "Multiprocessing"},
-    {"chapter": "Introduction to Operating System", "question": "Which of the following is a mobile operating system developed by Apple?", "options": ["Android", "Symbian", "iOS", "Tizen"], "answer": "iOS"},
-    {"chapter": "Introduction to Operating System", "question": "What is the default administrator account name in a Linux/Unix system?", "options": ["Admin", "Administrator", "Root", "Superuser"], "answer": "Root"},
-    {"chapter": "Introduction to Operating System", "question": "Which system call is used in Unix-like systems to create a new child process?", "options": ["fork()", "exec()", "create()", "spawn()"], "answer": "fork()"},
-    {"chapter": "Introduction to Operating System", "question": "What type of fragmentation occurs when memory is divided into fixed-size blocks, and a process allocated a block leaves some unused space inside it?", "options": ["External Fragmentation", "Internal Fragmentation", "Dynamic Fragmentation", "Virtual Fragmentation"], "answer": "Internal Fragmentation"},
-    {"chapter": "Introduction to Operating System", "question": "Which utility in Windows is used to check and repair errors on a hard disk drive?", "options": ["Disk Defragmenter", "CHKDSK", "Disk Cleanup", "Regedit"], "answer": "CHKDSK"},
-    {"chapter": "Introduction to Operating System", "question": "What is the full form of API, which allows applications to request services from the operating system?", "options": ["Application Programming Interface", "Advanced Program Integration", "Automated Process Interface", "Application Protocol Interconnect"], "answer": "Application Programming Interface"},
-    {"chapter": "Introduction to Operating System", "question": "Which character is used in Linux command line to pipe the output of one command as an input to another?", "options": [">", "<", "|", "&"], "answer": "|"},
-    {"chapter": "Introduction to Operating System", "question": "What is the minimum number of bits required to uniquely identify a process in a system using a Process ID (PID)?", "options": ["Depends on the OS architecture (e.g., 16-bit or 32-bit integers)", "Always 8 bits", "Always 64 bits", "Fixed at 4 bits"], "answer": "Depends on the OS architecture (e.g., 16-bit or 32-bit integers)"},
-    {"chapter": "Introduction to Operating System", "question": "Which type of software is an operating system categorized into?", "options": ["Application Software", "System Software", "Programming Software", "Utility Software"], "answer": "System Software"},
-    {"chapter": "Introduction to Operating System", "question": "Which algorithm is used by the operating system to prevent deadlocks by checking resource allocation states?", "options": ["Round Robin Algorithm", "Banker's Algorithm", "Page Replacement Algorithm", "Kruskal's Algorithm"], "answer": "Banker's Algorithm"},
-    {"chapter": "Introduction to Operating System", "question": "What is the full form of NTFS?", "options": ["New Technology File System", "Network Technology File System", "New Tab File Sequence", "Node Transfer File Structure"], "answer": "New Technology File System"},
-    {"chapter": "Introduction to Operating System", "question": "Which Linux command is used to change file permissions?", "options": ["chown", "chmod", "chgrp", "attrib"], "answer": "chmod"},
-    {"chapter": "Introduction to Operating System", "question": "What is the smallest allocatable unit of a hard disk space managed by a file system?", "options": ["Sector", "Track", "Cluster / Block", "Byte"], "answer": "Cluster / Block"},
-    {"chapter": "Introduction to Operating System", "question": "Which of the following is a characteristic of a real-time operating system?", "options": ["High throughput", "Deterministic and predictable response time", "Maximum CPU utilization", "Large memory footprint"], "answer": "Deterministic and predictable response time"},
-    {"chapter": "Introduction to Operating System", "question": "What is the name of the central database in Windows that stores configuration settings and options?", "options": ["Kernel Space", "Windows Registry", "Control Panel", "System INI"], "answer": "Windows Registry"},
-    {"chapter": "Introduction to Operating System", "question": "Which operation switches the CPU from executing one process to another, saving the current state first?", "options": ["Context Switching", "Process Migration", "Interrupt Handling", "Paging Allocation"], "answer": "Context Switching"},
-    {"chapter": "Introduction to Operating System", "question": "Which command in Windows command prompt (CMD) is used to clear the screen?", "options": ["clear", "cls", "clean", "reset"], "answer": "cls"},
-    {"chapter": "Introduction to Operating System", "question": "What type of OS runs on a group of independent, networked computers but appears to the user as a single computer?", "options": ["Distributed Operating System", "Batch Operating System", "Network Operating System", "Embedded Operating System"], "answer": "Distributed Operating System"},
-    {"chapter": "Introduction to Operating System", "question": "Which data structure is maintained by the operating system to store all the information about a specific process?", "options": ["Process Control Block (PCB)", "File Allocation Table (FAT)", "Page Map Table", "Ready Queue Stack"], "answer": "Process Control Block (PCB)"},
-    {"chapter": "Introduction to Operating System", "question": "What is the name of the special page replacement policy that replaces the page that has not been used for the longest period of time?", "options": ["FIFO (First In First Out)", "LRU (Least Recently Used)", "Optimal Page Replacement", "LIFO (Last In First Out)"], "answer": "LRU (Least Recently Used)"},
-    {"chapter": "Introduction to Operating System", "question": "Which of the following is a legacy 16-bit single-tasking operating system with a command-line interface?", "options": ["MS-DOS", "Windows XP", "OS/2", "Linux Mint"], "answer": "MS-DOS"},
-    {"chapter": "Introduction to Operating System", "question": "What type of operating system allows multiple parts of a single program (threads) to run concurrently?", "options": ["Multithreading OS", "Batch Processing OS", "Single-tasking OS", "Macro OS"], "answer": "Multithreading OS"},
-    {"chapter": "Introduction to Operating System", "question": "Which Linux command is used to create a new empty directory?", "options": ["md", "mkdir", "create", "newdir"], "answer": "mkdir"},
-    {"chapter": "Word Processing (LibreOffice Writer)", "question": "What is the default file extension of LibreOffice Writer?", "options": [".doc", ".docx", ".odt", ".txt"], "answer": ".odt"},
+{"chapter": "Introduction to Operating System", "question": "What is the core part of an Operating System called?", "options": ["Shell", "Kernel", "Command Prompt", "Registry"], "answer": "Kernel"},
+ 
+          
+{"chapter": "Introduction to Operating System", "question": "Which of the following is an example of an open-source operating system?\n(निम्नलिखित में से कौन सा एक ओपन-सोर्स ऑपरेटिंग सिस्टम का उदाहरण है?)", "options": ["Windows 11", "macOS", "Linux", "MS-DOS"], "answer": "Linux"},
+{"chapter": "Introduction to Operating System", "question": "What type of operating system is used in critical applications like satellite launching and medical equipment?\n(सैटेलाइट लॉन्चिंग और मेडिकल उपकरणों जैसे महत्वपूर्ण अनुप्रयोगों में किस प्रकार के ऑपरेटिंग सिस्टम का उपयोग किया जाता है?)", "options": ["Batch Processing OS", "Real-Time Operating System (RTOS)", "Time-Sharing OS", "Network OS"], "answer": "Real-Time Operating System (RTOS)"},
+{"chapter": "Introduction to Operating System", "question": "Which component of an operating system provides the interface for users to interact, like a command-line interpreter?\n(ऑपरेटिंग सिस्टम का कौन सा घटक उपयोगकर्ताओं को इंटरैक्ट करने के लिए इंटरफ़ेस प्रदान करता है, जैसे कमांड-लाइन इंटरप्रेटर?)", "options": ["Kernel (कर्नेल)", "Shell (शेल)", "Driver (ड्राइवर)", "Thread (थ्रेड)"], "answer": "Shell"},
+{"chapter": "Introduction to Operating System", "question": "What is a program in execution called?\n(एग्जीक्यूशन (निष्पादन) के दौरान एक प्रोग्राम को क्या कहा जाता है?)", "options": ["Command (कमांड)", "Process (प्रोसेस)", "Task Manager (टास्क मैनेजर)", "Function (फंक्शन)"], "answer": "Process"},
+{"chapter": "Introduction to Operating System", "question": "Which of the following is a multi-user, time-sharing operating system developed in the 1970s?\n(निम्नलिखित में से कौन सा 1970 के दशक में विकसित एक मल्टी-यूज़र, टाइम-शेयरिंग ऑपरेटिंग सिस्टम है?)", "options": ["MS-DOS", "Unix", "Windows 95", "Windows 3.1"], "answer": "Unix"},
+{"chapter": "Introduction to Operating System", "question": "What is the full form of GUI in operating systems?\n(ऑपरेटिंग सिस्टम में GUI का पूर्ण रूप क्या है?)", "options": ["Graphical User Interface", "General User Integration", "Global User Interface", "Graphics Universal Interchange"], "answer": "Graphical User Interface"},
+{"chapter": "Introduction to Operating System", "question": "Which scheduling algorithm allocates the CPU to the process that requests it first?\n(कौन सा शेड्यूलिंग एल्गोरिदम उस प्रोसेस को CPU आवंटित करता है जो इसके लिए सबसे पहले अनुरोध करता है?)", "options": ["Shortest Job First (SJF)", "Round Robin (RR)", "First-Come, First-Served (FCFS)", "Priority Scheduling"], "answer": "First-Come, First-Served (FCFS)"},
+{"chapter": "Introduction to Operating System", "question": "What is the default file system used by modern Windows operating systems (like Windows 10/11)?\n(आधुनिक विंडोज ऑपरेटिंग सिस्टम (जैसे विंडोज 10/11) द्वारा उपयोग किया जाने वाला डिफॉल्ट फ़ाइल सिस्टम क्या है?)", "options": ["FAT32", "NTFS", "ext4", "HPFS"], "answer": "NTFS"},
+{"chapter": "Introduction to Operating System", "question": "Which condition occurs when two or more processes are blocked indefinitely, waiting for each other to release resources?\n(वह स्थिति कब उत्पन्न होती है जब दो या दो से अधिक प्रोसेस अनिश्चित काल के लिए ब्लॉक हो जाते हैं और एक-दूसरे द्वारा संसाधनों को छोड़ने की प्रतीक्षा करते हैं?)", "options": ["Starvation (स्टार्वेशन)", "Deadlock (डेडलॉक)", "Context Switching (कॉन्टेक्स्ट स्विचिंग)", "Paging (पेजिंग)"], "answer": "Deadlock"},
+{"chapter": "Introduction to Operating System", "question": "What is the process of restarting an operating system that is already running called?\n(पहले से चल रहे ऑपरेटिंग सिस्टम को रीस्टार्ट करने की प्रक्रिया को क्या कहा जाता है?)", "options": ["Cold Booting (कोल्ड बूटिंग)", "Warm Booting (वार्म बूटिंग)", "Hard Booting (हार्ड बूटिंग)", "Shut Down (शट डाउन)"], "answer": "Warm Booting"},
+{"chapter": "Introduction to Operating System", "question": "Which Linux command is used to display the contents of a directory?\n(किसी डायरेक्टरी की सामग्री को प्रदर्शित करने के लिए किस लिनक्स कमांड का उपयोग किया जाता है?)", "options": ["dir", "ls", "cd", "pwd"], "answer": "ls"},
+{"chapter": "Introduction to Operating System", "question": "What is the mechanism that temporarily moves a process out of main memory to a secondary storage (hard disk) called?\n(उस मैकेनिज्म को क्या कहा जाता है जो अस्थायी रूप से किसी प्रोसेस को मुख्य मेमोरी से सेकेंडरी स्टोरेज (हार्ड डिस्क) में ले जाता है?)", "options": ["Swapping (स्वैपिंग)", "Caching (कैशिंग)", "Paging (पेजिंग)", "Fragmentation (फ्रैगमेंटेशन)"], "answer": "Swapping"},
+{"chapter": "Introduction to Operating System", "question": "Which type of operating system executes similar jobs grouped together without direct user interaction?\n(किस प्रकार का ऑपरेटिंग सिस्टम सीधे उपयोगकर्ता के हस्तक्षेप के बिना एक साथ समूहीकृत समान कार्यों को निष्पादित करता है?)", "options": ["Time-sharing OS", "Batch Processing OS", "Distributed OS", "Network OS"], "answer": "Batch Processing OS"},
+{"chapter": "Introduction to Operating System", "question": "What is the full form of CLI?\n(CLI का पूर्ण रूप क्या है?)", "options": ["Command Line Interface", "Common Line Interconnect", "Control Logic Interface", "Computer Language Interpreter"], "answer": "Command Line Interface"},
+{"chapter": "Introduction to Operating System", "question": "Which memory management technique maps a program's virtual address space into fixed-size blocks of physical memory?\n(कौन सी मेमोरी मैनेजमेंट तकनीक किसी प्रोग्राम के वर्चुअल एड्रेस स्पेस को फिजिकल मेमोरी के निश्चित आकार के ब्लॉक्स में मैप करती है?)", "options": ["Segmentation (सेगमेंटेशन)", "Paging (पेजिंग)", "Continuous Allocation (कंटीन्यूअस एलोकेशन)", "Compaction (कंपैक्शन)"], "answer": "Paging"},
+{"chapter": "Introduction to Operating System", "question": "Which Linux command is used to see the current working directory path?\n(वर्तमान वर्किंग डायरेक्टरी पाथ को देखने के लिए किस लिनक्स कमांड का उपयोग किया जाता है?)", "options": ["cd", "mkdir", "pwd", "path"], "answer": "pwd"},
+{"chapter": "Introduction to Operating System", "question": "What is the primary function of a device driver?\n(एक डिवाइस ड्राइवर का मुख्य कार्य क्या है?)", "options": ["To run user application software (उपयोगकर्ता एप्लिकेशन सॉफ़्टवेयर चलाना)", "To allow the OS to communicate with specific hardware components (OS को विशिष्ट हार्डवेयर घटकों के साथ संवाद करने की अनुमति देना)", "To scan files for viruses (वायरस के लिए फ़ाइलों को स्कैन करना)", "To back up system data (सिस्टम डेटा का बैकअप लेना)"], "answer": "To allow the OS to communicate with specific hardware components"},
+{"chapter": "Introduction to Operating System", "question": "Which of the following is NOT an operating system?\n(निम्नलिखित में से कौन सा एक ऑपरेटिंग सिस्टम नहीं है?)", "options": ["Windows Server", "Android", "Oracle", "Ubuntu"], "answer": "Oracle"},
+{"chapter": "Introduction to Operating System", "question": "What is the name of the system software that loads the operating system kernel into the computer's memory during boot up?\n(उस सिस्टम सॉफ़्टवेयर का नाम क्या है जो बूट अप के दौरान ऑपरेटिंग सिस्टम कर्नेल को कंप्यूटर की मेमोरी में लोड करता है?)", "options": ["Compiler (कंपाइलर)", "Linker (लिंकर)", "Bootstrap Loader (बूटस्ट्रैप लोडर)", "Assembler (असेम्बलर)"], "answer": "Bootstrap Loader"},
+{"chapter": "Introduction to Operating System", "question": "Which Windows shortcut key combination is used to open the Task Manager instantly?\n(टास्क मैनेजर को तुरंत खोलने के लिए किस विंडोज शॉर्टकट की कॉम्बिनेशन का उपयोग किया जाता है?)", "options": ["Ctrl + Alt + Del", "Ctrl + Shift + Esc", "Win + R", "Alt + F4"], "answer": "Ctrl + Shift + Esc"},
+{"chapter": "Introduction to Operating System", "question": "In operating systems, what does 'SPOOLING' stand for?\n(ऑपरेटिंग सिस्टम में 'SPOOLING' का क्या अर्थ है?)", "options": ["Simultaneous Peripheral Operations On-Line", "Sequential Program Optimization Over-Line", "System Peripheral Output Organizational Logic", "Serial Port Output Oriented Loader"], "answer": "Simultaneous Peripheral Operations On-Line"},
+{"chapter": "Introduction to Operating System", "question": "Which state does a process enter immediately after it is created or loaded into main memory?\n(कोई प्रोसेस मुख्य मेमोरी में बनने या लोड होने के तुरंत बाद किस स्टेट (अवस्था) में प्रवेश करती है?)", "options": ["Running State (रनिंग स्टेट)", "Waiting State (वेटिंग स्टेट)", "Ready State (रेडी स्टेट)", "Terminated State (टर्मिनेटेड स्टेट)"], "answer": "Ready State"},
+{"chapter": "Introduction to Operating System", "question": "What is the primary file system used in Linux operating systems?\n(लिनक्स ऑपरेटिंग सिस्टम में उपयोग किया जाने वाला प्राथमिक फ़ाइल सिस्टम क्या है?)", "options": ["NTFS", "FAT16", "ext4", "exFAT"], "answer": "ext4"},
+{"chapter": "Introduction to Operating System", "question": "Which scheduling algorithm uses a time quantum or fixed time slice for fair CPU distribution?\n(कौन सा शेड्यूलिंग एल्गोरिदम निष्पक्ष CPU वितरण के लिए टाइम क्वांटम या निश्चित टाइम स्लाइस का उपयोग करता है?)", "options": ["Round Robin (RR)", "Shortest Remaining Time First", "First-Come First-Served", "Highest Response Ratio Next"], "answer": "Round Robin (RR)"},
+{"chapter": "Introduction to Operating System", "question": "What happens when the system spends more time swapping pages in and out of memory than executing actual instructions?\n(क्या होता है जब सिस्टम वास्तविक निर्देशों को निष्पादित करने के बजाय मेमोरी में पेजों को स्वैप करने में अधिक समय बिताता है?)", "options": ["Deadlock (डेडलॉक)", "Thrashing (थ्रैशिंग)", "Starvation (स्टार्वेशन)", "Paging fault (पेजिंग फॉल्ट)"], "answer": "Thrashing"},
+{"chapter": "Introduction to Operating System", "question": "Which interface allows multiple processors to work together to execute a single task split across them?\n(कौन सा इंटरफ़ेस कई प्रोसेसरों को आपस में विभाजित एक ही कार्य को निष्पादित करने के लिए एक साथ काम करने की अनुमति देता है?)", "options": ["Multiprogramming (मल्टीप्रोग्रामिंग)", "Multiprocessing (मल्टीप्रोसेसिंग)", "Multitasking (मल्टीटास्किंग)", "Multithreading (मल्टीथ्रेडिंग)"], "answer": "Multiprocessing"},
+{"chapter": "Introduction to Operating System", "question": "Which of the following is a mobile operating system developed by Apple?\n(निम्नलिखित में से कौन सा Apple द्वारा विकसित एक मोबाइल ऑपरेटिंग सिस्टम है?)", "options": ["Android", "Symbian", "iOS", "Tizen"], "answer": "iOS"},
+{"chapter": "Introduction to Operating System", "question": "What is the default administrator account name in a Linux/Unix system?\n(लिनक्स/यूनिक्स सिस्टम में डिफॉल्ट एडमिनिस्ट्रेटर अकाउंट का नाम क्या होता है?)", "options": ["Admin", "Administrator", "Root", "Superuser"], "answer": "Root"},
+{"chapter": "Introduction to Operating System", "question": "Which system call is used in Unix-like systems to create a new child process?\n(यूनिक्स जैसे सिस्टम में एक नया चाइल्ड प्रोसेस बनाने के लिए किस सिस्टम कॉल का उपयोग किया जाता है?)", "options": ["fork()", "exec()", "create()", "spawn()"], "answer": "fork()"},
+{"chapter": "Introduction to Operating System", "question": "What type of fragmentation occurs when memory is divided into fixed-size blocks, and a process allocated a block leaves some unused space inside it?\n(किस प्रकार का फ्रेगमेंटेशन तब होता है जब मेमोरी को निश्चित आकार के ब्लॉक्स में विभाजित किया जाता है, और ब्लॉक आवंटित प्रोसेस उसके अंदर कुछ अप्रयुक्त स्थान छोड़ देती है?)", "options": ["External Fragmentation", "Internal Fragmentation", "Dynamic Fragmentation", "Virtual Fragmentation"], "answer": "Internal Fragmentation"},
+{"chapter": "Introduction to Operating System", "question": "Which utility in Windows is used to check and repair errors on a hard disk drive?\n(विंडोज में हार्ड डिस्क ड्राइव पर त्रुटियों की जांच करने और उन्हें ठीक करने के लिए किस यूटिलिटी का उपयोग किया जाता है?)", "options": ["Disk Defragmenter", "CHKDSK", "Disk Cleanup", "Regedit"], "answer": "CHKDSK"},
+{"chapter": "Introduction to Operating System", "question": "What is the full form of API, which allows applications to request services from the operating system?\n(API का पूर्ण रूप क्या है, जो एप्लिकेशन्स को ऑपरेटिंग सिस्टम से सेवाओं का अनुरोध करने की अनुमति देता है?)", "options": ["Application Programming Interface", "Advanced Program Integration", "Automated Process Interface", "Application Protocol Interconnect"], "answer": "Application Programming Interface"},
+{"chapter": "Introduction to Operating System", "question": "Which character is used in Linux command line to pipe the output of one command as an input to another?\n(एक कमांड के आउटपुट को दूसरे कमांड के इनपुट के रूप में पाइप करने के लिए लिनक्स कमांड लाइन में किस कैरेक्टर का उपयोग किया जाता है?)", "options": [">", "<", "|", "&"], "answer": "|"},
+{"chapter": "Introduction to Operating System", "question": "What is the minimum number of bits required to uniquely identify a process in a system using a Process ID (PID)?\n(प्रोसेस आईडी (PID) का उपयोग करके सिस्टम में किसी प्रोसेस की विशिष्ट रूप से पहचान करने के लिए आवश्यक बिट्स की न्यूनतम संख्या क्या है?)", "options": ["Depends on the OS architecture (e.g., 16-bit or 32-bit integers) (OS आर्किटेक्चर पर निर्भर करता है)", "Always 8 bits (हमेशा 8 बिट्स)", "Always 64 bits (हमेशा 64  बिट्स)", "Fixed at 4 bits (4 बिट्स पर फिक्स)"], "answer": "Depends on the OS architecture (e.g., 16-bit or 32-bit integers)"},
+{"chapter": "Introduction to Operating System", "question": "Which type of software is an operating system categorized into?\n(ऑपरेटिंग सिस्टम को किस प्रकार के सॉफ़्टवेयर में वर्गीकृत किया गया है?)", "options": ["Application Software (एप्लिकेशन सॉफ़्टवेयर)", "System Software (सिस्टम सॉफ़्टवेयर)", "Programming Software (प्रोग्रामिंग सॉफ़्टवेयर)", "Utility Software (यूटिलिटी सॉफ़्टवेयर)"], "answer": "System Software"},
+{"chapter": "Introduction to Operating System", "question": "Which algorithm is used by the operating system to prevent deadlocks by checking resource allocation states?\n(संसाधन आवंटन स्थितियों की जांच करके डेडलॉक को रोकने के लिए ऑपरेटिंग सिस्टम द्वारा किस एल्गोरिदम का उपयोग किया जाता है?)", "options": ["Round Robin Algorithm", "Banker's Algorithm", "Page Replacement Algorithm", "Kruskal's Algorithm"], "answer": "Banker's Algorithm"},
+{"chapter": "Introduction to Operating System", "question": "What is the full form of NTFS?\n(NTFS का पूर्ण रूप क्या है?)", "options": ["New Technology File System", "Network Technology File System", "New Tab File Sequence", "Node Transfer File Structure"], "answer": "New Technology File System"},
+{"chapter": "Introduction to Operating System", "question": "Which Linux command is used to change file permissions?\n(फ़ाइल अनुमतियों (परमिशन्स) को बदलने के लिए किस लिनक्स कमांड का उपयोग किया जाता है?)", "options": ["chown", "chmod", "chgrp", "attrib"], "answer": "chmod"},
+{"chapter": "Introduction to Operating System", "question": "What is the smallest allocatable unit of a hard disk space managed by a file system?\n(फ़ाइल सिस्टम द्वारा प्रबंधित हार्ड डिस्क स्पेस की सबसे छोटी आवंटन योग्य इकाई क्या है?)", "options": ["Sector (सेक्टर)", "Track (ट्रैक)", "Cluster / Block (क्लस्टर / ब्लॉक)", "Byte (बाइट)"], "answer": "Cluster / Block"},
+{"chapter": "Introduction to Operating System", "question": "Which of the following is a characteristic of a real-time operating system?\n(निम्नलिखित में से कौन सी एक रियल-टाइम ऑपरेटिंग सिस्टम की विशेषता है?)", "options": ["High throughput (उच्च थ्रूपुट)", "Deterministic and predictable response time (निश्चित और अनुमानित प्रतिक्रिया समय)", "Maximum CPU utilization (अधिकतम CPU उपयोग)", "Large memory footprint (बड़ा मेमोरी फ़ुटप्रिंट)"], "answer": "Deterministic and predictable response time"},
+{"chapter": "Introduction to Operating System", "question": "What is the name of the central database in Windows that stores configuration settings and options?\n(विंडोज में उस सेंट्रल डेटाबेस का नाम क्या है जो कॉन्फ़िगरेशन सेटिंग्स और विकल्पों को संग्रहीत करता है?)", "options": ["Kernel Space", "Windows Registry", "Control Panel", "System INI"], "answer": "Windows Registry"},
+{"chapter": "Introduction to Operating System", "question": "Which operation switches the CPU from executing one process to another, saving the current state first?\n(कौन सा ऑपरेशन CPU को एक प्रोसेस से दूसरी प्रोसेस में निष्पादित करने के लिए स्विच करता है, और पहले वर्तमान स्थिति को सुरक्षित करता है?)", "options": ["Context Switching (कॉन्टेक्स्ट स्विचिंग)", "Process Migration (प्रोसेस माइग्रेशन)", "Interrupt Handling (इंटरप्ट हैंडलिंग)", "Paging Allocation (पेजिंग एलोकेशन)"], "answer": "Context Switching"},
+{"chapter": "Introduction to Operating System", "question": "Which command in Windows command prompt (CMD) is used to clear the screen?\n(स्क्रीन को साफ़ करने के लिए विंडोज कमांड प्रॉम्प्ट (CMD) में किस कमांड का उपयोग किया जाता है?)", "options": ["clear", "cls", "clean", "reset"], "answer": "cls"},
+{"chapter": "Introduction to Operating System", "question": "What type of OS runs on a group of independent, networked computers but appears to the user as a single computer?\n(किस प्रकार का OS स्वतंत्र, नेटवर्क वाले कंप्यूटरों के समूह पर चलता है लेकिन उपयोगकर्ता को एक ही कंप्यूटर के रूप में दिखाई देता है?)", "options": ["Distributed Operating System", "Batch Operating System", "Network Operating System", "Embedded Operating System"], "answer": "Distributed Operating System"},
+{"chapter": "Introduction to Operating System", "question": "Which data structure is maintained by the operating system to store all the information about a specific process?\n(किसी विशिष्ट प्रोसेस के बारे में सभी जानकारी संग्रहीत करने के लिए ऑपरेटिंग सिस्टम द्वारा कौन सा डेटा स्ट्रक्चर बनाए रखा जाता है?)", "options": ["Process Control Block (PCB)", "File Allocation Table (FAT)", "Page Map Table", "Ready Queue Stack"], "answer": "Process Control Block (PCB)"},
+{"chapter": "Introduction to Operating System", "question": "What is the name of the special page replacement policy that replaces the page that has not been used for the longest period of time?\n(उस विशेष पेज रिप्लेसमेंट पॉलिसी का नाम क्या है जो उस पेज को बदलती है जिसका उपयोग सबसे लंबे समय से नहीं किया गया है?)", "options": ["FIFO (First In First Out)", "LRU (Least Recently Used)", "Optimal Page Replacement", "LIFO (Last In First Out)"], "answer": "LRU (Least Recently Used)"},
+{"chapter": "Introduction to Operating System", "question": "Which of the following is a legacy 16-bit single-tasking operating system with a command-line interface?\n(निम्नलिखित में से कौन सा कमांड-लाइन इंटरफ़ेस वाला एक पुराना 16-बिट सिंगल-टास्किंग ऑपरेटिंग सिस्टम है?)", "options": ["MS-DOS", "Windows XP", "OS/2", "Linux Mint"], "answer": "MS-DOS"},
+{"chapter": "Introduction to Operating System", "question": "What type of operating system allows multiple parts of a single program (threads) to run concurrently?\n(किस प्रकार का ऑपरेटिंग सिस्टम एकल प्रोग्राम के कई भागों (थ्रेड्स) को एक साथ चलने की अनुमति देता है?)", "options": ["Multithreading OS", "Batch Processing OS", "Single-tasking OS", "Macro OS"], "answer": "Multithreading OS"},
+{"chapter": "Introduction to Operating System", "question": "Which Linux command is used to create a new empty directory?\n(एक नई खाली डायरेक्टरी बनाने के लिए किस लिनक्स कमांड का उपयोग किया जाता है?)", "options": ["md", "mkdir", "create", "newdir"], "answer": "mkdir"},
+          
+          
+          
+          
+          
+
+          
+          
+          
+          
+          
+          {"chapter": "Word Processing (LibreOffice Writer)", "question": "What is the default file extension of LibreOffice Writer?", "options": [".doc", ".docx", ".odt", ".txt"], "answer": ".odt"},
     {"chapter": "Word Processing (LibreOffice Writer)", "question": "Which shortcut key is used for 'Save As' in LibreOffice Writer?", "options": ["Ctrl + S", "Ctrl + Shift + S", "Ctrl + Alt + S", "F12"], "answer": "Ctrl + Shift + S"},
     {"chapter": "Word Processing (LibreOffice Writer)", "question": "What is the maximum zoom percentage allowed in LibreOffice Writer?", "options": ["100%", "400%", "600%", "1000%"], "answer": "600%"},
     {"chapter": "Word Processing (LibreOffice Writer)", "question": "Which menu contains the 'Mail Merge Wizard' option in LibreOffice Writer?", "options": ["File", "Edit", "Insert", "Tools"], "answer": "Tools"},
