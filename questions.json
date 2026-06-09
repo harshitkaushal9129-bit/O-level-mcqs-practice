@@ -157,126 +157,56 @@
         "options": ["Inkjet Printer (इंकजेट प्रिंटर)", "Plotter (प्लॉटर)", "Laser Printer (लेजर प्रिंटर)", "Dot Matrix (डॉट मैट्रिक्स)"],
         "answer": "Plotter"
     },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Where are the basic BIOS boot instructions stored permanently?\n(बुनियादी BIOS बूट निर्देश स्थायी रूप से कहाँ संग्रहीत होते हैं?)",
-        "options": ["RAM", "ROM Chip (रॉम चिप)", "Hard Disk (हार्ड डिस्क)", "Cache Memory (कैश मेमोरी)"],
-        "answer": "ROM Chip"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Integrated Circuits (ICs) were introduced in which generation of computers?\n(इंटीग्रेटेड सर्किट (IC) कंप्यूटर की किस पीढ़ी में पेश किए गए थे?)",
-        "options": ["First Generation (प्रथम पीढ़ी)", "Second Generation (दूसरी पीढ़ी)", "Third Generation (तीसरी पीढ़ी)", "Fourth Generation (चौथी पीढ़ी)"],
-        "answer": "Third Generation"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "What is the binary equivalent of the decimal number 5?\n(दशमलव संख्या 5 का बाइनरी समकक्ष क्या है?)",
-        "options": ["100", "101", "110", "111"],
-        "answer": "101"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which register holds the address of the next instruction to be executed?\n(कौन सा रजिस्टर निष्पादित होने वाले अगले निर्देश का पता रखता है?)",
-        "options": ["Accumulator (एक्यूमलेटर)", "Program Counter (PC) (प्रोग्राम काउंटर)", "Instruction Register (इन्स्ट्रक्शन रजिस्टर)", "Memory Data Register (मेमोरी डेटा रजिस्टर)"],
-        "answer": "Program Counter (PC)"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which of the following is volatile memory?\n(निम्नलिखित में से कौन सी वोलेटाइल (अस्थायी) मेमोरी है?)",
-        "options": ["Hard Disk (हार्ड डिस्क)", "SSD", "RAM", "CD-ROM"],
-        "answer": "RAM"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "What does ASCII stand for?\n(ASCII का पूर्ण रूप क्या है?)",
-        "options": ["American Standard Code for Information Interchange", "Asian Standard Code for Audio Integration", "American Security Code for Information Interchange", "Advanced Standard Code for Information Interchange"],
-        "answer": "American Standard Code for Information Interchange"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which device acts as both an input and output device?\n(कौन सा डिवाइस इनपुट और आउटपुट डिवाइस दोनों के रूप में कार्य करता है?)",
-        "options": ["Scanner (स्कैनर)", "Touch Screen Monitor (टच स्क्रीन मॉनिटर)", "Keyboard (कीबोर्ड)", "Printer (प्रिंटर)"],
-        "answer": "Touch Screen Monitor"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "What is the full form of VDU?\n(VDU का पूर्ण रूप क्या है?)",
-        "options": ["Visual Display Unit", "Virtual Data Unit", "Video Dynamic Unit", "Visual Digital Union"],
-        "answer": "Visual Display Unit"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which storage device has the highest data transfer rate among secondary storage options?\n(सेकेंडरी स्टोरेज विकल्पों में से किस स्टोरेज डिवाइस की डेटा ट्रांसफर दर सबसे अधिक है?)",
-        "options": ["Floppy Disk (फ्लॉपी डिस्क)", "Hard Disk Drive (HDD)", "Solid State Drive (SSD)", "DVD-ROM"],
-        "answer": "Solid State Drive (SSD)"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "The physically executable components of a computer system are called ________.\n(कंप्यूटर सिस्टम के भौतिक रूप से निष्पादन योग्य घटकों को ________ कहा जाता है।)",
-        "options": ["Software (सॉफ्टवेयर)", "Hardware (हार्डवेयर)", "Firmware (फर्मवेयर)", "Shareware (शेयरवेयर)"],
-        "answer": "Hardware"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which type of software is distributed freely but requires payment for advanced features after a trial period?\n(किस प्रकार का सॉफ्टवेयर स्वतंत्र रूप से वितरित किया जाता है लेकिन ट्रायल अवधि के बाद उन्नत सुविधाओं के लिए भुगतान की आवश्यकता होती है?)",
-        "options": ["Open Source Software (ओपन सोर्स सॉफ्टवेयर)", "Freeware (फ्रीवेयर)", "Shareware (शेयरवेयर)", "Public Domain Software (पब्लिक डोमेन सॉफ्टवेयर)"],
-        "answer": "Shareware"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "What type of computer architecture is followed by most modern computers?\n(अधिकांश आधुनिक कंप्यूटरों द्वारा किस प्रकार के कंप्यूटर आर्किटेक्चर का पालन किया जाता है?)",
-        "options": ["Harvard Architecture", "Von Neumann Architecture", "Analytical Engine Model", "Eniac Architecture"],
-        "answer": "Von Neumann Architecture"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which secondary storage device uses optical laser technology to read and write data?\n(कौन सा सेकेंडरी स्टोरेज डिवाइस डेटा पढ़ने और लिखने के लिए ऑप्टिकल लेजर तकनीक का उपयोग करता है?)",
-        "options": ["Hard Disk (हार्ड डिस्क)", "CD-RW", "Solid State Drive (एसएसडी)", "Magnetic Tape (मैग्नेटिक टेप)"],
-        "answer": "CD-RW"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "What is the full form of CMOS in relation to computers?\n(कंप्यूटर के संबंध में CMOS का पूर्ण रूप क्या है?)",
-        "options": ["Complementary Metal-Oxide-Semiconductor", "Common Machine Operating System", "Computer Memory Output System", "Core Module Operating Software"],
-        "answer": "Complementary Metal-Oxide-Semiconductor"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which of the following is considered the first calculation device in human history?\n(निम्नलिखित में से किसे मानव इतिहास में पहला गणना उपकरण माना जाता है?)",
-        "options": ["Pascaline (पास्कलाइन)", "Analytical Engine (एनालिटिकल इंजन)", "Abacus (अबेकस)", "Napier's Bones (नेपियर्स बोन्स)"],
-        "answer": "Abacus"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "What is the term used for the process of loading an operating system into RAM?\n(ऑपरेटिंग सिस्टम को RAM में लोड करने की प्रक्रिया के लिए किस शब्द का उपयोग किया जाता है?)",
-        "options": ["Processing (प्रोसेसिंग)", "Booting (बूटिंग)", "Executing (एक्जीक्यूटिंग)", "Compiling (कंपाइलिंग)"],
-        "answer": "Booting"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which component protects the internal parts of a computer from external electrical spikes?\n(कौन सा घटक कंप्यूटर के आंतरिक भागों को बाहरी विद्युत स्पाइक्स से बचाता है?)",
-        "options": ["SMPS", "Motherboard (मदरबोर्ड)", "UPS", "CPU Fan (सीपीयू फैन)"],
-        "answer": "UPS"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "Which type of memory is directly integrated inside the CPU chip to hold current data values?\n(वर्तमान डेटा मानों को रखने के लिए CPU चिप के अंदर सीधे किस प्रकार की मेमोरी को एकीकृत किया जाता है?)",
-        "options": ["Registers (रजिस्टर)", "RAM", "ROM", "Virtual Memory (वर्चुअल मेमोरी)"],
-        "answer": "Registers"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "What is the capacity of a standard high-density Floppy Disk?\n(एक मानक उच्च घनत्व वाली फ्लॉपी डिस्क की क्षमता कितनी होती है?)",
-        "options": ["700 MB", "4.7 GB", "1.44 MB", "2.88 MB"],
-        "answer": "1.44 MB"
-    },
-    {
-        "chapter": "Introduction to Computer",
-        "question": "The binary system uses only two digits, which are ________.\n(बाइनरी सिस्टम केवल दो अंकों का उपयोग करता है, जो हैं ________।)",
-        "options": ["1 and 2", "0 and 1", "A and B", "9 and 10"],
-        "answer": "0 and 1"
-    },
+    {"chapter": "Introduction to Computer", "question": "Which of the following is the fastest memory in a computer system?\n(निम्नलिखित में से कौन सी कंप्यूटर सिस्टम lमें सबसे तेज़ मेमोरी है?)", "options": ["RAM", "ROM", "Cache Memory (कैश मेमोरी)", "Hard Disk (हार्ड डिस्क)"], "answer": "Cache Memory"},
+{"chapter": "Introduction to Computer", "question": "Who is known as the father of modern computers?\n(आधुनिक कंप्यूटर का जनक किसे माना जाता है?)", "options": ["Alan Turing (एलन ट्यूरिंग)", "Charles Babbage (चार्ल्स बैबेज)", "John von Neumann (जॉन वॉन न्यूमैन)", "Blaise Pascal (ब्लेज पास्कल)"], "answer": "Charles Babbage"},
+{"chapter": "Introduction to Computer", "question": "Which electronic components were used in First Generation Computers?\n(प्रथम पीढ़ी के कंप्यूटरों में किन इलेक्ट्रॉनिक घटकों का उपयोग किया गया था?)", "options": ["Transistors (ट्रांजिस्टर)", "Integrated Circuits (इंटीग्रेटेड सर्किट)", "Vacuum Tubes (वैक्यूम ट्यूब)", "Microprocessors (माइक्रोप्रोसेसर)"], "answer": "Vacuum Tubes"},
+{"chapter": "Introduction to Computer", "question": "What is the full form of ALU in computer architecture?\n(कंप्यूटर आर्किटेक्चर में ALU का पूर्ण रूप क्या है?)", "options": ["Arithmetic Logic Unit", "Advanced Logic Unit", "Array Logic Unit", "Application Logic Unit"], "answer": "Arithmetic Logic Unit"},
+{"chapter": "Introduction to Computer", "question": "Which of the following is a permanent non-volatile memory?\n(निम्नलिखित में से कौन सी एक स्थायी नॉन-वोलेटाइल मेमोरी है?)", "options": ["RAM", "ROM", "Cache (कैश)", "SRAM"], "answer": "ROM"},
+{"chapter": "Introduction to Computer", "question": "One Gigabyte (1 GB) is equal to how many Megabytes (MB)?\n(एक गीगाबाइट (1 GB) कितने मेगाबाइट (MB) के बराबर होता है?)", "options": ["1000 MB", "1024 MB", "512 MB", "2048 MB"], "answer": "1024 MB"},
+{"chapter": "Introduction to Computer", "question": "Which computer generation introduced the concept of Microprocessors?\n(किस कंप्यूटर पीढ़ी में माइक्रोप्रोसेसर की अवधारणा पेश की गई थी?)", "options": ["Second Generation (दूसरी पीढ़ी)", "Third Generation (तीसरी पीढ़ी)", "Fourth Generation (चौथी पीढ़ी)", "Fifth Generation (पांचवीं पीढ़ी)"], "answer": "Fourth Generation"},
+{"chapter": "Introduction to Computer", "question": "Which of the following is an input device?\n(निम्नलिखित में से कौन सा एक इनपुट डिवाइस है?)", "options": ["Monitor (मॉनिटर)", "Printer (प्रिंटर)", "Light Pen (लाइट पेन)", "Plotter (प्लॉटर)"], "answer": "Light Pen"},
+{"chapter": "Introduction to Computer", "question": "What is the main brain of any computer system called?\n(किसी भी कंप्यूटर सिस्टम का मुख्य दिमाग क्या कहलाता है?)", "options": ["Motherboard (मदरबोर्ड)", "CPU", "Hard Disk (हार्ड डिस्क)", "Control Unit (कंट्रोल यूनिट)"], "answer": "CPU"},
+{"chapter": "Introduction to Computer", "question": "Which type of computer is primarily used in weather forecasting and scientific research?\n(मौसम के पूर्वानुमान और वैज्ञानिक अनुसंधान में मुख्य रूप से किस प्रकार के कंप्यूटर का उपयोग किया जाता है?)", "options": ["Mainframe Computer (मेनफ्रेम कंप्यूटर)", "Mini Computer (मिनी कंप्यूटर)", "Supercomputer (सुपरकंप्यूटर)", "Microcomputer (माइक्रोकंप्यूटर)"], "answer": "Supercomputer"},
+{"chapter": "Introduction to Computer", "question": "What is the smallest unit of data in a computer?\n(कंप्यूटर में डेटा की सबसे छोटी इकाई क्या है?)", "options": ["Byte (बाइट)", "Nibble (निबल)", "Bit (बिट)", "Kilobyte (किलोबाइट)"], "answer": "Bit"},
+{"chapter": "Introduction to Computer", "question": "A collection of 4 bits is known as a ________.\n(4 बिट्स के संग्रह को ________ के रूप में जाना जाता है।)", "options": ["Byte (बाइट)", "Nibble (निबल)", "Word (वर्ड)", "Block (ब्लॉक)"], "answer": "Nibble"},
+{"chapter": "Introduction to Computer", "question": "Which of the following is an example of secondary memory?\n(निम्नलिखित में से कौन सा सेकेंडरी मेमोरी का उदाहरण है?)", "options": ["RAM", "ROM", "Solid State Drive (SSD)", "Register (रजिस्टर)"], "answer": "Solid State Drive (SSD)"},
+{"chapter": "Introduction to Computer", "question": "Artificial Intelligence (AI) is associated with which generation of computers?\n(आर्टिफिशियल इंटेलिजेंस (AI) कंप्यूटर की किस पीढ़ी से संबंधित है?)", "options": ["Third Generation (तीसरी पीढ़ी)", "Fourth Generation (चौथी पीढ़ी)", "Fifth Generation (पांचवीं पीढ़ी)", "Sixth Generation (छठी पीढ़ी)"], "answer": "Fifth Generation"},
+{"chapter": "Introduction to Computer", "question": "What is the full form of GUI?\n(GUI का पूर्ण रूप क्या है?)", "options": ["Graphical User Interface", "General User Interface", "Global User Index", "Graphic Universal Integration"], "answer": "Graphical User Interface"},
+{"chapter": "Introduction to Computer", "question": "Which part of the CPU coordinates the movement of data and instructions?\n(CPU का कौन सा भाग डेटा और निर्देशों के संचलन का समन्वय करता है?)", "options": ["ALU", "Control Unit (कंट्रोल यूनिट)", "Registers (रजिस्टर)", "RAM"], "answer": "Control Unit"},
+{"chapter": "Introduction to Computer", "question": "Which device is used to convert hard copy text/images into digital soft copy?\n(हार्ड कॉपी टेक्स्ट/इमेजेस को डिजिटल सॉफ्ट कॉपी में बदलने के लिए किस डिवाइस का उपयोग किया जाता है?)", "options": ["Printer (प्रिंटर)", "Plotter (प्लॉटर)", "Scanner (स्कैनर)", "Monitor (मॉनिटर)"], "answer": "Scanner"},
+{"chapter": "Introduction to Computer", "question": "What does RAM stand for?\n(RAM का क्या अर्थ है?)", "options": ["Read Access Memory", "Random Access Memory", "Ready Application Module", "Remote Access Memory"], "answer": "Random Access Memory"},
+{"chapter": "Introduction to Computer", "question": "Which of the following is an impact printer?\n(निम्नलिखित में से कौन सा एक इम्पैक्ट प्रिंटर है?)", "options": ["Laser Printer (लेजर प्रिंटर)", "Inkjet Printer (इंकजेट प्रिंटर)", "Dot Matrix Printer (डॉट मैट्रिक्स प्रिंटर)", "Thermal Printer (थर्मल प्रिंटर)"], "answer": "Dot Matrix Printer"},
+{"chapter": "Introduction to Computer", "question": "The speed of modern CPUs is generally measured in ________.\n(आधुनिक CPU की गति आम तौर पर ________ में मापी जाती है।)", "options": ["Kilohertz (kHz)", "Megabytes (MB)", "Gigahertz (GHz)", "Megabits (Mb)"], "answer": "Gigahertz (GHz)"},
+{"chapter": "Introduction to Computer", "question": "Which memory type needs continuous refreshing to retain data?\n(डेटा बनाए रखने के लिए किस मेमोरी प्रकार को लगातार रिफ्रेश करने की आवश्यकता होती है?)", "options": ["SRAM", "DRAM", "ROM", "Flash Memory (फ्लैश मेमोरी)"], "answer": "DRAM"},
+{"chapter": "Introduction to Computer", "question": "What is the full form of EEPROM?\n(EEPROM का पूर्ण रूप क्या है?)", "options": ["Electrically Erasable Programmable Read-Only Memory", "Extended Easily Programmable Read-Only Memory", "Electronic Erasable Production Read-Only Memory", "Efficient Erasable Programmable Read-Only Memory"], "answer": "Electrically Erasable Programmable Read-Only Memory"},
+{"chapter": "Introduction to Computer", "question": "Which of the following is an example of system software?\n(निम्नलिखित में से कौन सा सिस्टम सॉफ्टवेयर का एक उदाहरण है?)", "options": ["MS Word", "Google Chrome", "Operating System (ऑपरेटिंग सिस्टम)", "Photoshop"], "answer": "Operating System"},
+{"chapter": "Introduction to Computer", "question": "What was the name of the first general-purpose electronic digital computer?\n(पहले सामान्य उद्देश्य वाले इलेक्ट्रॉनिक डिजिटल कंप्यूटर का नाम क्या था?)", "options": ["UNIVAC", "ENIAC", "EDVAC", "ABACUS"], "answer": "ENIAC"},
+{"chapter": "Introduction to Computer", "question": "Which port is most commonly used to connect modern keyboards, mice, and flash drives?\n(आधुनिक कीबोर्ड, माउस और फ्लैश ड्राइव को जोड़ने के लिए सबसे अधिक किस पोर्ट का उपयोग किया जाता है?)", "options": ["VGA Port", "Serial Port", "USB Port", "Parallel Port"], "answer": "USB Port"},
+{"chapter": "Introduction to Computer", "question": "What is the base of the Hexadecimal number system?\n(हेक्साडेसिमल संख्या प्रणाली का आधार क्या है?)", "options": ["2", "8", "10", "16"], "answer": "16"},
+{"chapter": "Introduction to Computer", "question": "Which of the following is used to produce high-quality vector graphics and large architectural drawings?\n(उच्च गुणवत्ता वाले वेक्टर ग्राफिक्स और बड़े आर्किटेक्चरल ड्रॉइंग बनाने के लिए निम्नलिखित में से किसका उपयोग किया जाता है?)", "options": ["Inkjet Printer (इंकजेट प्रिंटर)", "Plotter (प्लॉटर)", "Laser Printer (लेजर प्रिंटर)", "Dot Matrix (डॉट मैट्रिक्स)"], "answer": "Plotter"},
+{"chapter": "Introduction to Computer", "question": "Where are the basic BIOS boot instructions stored permanently?\n(बुनियादी BIOS बूट निर्देश स्थायी रूप से कहाँ संग्रहीत होते हैं?)", "options": ["RAM", "ROM Chip (रॉम चिप)", "Hard Disk (हार्ड डिस्क)", "Cache Memory (कैश मेमोरी)"], "answer": "ROM Chip"},
+{"chapter": "Introduction to Computer", "question": "Integrated Circuits (ICs) were introduced in which generation of computers?\n(इंटीग्रेटेड सर्किट (IC) कंप्यूटर की किस पीढ़ी में पेश किए गए थे?)", "options": ["First Generation (प्रथम पीढ़ी)", "Second Generation (दूसरी पीढ़ी)", "Third Generation (तीसरी पीढ़ी)", "Fourth Generation (चौथी पीढ़ी)"], "answer": "Third Generation"},
+{"chapter": "Introduction to Computer", "question": "What is the binary equivalent of the decimal number 5?\n(दशमलव संख्या 5 का बाइनरी समकक्ष क्या है?)", "options": ["100", "101", "110", "111"], "answer": "101"},
+{"chapter": "Introduction to Computer", "question": "Which register holds the address of the next instruction to be executed?\n(कौन सा रजिस्टर निष्पादित होने वाले अगले निर्देश का पता रखता है?)", "options": ["Accumulator (एक्यूमलेटर)", "Program Counter (PC) (प्रोग्राम काउंटर)", "Instruction Register (इन्स्ट्रक्शन रजिस्टर)", "Memory Data Register (मेमोरी डेटा रजिस्टर)"], "answer": "Program Counter (PC)"},
+{"chapter": "Introduction to Computer", "question": "Which of the following is volatile memory?\n(निम्नलिखित में से कौन सी वोलेटाइल (अस्थायी) मेमोरी है?)", "options": ["Hard Disk (हार्ड डिस्क)", "SSD", "RAM", "CD-ROM"], "answer": "RAM"},
+{"chapter": "Introduction to Computer", "question": "What does ASCII stand for?\n(ASCII का पूर्ण रूप क्या है?)", "options": ["American Standard Code for Information Interchange", "Asian Standard Code for Audio Integration", "American Security Code for Information Interchange", "Advanced Standard Code for Information Interchange"], "answer": "American Standard Code for Information Interchange"},
+{"chapter": "Introduction to Computer", "question": "Which device acts as both an input and output device?\n(कौन सा डिवाइस इनपुट और आउटपुट डिवाइस दोनों के रूप में कार्य करता है?)", "options": ["Scanner (स्कैनर)", "Touch Screen Monitor (टच स्क्रीन मॉनिटर)", "Keyboard (कीबोर्ड)", "Printer (प्रिंटर)"], "answer": "Touch Screen Monitor"},
+{"chapter": "Introduction to Computer", "question": "What is the full form of VDU?\n(VDU का पूर्ण रूप क्या है?)", "options": ["Visual Display Unit", "Virtual Data Unit", "Video Dynamic Unit", "Visual Digital Union"], "answer": "Visual Display Unit"},
+{"chapter": "Introduction to Computer", "question": "Which storage device has the highest data transfer rate among secondary storage options?\n(सेकेंडरी स्टोरेज विकल्पों में से किस स्टोरेज डिवाइस की डेटा ट्रांसफर दर सबसे अधिक है?)", "options": ["Floppy Disk (फ्लॉपी डिस्क)", "Hard Disk Drive (HDD)", "Solid State Drive (SSD)", "DVD-ROM"], "answer": "Solid State Drive (SSD)"},
+{"chapter": "Introduction to Computer", "question": "The physically executable components of a computer system are called ________.\n(कंप्यूटर सिस्टम के भौतिक रूप से निष्पादन योग्य घटकों को ________ कहा जाता है।)", "options": ["Software (सॉफ्टवेयर)", "Hardware (हार्डवेयर)", "Firmware (फर्मवेयर)", "Shareware (शेयरवेयर)"], "answer": "Hardware"},
+{"chapter": "Introduction to Computer", "question": "Which type of software is distributed freely but requires payment for advanced features after a trial period?\n(किस प्रकार का सॉफ्टवेयर स्वतंत्र रूप से वितरित किया जाता है लेकिन ट्रायल अवधि के बाद उन्नत सुविधाओं के लिए भुगतान की आवश्यकता होती है?)", "options": ["Open Source Software (ओपन सोर्स सॉफ्टवेयर)", "Freeware (फ्रीवेयर)", "Shareware (शेयरवेयर)", "Public Domain Software (पब्लिक डोमेन सॉफ्टवेयर)"], "answer": "Shareware"},
+{"chapter": "Introduction to Computer", "question": "What type of computer architecture is followed by most modern computers?\n(अधिकांश आधुनिक कंप्यूटरों द्वारा किस प्रकार के कंप्यूटर आर्किटेक्चर का पालन किया जाता है?)", "options": ["Harvard Architecture", "Von Neumann Architecture", "Analytical Engine Model", "Eniac Architecture"], "answer": "Von Neumann Architecture"},
+{"chapter": "Introduction to Computer", "question": "Which secondary storage device uses optical laser technology to read and write data?\n(कौन सा सेकेंडरी स्टोरेज डिवाइस डेटा पढ़ने और लिखने के लिए ऑप्टिकल लेजर तकनीक का उपयोग करता है?)", "options": ["Hard Disk (हार्ड डिस्क)", "CD-RW", "Solid State Drive (एसएसडी)", "Magnetic Tape (मैग्नेटिक टेप)"], "answer": "CD-RW"},
+{"chapter": "Introduction to Computer", "question": "What is the full form of CMOS in relation to computers?\n(कंप्यूटर के संबंध में CMOS का पूर्ण रूप क्या है?)", "options": ["Complementary Metal-Oxide-Semiconductor", "Common Machine Operating System", "Computer Memory Output System", "Core Module Operating Software"], "answer": "Complementary Metal-Oxide-Semiconductor"},
+{"chapter": "Introduction to Computer", "question": "Which of the following is considered the first calculation device in human history?\n(निम्नलिखित में से किसे मानव इतिहास में पहला गणना उपकरण माना जाता है?)", "options": ["Pascaline (पास्कलाइन)", "Analytical Engine (एनालिटिकल इंजन)", "Abacus (अबेकस)", "Napier's Bones (नेपियर्स बोन्स)"], "answer": "Abacus"},
+{"chapter": "Introduction to Computer", "question": "What is the term used for the process of loading an operating system into RAM?\n(ऑपरेटिंग सिस्टम को RAM में लोड करने की प्रक्रिया के लिए किस शब्द का उपयोग किया जाता है?)", "options": ["Processing (प्रोसेसिंग)", "Booting (बूटिंग)", "Executing (एक्जीक्यूटिंग)", "Compiling (कंपाइलिंग)"], "answer": "Booting"},
+{"chapter": "Introduction to Computer", "question": "Which component protects the internal parts of a computer from external electrical spikes?\n(कौन सा घटक कंप्यूटर के आंतरिक भागों को बाहरी विद्युत स्पाइक्स से बचाता है?)", "options": ["SMPS", "Motherboard (मदरबोर्ड)", "UPS", "CPU Fan (सीपीयू फैन)"], "answer": "UPS"},
+{"chapter": "Introduction to Computer", "question": "Which type of memory is directly integrated inside the CPU chip to hold current data values?\n(वर्तमान डेटा मानों को रखने के लिए CPU चिप के अंदर सीधे किस प्रकार की मेमोरी को एकीकृत किया जाता है?)", "options": ["Registers (रजिस्टर)", "RAM", "ROM", "Virtual Memory (वर्चुअल मेमोरी)"], "answer": "Registers"},
+{"chapter": "Introduction to Computer", "question": "What is the capacity of a standard high-density Floppy Disk?\n(एक मानक उच्च घनत्व वाली फ्लॉपी डिस्क की क्षमता कितनी होती है?)", "options": ["700 MB", "4.7 GB", "1.44 MB", "2.88 MB"], "answer": "1.44 MB"},
+{"chapter": "Introduction to Computer", "question": "The binary system uses only two digits, which are ________.\n(बाइनरी सिस्टम केवल दो अंकों का उपयोग करता है, जो हैं ________।)", "options": ["1 and 2", "0 and 1", "A and B", "9 and 10"], "answer": "0 and 1"},
+{"chapter": "Introduction to Computer", "question": "Which memory acts as an overflow space when the physical RAM is completely full?\n(जब फिजिकल RAM पूरी तरह से भर जाती है तो कौन सी मेमोरी ओवरफ्लो释放 स्पेस के रूप में कार्य करती है?)", "options": ["Cache Memory (कैश मेमोरी)", "Flash Memory (फ्लैश मेमोरी)", "Virtual Memory (वर्चुअल मेमोरी)", "EEPROM"], "answer": "Virtual Memory"},
+{"chapter": "Introduction to Computer", "question": "What is the full form of Motherboard Form Factor standard ATX?\n(मदरबोर्ड फॉर्म फैक्टर मानक ATX का पूर्ण रूप क्या है?)", "options": ["Advanced Technology Extended", "Advanced Terminal Exchange", "Automated Transfer eXcellent", "All Technology eXecution"], "answer": "Advanced Technology Extended"},
+{"chapter": "Introduction to Computer", "question": "Which encoding standard represents characters globally for almost all languages?\n(कौन सा एन्कोडिंग मानक लगभग सभी भाषाओं के लिए विश्व स्तर पर वर्णों का प्रतिनिधित्व करता है?)", "options": ["ASCII", "Unicode (यूनिकोड)", "EBCDIC", "BCD"], "answer": "Unicode"},
     {
         "chapter": "Introduction to Computer",
         "question": "Which memory acts as an overflow space when the physical RAM is completely full?\n(जब फिजिकल RAM पूरी तरह से भर जाती है तो कौन सी मेमोरी ओवरफ्लो स्पेस के रूप में कार्य करती है?)",
