@@ -16,8 +16,12 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- qrcode.min.js Library include ki gayi hai -->
+    <!-- qrcode.min.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- Firebase SDK (v8 Compatible Libraries for CDN Integration) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
@@ -282,6 +286,22 @@
     </main>
 
     <script>
+        // --- FIREBASE INITIALIZATION ---
+        const firebaseConfig = {
+          apiKey: "AIzaSyBtK_ABh5RiHV_lX-WZ8FLbVxq7Rh93q_0",
+          authDomain: "o-level-quiz-f2545.firebaseapp.com",
+          databaseURL: "https://o-level-quiz-f2545-default-rtdb.firebaseio.com",
+          projectId: "o-level-quiz-f2545",
+          storageBucket: "o-level-quiz-f2545.firebasestorage.app",
+          messagingSenderId: "764630053537",
+          appId: "1:764630053537:web:d8b2573ebf6c47761936e0",
+          measurementId: "G-4YJZZC0N3P"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
+        // --- DEV-TOOLS PROTECTION ---
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.onkeydown = function(e) {
             if (e.keyCode == 123) return false;
@@ -357,8 +377,6 @@
             initPalette();
             renderQuestion();
             startTimer();
-            
-            // Exam Start hote hi background me dynamic QR code layer ko ready kar dena
             generateDynamicQRCode();
         }
 
@@ -484,17 +502,30 @@
             document.getElementById('res-corr').textContent = correct;
             document.getElementById('res-wrng').textContent = questions.length - correct;
             document.getElementById('res-total').textContent = questions.length;
+
+            // --- FIREBASE LIVE DATA PUSH ---
+            try {
+                database.ref('student_results').push({
+                    studentName: candidateName,
+                    moduleCode: selectedModCode,
+                    scorePercentage: scorePercent + "%",
+                    grade: grade,
+                    correctAnswers: correct,
+                    totalQuestions: questions.length,
+                    submittedAt: new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"})
+                });
+                console.log("Student performance successfully recorded in database.");
+            } catch (firebaseError) {
+                console.error("Database sync failed:", firebaseError);
+            }
         }
 
-        // Function to Generate QR Code Using qrcode.min.js
         function generateDynamicQRCode() {
             const upiId = "mandavikaushal913@okaxis";
             const upiUrl = `upi://pay?pa=${upiId}&pn=Kaushal%20Institute&cu=INR`;
             
-            // Mobile anchor tag dynamic intent update
             document.getElementById('dynamic-upi-link').href = upiUrl;
             
-            // Clean container before injecting new canvas
             const qrContainer = document.getElementById("qrcode");
             qrContainer.innerHTML = "";
             
@@ -502,7 +533,7 @@
                 text: upiUrl,
                 width: 128,
                 height: 128,
-                colorDark: "#003366", // Matching Theme Palette
+                colorDark: "#003366", 
                 colorLight: "#ffffff",
                 correctLevel: QRCode.CorrectLevel.H
             });
