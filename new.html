@@ -3,104 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaushal Institute - Visitor Logs</title>
+    <title>Kaushal Institute - Admin Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <!-- Firebase Libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body class="bg-slate-900 text-white min-h-screen p-4 md:p-10">
+<body class="bg-slate-100 min-h-screen">
 
-    <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-10">
-            <h1 class="text-3xl font-black text-orange-500 uppercase">Admin Control Panel</h1>
-            <p class="text-slate-400 text-sm">Real-time Visitor Tracking for Kaushal Institute</p>
-        </div>
-
-        <div class="flex justify-center mb-10">
-            <button onclick="toggleLogs()" class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-2xl font-bold shadow-xl transition-all flex items-center gap-3">
-                <i class="fas fa-database"></i> SHOW ALL VISITORS DATA
-            </button>
-        </div>
-
-        <div id="logs-section" class="hidden bg-white text-slate-800 rounded-3xl overflow-hidden shadow-2xl">
-            <div class="bg-slate-100 p-5 border-b flex justify-between items-center">
-                <h2 class="font-bold uppercase text-slate-600">Live Traffic Logs</h2>
-                <span id="visitor-count" class="bg-orange-500 text-white px-4 py-1 rounded-full text-xs font-bold">0 Users</span>
+    <!-- Navbar -->
+    <header class="bg-[#003366] text-white p-4 shadow-md sticky top-0 z-50 border-b-4 border-orange-500">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fas fa-user-shield text-2xl text-orange-400"></i>
+                <div>
+                    <h1 class="text-lg font-bold uppercase leading-none">Kaushal Institute</h1>
+                    <p class="text-[10px] text-orange-300 font-bold uppercase tracking-wider">Students Live Exam Monitor</p>
+                </div>
             </div>
-            
-            <div class="overflow-x-auto">
-                <table class="w-full text-left">
-                    <thead class="bg-slate-50 text-[10px] uppercase text-slate-400">
-                        <tr>
-                            <th class="p-4">IP Address</th>
-                            <th class="p-4">Date & Time</th>
-                            <th class="p-4">Device / OS</th>
-                        </tr>
-                    </thead>
-                    <tbody id="data-table" class="text-sm divide-y">
-                        </tbody>
-                </table>
+            <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full border border-white/10">
+                <span class="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></span>
+                <span id="total-count" class="text-xs font-bold font-mono">Total Results: 0</span>
             </div>
         </div>
-    </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        
+        <!-- Search and Filters Section -->
+        <div class="bg-white p-4 rounded-xl shadow-sm mb-6 flex flex-col sm:flex-row gap-4 justify-between items-center">
+            <div class="relative w-full sm:w-72">
+                <i class="fas fa-search absolute left-3 top-3.5 text-slate-400 text-sm"></i>
+                <input type="text" id="search-input" oninput="filterCards()" placeholder="Search student name..." class="w-full bg-slate-50 border border-slate-200 pl-9 pr-4 py-2.5 rounded-xl text-sm font-medium outline-none focus:border-blue-600 transition-all">
+            </div>
+            <div class="flex gap-2 w-full sm:w-auto">
+                <select id="module-filter" onchange="filterCards()" class="w-full sm:w-auto bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 outline-none focus:border-blue-600">
+                    <option value="ALL">All Papers</option>
+                    <option value="M1">M1-R5</option>
+                    <option value="M2">M2-R5</option>
+                    <option value="M3">M3-R5</option>
+                    <option value="M4">M4-R5</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- No Data State (Hidden by default) -->
+        <div id="no-data" class="hidden text-center py-20 bg-white rounded-2xl shadow-sm border border-dashed border-slate-300">
+            <i class="fas fa-folder-open text-5xl text-slate-300 mb-3"></i>
+            <h3 class="text-slate-700 font-bold text-lg">Koi data nahi mila!</h3>
+            <p class="text-slate-400 text-xs">Jaise hi bache test submit karenge, cards yahan dikhne lagenge.</p>
+        </div>
+
+        <!-- Cards Live Grid Grid -->
+        <div id="cards-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Dynamic Cards Will Load Here -->
+        </div>
+
+    </main>
 
     <script>
-        // 1. FIREBASE SETUP (Aapko apna Firebase account bana kar ye detail badalni hogi)
+        // --- FIREBASE CONFIGURATION (Same as main file) ---
         const firebaseConfig = {
-            databaseURL: "https://your-project-id.firebaseio.com" // <--- Yahan apna URL dalein
+          apiKey: "AIzaSyBtK_ABh5RiHV_lX-WZ8FLbVxq7Rh93q_0",
+          authDomain: "o-level-quiz-f2545.firebaseapp.com",
+          databaseURL: "https://o-level-quiz-f2545-default-rtdb.firebaseio.com",
+          projectId: "o-level-quiz-f2545",
+          storageBucket: "o-level-quiz-f2545.firebasestorage.app",
+          messagingSenderId: "764630053537",
+          appId: "1:764630053537:web:d8b2573ebf6c47761936e0",
+          measurementId: "G-4YJZZC0N3P"
         };
+
+        // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-        const db = firebase.database();
+        const database = firebase.database();
 
-        // 2. VISITOR DATA CAPTURE (Ye har visit par chalega)
-        async function captureVisitor() {
-            try {
-                const res = await fetch('https://api.ipify.org?format=json');
-                const ipData = await res.json();
-                
-                const newVisitor = {
-                    ip: ipData.ip,
-                    time: new Date().toLocaleString('en-IN'),
-                    platform: navigator.platform,
-                    agent: navigator.userAgent.slice(0, 50) + "..."
-                };
+        let localResultsData = [];
 
-                // Database mein "visitors" folder ke andar data save karein
-                db.ref('visitors').push(newVisitor);
-            } catch (err) { console.error("Tracking Error"); }
-        }
-
-        // 3. SHOW DATA LOGIC
-        function toggleLogs() {
-            const section = document.getElementById('logs-section');
-            section.classList.toggle('hidden');
+        // --- REALTIME DATA FETCHING FROM FIREBASE ---
+        database.ref('student_results').on('value', (snapshot) => {
+            const data = snapshot.val();
+            const grid = document.getElementById('cards-grid');
+            const totalCountText = document.getElementById('total-count');
             
-            // Database se real-time data uthana
-            db.ref('visitors').on('value', (snapshot) => {
-                const data = snapshot.val();
-                const table = document.getElementById('data-table');
-                table.innerHTML = "";
-                
-                let count = 0;
-                for (let id in data) {
-                    count++;
-                    const v = data[id];
-                    table.innerHTML += `
-                        <tr class="hover:bg-blue-50 transition-colors">
-                            <td class="p-4 font-mono font-bold text-blue-600">${v.ip}</td>
-                            <td class="p-4 text-slate-500">${v.time}</td>
-                            <td class="p-4 text-xs font-medium text-slate-700">${v.platform} <br> <span class="text-[9px] text-slate-400">${v.agent}</span></td>
-                        </tr>
-                    `;
-                }
-                document.getElementById('visitor-count').innerText = `${count} Users Found`;
+            grid.innerHTML = "";
+            localResultsData = [];
+
+            if (!data) {
+                document.getElementById('no-data').classList.remove('hidden');
+                totalCountText.textContent = "Total Results: 0";
+                return;
+            }
+
+            document.getElementById('no-data').classList.add('hidden');
+
+            // Convert Object to Array and Sort by Latest Submission Time
+            Object.keys(data).forEach(key => {
+                localResultsData.push({ id: key, ...data[key] });
+            });
+            
+            // Latest submissions will show first
+            localResultsData.reverse(); 
+
+            totalCountText.textContent = `Total Results: ${localResultsData.length}`;
+            renderAllCards(localResultsData);
+        });
+
+        // --- FUNCTION TO GENERATE CARDS ---
+        function renderAllCards(records) {
+            const grid = document.getElementById('cards-grid');
+            grid.innerHTML = "";
+
+            records.forEach(student => {
+                // Grade dynamic badges color mapping
+                let gradeColor = "bg-red-100 text-red-700 border-red-200";
+                if(student.grade === 'S') gradeColor = "bg-purple-100 text-purple-700 border-purple-200 animate-bounce";
+                else if(['A', 'B'].includes(student.grade)) gradeColor = "bg-green-100 text-green-700 border-green-200";
+                else if(['C', 'D'].includes(student.grade)) gradeColor = "bg-blue-100 text-blue-700 border-blue-200";
+
+                // Module descriptions
+                const modNames = { 'M1': 'IT Tools', 'M2': 'Web Design', 'M3': 'Python Pro.', 'M4': 'IoT Basic' };
+                const paperName = modNames[student.moduleCode] || 'O Level Paper';
+
+                const cardHtml = `
+                    <div class="student-card bg-white rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-all overflow-hidden flex flex-col justify-between" 
+                         data-name="${student.studentName.toLowerCase()}" 
+                         data-module="${student.moduleCode}">
+                        
+                        <!-- Header Part inside card -->
+                        <div class="p-5 border-b border-slate-100">
+                            <div class="flex justify-between items-start gap-2 mb-3">
+                                <span class="bg-slate-100 border text-slate-700 text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider">
+                                    ${student.moduleCode || 'N/A'} : ${paperName}
+                                </span>
+                                <span class="text-[11px] text-slate-400 font-bold flex items-center gap-1">
+                                    <i class="far fa-clock"></i> ${student.submittedAt ? student.submittedAt.split(',')[1]?.trim() || student.submittedAt : 'Just Now'}
+                                </span>
+                            </div>
+                            <h3 class="text-slate-800 font-extrabold text-base uppercase tracking-tight truncate">
+                                ${student.studentName}
+                            </h3>
+                        </div>
+
+                        <!-- Info/Analytics Grid inside card -->
+                        <div class="bg-slate-50/50 p-5 grid grid-cols-2 gap-4 border-b border-slate-100">
+                            <div>
+                                <p class="text-[10px] text-slate-400 font-bold uppercase mb-0.5">Percentage</p>
+                                <p class="text-xl font-black text-slate-800">${student.scorePercentage || '0%'}</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-400 font-bold uppercase mb-0.5">Accuracy</p>
+                                <p class="text-xs font-bold text-slate-600 mt-1">
+                                    <span class="text-green-600 font-extrabold">${student.correctAnswers || 0}</span> / ${student.totalQuestions || 0} Qs
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Footer Grade badge section inside card -->
+                        <div class="p-4 bg-slate-50 flex items-center justify-between">
+                            <span class="text-[9px] text-slate-400 font-bold uppercase">Result Status:</span>
+                            <span class="border px-4 py-0.5 rounded-full text-xs font-black tracking-widest ${gradeColor}">
+                                GRADE ${student.grade || 'F'}
+                            </span>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += cardHtml;
             });
         }
 
-        // Auto capture on load
-        captureVisitor();
+        // --- FILTER AND SEARCH LOGIC ---
+        function filterCards() {
+            const searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
+            const moduleFilter = document.getElementById('module-filter').value;
+
+            const filteredData = localResultsData.filter(item => {
+                const matchesName = item.studentName.toLowerCase().includes(searchQuery);
+                const matchesModule = (moduleFilter === "ALL") || (item.moduleCode === moduleFilter);
+                return matchesName && matchesModule;
+            });
+
+            renderAllCards(filteredData);
+            
+            // Toggle data visibility layer if filter returns 0 records
+            const noDataEl = document.getElementById('no-data');
+            if(filteredData.length === 0) {
+                noDataEl.classList.remove('hidden');
+            } else {
+                noDataEl.classList.add('hidden');
+            }
+        }
     </script>
 </body>
 </html>
