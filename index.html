@@ -16,7 +16,7 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- qrcode.min.js Library yahan include ki gayi hai -->
+    <!-- qrcode.min.js Library include ki gayi hai -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
     <style>
@@ -154,8 +154,7 @@
                         <p class="font-bold text-slate-800 text-sm uppercase tracking-wide mb-3 text-center md:text-left">
                             <i class="fas fa-book-open text-blue-900 mr-2"></i>Select Chapters
                         </p>
-                        <div id="chapter-list" class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 bg-slate-50 rounded-xl border max-h-48 overflow-y-auto">
-                            </div>
+                        <div id="chapter-list" class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 bg-slate-50 rounded-xl border max-h-48 overflow-y-auto"></div>
                     </div>
 
                     <p class="font-bold text-slate-800 text-lg mb-6">Select Number of Questions</p>
@@ -487,7 +486,7 @@
             document.getElementById('res-total').textContent = questions.length;
         }
 
-        // Dedicated Function to Generate QR Code Using qrcode.min.js
+        // Function to Generate QR Code Using qrcode.min.js
         function generateDynamicQRCode() {
             const upiId = "mandavikaushal913@okaxis";
             const upiUrl = `upi://pay?pa=${upiId}&pn=Kaushal%20Institute&cu=INR`;
@@ -495,7 +494,7 @@
             // Mobile anchor tag dynamic intent update
             document.getElementById('dynamic-upi-link').href = upiUrl;
             
-            // Clean container before injecting new canvas canvas
+            // Clean container before injecting new canvas
             const qrContainer = document.getElementById("qrcode");
             qrContainer.innerHTML = "";
             
