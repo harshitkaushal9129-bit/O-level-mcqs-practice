@@ -31,18 +31,16 @@
             user-select: none; 
             -webkit-tap-highlight-color: transparent;
         }
-        input[type="text"] { -webkit-user-select: text; user-select: text; }
+        input[type="text"], input[type="email"], input[type="password"] { -webkit-user-select: text; user-select: text; }
 
         body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; height: 100vh; margin: 0; overflow: hidden; display: flex; flex-direction: column; }
         
-        /* NIELIT Palette Shapes */
         .q-btn { width: 32px; height: 32px; font-size: 11px; font-weight: 700; border: 1px solid #cbd5e1; cursor: pointer; background: #fff; transition: all 0.2s; display: flex; align-items: center; justify-content: center; }
         .q-answered { background: #16a34a !important; color: white !important; clip-path: polygon(0% 20%, 20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%); border: none; }
         .q-not-answered { background: #dc2626 !important; color: white !important; clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); border: none; }
         .q-marked { background: #7c3aed !important; color: white !important; border-radius: 50% !important; border: none; }
         .q-current { border: 3px solid #0f172a !important; transform: scale(1.1); z-index: 10; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
 
-        /* Modern Option Design */
         .opt-label { border: 2px solid #e2e8f0; border-radius: 12px; padding: 14px 20px; cursor: pointer; display: flex; align-items: center; background: #fff; transition: 0.2s; position: relative; gap: 12px; }
         .opt-label:hover { border-color: #94a3b8; background: #f8fafc; }
         .opt-input:checked + .opt-label { background: #eff6ff; border-color: #2563eb; color: #1e40af; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
@@ -60,22 +58,9 @@
         .btn-submit { background: #ef4444; color: white; }
         .btn-action:active { transform: scale(0.96); }
 
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-
-        /* Print Media optimization rules */
-        @media print {
-            body { background: white !important; overflow: visible !important; height: auto !important; }
-            header, .no-print, footer, aside, .bg-[#003366] { display: none !important; }
-            #result-ui { position: relative !important; z-index: 10 !important; display: block !important; overflow: visible !important; }
-            .max-w-4xl { max-w: 100% !important; padding: 0 !important; }
-            .bg-gradient-to-br { color: black !important; background: transparent !important; padding: 10px 0 !important; border-bottom: 2px solid #000; }
-            #res-grade { color: black !important; text-shadow: none !important; font-size: 5rem !important; }
-            .grid { display: block !important; }
-            .grid > div { margin-bottom: 10px !important; border: 1px solid #ccc !important; background: white !important; }
-        }
     </style>
 </head>
 <body oncontextmenu="return false;">
@@ -88,38 +73,66 @@
                 <p class="text-[10px] text-orange-400 font-bold uppercase">CBT Interface | Kaushal Institute</p>
             </div>
         </div>
-        <div id="exam-timer" class="bg-black/40 px-5 py-2 rounded-full font-mono text-xl font-bold text-orange-400 border border-white/20 shadow-inner">90:00</div>
+        <div id="exam-timer" class="bg-black/40 px-5 py-2 rounded-full font-mono text-xl font-bold text-orange-400 border border-white/20 shadow-inner hide">90:00</div>
     </header>
 
     <main class="flex-1 relative overflow-hidden flex flex-col">
         
-        <section id="login-ui" class="absolute inset-0 z-[100] bg-slate-200 flex items-center justify-center p-4">
-            <div class="bg-white w-full max-w-md rounded-2xl shadow-2xl overflow-hidden">
+        <!-- AUTH CONTAINER (REGISTRATION & LOGIN SWITCHER) -->
+        <section id="auth-ui" class="absolute inset-0 z-[100] bg-slate-200 flex items-center justify-center p-4 overflow-y-auto">
+            <div class="bg-white w-full max-w-md rounded-2xl shadow-2xl overflow-hidden my-auto">
                 <div class="bg-[#003366] p-6 text-center text-white">
-                    <i class="fas fa-user-circle text-4xl mb-2"></i>
-                    <h2 class="text-xl font-bold uppercase tracking-wider">Candidate Login</h2>
+                    <i class="fas fa-user-shield text-4xl mb-2"></i>
+                    <h2 id="auth-title" class="text-xl font-bold uppercase tracking-wider">Candidate Login</h2>
                 </div>
-                <div class="p-8">
+                
+                <!-- LOGIN FORM -->
+                <div id="login-form" class="p-8">
+                    <div class="mb-4">
+                        <label class="text-xs font-bold text-slate-500 uppercase mb-2 block">Registered Email</label>
+                        <input type="text" id="login-email" class="w-full border-2 border-slate-200 p-3 rounded-xl outline-none focus:border-blue-600 font-semibold" placeholder="Enter email...">
+                    </div>
                     <div class="mb-6">
-                        <label class="text-xs font-bold text-slate-500 uppercase mb-2 block">Student Name</label>
-                        <input type="text" id="cand-name" class="w-full border-2 border-slate-200 p-4 rounded-xl outline-none focus:border-blue-600 transition-all font-semibold text-lg" placeholder="Type your full name...">
+                        <label class="text-xs font-bold text-slate-500 uppercase mb-2 block">Security Captcha</label>
+                        <div class="flex items-center gap-3 mb-2">
+                            <span id="login-captcha-q" class="bg-slate-100 px-4 py-2 rounded-xl font-mono font-bold text-slate-700 border flex-1 text-center tracking-wider"></span>
+                            <button onclick="generateLoginCaptcha()" class="text-slate-400 hover:text-slate-600 p-2"><i class="fas fa-sync-alt"></i></button>
+                        </div>
+                        <input type="text" id="login-captcha-ans" class="w-full border-2 border-slate-200 p-3 rounded-xl outline-none focus:border-blue-600 font-semibold" placeholder="Enter sum...">
                     </div>
-                    <button onclick="login()" class="w-full bg-[#ff9933] text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-orange-200 hover:-translate-y-1 transition-all uppercase">Start Examination</button>
-                    <div class="mt-6 flex justify-center gap-4 text-slate-400 text-sm">
-                        <i class="fab fa-facebook"></i>
-                        <i class="fab fa-youtube"></i>
-                        <i class="fab fa-telegram"></i>
+                    <button onclick="handleLogin()" class="w-full bg-[#ff9933] text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-orange-200 transition-all uppercase mb-4">Login</button>
+                    <p class="text-center text-xs text-slate-500 font-medium">New student? <button onclick="switchAuthTab('reg')" class="text-blue-600 font-bold underline">Register here</button></p>
+                </div>
+
+                <!-- REGISTRATION FORM -->
+                <div id="reg-form" class="p-8 hide">
+                    <div class="mb-4">
+                        <label class="text-xs font-bold text-slate-500 uppercase mb-2 block">Full Name</label>
+                        <input type="text" id="reg-name" class="w-full border-2 border-slate-200 p-3 rounded-xl outline-none focus:border-blue-600 font-semibold" placeholder="Your full name...">
                     </div>
-                    <p class="text-[10px] text-center text-slate-400 mt-4 uppercase">© 2026 Kaushal Institute IT Cell</p>
+                    <div class="mb-4">
+                        <label class="text-xs font-bold text-slate-500 uppercase mb-2 block">Email Address (ID)</label>
+                        <input type="email" id="reg-email" class="w-full border-2 border-slate-200 p-3 rounded-xl outline-none focus:border-blue-600 font-semibold" placeholder="Your email...">
+                    </div>
+                    <div class="mb-6">
+                        <label class="text-xs font-bold text-slate-500 uppercase mb-2 block">Profile Photo URL (Optional)</label>
+                        <input type="text" id="reg-img" class="w-full border-2 border-slate-200 p-3 rounded-xl outline-none focus:border-blue-600 font-semibold" placeholder="https://... (Image link)">
+                    </div>
+                    <button onclick="handleRegister()" class="w-full bg-blue-900 text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-blue-200 transition-all uppercase mb-4">Register & Proceed</button>
+                    <p class="text-center text-xs text-slate-500 font-medium">Already registered? <button onclick="switchAuthTab('login')" class="text-blue-600 font-bold underline">Login here</button></p>
                 </div>
             </div>
         </section>
 
+        <!-- MODULE SELECTION -->
         <section id="module-ui" class="hide absolute inset-0 z-[90] bg-slate-100 p-4 md:p-8 overflow-y-auto">
             <div class="max-w-5xl mx-auto">
-                <div class="bg-white p-6 rounded-2xl shadow-sm mb-8 border-b-4 border-blue-900">
-                    <h2 class="text-2xl font-black text-slate-800 uppercase tracking-tight">Select Examination Paper</h2>
-                    <p class="text-slate-500 text-sm font-medium">Choose one module to begin your practice session</p>
+                <div class="bg-white p-6 rounded-2xl shadow-sm mb-8 border-b-4 border-blue-900 flex justify-between items-center">
+                    <div>
+                        <h2 class="text-2xl font-black text-slate-800 uppercase tracking-tight">Select Examination Paper</h2>
+                        <p class="text-slate-500 text-sm font-medium">Choose one module to begin your practice session</p>
+                    </div>
+                    <button onclick="logout()" class="text-xs font-bold text-red-500 bg-red-50 px-4 py-2 rounded-xl border border-red-200">Logout</button>
                 </div>
                 
                 <div id="step-1" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -173,6 +186,7 @@
             </div>
         </section>
 
+        <!-- EXAM INTERFACE -->
         <section id="exam-ui" class="hide flex flex-col md:flex-row h-full w-full overflow-hidden bg-white">
             <div class="flex-1 flex flex-col h-full overflow-hidden border-r border-slate-200">
                 <div class="bg-slate-50 px-4 py-3 text-[11px] font-bold text-slate-500 flex justify-between items-center border-b">
@@ -201,11 +215,14 @@
 
             <aside class="w-full md:w-80 bg-slate-50 flex flex-col shrink-0 h-48 md:h-full border-t md:border-t-0">
                 <div class="p-4 bg-white border-b flex justify-between items-center shadow-sm">
-                    <div>
-                        <p class="text-[10px] text-slate-400 font-black uppercase">Examinee</p>
-                        <p id="usr-display" class="font-bold text-blue-900 text-sm truncate max-w-[140px]"></p>
+                    <div class="flex items-center gap-2">
+                        <img id="sidebar-user-img" src="https://via.placeholder.com/40" class="w-8 h-8 rounded-full object-cover border">
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-black uppercase">Examinee</p>
+                            <p id="usr-display" class="font-bold text-blue-900 text-xs truncate max-w-[110px]"></p>
+                        </div>
                     </div>
-                    <div class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-[10px] font-bold animate-pulse">● LIVE</div>
+                    <div class="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-[9px] font-bold animate-pulse">● LIVE</div>
                 </div>
                 <div class="p-3 grid grid-cols-4 md:grid-cols-2 gap-2 text-[10px] font-bold border-b bg-white">
                     <div class="flex items-center gap-1.5 p-1.5 border rounded bg-green-50"><span class="w-2.5 h-2.5 bg-green-600 rounded-sm"></span> <span id="stat-a">0</span> Ans.</div>
@@ -219,6 +236,7 @@
             </aside>
         </section>
 
+        <!-- RESULT UI -->
         <section id="result-ui" class="hide absolute inset-0 z-[200] bg-white overflow-y-auto">
             <div class="max-w-4xl mx-auto p-6 pb-20">
                 <div class="text-center mb-8 py-12 bg-gradient-to-br from-[#003366] to-blue-800 rounded-3xl text-white shadow-xl relative overflow-hidden">
@@ -228,7 +246,7 @@
                     <p class="font-bold uppercase tracking-widest text-sm">Official NIELIT Grade</p>
                     
                     <div class="mt-6 flex justify-center gap-3 no-print">
-                        <button onclick="window.print()" class="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-white/20 transition-all">
+                        <button onclick="window.print()" class="bg-white/20 hover:bg-white/35 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 border border-white/20 transition-all">
                             <i class="fas fa-print"></i> Print Result
                         </button>
                         <button onclick="shareScore()" class="bg-[#ff9933] hover:bg-orange-500 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all shadow-md">
@@ -260,7 +278,6 @@
                     <h3 class="text-lg font-bold text-[#003366] uppercase mb-1">Support the Developer</h3>
                     <p class="text-slate-500 text-[10px] mb-4">Aapki choti si madad humein naya content banane mein help karegi.</p>
                     
-                    <!-- DYNAMIC QR CODE INTERFACE -->
                     <div class="bg-white p-3 inline-block rounded-xl shadow-md mb-4 border border-slate-200">
                         <div id="qrcode" class="flex justify-center items-center w-32 h-32 mx-auto"></div>
                     </div>
@@ -286,20 +303,104 @@
     </main>
 
     <script>
-        // --- FIREBASE INITIALIZATION ---
+        // --- NEW FIREBASE CONFIGURATION ---
         const firebaseConfig = {
-          apiKey: "AIzaSyBtK_ABh5RiHV_lX-WZ8FLbVxq7Rh93q_0",
-          authDomain: "o-level-quiz-f2545.firebaseapp.com",
-          databaseURL: "https://o-level-quiz-f2545-default-rtdb.firebaseio.com",
-          projectId: "o-level-quiz-f2545",
-          storageBucket: "o-level-quiz-f2545.firebasestorage.app",
-          messagingSenderId: "764630053537",
-          appId: "1:764630053537:web:d8b2573ebf6c47761936e0",
-          measurementId: "G-4YJZZC0N3P"
+          apiKey: "AIzaSyAKTH95QIT__fUZvNDxwY2_C1j0Ex5HFjk",
+          authDomain: "o-level-mcqs.firebaseapp.com",
+          projectId: "o-level-mcqs",
+          storageBucket: "o-level-mcqs.firebasestorage.app",
+          messagingSenderId: "511777254462",
+          appId: "1:511777254462:web:bcc62be13995a9b0eb756f",
+          measurementId: "G-RF63PL9GBR"
         };
 
         firebase.initializeApp(firebaseConfig);
         const database = firebase.database();
+
+        let num1 = 0, num2 = 0, currentCaptchaAns = 0;
+        function generateLoginCaptcha() {
+            num1 = Math.floor(Math.random() * 10) + 1;
+            num2 = Math.floor(Math.random() * 10) + 1;
+            currentCaptchaAns = num1 + num2;
+            document.getElementById('login-captcha-q').textContent = `${num1} + ${num2} = ?`;
+            document.getElementById('login-captcha-ans').value = '';
+        }
+
+        function switchAuthTab(tab) {
+            if(tab === 'reg') {
+                document.getElementById('login-form').classList.add('hide');
+                document.getElementById('reg-form').classList.remove('hide');
+                document.getElementById('auth-title').textContent = "Candidate Registration";
+            } else {
+                document.getElementById('reg-form').classList.add('hide');
+                document.getElementById('login-form').classList.remove('hide');
+                document.getElementById('auth-title').textContent = "Candidate Login";
+                generateLoginCaptcha();
+            }
+        }
+
+        async function handleRegister() {
+            const name = document.getElementById('reg-name').value.trim();
+            const email = document.getElementById('reg-email').value.trim().toLowerCase();
+            const img = document.getElementById('reg-img').value.trim() || "https://via.placeholder.com/150";
+
+            if(!name || !email) return alert("Kripya Naam aur Email bharein!");
+
+            const snapshot = await database.ref('registered_users').once('value');
+            let users = snapshot.val() || {};
+            
+            for(let key in users) {
+                if(users[key].email === email) {
+                    alert("Yeh email pehle se registered hai! Kripya Login karein.");
+                    switchAuthTab('login');
+                    return;
+                }
+            }
+
+            const userData = { name, email, img, registeredAt: new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"}) };
+            await database.ref('registered_users').push(userData);
+            
+            alert("Registration successful! Ab aap login kar sakte hain.");
+            switchAuthTab('login');
+        }
+
+        async function handleLogin() {
+            const email = document.getElementById('login-email').value.trim().toLowerCase();
+            const userAns = parseInt(document.getElementById('login-captcha-ans').value);
+
+            if(!email) return alert("Kripya email daalein!");
+            if(userAns !== currentCaptchaAns) {
+                alert("Galat Captcha! Kripya sahi jodh likhein.");
+                generateLoginCaptcha();
+                return;
+            }
+
+            const snapshot = await database.ref('registered_users').once('value');
+            let users = snapshot.val() || {};
+            let foundUser = null;
+
+            for(let key in users) {
+                if(users[key].email === email) {
+                    foundUser = users[key];
+                    break;
+                }
+            }
+
+            if(!foundUser) {
+                alert("Yeh email registered nahi hai! Pehle Register karein.");
+                return;
+            }
+
+            window.currentUser = foundUser;
+            document.getElementById('usr-display').textContent = foundUser.name;
+            document.getElementById('sidebar-user-img').src = foundUser.img;
+            document.getElementById('auth-ui').classList.add('hide');
+            document.getElementById('module-ui').classList.remove('hide');
+        }
+
+        function logout() {
+            location.reload();
+        }
 
         // --- DEV-TOOLS PROTECTION ---
         document.addEventListener('contextmenu', e => e.preventDefault());
@@ -310,17 +411,8 @@
         };
         document.ondragstart = () => false;
 
-        // --- CORE LOGIC ---
         let allData = {}, questions = [], userAnswers = {}, markedReview = new Set(), visited = new Set();
-        let currentIdx = 0, candidateName = "", selectedModCode = "", timerSeconds = 90 * 60, interval;
-
-        function login() {
-            candidateName = document.getElementById('cand-name').value.trim();
-            if (candidateName.length < 2) return alert("Please enter your name");
-            document.getElementById('usr-display').textContent = candidateName;
-            document.getElementById('login-ui').classList.add('hide');
-            document.getElementById('module-ui').classList.remove('hide');
-        }
+        let currentIdx = 0, selectedModCode = "", timerSeconds = 90 * 60, interval;
 
         async function selectMod(code) {
             selectedModCode = code;
@@ -333,9 +425,7 @@
                 chListContainer.innerHTML = '';
                 
                 let uniqueChapters = new Set();
-                allData[code].forEach(q => {
-                    if(q.chapter) uniqueChapters.add(q.chapter);
-                });
+                allData[code].forEach(q => { if(q.chapter) uniqueChapters.add(q.chapter); });
 
                 if(uniqueChapters.size === 0) {
                     chListContainer.innerHTML = `<p class="text-xs text-slate-400 italic">No specific chapters found. All questions will be loaded.</p>`;
@@ -358,22 +448,16 @@
             const checkedRadio = document.querySelector('.ch-filter-radio:checked');
             
             if(document.querySelectorAll('.ch-filter-radio').length > 0) {
-                if(!checkedRadio) {
-                    alert("Kripya test shuru karne ke liye ek chapter zaroor chunein!");
-                    return;
-                }
-                const activeChapter = checkedRadio.value;
-                baseQuestions = baseQuestions.filter(q => q.chapter === activeChapter);
+                if(!checkedRadio) { alert("Kripya test shuru karne ke liye ek chapter zaroor chunein!"); return; }
+                baseQuestions = baseQuestions.filter(q => q.chapter === checkedRadio.value);
             }
 
-            if(baseQuestions.length === 0) {
-                alert("Chune gaye chapter mein koi sawal nahi mila!");
-                return;
-            }
+            if(baseQuestions.length === 0) { alert("Chune gaye chapter mein koi sawal nahi mila!"); return; }
 
             questions = baseQuestions.sort(() => 0.5 - Math.random()).slice(0, count);
             document.getElementById('module-ui').classList.add('hide');
             document.getElementById('exam-ui').classList.remove('hide');
+            document.getElementById('exam-timer').classList.remove('hide');
             initPalette();
             renderQuestion();
             startTimer();
@@ -503,18 +587,20 @@
             document.getElementById('res-wrng').textContent = questions.length - correct;
             document.getElementById('res-total').textContent = questions.length;
 
-            // --- FIREBASE LIVE DATA PUSH ---
+            // Push result to Firebase under new configuration
             try {
                 database.ref('student_results').push({
-                    studentName: candidateName,
+                    studentEmail: window.currentUser.email,
+                    studentName: window.currentUser.name,
+                    studentImg: window.currentUser.img,
                     moduleCode: selectedModCode,
                     scorePercentage: scorePercent + "%",
                     grade: grade,
                     correctAnswers: correct,
+                    wrongAnswers: questions.length - correct,
                     totalQuestions: questions.length,
                     submittedAt: new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"})
                 });
-                console.log("Student performance successfully recorded in database.");
             } catch (firebaseError) {
                 console.error("Database sync failed:", firebaseError);
             }
@@ -523,48 +609,26 @@
         function generateDynamicQRCode() {
             const upiId = "mandavikaushal913@okaxis";
             const upiUrl = `upi://pay?pa=${upiId}&pn=Kaushal%20Institute&cu=INR`;
-            
             document.getElementById('dynamic-upi-link').href = upiUrl;
-            
             const qrContainer = document.getElementById("qrcode");
             qrContainer.innerHTML = "";
-            
-            new QRCode(qrContainer, {
-                text: upiUrl,
-                width: 128,
-                height: 128,
-                colorDark: "#003366", 
-                colorLight: "#ffffff",
-                correctLevel: QRCode.CorrectLevel.H
-            });
+            new QRCode(qrContainer, { text: upiUrl, width: 128, height: 128, colorDark: "#003366", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.H });
         }
 
         function shareScore() {
             const score = document.getElementById('res-score').textContent;
             const grade = document.getElementById('res-grade').textContent;
-            const shareText = `🎯 NIELIT CBT Practice Result\n\n👤 Student: ${candidateName}\n📄 Paper: ${selectedModCode}\n📊 Score: ${score}\n🏅 Grade: ${grade}\n\nKaushal Institute Online Portal par practice karein!`;
+            const shareText = `🎯 NIELIT CBT Practice Result\n\n👤 Student: ${window.currentUser.name}\n📄 Paper: ${selectedModCode}\n📊 Score: ${score}\n🏅 Grade: ${grade}\n\nKaushal Institute Online Portal par practice karein!`;
             
             if (navigator.share) {
-                navigator.share({
-                    title: 'My NIELIT CBT Result',
-                    text: shareText,
-                    url: window.location.href
-                }).catch(err => console.log(err));
+                navigator.share({ title: 'My NIELIT CBT Result', text: shareText, url: window.location.href }).catch(() => {});
             } else {
-                navigator.clipboard.writeText(shareText).then(() => {
-                    alert("Result summary copied to clipboard! Paste it anywhere to share.");
-                }).catch(() => {
-                    alert("Sharing not supported on this device.");
-                });
+                navigator.clipboard.writeText(shareText).then(() => alert("Result summary copied to clipboard!"));
             }
         }
-    </script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js')
-                .then(() => console.log("PWA Active"))
-                .catch((err) => console.log("PWA Error", err));
-        }
+
+        // Initialize captcha on load
+        generateLoginCaptcha();
     </script>
 </body>
 </html>
