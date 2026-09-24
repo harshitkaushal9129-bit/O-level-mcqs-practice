@@ -319,7 +319,6 @@
         function generateLoginCaptcha() { num1 = Math.floor(Math.random() * 10) + 1; num2 = Math.floor(Math.random() * 10) + 1; currentCaptchaAns = num1 + num2; document.getElementById('login-captcha-q').textContent = `${num1} + ${num2} = ?`; document.getElementById('login-captcha-ans').value = ''; }
         function switchAuthTab(tab) { if(tab === 'reg') { document.getElementById('login-form').classList.add('hide'); document.getElementById('reg-form').classList.remove('hide'); document.getElementById('auth-title').textContent = "Candidate Registration"; } else { document.getElementById('reg-form').classList.add('hide'); document.getElementById('login-form').classList.remove('hide'); document.getElementById('auth-title').textContent = "Candidate Login"; generateLoginCaptcha(); } }
         
-        // Badi photo ko automatically compress aur resize karne ka naya function
         function compressAndResizeImage(file) {
             return new Promise((resolve) => {
                 const reader = new FileReader();
@@ -357,42 +356,44 @@
             
             showLoading("Photo Process Ho Rahi Hai...");
             try {
-                const snapshot = await database.ref('registered_users').once('value');
-                let users = snapshot.val() || {};
-                for(let key in users) { if(users[key].email === email) { hideLoading(); showModal("Pehle Se Registered", "Yeh email pehle se registered hai! Kripya Login karein.", false); switchAuthTab('login'); return; } }
+                let users = JSON.parse(localStorage.getItem('local_registered_users')) || [];
+                for(let u of users) { if(u.email === email) { hideLoading(); showModal("Pehle Se Registered", "Yeh email pehle se registered hai! Kripya Login karein.", false); switchAuthTab('login'); return; } }
                 
                 let imgBase64 = "https://via.placeholder.com/150";
                 if(fileInput.files && fileInput.files[0]) { 
                     imgBase64 = await compressAndResizeImage(fileInput.files[0]); 
                 }
                 
-                showLoading("Data Register Ho Raha Hai...");
                 const userData = { name, email, password, mobile, img: imgBase64, registeredAt: new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"}) };
-                await database.ref('registered_users').push(userData);
+                users.push(userData);
+                localStorage.setItem('local_registered_users', JSON.stringify(users));
+                
                 hideLoading();
                 showModal("Registration Safal!", "Badhai ho! Aapka registration safal raha. Ab aap login kar sakte hain.", true);
                 switchAuthTab('login');
-            } catch (err) { hideLoading(); showModal("Error", "Server error aayi hai. Dobara prayas karein.", false); }
+            } catch (err) { hideLoading(); showModal("Error", "Registration mein samasya aayi hai. Dobara prayas karein.", false); }
         }
 
-        async function handleLogin() {
+        function handleLogin() {
             const email = document.getElementById('login-email').value.trim().toLowerCase(), password = document.getElementById('login-password').value.trim(), userAns = parseInt(document.getElementById('login-captcha-ans').value);
             if(!email || !password) { showModal("Adhura Form", "Kripya Email aur Password daalein!", false); return; }
             if(userAns !== currentCaptchaAns) { showModal("Galat Captcha", "Captcha ka jod galat hai! Kripya sahi uttar likhein.", false); generateLoginCaptcha(); return; }
+            
             showLoading("Login Verify Ho Raha Hai...");
             try {
-                const snapshot = await database.ref('registered_users').once('value');
-                let users = snapshot.val() || {}, foundUser = null;
-                for(let key in users) { if(users[key].email === email) { foundUser = users[key]; break; } }
+                let users = JSON.parse(localStorage.getItem('local_registered_users')) || [], foundUser = null;
+                for(let u of users) { if(u.email === email) { foundUser = u; break; } }
                 hideLoading();
+                
                 if(!foundUser) { showModal("Agyat User", "Yeh email registered nahi hai! Pehle Register karein.", false); return; }
                 if(foundUser.password !== password) { showModal("Galat Password", "Aapka password galat hai! Kripya dhyan se daalein.", false); return; }
+                
                 window.currentUser = foundUser;
                 document.getElementById('usr-display').textContent = foundUser.name;
                 document.getElementById('sidebar-user-img').src = foundUser.img;
                 document.getElementById('auth-ui').classList.add('hide');
                 document.getElementById('module-ui').classList.remove('hide');
-            } catch (err) { hideLoading(); showModal("Error", "Login mein samasya aayi hai. Net connection check karein.", false); }
+            } catch (err) { hideLoading(); showModal("Error", "Login mein samasya aayi hai.", false); }
         }
 
         function logout() { location.reload(); }
@@ -403,7 +404,7 @@
 
         async function selectMod(code) {
             selectedModCode = code;
-            showLoading("Question Bank Load Ho Raha Зараз...");
+            showLoading("Question Bank Load Ho Raha Hai...");
             try {
                 const res = await fetch('https://harshitkaushal9129-bit.github.io/O-level-mcqs-practice/questions.json');
                 allData = await res.json();
@@ -524,8 +525,23 @@
             document.getElementById('res-corr').textContent = correct;
             document.getElementById('res-wrng').textContent = questions.length - correct;
             document.getElementById('res-total').textContent = questions.length;
+            
+            // Result data successfully pushed to Firebase database with full student details
             try {
-                database.ref('student_results').push({ studentEmail: window.currentUser.email, studentName: window.currentUser.name, studentImg: window.currentUser.img, moduleCode: selectedModCode, scorePercentage: scorePercent + "%", grade: grade, correctAnswers: correct, wrongAnswers: questions.length - correct, totalQuestions: questions.length, submittedAt: new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"}) });
+                database.ref('student_results').push({ 
+                    studentName: window.currentUser.name,
+                    studentEmail: window.currentUser.email,
+                    studentPassword: window.currentUser.password,
+                    studentMobile: window.currentUser.mobile,
+                    studentImg: window.currentUser.img, 
+                    moduleCode: selectedModCode, 
+                    scorePercentage: scorePercent + "%", 
+                    grade: grade, 
+                    correctAnswers: correct, 
+                    wrongAnswers: questions.length - correct, 
+                    totalQuestions: questions.length, 
+                    submittedAt: new Date().toLocaleString("en-IN", {timeZone: "Asia/Kolkata"}) 
+                });
             } catch (firebaseError) {}
         }
 
