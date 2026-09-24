@@ -40,6 +40,7 @@
         const firebaseConfig = {
           apiKey: "AIzaSyAKTH95QIT__fUZvNDxwY2_C1j0Ex5HFjk",
           authDomain: "o-level-mcqs.firebaseapp.com",
+          databaseURL: "https://o-level-mcqs-default-rtdb.firebaseio.com", // <-- Yeh add kiya gaya hai
           projectId: "o-level-mcqs",
           storageBucket: "o-level-mcqs.firebasestorage.app",
           messagingSenderId: "511777254462",
@@ -52,7 +53,6 @@
 
         async function fetchDashboardData() {
             try {
-                // Fetching results directly from Firebase student_results node
                 const resultsSnap = await database.ref('student_results').once('value');
                 const results = resultsSnap.val() || {};
 
@@ -65,7 +65,6 @@
                     return;
                 }
 
-                // Grouping attempts by student email
                 let studentMap = {};
                 for(let rKey in results) {
                     let res = results[rKey];
@@ -130,7 +129,11 @@
 
             } catch (err) {
                 console.error(err);
-                document.getElementById('loading').innerHTML = `<p class="text-red-500 font-bold text-sm">Data load karne mein error aayi hai. Firebase Database Rules check karein.</p>`;
+                document.getElementById('loading').innerHTML = `
+                    <div class="bg-red-50 border border-red-200 p-6 rounded-2xl text-center">
+                        <p class="text-red-600 font-bold text-sm mb-1">Data load karne mein error aayi hai!</p>
+                        <p class="text-xs text-red-500 font-mono">${err.message}</p>
+                    </div>`;
             }
         }
 
