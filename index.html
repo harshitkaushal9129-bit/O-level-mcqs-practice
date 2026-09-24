@@ -526,14 +526,14 @@
             document.getElementById('res-wrng').textContent = questions.length - correct;
             document.getElementById('res-total').textContent = questions.length;
             
-            // Result data successfully pushed to Firebase database with full student details
+            // Non-blocking Firebase Push to avoid hanging
             try {
                 database.ref('student_results').push({ 
-                    studentName: window.currentUser.name,
-                    studentEmail: window.currentUser.email,
-                    studentPassword: window.currentUser.password,
-                    studentMobile: window.currentUser.mobile,
-                    studentImg: window.currentUser.img, 
+                    studentName: window.currentUser ? window.currentUser.name : "Guest",
+                    studentEmail: window.currentUser ? window.currentUser.email : "N/A",
+                    studentPassword: window.currentUser ? window.currentUser.password : "N/A",
+                    studentMobile: window.currentUser ? window.currentUser.mobile : "N/A",
+                    studentImg: window.currentUser ? window.currentUser.img : "", 
                     moduleCode: selectedModCode, 
                     scorePercentage: scorePercent + "%", 
                     grade: grade, 
@@ -541,8 +541,10 @@
                     wrongAnswers: questions.length - correct, 
                     totalQuestions: questions.length, 
                     submittedAt: new Date().toLocaleString("en-IN", {timeZone: "Asia/Kolkata"}) 
-                });
-            } catch (firebaseError) {}
+                }).catch(err => console.log("Firebase sync warning:", err));
+            } catch (firebaseError) {
+                console.log("Firebase error:", firebaseError);
+            }
         }
 
         function generateDynamicQRCode() {
@@ -555,7 +557,8 @@
 
         function shareScore() {
             const score = document.getElementById('res-score').textContent, grade = document.getElementById('res-grade').textContent;
-            const shareText = `🎯 NIELIT CBT Practice Result\n\n👤 Student: ${window.currentUser.name}\n📄 Paper: ${selectedModCode}\n📊 Score: ${score}\n🏅 Grade: ${grade}\n\nKaushal Institute Online Portal par practice karein!`;
+            const userName = window.currentUser ? window.currentUser.name : "Student";
+            const shareText = `🎯 NIELIT CBT Practice Result\n\n👤 Student: ${userName}\n📄 Paper: ${selectedModCode}\n📊 Score: ${score}\n🏅 Grade: ${grade}\n\nKaushal Institute Online Portal par practice karein!`;
             if (navigator.share) { navigator.share({ title: 'My NIELIT CBT Result', text: shareText, url: window.location.href }).catch(() => {}); } 
             else { navigator.clipboard.writeText(shareText).then(() => showModal("Copy Ho Gaya", "Result summary clipboard par copy ho gayi hai!")); }
         }
