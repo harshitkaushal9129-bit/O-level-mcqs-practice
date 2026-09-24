@@ -3,273 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaushal Institute - Admin Dashboard</title>
-    
-    <!-- PWA Meta Tags & Manifest Configuration via Data URI -->
-    <meta name="theme-color" content="#003366">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/906/906343.png">
-    
-    <!-- Dynamic Manifest Injection -->
-    <script>
-        const manifest = {
-            "name": "Kaushal Institute Admin",
-            "short_name": "KI Admin",
-            "start_url": window.location.href,
-            "display": "standalone",
-            "background_color": "#f1f5f9",
-            "theme_color": "#003366",
-            "icons": [
-                {
-                    "src": "https://cdn-icons-png.flaticon.com/512/906/906343.png",
-                    "sizes": "512x512",
-                    "type": "image/png",
-                    "purpose": "any maskable"
-                }
-            ]
-        };
-        const stringManifest = JSON.stringify(manifest);
-        const blob = new Blob([stringManifest], {type: 'application/json'});
-        const manifestURL = URL.createObjectURL(blob);
-        const relManifest = document.createElement('link');
-        relManifest.setAttribute('rel', 'manifest');
-        relManifest.setAttribute('href', manifestURL);
-        document.head.appendChild(relManifest);
-    </script>
-
+    <title>Admin Panel - Students Progress Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Firebase Libraries -->
+    <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .hide { display: none !important; }
     </style>
 </head>
-<body class="bg-slate-100 min-h-screen">
+<body class="p-4 md:p-8">
 
-    <!-- PWA Dynamic Install Banner (Sirf tab dikhega jab app install nahi hogi) -->
-    <div id="install-banner" class="hidden bg-orange-500 text-white p-3 text-center text-sm font-bold flex justify-between items-center px-6 sticky top-0 z-50 shadow-lg">
-        <span><i class="fas fa-mobile-alt mr-2 animate-bounce"></i> Is dashboard ko mobile app ki tarah install karein!</span>
-        <button onclick="triggerPWAInstall()" class="bg-white text-orange-600 px-4 py-1.5 rounded-xl text-xs font-black uppercase shadow-sm hover:bg-slate-100 transition-all">
-            INSTALL APP
-        </button>
+    <div class="max-w-4xl mx-auto">
+        <header class="bg-[#003366] text-white p-6 rounded-2xl shadow-lg mb-8 flex justify-between items-center">
+            <div>
+                <h1 class="text-xl md:text-2xl font-black uppercase">Students Progress Analytics</h1>
+                <p class="text-xs text-orange-400 font-bold mt-1">Kaushal Institute Administration Panel</p>
+            </div>
+            <a href="index.html" class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all border border-white/20">Back to Portal</a>
+        </header>
+
+        <div id="loading" class="text-center py-20">
+            <i class="fas fa-spinner fa-spin text-4xl text-[#003366] mb-3"></i>
+            <p class="text-slate-500 font-bold text-sm uppercase">Loading student records...</p>
+        </div>
+
+        <div id="students-container" class="space-y-4"></div>
     </div>
 
-    <!-- Navbar -->
-    <header class="bg-[#003366] text-white p-4 shadow-md sticky top-0 z-40 border-b-4 border-orange-500">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <i class="fas fa-user-shield text-2xl text-orange-400"></i>
-                <div>
-                    <h1 class="text-lg font-bold uppercase leading-none">Kaushal Institute</h1>
-                    <p class="text-[10px] text-orange-300 font-bold uppercase tracking-wider">Students Live Exam Monitor</p>
-                </div>
-            </div>
-            <div class="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-full border border-white/10">
-                <span class="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></span>
-                <span id="total-count" class="text-xs font-bold font-mono">Total Results: 0</span>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content Container -->
-    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
-        
-        <!-- Search and Filters Section -->
-        <div class="bg-white p-4 rounded-xl shadow-sm mb-6 flex flex-col sm:flex-row gap-4 justify-between items-center">
-            <div class="relative w-full sm:w-72">
-                <i class="fas fa-search absolute left-3 top-3.5 text-slate-400 text-sm"></i>
-                <input type="text" id="search-input" oninput="filterCards()" placeholder="Search student name..." class="w-full bg-slate-50 border border-slate-200 pl-9 pr-4 py-2.5 rounded-xl text-sm font-medium outline-none focus:border-blue-600 transition-all">
-            </div>
-            <div class="flex gap-2 w-full sm:w-auto">
-                <select id="module-filter" onchange="filterCards()" class="w-full sm:w-auto bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 outline-none focus:border-blue-600">
-                    <option value="ALL">All Papers</option>
-                    <option value="M1">M1-R5</option>
-                    <option value="M2">M2-R5</option>
-                    <option value="M3">M3-R5</option>
-                    <option value="M4">M4-R5</option>
-                </select>
-            </div>
-        </div>
-
-        <!-- No Data State -->
-        <div id="no-data" class="hidden text-center py-20 bg-white rounded-2xl shadow-sm border border-dashed border-slate-300">
-            <i class="fas fa-folder-open text-5xl text-slate-300 mb-3"></i>
-            <h3 class="text-slate-700 font-bold text-lg">Koi data nahi mila!</h3>
-            <p class="text-slate-400 text-xs">Jaise hi bache test submit karenge, cards yahan dikhne lagenge.</p>
-        </div>
-
-        <!-- Cards Live Grid Grid -->
-        <div id="cards-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            <!-- Dynamic Cards Will Load Here -->
-        </div>
-
-    </main>
-
     <script>
-        // --- PWA SERVICE WORKER REGISTRATION (Inline Fallback) ---
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                // Ek simple service worker dynamic data url se load kar rahe hain taaki extra file na banani pade
-                const swCode = `
-                    self.addEventListener('install', e => self.skipWaiting());
-                    self.addEventListener('activate', e => e.waitUntil(clients.claim()));
-                    self.addEventListener('fetch', e => e.respondWith(fetch(e.request).catch(() => new Response('Offline mode ready'))));
-                `;
-                const blob = new Blob([swCode], {type: 'text/javascript'});
-                const swUrl = URL.createObjectURL(blob);
-                navigator.serviceWorker.register(swUrl).catch(err => console.log("SW Error", err));
-            });
-        }
-
-        // --- PWA INSTALL BANNER LOGIC ---
-        let deferredPrompt;
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            // Banner ko show karein
-            document.getElementById('install-banner').classList.remove('hidden');
-        });
-
-        function triggerPWAInstall() {
-            if (!deferredPrompt) return;
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                    console.log('User ne app install kar li');
-                }
-                document.getElementById('install-banner').classList.add('hidden');
-                deferredPrompt = null;
-            });
-        }
-
-        // --- FIREBASE CONFIGURATION ---
+        // --- NEW FIREBASE CONFIGURATION ---
         const firebaseConfig = {
-          apiKey: "AIzaSyBtK_ABh5RiHV_lX-WZ8FLbVxq7Rh93q_0",
-          authDomain: "o-level-quiz-f2545.firebaseapp.com",
-          databaseURL: "https://o-level-quiz-f2545-default-rtdb.firebaseio.com",
-          projectId: "o-level-quiz-f2545",
-          storageBucket: "o-level-quiz-f2545.firebasestorage.app",
-          messagingSenderId: "764630053537",
-          appId: "1:764630053537:web:d8b2573ebf6c47761936e0",
-          measurementId: "G-4YJZZC0N3P"
+          apiKey: "AIzaSyAKTH95QIT__fUZvNDxwY2_C1j0Ex5HFjk",
+          authDomain: "o-level-mcqs.firebaseapp.com",
+          projectId: "o-level-mcqs",
+          storageBucket: "o-level-mcqs.firebasestorage.app",
+          messagingSenderId: "511777254462",
+          appId: "1:511777254462:web:bcc62be13995a9b0eb756f",
+          measurementId: "G-RF63PL9GBR"
         };
 
         firebase.initializeApp(firebaseConfig);
         const database = firebase.database();
 
-        let localResultsData = [];
+        async function fetchDashboardData() {
+            try {
+                const usersSnap = await database.ref('registered_users').once('value');
+                const resultsSnap = await database.ref('student_results').once('value');
 
-        // --- REALTIME DATA FETCHING FROM FIREBASE ---
-        database.ref('student_results').on('value', (snapshot) => {
-            const data = snapshot.val();
-            const grid = document.getElementById('cards-grid');
-            const totalCountText = document.getElementById('total-count');
-            
-            grid.innerHTML = "";
-            localResultsData = [];
+                const users = usersSnap.val() || {};
+                const results = resultsSnap.val() || {};
 
-            if (!data) {
-                document.getElementById('no-data').classList.remove('hidden');
-                totalCountText.textContent = "Total Results: 0";
-                return;
-            }
+                const container = document.getElementById('students-container');
+                container.innerHTML = '';
+                document.getElementById('loading').classList.add('hide');
 
-            document.getElementById('no-data').classList.add('hidden');
+                if(Object.keys(users).length === 0) {
+                    container.innerHTML = `<div class="bg-white p-8 rounded-2xl text-center text-slate-400 font-bold">Koi registered user nahi mila.</div>`;
+                    return;
+                }
 
-            Object.keys(data).forEach(key => {
-                localResultsData.push({ id: key, ...data[key] });
-            });
-            
-            localResultsData.reverse(); 
+                // Map results by email
+                let userResultsMap = {};
+                for(let rKey in results) {
+                    let res = results[rKey];
+                    let email = res.studentEmail ? res.studentEmail.toLowerCase() : '';
+                    if(!email && res.studentName) email = res.studentName.toLowerCase(); // fallback
+                    
+                    if(!userResultsMap[email]) userResultsMap[email] = [];
+                    userResultsMap[email].push(res);
+                }
 
-            totalCountText.textContent = `Total Results: ${localResultsData.length}`;
-            renderAllCards(localResultsData);
-        });
+                for(let uKey in users) {
+                    let user = users[uKey];
+                    let emailKey = user.email.toLowerCase();
+                    let userAttempts = userResultsMap[emailKey] || [];
 
-        // --- FUNCTION TO GENERATE CARDS ---
-        function renderAllCards(records) {
-            const grid = document.getElementById('cards-grid');
-            grid.innerHTML = "";
+                    let card = document.createElement('div');
+                    card.className = "bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all";
 
-            records.forEach(student => {
-                let gradeColor = "bg-red-100 text-red-700 border-red-200";
-                if(student.grade === 'S') gradeColor = "bg-purple-100 text-purple-700 border-purple-200 animate-bounce";
-                else if(['A', 'B'].includes(student.grade)) gradeColor = "bg-green-100 text-green-700 border-green-200";
-                else if(['C', 'D'].includes(student.grade)) gradeColor = "bg-blue-100 text-blue-700 border-blue-200";
+                    let attemptsHTML = '';
+                    if(userAttempts.length === 0) {
+                        attemptsHTML = `<p class="text-xs text-slate-400 italic py-2">Is user ne abhi tak koi test attempt nahi kiya hai.</p>`;
+                    } else {
+                        userAttempts.forEach((att, idx) => {
+                            attemptsHTML += `
+                                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                                    <div>
+                                        <span class="bg-blue-900 text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Attempt #${idx+1} (${att.moduleCode})</span>
+                                        <span class="text-xs text-slate-500 ml-2 font-medium"><i class="far fa-clock"></i> ${att.submittedAt}</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-xs font-bold">
+                                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-lg">Correct: ${att.correctAnswers}</span>
+                                        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-lg">Wrong: ${att.wrongAnswers}</span>
+                                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-lg">Score: ${att.scorePercentage} (Grade: ${att.grade})</span>
+                                    </div>
+                                </div>
+                            `;
+                        });
+                    }
 
-                const modNames = { 'M1': 'IT Tools', 'M2': 'Web Design', 'M3': 'Python Pro.', 'M4': 'IoT Basic' };
-                const paperName = modNames[student.moduleCode] || 'O Level Paper';
-
-                const cardHtml = `
-                    <div class="student-card bg-white rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-all overflow-hidden flex flex-col justify-between" 
-                         data-name="${student.studentName.toLowerCase()}" 
-                         data-module="${student.moduleCode}">
-                        
-                        <div class="p-5 border-b border-slate-100">
-                            <div class="flex justify-between items-start gap-2 mb-3">
-                                <span class="bg-slate-100 border text-slate-700 text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider">
-                                    ${student.moduleCode || 'N/A'} : ${paperName}
-                                </span>
-                                <span class="text-[11px] text-slate-400 font-bold flex items-center gap-1">
-                                    <i class="far fa-clock"></i> ${student.submittedAt ? student.submittedAt.split(',')[1]?.trim() || student.submittedAt : 'Just Now'}
-                                </span>
+                    card.innerHTML = `
+                        <div class="p-5 flex items-center justify-between cursor-pointer hover:bg-slate-50 select-none" onclick="toggleAccordion(this)">
+                            <div class="flex items-center gap-4">
+                                <img src="${user.img || 'https://via.placeholder.com/150'}" class="w-12 h-12 rounded-full object-cover border-2 border-slate-200 shadow-inner">
+                                <div>
+                                    <h3 class="font-bold text-slate-800 text-base">${user.name}</h3>
+                                    <p class="text-xs text-slate-400">${user.email} • Registered: ${user.registeredAt}</p>
+                                </div>
                             </div>
-                            <h3 class="text-slate-800 font-extrabold text-base uppercase tracking-tight truncate">
-                                ${student.studentName}
-                            </h3>
-                        </div>
-
-                        <div class="bg-slate-50/50 p-5 grid grid-cols-2 gap-4 border-b border-slate-100">
-                            <div>
-                                <p class="text-[10px] text-slate-400 font-bold uppercase mb-0.5">Percentage</p>
-                                <p class="text-xl font-black text-slate-800">${student.scorePercentage || '0%'}</p>
-                            </div>
-                            <div>
-                                <p class="text-[10px] text-slate-400 font-bold uppercase mb-0.5">Accuracy</p>
-                                <p class="text-xs font-bold text-slate-600 mt-1">
-                                    <span class="text-green-600 font-extrabold">${student.correctAnswers || 0}</span> / ${student.totalQuestions || 0} Qs
-                                </p>
+                            <div class="flex items-center gap-3">
+                                <span class="bg-orange-100 text-orange-700 font-bold text-xs px-3 py-1 rounded-full">${userAttempts.length} Tests Given</span>
+                                <i class="fas fa-chevron-down text-slate-400 transition-transform duration-200 arrow-icon"></i>
                             </div>
                         </div>
-
-                        <div class="p-4 bg-slate-50 flex items-center justify-between">
-                            <span class="text-[9px] text-slate-400 font-bold uppercase">Result Status:</span>
-                            <span class="border px-4 py-0.5 rounded-full text-xs font-black tracking-widest ${gradeColor}">
-                                GRADE ${student.grade || 'F'}
-                            </span>
+                        <div class="details-pane hide p-5 border-t border-slate-100 bg-white space-y-3">
+                            <h4 class="text-xs font-black text-slate-400 uppercase tracking-wider mb-2">Performance History</h4>
+                            ${attemptsHTML}
                         </div>
-                    </div>
-                `;
-                grid.innerHTML += cardHtml;
-            });
-        }
+                    `;
 
-        // --- FILTER AND SEARCH LOGIC ---
-        function filterCards() {
-            const searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
-            const moduleFilter = document.getElementById('module-filter').value;
+                    container.appendChild(card);
+                }
 
-            const filteredData = localResultsData.filter(item => {
-                const matchesName = item.studentName.toLowerCase().includes(searchQuery);
-                const matchesModule = (moduleFilter === "ALL") || (item.moduleCode === moduleFilter);
-                return matchesName && matchesModule;
-            });
-
-            renderAllCards(filteredData);
-            
-            const noDataEl = document.getElementById('no-data');
-            if(filteredData.length === 0) {
-                noDataEl.classList.remove('hidden');
-            } else {
-                noDataEl.classList.add('hidden');
+            } catch (err) {
+                console.error(err);
+                document.getElementById('loading').innerHTML = `<p class="text-red-500 font-bold text-sm">Data load karne mein error aayi hai. Firebase Rules check karein.</p>`;
             }
         }
+
+        function toggleAccordion(headerEl) {
+            const detailsPane = headerEl.nextElementSibling;
+            const arrow = headerEl.querySelector('.arrow-icon');
+            
+            detailsPane.classList.toggle('hide');
+            arrow.style.transform = detailsPane.classList.contains('hide') ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+
+        fetchDashboardData();
     </script>
 </body>
 </html>
