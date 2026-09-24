@@ -37,7 +37,6 @@
     </div>
 
     <script>
-        // --- NEW FIREBASE CONFIGURATION ---
         const firebaseConfig = {
           apiKey: "AIzaSyAKTH95QIT__fUZvNDxwY2_C1j0Ex5HFjk",
           authDomain: "o-level-mcqs.firebaseapp.com",
@@ -53,72 +52,70 @@
 
         async function fetchDashboardData() {
             try {
-                const usersSnap = await database.ref('registered_users').once('value');
+                // Fetching results directly from Firebase student_results node
                 const resultsSnap = await database.ref('student_results').once('value');
-
-                const users = usersSnap.val() || {};
                 const results = resultsSnap.val() || {};
 
                 const container = document.getElementById('students-container');
                 container.innerHTML = '';
                 document.getElementById('loading').classList.add('hide');
 
-                if(Object.keys(users).length === 0) {
-                    container.innerHTML = `<div class="bg-white p-8 rounded-2xl text-center text-slate-400 font-bold">Koi registered user nahi mila.</div>`;
+                if(Object.keys(results).length === 0) {
+                    container.innerHTML = `<div class="bg-white p-8 rounded-2xl text-center text-slate-400 font-bold shadow-sm border">Abhi tak kisi bhi student ne test submit nahi kiya hai.</div>`;
                     return;
                 }
 
-                // Map results by email
-                let userResultsMap = {};
+                // Grouping attempts by student email
+                let studentMap = {};
                 for(let rKey in results) {
                     let res = results[rKey];
-                    let email = res.studentEmail ? res.studentEmail.toLowerCase() : '';
-                    if(!email && res.studentName) email = res.studentName.toLowerCase(); // fallback
+                    let email = res.studentEmail ? res.studentEmail.toLowerCase() : 'unknown';
                     
-                    if(!userResultsMap[email]) userResultsMap[email] = [];
-                    userResultsMap[email].push(res);
+                    if(!studentMap[email]) {
+                        studentMap[email] = {
+                            name: res.studentName || "Unknown Student",
+                            email: res.studentEmail || "N/A",
+                            mobile: res.studentMobile || "N/A",
+                            img: res.studentImg || "https://via.placeholder.com/150",
+                            attempts: []
+                        };
+                    }
+                    studentMap[email].attempts.push(res);
                 }
 
-                for(let uKey in users) {
-                    let user = users[uKey];
-                    let emailKey = user.email.toLowerCase();
-                    let userAttempts = userResultsMap[emailKey] || [];
+                for(let email in studentMap) {
+                    let student = studentMap[email];
+                    let attemptsHTML = '';
+
+                    student.attempts.forEach((att, idx) => {
+                        attemptsHTML += `
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                                <div>
+                                    <span class="bg-blue-900 text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Attempt #${idx+1} (${att.moduleCode || 'N/A'})</span>
+                                    <span class="text-xs text-slate-500 ml-2 font-medium"><i class="far fa-clock"></i> ${att.submittedAt || 'N/A'}</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-xs font-bold flex-wrap">
+                                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-lg">Correct: ${att.correctAnswers}</span>
+                                    <span class="bg-red-100 text-red-700 px-3 py-1 rounded-lg">Wrong: ${att.wrongAnswers}</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-lg">Score: ${att.scorePercentage} (Grade: ${att.grade})</span>
+                                </div>
+                            </div>
+                        `;
+                    });
 
                     let card = document.createElement('div');
                     card.className = "bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all";
-
-                    let attemptsHTML = '';
-                    if(userAttempts.length === 0) {
-                        attemptsHTML = `<p class="text-xs text-slate-400 italic py-2">Is user ne abhi tak koi test attempt nahi kiya hai.</p>`;
-                    } else {
-                        userAttempts.forEach((att, idx) => {
-                            attemptsHTML += `
-                                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                                    <div>
-                                        <span class="bg-blue-900 text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Attempt #${idx+1} (${att.moduleCode})</span>
-                                        <span class="text-xs text-slate-500 ml-2 font-medium"><i class="far fa-clock"></i> ${att.submittedAt}</span>
-                                    </div>
-                                    <div class="flex items-center gap-3 text-xs font-bold">
-                                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-lg">Correct: ${att.correctAnswers}</span>
-                                        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-lg">Wrong: ${att.wrongAnswers}</span>
-                                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-lg">Score: ${att.scorePercentage} (Grade: ${att.grade})</span>
-                                    </div>
-                                </div>
-                            `;
-                        });
-                    }
-
                     card.innerHTML = `
                         <div class="p-5 flex items-center justify-between cursor-pointer hover:bg-slate-50 select-none" onclick="toggleAccordion(this)">
                             <div class="flex items-center gap-4">
-                                <img src="${user.img || 'https://via.placeholder.com/150'}" class="w-12 h-12 rounded-full object-cover border-2 border-slate-200 shadow-inner">
+                                <img src="${student.img}" class="w-12 h-12 rounded-full object-cover border-2 border-slate-200 shadow-inner">
                                 <div>
-                                    <h3 class="font-bold text-slate-800 text-base">${user.name}</h3>
-                                    <p class="text-xs text-slate-400">${user.email} • Registered: ${user.registeredAt}</p>
+                                    <h3 class="font-bold text-slate-800 text-base">${student.name}</h3>
+                                    <p class="text-xs text-slate-400">${student.email} • Mobile: ${student.mobile}</p>
                                 </div>
                             </div>
                             <div class="flex items-center gap-3">
-                                <span class="bg-orange-100 text-orange-700 font-bold text-xs px-3 py-1 rounded-full">${userAttempts.length} Tests Given</span>
+                                <span class="bg-orange-100 text-orange-700 font-bold text-xs px-3 py-1 rounded-full">${student.attempts.length} Test Given</span>
                                 <i class="fas fa-chevron-down text-slate-400 transition-transform duration-200 arrow-icon"></i>
                             </div>
                         </div>
@@ -133,7 +130,7 @@
 
             } catch (err) {
                 console.error(err);
-                document.getElementById('loading').innerHTML = `<p class="text-red-500 font-bold text-sm">Data load karne mein error aayi hai. Firebase Rules check karein.</p>`;
+                document.getElementById('loading').innerHTML = `<p class="text-red-500 font-bold text-sm">Data load karne mein error aayi hai. Firebase Database Rules check karein.</p>`;
             }
         }
 
