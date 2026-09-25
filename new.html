@@ -3,149 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - Students Progress Dashboard</title>
+    <title>Admin Dashboard - Student Results | Kaushal Institute</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Firebase SDK -->
+    <!-- Firebase App & Database Scripts -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; }
         .hide { display: none !important; }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
     </style>
 </head>
-<body class="p-4 md:p-8">
+<body class="min-h-screen flex flex-col">
 
-    <div class="max-w-4xl mx-auto">
-        <header class="bg-[#003366] text-white p-6 rounded-2xl shadow-lg mb-8 flex justify-between items-center">
-            <div>
-                <h1 class="text-xl md:text-2xl font-black uppercase">Students Progress Analytics</h1>
-                <p class="text-xs text-orange-400 font-bold mt-1">Kaushal Institute Administration Panel</p>
+    <!-- Header -->
+    <header class="bg-[#003366] text-white p-4 shadow-lg border-b-4 border-orange-500 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="bg-white p-2 rounded-xl text-[#003366] font-black text-lg">
+                <i class="fas fa-user-shield"></i>
             </div>
-            <a href="index.html" class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all border border-white/20">Back to Portal</a>
-        </header>
+            <div>
+                <h1 class="text-base font-black uppercase tracking-wider">Admin Result Dashboard</h1>
+                <p class="text-[10px] text-orange-400 font-bold uppercase">Kaushal Institute - Student Performance Records</p>
+            </div>
+        </div>
+        <button onclick="fetchStudentResults()" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all shadow-md flex items-center gap-2 cursor-pointer">
+            <i class="fas fa-sync-alt"></i> Refresh Data
+        </button>
+    </header>
 
-        <div id="loading" class="text-center py-20">
-            <i class="fas fa-spinner fa-spin text-4xl text-[#003366] mb-3"></i>
-            <p class="text-slate-500 font-bold text-sm uppercase">Loading student records...</p>
+    <!-- Main Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 md:p-8">
+        
+        <!-- Stats Overview Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-blue-600 flex items-center justify-between">
+                <div>
+                    <p class="text-xs font-bold text-slate-400 uppercase">Total Submissions</p>
+                    <h3 id="total-submissions" class="text-3xl font-black text-slate-800 mt-1">0</h3>
+                </div>
+                <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl">
+                    <i class="fas fa-users"></i>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-green-600 flex items-center justify-between">
+                <div>
+                    <p class="text-xs font-bold text-slate-400 uppercase">Passed Students</p>
+                    <h3 id="passed-count" class="text-3xl font-black text-green-600 mt-1">0</h3>
+                </div>
+                <div class="w-12 h-12 bg-green-50 text-green-600 rounded-xl flex items-center justify-center text-xl">
+                    <i class="fas fa-user-check"></i>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-red-600 flex items-center justify-between">
+                <div>
+                    <p class="text-xs font-bold text-slate-400 uppercase">Failed / Low Score</p>
+                    <h3 id="failed-count" class="text-3xl font-black text-red-600 mt-1">0</h3>
+                </div>
+                <div class="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center text-xl">
+                    <i class="fas fa-user-times"></i>
+                </div>
+            </div>
         </div>
 
-        <div id="students-container" class="space-y-4"></div>
+        <!-- Search & Filter Bar -->
+        <div class="bg-white p-4 rounded-2xl shadow-sm mb-6 flex flex-col sm:flex-row gap-4 items-center justify-between">
+            <div class="relative w-full sm:w-96">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400"><i class="fas fa-search"></i></span>
+                <input type="text" id="search-input" onkeyup="filterResults()" placeholder="Search by student name or email..." class="w-full pl-10 pr-4 py-2.5 border-2 border-slate-200 rounded-xl outline-none focus:border-blue-600 text-xs font-semibold">
+            </div>
+            <div class="text-xs font-bold text-slate-500 uppercase">
+                Showing live database records
+            </div>
+        </div>
+
+        <!-- Student Cards Container -->
+        <div id="results-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Dynamic Cards will be injected here -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="hide text-center py-20 bg-white rounded-2xl shadow-sm">
+            <i class="fas fa-folder-open text-5xl text-slate-300 mb-3"></i>
+            <h3 class="text-lg font-bold text-slate-700">Koi Record Nahi Mila</h3>
+            <p class="text-xs text-slate-400">Abhi tak kisi bhi student ne test submit nahi kiya hai.</p>
+        </div>
+
+    </main>
+
+    <!-- Detailed View Modal -->
+    <div id="detail-modal" class="hide fixed inset-0 z-[300] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-3xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden">
+            <div class="bg-[#003366] p-4 text-white flex justify-between items-center">
+                <div>
+                    <h3 id="modal-student-name" class="font-bold text-base uppercase">Student Detailed Analysis</h3>
+                    <p id="modal-student-meta" class="text-[10px] text-orange-300 font-semibold"></p>
+                </div>
+                <button onclick="closeDetailModal()" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center font-bold text-sm cursor-pointer">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="modal-questions-list" class="p-6 overflow-y-auto space-y-4 flex-1 bg-slate-50">
+                <!-- Question Breakdown Injected Here -->
+            </div>
+            <div class="p-4 bg-white border-t text-right">
+                <button onclick="closeDetailModal()" class="bg-slate-800 text-white px-6 py-2.5 rounded-xl text-xs font-bold uppercase cursor-pointer">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="fixed inset-0 z-[250] bg-black/50 backdrop-blur-xs flex flex-col items-center justify-center text-white">
+        <div class="w-14 h-14 border-4 border-orange-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+        <p class="font-bold text-sm tracking-wider uppercase">Database Se Data Load Ho Raha Hai...</p>
     </div>
 
     <script>
-        const firebaseConfig = {
-          apiKey: "AIzaSyAKTH95QIT__fUZvNDxwY2_C1j0Ex5HFjk",
-          authDomain: "o-level-mcqs.firebaseapp.com",
-          databaseURL: "https://o-level-mcqs-default-rtdb.firebaseio.com", // <-- Yeh add kiya gaya hai
-          projectId: "o-level-mcqs",
-          storageBucket: "o-level-mcqs.firebasestorage.app",
-          messagingSenderId: "511777254462",
-          appId: "1:511777254462:web:bcc62be13995a9b0eb756f",
-          measurementId: "G-RF63PL9GBR"
-        };
-
+        // Same Firebase Config as main app
+        const firebaseConfig = { apiKey: "AIzaSyAKTH95QIT__fUZvNDxwY2_C1j0Ex5HFjk", authDomain: "o-level-mcqs.firebaseapp.com", projectId: "o-level-mcqs", storageBucket: "o-level-mcqs.firebasestorage.app", messagingSenderId: "511777254462", appId: "1:511777254462:web:bcc62be13995a9b0eb756f", measurementId: "G-RF63PL9GBR" };
         firebase.initializeApp(firebaseConfig);
         const database = firebase.database();
 
-        async function fetchDashboardData() {
-            try {
-                const resultsSnap = await database.ref('student_results').once('value');
-                const results = resultsSnap.val() || {};
+        let allResultsList = [];
 
-                const container = document.getElementById('students-container');
-                container.innerHTML = '';
-                document.getElementById('loading').classList.add('hide');
-
-                if(Object.keys(results).length === 0) {
-                    container.innerHTML = `<div class="bg-white p-8 rounded-2xl text-center text-slate-400 font-bold shadow-sm border">Abhi tak kisi bhi student ne test submit nahi kiya hai.</div>`;
-                    return;
-                }
-
-                let studentMap = {};
-                for(let rKey in results) {
-                    let res = results[rKey];
-                    let email = res.studentEmail ? res.studentEmail.toLowerCase() : 'unknown';
-                    
-                    if(!studentMap[email]) {
-                        studentMap[email] = {
-                            name: res.studentName || "Unknown Student",
-                            email: res.studentEmail || "N/A",
-                            mobile: res.studentMobile || "N/A",
-                            img: res.studentImg || "https://via.placeholder.com/150",
-                            attempts: []
-                        };
-                    }
-                    studentMap[email].attempts.push(res);
-                }
-
-                for(let email in studentMap) {
-                    let student = studentMap[email];
-                    let attemptsHTML = '';
-
-                    student.attempts.forEach((att, idx) => {
-                        attemptsHTML += `
-                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                                <div>
-                                    <span class="bg-blue-900 text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Attempt #${idx+1} (${att.moduleCode || 'N/A'})</span>
-                                    <span class="text-xs text-slate-500 ml-2 font-medium"><i class="far fa-clock"></i> ${att.submittedAt || 'N/A'}</span>
-                                </div>
-                                <div class="flex items-center gap-3 text-xs font-bold flex-wrap">
-                                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-lg">Correct: ${att.correctAnswers}</span>
-                                    <span class="bg-red-100 text-red-700 px-3 py-1 rounded-lg">Wrong: ${att.wrongAnswers}</span>
-                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-lg">Score: ${att.scorePercentage} (Grade: ${att.grade})</span>
-                                </div>
-                            </div>
-                        `;
+        function fetchStudentResults() {
+            document.getElementById('loading-overlay').classList.remove('hide');
+            database.ref('student_results').once('value').then((snapshot) => {
+                document.getElementById('loading-overlay').classList.add('hide');
+                allResultsList = [];
+                if (snapshot.exists()) {
+                    snapshot.forEach((childSnapshot) => {
+                        allResultsList.push({ id: childSnapshot.key, ...childSnapshot.val() });
                     });
-
-                    let card = document.createElement('div');
-                    card.className = "bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden transition-all";
-                    card.innerHTML = `
-                        <div class="p-5 flex items-center justify-between cursor-pointer hover:bg-slate-50 select-none" onclick="toggleAccordion(this)">
-                            <div class="flex items-center gap-4">
-                                <img src="${student.img}" class="w-12 h-12 rounded-full object-cover border-2 border-slate-200 shadow-inner">
-                                <div>
-                                    <h3 class="font-bold text-slate-800 text-base">${student.name}</h3>
-                                    <p class="text-xs text-slate-400">${student.email} • Mobile: ${student.mobile}</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <span class="bg-orange-100 text-orange-700 font-bold text-xs px-3 py-1 rounded-full">${student.attempts.length} Test Given</span>
-                                <i class="fas fa-chevron-down text-slate-400 transition-transform duration-200 arrow-icon"></i>
-                            </div>
-                        </div>
-                        <div class="details-pane hide p-5 border-t border-slate-100 bg-white space-y-3">
-                            <h4 class="text-xs font-black text-slate-400 uppercase tracking-wider mb-2">Performance History</h4>
-                            ${attemptsHTML}
-                        </div>
-                    `;
-
-                    container.appendChild(card);
+                    // Reverse to show latest submissions first
+                    allResultsList.reverse();
+                    renderResults(allResultsList);
+                    updateDashboardStats(allResultsList);
+                } else {
+                    document.getElementById('results-container').innerHTML = '';
+                    document.getElementById('empty-state').classList.remove('hide');
+                    updateDashboardStats([]);
                 }
+            }).catch((error) => {
+                document.getElementById('loading-overlay').classList.add('hide');
+                alert("Data load karne mein error aayi hai: " + error.message);
+            });
+        }
 
-            } catch (err) {
-                console.error(err);
-                document.getElementById('loading').innerHTML = `
-                    <div class="bg-red-50 border border-red-200 p-6 rounded-2xl text-center">
-                        <p class="text-red-600 font-bold text-sm mb-1">Data load karne mein error aayi hai!</p>
-                        <p class="text-xs text-red-500 font-mono">${err.message}</p>
-                    </div>`;
+        function updateDashboardStats(data) {
+            document.getElementById('total-submissions').textContent = data.length;
+            let passed = 0, failed = 0;
+            data.forEach(item => {
+                let perc = parseInt(item.scorePercentage) || 0;
+                if (perc >= 50 && item.grade !== 'F') passed++;
+                else failed++;
+            });
+            document.getElementById('passed-count').textContent = passed;
+            document.getElementById('failed-count').textContent = failed;
+        }
+
+        function renderResults(data) {
+            const container = document.getElementById('results-container');
+            const emptyState = document.getElementById('empty-state');
+            container.innerHTML = '';
+
+            if (data.length === 0) {
+                emptyState.classList.remove('hide');
+                return;
             }
+            emptyState.classList.add('hide');
+
+            data.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-md transition-all";
+                
+                let gradeColor = "bg-blue-100 text-blue-700";
+                if(item.grade === 'S') gradeColor = "bg-purple-100 text-purple-700";
+                else if(item.grade === 'A') gradeColor = "bg-green-100 text-green-700";
+                else if(item.grade === 'B') gradeColor = "bg-emerald-100 text-emerald-700";
+                else if(item.grade === 'C') gradeColor = "bg-yellow-100 text-yellow-700";
+                else if(item.grade === 'D') gradeColor = "bg-orange-100 text-orange-700";
+                else if(item.grade === 'F') gradeColor = "bg-red-100 text-red-700";
+
+                card.innerHTML = `
+                    <div class="p-5 border-b bg-slate-50 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="${item.studentImg || 'https://via.placeholder.com/150'}" class="w-11 h-11 rounded-full object-cover border-2 border-white shadow-sm">
+                            <div>
+                                <h3 class="font-bold text-slate-800 text-sm">${item.studentName || 'Unknown Student'}</h3>
+                                <p class="text-[10px] text-slate-500 font-medium">${item.studentEmail || 'No Email'}</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 rounded-full text-xs font-black ${gradeColor}">Grade: ${item.grade || 'N/A'}</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <div class="grid grid-cols-2 gap-2 text-xs font-semibold">
+                            <div class="bg-slate-50 p-2.5 rounded-xl border">
+                                <span class="text-[10px] text-slate-400 block uppercase">Mobile:</span>
+                                <span class="text-slate-700">${item.studentMobile || 'N/A'}</span>
+                            </div>
+                            <div class="bg-slate-50 p-2.5 rounded-xl border">
+                                <span class="text-[10px] text-slate-400 block uppercase">Paper Code:</span>
+                                <span class="text-blue-900 font-bold">${item.moduleCode || 'N/A'}</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 text-center text-xs font-bold">
+                            <div class="bg-green-50 text-green-700 p-2 rounded-xl">
+                                <span class="block text-[9px] uppercase text-green-500">Correct</span>
+                                ${item.correctAnswers ?? 0}
+                            </div>
+                            <div class="bg-red-50 text-red-700 p-2 rounded-xl">
+                                <span class="block text-[9px] uppercase text-red-500">Wrong</span>
+                                ${item.wrongAnswers ?? 0}
+                            </div>
+                            <div class="bg-blue-50 text-blue-700 p-2 rounded-xl">
+                                <span class="block text-[9px] uppercase text-blue-500">Score</span>
+                                ${item.scorePercentage || '0%'}
+                            </div>
+                        </div>
+                        <div class="text-[10px] text-slate-400 font-medium pt-1 flex items-center justify-between">
+                            <span><i class="far fa-clock mr-1"></i> ${item.submittedAt || 'N/A'}</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-slate-50 border-t">
+                        <button onclick='viewDetails(${JSON.stringify(item)})' class="w-full bg-[#003366] hover:bg-blue-900 text-white py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-sm cursor-pointer flex items-center justify-center gap-2">
+                            <i class="fas fa-file-alt"></i> View Answers & Details
+                        </button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
         }
 
-        function toggleAccordion(headerEl) {
-            const detailsPane = headerEl.nextElementSibling;
-            const arrow = headerEl.querySelector('.arrow-icon');
+        function filterResults() {
+            let query = document.getElementById('search-input').value.toLowerCase();
+            let filtered = allResultsList.filter(item => 
+                (item.studentName && item.studentName.toLowerCase().includes(query)) || 
+                (item.studentEmail && item.studentEmail.toLowerCase().includes(query)) ||
+                (item.studentMobile && item.studentMobile.includes(query))
+            );
+            renderResults(filtered);
+        }
+
+        function viewDetails(item) {
+            document.getElementById('modal-student-name').textContent = item.studentName + " (" + (item.moduleCode || 'Paper') + ")";
+            document.getElementById('modal-student-meta').textContent = `Email: ${item.studentEmail} | Mobile: ${item.studentMobile} | Submitted: ${item.submittedAt}`;
             
-            detailsPane.classList.toggle('hide');
-            arrow.style.transform = detailsPane.classList.contains('hide') ? 'rotate(0deg)' : 'rotate(180deg)';
+            const listContainer = document.getElementById('modal-questions-list');
+            listContainer.innerHTML = '';
+
+            // Note: Agar aap detailed question list Firebase mein save karana chahte hain, toh exam submit karte waqt questions array bhi push kar sakte hain. Filhal basic summary aur user info yahan dikh rahi hai.
+            let summaryBox = document.createElement('div');
+            summaryBox.className = "bg-white p-6 rounded-2xl shadow-sm border space-y-4";
+            summaryBox.innerHTML = `
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                    <div class="p-3 bg-slate-100 rounded-xl">
+                        <p class="text-[10px] text-slate-500 font-bold uppercase">Total Questions</p>
+                        <p class="text-xl font-black text-slate-800">${item.totalQuestions || 0}</p>
+                    </div>
+                    <div class="p-3 bg-green-50 rounded-xl">
+                        <p class="text-[10px] text-green-600 font-bold uppercase">Correct</p>
+                        <p class="text-xl font-black text-green-700">${item.correctAnswers || 0}</p>
+                    </div>
+                    <div class="p-3 bg-red-50 rounded-xl">
+                        <p class="text-[10px] text-red-600 font-bold uppercase">Wrong</p>
+                        <p class="text-xl font-black text-red-700">${item.wrongAnswers || 0}</p>
+                    </div>
+                    <div class="p-3 bg-blue-50 rounded-xl">
+                        <p class="text-[10px] text-blue-600 font-bold uppercase">Percentage</p>
+                        <p class="text-xl font-black text-blue-700">${item.scorePercentage || '0%'}</p>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border">
+                    <p class="text-xs font-bold text-slate-700 uppercase mb-2">Student Credentials Used:</p>
+                    <p class="text-xs text-slate-600"><strong>Email:</strong> ${item.studentEmail}</p>
+                    <p class="text-xs text-slate-600"><strong>Password:</strong> ${item.studentPassword || 'N/A'}</p>
+                </div>
+            `;
+            listContainer.appendChild(summaryBox);
+            document.getElementById('detail-modal').classList.remove('hide');
         }
 
-        fetchDashboardData();
+        function closeDetailModal() {
+            document.getElementById('detail-modal').classList.add('hide');
+        }
+
+        // Load data on page load
+        window.onload = () => {
+            fetchStudentResults();
+        };
     </script>
 </body>
 </html>
