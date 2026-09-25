@@ -365,8 +365,14 @@
                 }
                 
                 const userData = { name, email, password, mobile, img: imgBase64, registeredAt: new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"}) };
+                
+                // 1. LocalStorage mein save karein
                 users.push(userData);
                 localStorage.setItem('local_registered_users', JSON.stringify(users));
+                
+                // 2. Firebase Realtime Database mein save karein
+                const safeEmailKey = email.replace(/\./g, '_');
+                await database.ref('registered_students/' + safeEmailKey).set(userData);
                 
                 hideLoading();
                 showModal("Registration Safal!", "Badhai ho! Aapka registration safal raha. Ab aap login kar sakte hain.", true);
@@ -526,7 +532,6 @@
             document.getElementById('res-wrng').textContent = questions.length - correct;
             document.getElementById('res-total').textContent = questions.length;
             
-            // Non-blocking Firebase Push to avoid hanging
             try {
                 database.ref('student_results').push({ 
                     studentName: window.currentUser ? window.currentUser.name : "Guest",
